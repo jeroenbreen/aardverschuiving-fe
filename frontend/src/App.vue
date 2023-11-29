@@ -3,21 +3,43 @@ import { onMounted } from "vue";
 import { useMainStore } from "./stores/main";
 import elections from "@/data/elections";
 import votes from "@/data/votes";
-import municipallities from "@/data/municipallities";
+import municipalities from "@/data/municipalities";
 import parties from "@/data/parties";
+import Tools from "./components/tools/Tools.vue";
+import Municipality from "./components/municipalities/Municipality.vue";
 
 const store = useMainStore();
 
 onMounted(() => {
     store.elections = elections;
     store.votes = votes;
-    store.municipallities = municipallities;
+    store.municipalities = municipalities;
     store.parties = parties;
+    store.currentMunicipality = municipalities[0];
+    store.currentElection = elections[0];
+    store.loaded = true;
 });
 </script>
 
 <template>
-    <router-view />
+    <div class="App" v-if="store.loaded">
+        <tools />
+        <municipality />
+        <router-view />
+    </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import "@/styles/index";
+</style>
+
+<style lang="scss" scoped>
+.App {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>

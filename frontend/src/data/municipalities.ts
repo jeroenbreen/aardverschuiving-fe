@@ -1,6 +1,6 @@
-import { Municipallity } from "../types";
+import { Municipality } from "../types";
 
-const municipallities: Municipallity[] = [
+const municipalities: Municipality[] = [
     {
         title: "Aa en Hunze",
         province: "Drenthe",
@@ -3915,4 +3915,4 @@ const municipallities: Municipallity[] = [
     },
 ];
 
-export default municipallities;
+export default municipalities;

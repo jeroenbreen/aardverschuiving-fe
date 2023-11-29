@@ -1,20 +1,26 @@
 import { defineStore } from "pinia";
-import { Election, Municipallity, Party, Vote } from "./../types";
+import { Election, Municipality, Party, Vote } from "./../types";
 
 interface MainState {
+    loaded: boolean;
     elections: Election[];
-    municipallities: Municipallity[];
+    municipalities: Municipality[];
     parties: Party[];
     votes: Vote[];
+    currentMunicipality: Municipality | null;
+    currentElection: Election | null;
 }
 
 export const useMainStore = defineStore("main", {
     state: () => {
         return {
+            loaded: false,
             elections: [],
-            municipallities: [],
+            municipalities: [],
             parties: [],
             votes: [],
+            currentMunicipality: null,
+            currentElection: null,
         } as MainState;
     },
     getters: {},

@@ -1,4 +1,4 @@
-export interface Municipallity {
+export interface Municipality {
     title: string;
     province: string;
     population: number;
