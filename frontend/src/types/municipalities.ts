@@ -1,5 +1,6 @@
 export interface Municipality {
     title: string;
+    cbs_code: string;
     province: string;
     population: number;
     latitude: number;

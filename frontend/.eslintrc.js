@@ -16,12 +16,15 @@ module.exports = {
         ecmaVersion: 2020,
     },
 
+    ignorePatterns: ["data/municipalities.ts"],
+
     rules: {
         "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
         "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
         "vue/multi-word-component-names": "off",
         "vue/no-mutating-props": "off",
         "no-case-declarations": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
     },
 
     overrides: [

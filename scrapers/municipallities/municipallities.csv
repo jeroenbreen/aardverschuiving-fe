@@ -1,327 +1,346 @@
-title,province,population,area,migrants,migrants_western,migrants_non_western,income,latitude,longitude
-"Aa en Hunze","Drenthe",25728,276.09,6.7,4.2,2.5,31100,53,6.75
-"Aalsmeer","Noord-Holland",33071,20.12,20.4,11.3,9.1,35300,52.233333333333,4.75
-"Aalten (gemeente)","Gelderland",27269,96.54,11.4,8,3.4,28600,51.933333333333,6.5833333333333
-"Achtkarspelen","Friesland",28110,102.23,4.5,2.3,2.2,26100,53.416666666667,6.25
-"Alblasserdam","Zuid-Holland",20399,8.78,15.1,7,8.1,29400,51.866666666667,4.6666666666667
-"Albrandswaard","Zuid-Holland",26349,21.69,21.5,7.9,13.6,35200,51.866666666667,4.4166666666667
-"Alkmaar (gemeente)","Noord-Holland",111878,110.46,22.6,9.8,12.9,29100,52.616666666667,4.7666666666667
-"Almelo","Overijssel",74034,67.27,26.3,10.4,15.9,26300,52.366666666667,6.6666666666667
-"Almere","Flevoland",223183,129.19,43.8,10.9,32.9,29400,52.366666666667,5.2166666666667
-"Alphen aan den Rijn (gemeente)","Zuid-Holland",114313,126.23,20.8,9.4,11.4,31400,52.133333333333,4.65
-"Alphen-Chaam","Noord-Brabant",10462,93.04,14.5,11.8,2.8,33000,51.483333333333,4.8666666666667
-"Altena (Nederlandse gemeente)","Noord-Brabant",57776,200.63,7.5,4.7,2.8,31100,51.766666666667,4.95
-"Ameland (hoofdbetekenis)","Friesland",3834,59.11,8.1,6.5,1.6,0,53.45,5.75
-"Amersfoort (hoofdbetekenis)","Utrecht (provincie)",160902,62.62,25.1,8.9,16.1,31500,52.15,5.3833333333333
-"Amstelveen","Noord-Holland",94396,41.13,45.8,19.7,26.1,33500,52.3,4.8333333333333
-"Amsterdam (gemeente)","Noord-Holland",922679,165.5,55.6,19.5,36.1,29400,52.366666666667,4.8833333333333
-"Apeldoorn (gemeente)","Gelderland",167205,339.89,18.1,8.4,9.7,29700,52.216666666667,5.95
-"Arnhem","Gelderland",165896,97.82,32.8,11.8,21,26100,51.983333333333,5.9166666666667
-"Assen","Drenthe",69426,81.89,16.2,8,8.3,27700,52.983333333333,6.55
-"Asten (gemeente)","Noord-Brabant",17267,70.17,11.3,7.6,3.7,30300,51.4,5.7333333333333
-"Baarle-Nassau","Noord-Brabant",7080,76.14,25.8,22.7,3.1,31200,51.45,4.9333333333333
-"Baarn","Utrecht (provincie)",25032,32.54,18.5,9.8,8.6,37400,52.216666666667,5.3
-"Barendrecht","Zuid-Holland",48807,19.75,25.2,7.8,17.4,34300,51.85,4.5333333333333
-"Barneveld (gemeente)","Gelderland",61769,175.9,8.9,4.1,4.8,31100,52.133333333333,5.5833333333333
-"Beek (gemeente)","Limburg (Nederlandse provincie)",16152,21.03,15.2,10.3,5,30400,50.933333333333,5.7833333333333
-"Beekdaelen","Limburg (Nederlandse provincie)",35941,78.3,15.7,12.4,3.3,30300,50.933333333333,5.8833333333333
-"Beesel (gemeente)","Limburg (Nederlandse provincie)",13450,27.99,16.9,11.2,5.7,28500,51.266666666667,6.0333333333333
-"Berg en Dal (gemeente)","Gelderland",35439,86.31,14.5,10.2,4.3,29600,51.783333333333,5.9333333333333
-"Bergeijk (gemeente)","Noord-Brabant",19089,101,10.8,8.1,2.6,32700,51.316666666667,5.35
-"Bergen (Limburg, gemeente)","Limburg (Nederlandse provincie)",13100,103.24,15.8,12.9,2.9,28900,51.583333333333,6.0333333333333
-"Bergen (Noord-Holland)","Noord-Holland",30133,98.96,13.6,9.8,3.9,37300,52.666666666667,4.7
-"Bergen op Zoom (gemeente)","Noord-Brabant",68970,79.96,25.7,10.4,15.3,29000,51.5,4.2833333333333
-"Berkelland","Gelderland",43992,258.06,8,5,2.9,29300,52.116666666667,6.5166666666667
-"Bernheze","Noord-Brabant",32277,89.73,9.2,6.2,3,31900,51.683333333333,5.5166666666667
-"Best","Noord-Brabant",30883,34.3,17.5,9.9,7.6,32900,51.5,5.3833333333333
-"Beuningen (Gelderland)","Gelderland",26576,43.65,13.1,7.6,5.4,31300,51.85,5.75
-"Beverwijk","Noord-Holland",42678,18.4,27.7,12.1,15.6,28700,52.483333333333,4.65
-"Bladel (gemeente)","Noord-Brabant",21020,75.33,10.5,7.3,3.3,31400,51.366666666667,5.2166666666667
-"Blaricum","Noord-Holland",12486,11.11,19.8,10.8,8.9,50700,52.266666666667,5.2333333333333
-"Bloemendaal (Noord-Holland)","Noord-Holland",23932,39.79,19.2,13.9,5.3,51700,52.4,4.6166666666667
-"Bodegraven-Reeuwijk","Zuid-Holland",36303,75.38,13.4,6.6,6.9,34700,52.05,4.7166666666667
-"Boekel (gemeente)","Noord-Brabant",11204,34.51,8.3,6.2,2.2,31300,51.6,5.6666666666667
-"Bonaire","Caribisch Nederland",22573,288,0,0,0,0,12.166666666667,68.25
-"Borger-Odoorn","Drenthe",25915,274.53,6.4,4.3,2.1,28500,52.85,6.85
-"Borne (Overijssel)","Overijssel",24518,26,11,6.3,4.8,30500,52.3,6.75
-"Borsele (gemeente)","Zeeland (provincie)",23164,141.57,9.5,6.5,3,30600,51.433333333333,3.8166666666667
-"Boxtel (gemeente)","Noord-Brabant",33828,63.73,16.9,8.4,8.5,30300,51.583333333333,5.3333333333333
-"Breda (gemeente)","Noord-Brabant",186504,125.74,24.2,11.5,12.8,30300,51.583333333333,4.7833333333333
-"Bronckhorst (hoofdbetekenis)","Gelderland",36261,283.5,6.1,4.1,2,32800,52.05,6.3
-"Brummen (gemeente)","Gelderland",21109,83.65,12.1,6.1,6,30700,52.1,6.1
-"Brunssum","Limburg (Nederlandse provincie)",27647,17.25,24.1,18.5,5.6,26300,50.95,5.9666666666667
-"Bunnik (gemeente)","Utrecht (provincie)",15997,36.97,13.2,7.6,5.6,35200,52.066666666667,5.2
-"Bunschoten","Utrecht (provincie)",22502,30.38,11.7,6.3,5.3,31900,52.25,5.3666666666667
-"Buren (gemeente)","Gelderland",27719,133.89,8.7,5.9,2.8,33000,51.9,5.3333333333333
-"Capelle aan den IJssel","Zuid-Holland",67513,14.14,36.2,11.3,24.9,29100,51.933333333333,4.5833333333333
-"Castricum","Noord-Holland",36298,49.68,11.7,7.1,4.5,35500,52.55,4.6666666666667
-"Coevorden (gemeente)","Drenthe",35741,296.07,9.2,5.3,3.9,28700,52.65,6.7333333333333
-"Cranendonck","Noord-Brabant",20879,76.4,18.2,11.5,6.7,31300,51.266666666667,5.5666666666667
-"Culemborg","Gelderland",29732,29.29,23.7,9.3,14.3,30900,51.95,5.2333333333333
-"Dalfsen (gemeente)","Overijssel",29599,165.07,5.9,3.3,2.6,31200,52.5,6.25
-"Dantumadeel","Friesland",19173,84.66,4.5,2.2,2.4,26500,53.283333333333,5.9833333333333
-"De Bilt (gemeente)","Utrecht (provincie)",43871,66.12,18.3,9.7,8.6,36200,52.1,5.1833333333333
-"De Friese Meren","Friesland",51993,351.29,8.2,4.6,3.6,28700,52.933333333333,5.7
-"De Ronde Venen","Utrecht (provincie)",45664,99.92,17.1,8.9,8.2,35800,52.2,4.8666666666667
-"De Wolden","Drenthe",24585,224.55,5.3,3.2,2.2,30300,52.666666666667,6.4166666666667
-"Delft","Zuid-Holland",106184,22.65,36.7,15.2,21.5,28200,52,4.35
-"Den Haag","Zuid-Holland",562446,82.45,55.6,19.3,36.3,0,52.083333333333,4.3
-"Den Helder","Noord-Holland",56524,45.25,20.5,9.8,10.7,26400,52.95,4.7666666666667
-"Deurne (Nederlandse gemeente)","Noord-Brabant",33010,116.93,9.7,5.8,3.9,29500,51.45,5.7833333333333
-"Deventer (gemeente)","Overijssel",102831,130.68,22.3,9.1,13.2,27600,52.266666666667,6.2
-"Diemen","Noord-Holland",32786,11.99,47.9,17.5,30.4,29500,52.333333333333,4.95
-"Dijk en Waard","Noord-Holland",89087,62.09,34.5,15.6,18.9,0,52.666666666667,4.8333333333333
-"Dinkelland","Overijssel",26746,175.71,8.1,5.9,2.2,30800,52.366666666667,7
-"Doesburg","Gelderland",11073,11.53,20.3,9.6,10.8,26800,52.016666666667,6.1333333333333
-"Doetinchem (gemeente)","Gelderland",59265,79.05,14.7,7.4,7.3,28000,51.966666666667,6.2833333333333
-"Dongen (gemeente)","Noord-Brabant",27252,29.24,14,7,7,29800,51.616666666667,4.9333333333333
-"Dordrecht","Zuid-Holland",121563,78.54,30.7,11.6,19.1,27900,51.8,4.6666666666667
-"Drechterland (gemeente)","Noord-Holland",20413,58.89,11,7,4,31000,52.683333333333,5.1666666666667
-"Drimmelen (gemeente)","Noord-Brabant",28030,95.18,9.8,6.8,3,31300,51.683333333333,4.7833333333333
-"Dronten","Flevoland",43523,333.57,17.6,8.5,9.1,29000,52.516666666667,5.7166666666667
-"Druten","Gelderland",19532,37.64,12.6,6.4,6.2,29600,51.883333333333,5.6
-"Duiven (gemeente)","Gelderland",24986,33.9,14.7,8.4,6.2,29600,51.95,6.0166666666667
-"Echt-Susteren","Limburg (Nederlandse provincie)",32001,103.07,17.4,13.2,4.1,29000,51.083333333333,5.8666666666667
-"Edam-Volendam","Noord-Holland",36812,54.33,9.5,4.4,5.1,33000,52.5,5.05
-"Ede (gemeente)","Gelderland",122140,318.18,15.9,7.2,8.8,30000,52.05,5.6666666666667
-"Eemnes","Utrecht (provincie)",9618,31.04,14,7.6,6.4,33700,52.25,5.25
-"Eemsdelta","Groningen (provincie)",45317,267.89,0,0,0,33700,53.333333333333,6.8333333333333
-"Eersel (gemeente)","Noord-Brabant",19995,82.46,9.8,6.5,3.3,35000,51.35,5.3
-"Eijsden-Margraten","Limburg (Nederlandse provincie)",26010,77.55,13.3,10.6,2.8,32100,50.783333333333,5.75
-"Eindhoven","Noord-Brabant",243669,87.66,37.5,15.4,22.1,28900,51.433333333333,5.4666666666667
-"Elburg (gemeente)","Gelderland",24010,63.82,6.4,3.5,2.9,28300,52.45,5.85
-"Emmen (gemeente)","Drenthe",108852,335.18,12.4,6.9,5.4,26200,52.783333333333,6.8833333333333
-"Enkhuizen","Noord-Holland",18873,12.68,16.9,9.5,7.4,28200,52.7,5.3
-"Enschede","Overijssel",161194,140.83,30.3,12.8,17.5,25400,52.216666666667,6.8833333333333
-"Epe (gemeente)","Gelderland",33246,156.07,11.8,6.2,5.7,29600,52.333333333333,5.9166666666667
-"Ermelo (gemeente)","Gelderland",27516,85.63,11.2,6,5.2,31100,52.283333333333,5.6666666666667
-"Etten-Leur","Noord-Brabant",44652,55.3,19.5,9.6,9.9,29400,51.566666666667,4.6333333333333
-"Geertruidenberg (gemeente)","Noord-Brabant",22104,26.63,10.7,6.4,4.3,29700,51.7,4.85
-"Geldrop-Mierlo","Noord-Brabant",40484,31.01,17.9,9.6,8.3,30000,51.416666666667,5.55
-"Gemert-Bakel","Noord-Brabant",31364,122.14,11.3,7.8,3.5,29300,51.516666666667,5.7166666666667
-"Gennep (gemeente)","Limburg (Nederlandse provincie)",17771,47.62,14.1,9.7,4.4,28600,51.683333333333,5.9666666666667
-"Gilze en Rijen","Noord-Brabant",26939,65.38,17,7.9,9.1,29400,51.55,4.9166666666667
-"Goeree-Overflakkee","Zuid-Holland",51579,260.48,7,4.2,2.8,30300,51.75,4.1166666666667
-"Goes (gemeente)","Zeeland (provincie)",39432,92.58,16.4,8.6,7.8,28900,51.516666666667,3.8333333333333
-"Goirle (gemeente)","Noord-Brabant",24204,42.99,11.6,6.8,4.8,31200,51.516666666667,5.0666666666667
-"Gooise Meren","Noord-Holland",60423,41.59,21.7,12.5,9.2,38200,52.266666666667,5.1666666666667
-"Gorinchem","Zuid-Holland",38506,18.83,26.6,10,16.6,28800,51.833333333333,4.9666666666667
-"Gouda (hoofdbetekenis)","Zuid-Holland",75298,16.5,26.3,9.2,17.1,28900,52.016666666667,4.7
-"Groningen (gemeente)","Groningen (provincie)",238016,185.6,24.7,12.6,12.1,25700,53.216666666667,6.5666666666667
-"Gulpen-Wittem","Limburg (Nederlandse provincie)",14177,73.18,14.1,11.7,2.4,29300,50.8,5.8833333333333
-"Haaksbergen","Overijssel",24494,104.82,12.5,6.7,5.8,29200,52.15,6.7333333333333
-"Haarlem","Noord-Holland",165650,29.17,30.8,14.3,16.5,30300,52.383333333333,4.6333333333333
-"Haarlemmermeer","Noord-Holland",162344,197.48,28.5,11.7,16.8,32600,52.316666666667,4.6833333333333
-"Halderberge","Noord-Brabant",31020,74.47,15.9,7.9,8,29500,51.583333333333,4.5166666666667
-"Hardenberg (gemeente)","Overijssel",62579,312.28,6.9,3.8,3.1,27900,52.566666666667,6.6
-"Harderwijk","Gelderland",48946,38.89,19.2,6.9,12.2,28700,52.35,5.6166666666667
-"Hardinxveld-Giessendam","Zuid-Holland",18678,16.91,7.5,3.6,3.9,29400,51.833333333333,4.8333333333333
-"Harlingen (gemeente)","Friesland",16192,24.96,12.4,7.6,4.8,26000,53.3,5.6833333333333
-"Hattem","Gelderland",12569,23.08,8,4.5,3.5,31500,52.483333333333,6.0666666666667
-"Heemskerk (hoofdbetekenis)","Noord-Holland",39451,27.34,20.9,9.5,11.3,29800,52.5,4.6666666666667
-"Heemstede (Noord-Holland)","Noord-Holland",27766,9.18,20.2,13.1,7.1,40500,52.35,4.6166666666667
-"Heerde (gemeente)","Gelderland",19227,78.74,6.1,3.4,2.8,0,52.4,6.05
-"Heerenveen (gemeente)","Friesland",51654,190.09,12.3,5.5,6.8,0,52.966666666667,6.05
-"Heerlen","Limburg (Nederlandse provincie)",87116,44.94,29.1,18.4,10.7,0,50.883333333333,5.9666666666667
-"Heeze-Leende","Noord-Brabant",16640,104.02,11.1,7.6,3.5,0,51.366666666667,5.55
-"Heiloo","Noord-Holland",24280,18.7,13.1,8.1,5,0,52.6,4.7
-"Hellendoorn (gemeente)","Overijssel",36245,137.91,7,4.1,2.9,0,52.35,6.45
-"Helmond","Noord-Brabant",94967,53.18,27.8,14.2,13.6,0,51.483333333333,5.65
-"Hendrik-Ido-Ambacht","Zuid-Holland",32176,10.61,14.8,6.3,8.5,0,51.85,4.6333333333333
-"Hengelo (Overijssel)","Overijssel",82384,60.84,23.3,9.7,13.6,0,52.266666666667,6.7833333333333
-"'s-Hertogenbosch (gemeente)","Noord-Brabant",158952,109.99,20.9,9.1,11.8,0,51.683333333333,5.3
-"Het Hogeland","Groningen (provincie)",48255,482.75,7.7,4.4,3.3,0,53.4,6.6666666666667
-"Heumen (gemeente)","Gelderland",16779,39.76,14,9.1,4.8,0,51.783333333333,5.8666666666667
-"Heusden (gemeente)","Noord-Brabant",45854,78.88,14.5,7.9,6.6,0,51.7,5.1666666666667
-"Hillegom","Zuid-Holland",22518,12.87,18.5,11.6,6.9,0,52.3,4.5833333333333
-"Hilvarenbeek (gemeente)","Noord-Brabant",15956,94.85,8.1,5.6,2.5,0,51.483333333333,5.1333333333333
-"Hilversum","Noord-Holland",93396,45.61,29.1,14,15.1,0,52.216666666667,5.1833333333333
-"Hoeksche Waard (gemeente)","Zuid-Holland",89846,268.93,9.4,5.4,4.1,0,51.766666666667,4.4666666666667
-"Hof van Twente","Overijssel",35450,212.56,9.3,5.7,3.7,0,52.25,6.7
-"Hollands Kroon (gemeente)","Noord-Holland",49387,357.34,12,8.5,3.5,0,52.866666666667,4.8
-"Hoogeveen (gemeente)","Drenthe",56437,127.54,11.1,5.8,5.3,0,52.066666666667,6.4666666666667
-"Hoorn (Noord-Holland)","Noord-Holland",75240,20.38,24.4,9.5,14.9,0,52.633333333333,5.05
-"Horst aan de Maas","Limburg (Nederlandse provincie)",43642,188.73,12.1,9.1,3,0,51.433333333333,6.1
-"Houten","Utrecht (provincie)",50593,54.94,16,7.4,8.6,0,52.033333333333,5.1666666666667
-"Huizen","Noord-Holland",41215,15.81,21.2,10,11.2,0,52.283333333333,5.25
-"Hulst (gemeente)","Zeeland (provincie)",27586,201.71,28.7,25.4,3.3,0,51.316666666667,4.05
-"IJsselstein","Utrecht (provincie)",33501,21.07,20.8,7.3,13.5,0,52.016666666667,5.05
-"Kaag en Braassem","Zuid-Holland",28590,63.24,11.9,6.7,5.2,0,52.2,4.6166666666667
-"Kampen (gemeente)","Overijssel",55650,142.18,10.2,4.3,6,0,52.55,5.9
-"Kapelle (gemeente)","Zeeland (provincie)",13029,37.13,9.8,6.2,3.6,0,51.5,3.95
-"Katwijk (Zuid-Holland)","Zuid-Holland",66635,24.75,11.5,5.8,5.7,0,52.2,4.4
-"Kerkrade (gemeente)","Limburg (Nederlandse provincie)",45642,21.91,32.1,25.2,6.9,0,50.85,6.05
-"Koggenland","Noord-Holland",23517,80.32,8.7,5,3.7,0,52.633333333333,4.95
-"Krimpen aan den IJssel","Zuid-Holland",29501,7.69,16.6,7.5,9.1,0,51.916666666667,4.6
-"Krimpenerwaard (gemeente)","Zuid-Holland",57729,148.4,11.4,5.4,6,0,51.983333333333,4.7833333333333
-"Laarbeek (gemeente)","Noord-Brabant",23253,55.35,9.4,6.6,2.7,0,51.516666666667,5.6166666666667
-"Land van Cuijk (gemeente)","Noord-Brabant",91489,351.87,12.3,6.9,5.4,0,51.666666666667,5.8666666666667
-"Landgraaf (gemeente)","Limburg (Nederlandse provincie)",37146,24.58,23.1,18.4,4.7,0,50.9,6.0166666666667
-"Landsmeer","Noord-Holland",11688,22.53,18.1,9.2,8.9,0,52.416666666667,4.9
-"Lansingerland","Zuid-Holland",64737,53.42,18.9,7.5,11.3,0,52,4.5
-"Laren (Noord-Holland)","Noord-Holland",11724,12.41,20.6,14.2,6.4,0,52.25,5.2166666666667
-"Leeuwarden (gemeente)","Friesland",127064,238.38,17.7,7.9,9.9,0,53.2,5.7833333333333
-"Leiden (hoofdbetekenis)","Zuid-Holland",127046,21.91,32.2,15.2,17,0,52.15,4.4833333333333
-"Leiderdorp","Zuid-Holland",27723,11.58,22.1,9.9,12.2,0,52.15,4.5333333333333
-"Leidschendam-Voorburg","Zuid-Holland",77798,32.55,32.4,14.8,17.6,0,52.083333333333,4.4
-"Lelystad","Flevoland",83192,230.32,32.7,10.9,21.8,0,52.5,5.4666666666667
-"Leudal (gemeente)","Limburg (Nederlandse provincie)",36106,162.73,13,9.9,3.1,0,51.25,5.9
-"Leusden","Utrecht (provincie)",31514,58.54,14.2,8.1,6.2,0,52.133333333333,5.4166666666667
-"Lingewaard","Gelderland",47241,62,10.7,6.8,3.9,0,51.9,5.9
-"Lisse","Zuid-Holland",23373,15.69,14.1,8.8,5.2,0,52.25,4.55
-"Lochem (gemeente)","Gelderland",34302,213.03,10.8,6,4.9,0,52.15,6.4
-"Loon op Zand (gemeente)","Noord-Brabant",23802,49.94,11.4,7.1,4.3,0,51.616666666667,5.0666666666667
-"Lopik (gemeente)","Utrecht (provincie)",14698,75.57,9.4,4.3,5.1,0,4.95,51.983333333333
-"Losser (gemeente)","Overijssel",23386,98.76,14.6,10.9,3.7,0,52.25,7
-"Maasdriel","Gelderland",26041,66.11,13.1,9.4,3.7,0,51.766666666667,5.3333333333333
-"Maasgouw (gemeente)","Limburg (Nederlandse provincie)",24358,45.71,14.7,11.6,3,0,51.15,5.8833333333333
-"Maashorst (gemeente)","Noord-Brabant",58934,138.24,0,0,0,0,51.683333333333,5.6166666666667
-"Maassluis","Zuid-Holland",35346,8.48,28.6,9.1,19.5,0,51.933333333333,4.25
-"Maastricht","Limburg (Nederlandse provincie)",122692,55.99,33.1,21.6,11.6,0,50.85,5.6833333333333
-"Medemblik (gemeente)","Noord-Holland",46071,121.42,13.2,8.1,5.1,0,52.766666666667,5.1
-"Meerssen (gemeente)","Limburg (Nederlandse provincie)",18594,26.96,12.9,9.6,3.3,0,50.883333333333,5.75
-"Meierijstad","Noord-Brabant",83706,184.09,14.5,7.8,6.7,0,51.583333333333,5.4833333333333
-"Meppel","Drenthe",35454,55.53,12,5.8,6.2,0,52.7,6.1833333333333
-"Middelburg (gemeente)","Zeeland (provincie)",49919,48.42,19.4,10.1,9.3,0,51.5,3.6166666666667
-"Midden-Delfland","Zuid-Holland",19449,47.19,12.6,6.4,6.3,0,51.966666666667,4.3
-"Midden-Drenthe","Drenthe",34011,340.51,7.3,4.6,2.7,0,52.85,6.5
-"Midden-Groningen","Groningen (provincie)",61573,280,14.8,6.4,8.5,0,53.15,6.75
-"Moerdijk (gemeente)","Noord-Brabant",37717,159.15,12.4,7.3,5.1,0,51.65,4.5166666666667
-"Molenlanden","Zuid-Holland",45143,181.73,7,4,2.9,0,51.85,4.8
-"Montferland (gemeente)","Gelderland",36891,105.7,12.4,8.5,4,0,51.933333333333,6.15
-"Montfoort","Utrecht (provincie)",13911,37.57,10.5,9.9,5.5,0,52.033333333333,4.95
-"Mook en Middelaar","Limburg (Nederlandse provincie)",8024,17.38,14.1,9.9,4.1,0,51.75,5.8666666666667
-"Neder-Betuwe (gemeente)","Gelderland",25457,59.98,8.6,5.9,2.7,0,51.933333333333,5.6333333333333
-"Nederweert (gemeente)","Limburg (Nederlandse provincie)",17476,99.98,9.5,6.7,2.8,0,51.283333333333,5.75
-"Nieuwegein","Utrecht (provincie)",65540,23.51,27.9,10.4,17.5,0,52.016666666667,5.0833333333333
-"Nieuwkoop","Zuid-Holland",29434,78.05,11.2,6.5,4.7,0,52.15,4.8
-"Nijkerk (gemeente)","Gelderland",45029,69.34,12.1,5.4,6.7,0,52.2,5.4833333333333
-"Nijmegen (hoofdbetekenis)","Gelderland",182399,53.09,26.5,12.1,14.4,0,51.833333333333,5.8666666666667
-"Nissewaard","Zuid-Holland",86857,73.58,25.3,9.5,15.8,0,51.833333333333,4.3
-"Noardeast-Fryslân","Friesland",45818,377.83,5.8,3.2,2.6,0,53.316666666667,5.9833333333333
-"Noord-Beveland","Zeeland (provincie)",7881,85.96,13.4,10.4,3,0,51.583333333333,3.7333333333333
-"Noordenveld (gemeente)","Drenthe",31612,199.41,7.9,4.6,3.3,0,53.133333333333,6.4166666666667
-"Noordoostpolder","Flevoland",49909,458.17,15.8,8.1,7.8,0,52.716666666667,5.7
-"Noordwijk (Zuid-Holland)","Zuid-Holland",45258,58.37,17.9,12.5,5.4,0,52.25,4.4333333333333
-"Nuenen, Gerwen en Nederwetten","Noord-Brabant",24046,33.71,13.5,9.1,4.4,0,51.483333333333,5.5166666666667
-"Nunspeet (gemeente)","Gelderland",28749,128.74,7.1,3.6,3.5,0,52.333333333333,5.7833333333333
-"Oegstgeest","Zuid-Holland",25795,7.31,24.8,15.7,9.1,0,52.183333333333,4.4666666666667
-"Oirschot (gemeente)","Noord-Brabant",19197,101.78,8.1,5.2,3,0,51.5,5.3
-"Oisterwijk (gemeente)","Noord-Brabant",32963,63.84,11.5,6.6,4.9,0,51.566666666667,5.2
-"Oldambt (gemeente)","Groningen (provincie)",39073,226.66,11.6,7.2,4.1,0,53.2,7.0833333333333
-"Oldebroek (gemeente)","Gelderland",24263,97.65,6,3.4,2.6,0,52.466666666667,5.9166666666667
-"Oldenzaal","Overijssel",31921,21.55,15.8,7.9,7.9,0,52.3,6.9166666666667
-"Olst-Wijhe","Overijssel",18682,113.84,8.3,4.6,3.7,0,52.333333333333,6.1
-"Ommen (gemeente)","Overijssel",18955,179.9,7.8,4.6,3.2,0,52.516666666667,6.4166666666667
-"Oost Gelre","Gelderland",29863,109.93,8.4,5.2,3.1,0,51.983333333333,6.5833333333333
-"Oosterhout (gemeente)","Noord-Brabant",57466,71.47,20.7,9.5,11.2,0,51.65,4.85
-"Ooststellingwerf","Friesland",25854,223.42,7.2,4.3,2.9,0,53,6.2833333333333
-"Oostzaan","Noord-Holland",9719,11.53,14.5,6.5,8,0,52.433333333333,4.8666666666667
-"Opmeer","Noord-Holland",12158,41.5,9.4,6.4,3,0,52.7,4.9666666666667
-"Opsterland","Friesland",30064,224.4,6.4,3.5,2.9,0,53.083333333333,6.1333333333333
-"Oss (gemeente)","Noord-Brabant",94457,163.16,19.4,9.4,9.9,0,51.75,5.5166666666667
-"Oude IJsselstreek","Gelderland",39624,136.15,13.7,7.2,6.5,0,51.866666666667,6.3833333333333
-"Ouder-Amstel","Noord-Holland",14265,24.08,28.1,13.3,14.8,0,52.283333333333,4.9
-"Oudewater","Utrecht (provincie)",10237,38.9,8.8,4.5,4.3,0,52.016666666667,4.8666666666667
-"Overbetuwe","Gelderland",48703,109.19,11.9,7.1,4.8,0,51.866666666667,5.85
-"Papendrecht","Zuid-Holland",32267,9.41,18.6,8.4,10.2,0,51.833333333333,4.7
-"Peel en Maas","Limburg (Nederlandse provincie)",45314,159.37,11.3,7.4,3.9,0,51.316666666667,5.9833333333333
-"Pekela","Groningen (provincie)",12429,49.04,9.1,5.9,3.1,0,53.1,7
-"Pijnacker-Nootdorp","Zuid-Holland",57688,37.08,22,8.8,13.1,0,52.016666666667,4.4166666666667
-"Purmerend (gemeente)","Noord-Holland",94129,95.22,27.6,9.4,18.1,0,52.5,4.95
-"Putten (gemeente)","Gelderland",24894,85.22,7.9,4.4,3.5,0,52.233333333333,5.5833333333333
-"Raalte (gemeente)","Overijssel",38468,170.99,6.7,3.4,3.3,0,52.4,6.2833333333333
-"Reimerswaal (gemeente)","Zeeland (provincie)",23265,101.8,14.5,10.1,4.4,0,51.45,4.0166666666667
-"Renkum (gemeente)","Gelderland",31459,45.95,15.6,9.7,5.9,0,51.983333333333,5.85
-"Renswoude","Utrecht (provincie)",5748,18.4,7.3,4.2,3.1,0,52.066666666667,5.5333333333333
-"Reusel-De Mierden","Noord-Brabant",13551,77.88,9.1,6.4,2.7,0,51.35,5.15
-"Rheden (gemeente)","Gelderland",43522,81.74,17.2,9.5,7.7,0,52,6.0333333333333
-"Rhenen","Utrecht (provincie)",20332,42.08,12,5.9,6.1,0,51.95,5.5666666666667
-"Ridderkerk","Zuid-Holland",47503,23.72,20,7.8,12.1,0,51.866666666667,4.6
-"Rijssen-Holten","Overijssel",38502,94.13,8.1,3,5.2,0,52.3,6.5166666666667
-"Rijswijk (Zuid-Holland)","Zuid-Holland",58050,13.96,36.8,15.2,21.5,0,52.033333333333,4.3166666666667
-"Roerdalen","Limburg (Nederlandse provincie)",20699,88.21,17.6,14,3.6,0,51.133333333333,6
-"Roermond (gemeente)","Limburg (Nederlandse provincie)",59992,60.81,29.7,15,14.6,0,51.2,5.9833333333333
-"Roosendaal (gemeente)","Noord-Brabant",77578,106.5,26.1,11.9,14.2,0,51.533333333333,4.4666666666667
-"Rotterdam (gemeente)","Zuid-Holland",664311,217.55,52.3,13.4,38.9,0,51.95,4.4166666666667
-"Rozendaal","Gelderland",1754,27.9,15.4,9.9,5.5,0,52,5.9666666666667
-"Rucphen (gemeente)","Noord-Brabant",23608,64.41,10.3,7.1,3.2,0,51.516666666667,4.55
-"Saba","Caribisch Nederland",1911,13,0,0,0,0,17.616666666667,63.233333333333
-"Schagen (gemeente)","Noord-Holland",47477,168.25,11.4,7,4.4,0,52.783333333333,4.75
-"Scherpenzeel (Gelderland)","Gelderland",10393,13.79,7.6,4.4,3.2,0,52.066666666667,5.4833333333333
-"Schiedam","Zuid-Holland",80723,17.82,43.7,13.9,29.8,0,51.916666666667,4.4
-"Schiermonnikoog","Friesland",982,40.5,10.9,8.2,2.6,0,53.466666666667,6.15
-"Schouwen-Duiveland","Zeeland (provincie)",34521,229.65,9.9,6.6,3.3,0,51.666666666667,3.8833333333333
-"Simpelveld (gemeente)","Limburg (Nederlandse provincie)",10361,16.03,18.2,15.8,2.4,0,50.883333333333,5.9166666666667
-"Sint Eustatius","Caribisch Nederland",3242,21,0,0,0,0,17.483333333333,62.966666666667
-"Sint-Michielsgestel (gemeente)","Noord-Brabant",30121,58.38,8.7,5.4,3.3,0,51.633333333333,5.35
-"Sittard-Geleen","Limburg (Nederlandse provincie)",92177,79.01,22.4,15,7.4,0,51,5.85
-"Sliedrecht","Zuid-Holland",26211,12.84,14.7,4.9,9.8,0,51.816666666667,4.7666666666667
-"Sluis (gemeente)","Zeeland (provincie)",23244,279.36,28.1,24.9,3.2,0,51.333333333333,3.5
-"Smallingerland","Friesland",56173,117.31,11.7,5.2,6.5,0,53.166666666667,6.1666666666667
-"Soest (Nederland)","Utrecht (provincie)",47423,46.24,21.6,8.8,12.9,0,52.183333333333,5.2833333333333
-"Someren (gemeente)","Noord-Brabant",20090,80.27,10.1,7.4,2.7,0,51.383333333333,5.7
-"Son en Breugel","Noord-Brabant",18027,25.95,13.5,9,4.5,0,51.5,5.5
-"Stadskanaal (gemeente)","Groningen (provincie)",32169,117.64,7.9,4.7,3.2,0,52.983333333333,6.95
-"Staphorst (gemeente)","Overijssel",17640,133.99,4.6,2.5,2.1,0,52.633333333333,6.2
-"Stede Broec","Noord-Holland",22116,14.5,13.4,8.1,5.2,0,52.7,5.2166666666667
-"Steenbergen (gemeente)","Noord-Brabant",24582,146.43,15.3,11.4,3.8,0,51.583333333333,4.3166666666667
-"Steenwijkerland","Overijssel",45383,288.27,8.8,4.7,4.1,0,52.783333333333,6.1166666666667
-"Stein (gemeente)","Limburg (Nederlandse provincie)",24783,21.08,14.3,10.8,3.5,0,50.966666666667,5.75
-"Stichtse Vecht","Utrecht (provincie)",65755,96.1,18.8,9.2,9.6,0,52.2,5
-"Súdwest-Fryslân","Friesland",90873,523.01,9.3,5.1,4.2,0,53,5.5333333333333
-"Terneuzen (gemeente)","Zeeland (provincie)",54990,250.38,28,19.8,8.2,0,51.3,3.8333333333333
-"Terschelling","Friesland",4890,85.26,7.9,6,1.9,0,53.4,5.35
-"Texel","Noord-Holland",13950,162,11,7.2,3.8,0,53.066666666667,4.8
-"Teylingen (gemeente)","Zuid-Holland",38521,28.38,16.3,9.6,6.7,0,52.216666666667,4.5
-"Tholen (gemeente)","Zeeland (provincie)",26793,146.71,9.4,5.7,3.7,0,51.583333333333,4.1166666666667
-"Tiel","Gelderland",42672,32.88,27,10.9,16.2,0,51.883333333333,5.4333333333333
-"Tilburg (gemeente)","Noord-Brabant",227794,116.17,28.8,12.2,16.6,0,51.55,5.0833333333333
-"Tubbergen (gemeente)","Overijssel",21413,147,4.7,3.3,1.4,0,52.4,6.7666666666667
-"Twenterand","Overijssel",33867,106.17,5.4,3.1,2.3,0,52.4,6.6166666666667
-"Tynaarlo (gemeente)","Drenthe",34603,143,8.8,5.3,3.5,0,53.066666666667,6.5666666666667
-"Tietjerksteradeel","Friesland",32441,148.86,6.5,3.2,3.3,0,53.183333333333,5.9833333333333
-"Uitgeest","Noord-Holland",13441,19.16,12.6,6.9,5.7,0,52.516666666667,4.7
-"Uithoorn","Noord-Holland",31406,18.14,27.1,12.3,14.7,0,52.233333333333,4.8166666666667
-"Urk","Flevoland",21847,13.15,4.2,1.6,2.5,0,52.65,5.6
-"Utrecht (stad)","Utrecht (provincie)",368024,93.83,36.1,12.2,23.9,0,52.083333333333,5.1166666666667
-"Utrechtse Heuvelrug (gemeente)","Utrecht (provincie)",50353,132.01,15.8,8.5,7.3,0,52.033333333333,5.45
-"Vaals (gemeente)","Limburg (Nederlandse provincie)",10173,23.89,52.1,46.8,5.3,0,50.766666666667,6.0166666666667
-"Valkenburg aan de Geul","Limburg (Nederlandse provincie)",16456,36.73,15,11.5,3.5,0,50.85,5.8166666666667
-"Valkenswaard (gemeente)","Noord-Brabant",31548,54.92,14.5,9.6,5,0,51.35,5.4666666666667
-"Veendam (gemeente)","Groningen (provincie)",27620,76,13.1,5.4,7.7,0,53.1,6.8666666666667
-"Veenendaal","Utrecht (provincie)",68563,19.46,18.6,6.1,12.5,0,52.016666666667,5.55
-"Veere (gemeente)","Zeeland (provincie)",22071,132.56,8.8,6.2,2.6,0,51.55,3.5333333333333
-"Veldhoven (hoofdbetekenis)","Noord-Brabant",46452,31.69,18.4,10.4,8,0,51.4,5.4
-"Velsen","Noord-Holland",68857,45.2,19.5,9.9,9.6,0,52.466666666667,4.6166666666667
-"Venlo (gemeente)","Limburg (Nederlandse provincie)",103312,124.25,28.9,16.7,12.2,0,51.366666666667,6.1666666666667
-"Venray (gemeente)","Limburg (Nederlandse provincie)",44648,163.27,20.8,11.5,9.3,0,51.533333333333,5.9666666666667
-"Vijfheerenlanden (gemeente)","Utrecht (provincie)",60184,146.41,17,6.3,10.7,0,51.933333333333,5.0666666666667
-"Vlaardingen","Zuid-Holland",75126,23.57,32.1,10.7,21.4,0,51.916666666667,4.35
-"Vlieland (hoofdbetekenis)","Friesland",1254,39.15,15.2,13.2,2.1,0,53.466666666667,5.1
-"Vlissingen","Zeeland (provincie)",45182,34.31,26.6,14.4,12.2,0,51.45,3.5833333333333
-"Voerendaal (gemeente)","Limburg (Nederlandse provincie)",12419,31.51,14,10.6,3.4,0,50.883333333333,5.9166666666667
-"Voorne aan Zee","Zuid-Holland",73993,174.81,0,0,0,0,51.866666666667,4.1333333333333
-"Voorschoten","Zuid-Holland",25585,11.14,22.6,13.1,9.5,0,52.116666666667,4.45
-"Voorst (gemeente)","Gelderland",25227,122.97,8.3,4.9,3.4,0,52.233333333333,6.0833333333333
-"Vught (gemeente)","Noord-Brabant",32113,33.75,14.3,9.2,5.2,0,51.65,5.2833333333333
-"Waadhoeke","Friesland",46800,284.86,9.1,5.5,3.6,0,53.183333333333,5.5333333333333
-"Waalre (gemeente)","Noord-Brabant",17965,22.39,17.5,11.1,6.5,0,51.383333333333,5.4333333333333
-"Waalwijk (gemeente)","Noord-Brabant",49934,64.58,19,10.2,8.8,0,51.7,5.1
-"Waddinxveen","Zuid-Holland",32690,27.77,17.5,8,9.5,0,52.033333333333,4.6333333333333
-"Wageningen (Nederland)","Gelderland",41098,30.42,28.1,14,14.2,0,51.966666666667,5.6666666666667
-"Wassenaar (gemeente)","Zuid-Holland",27131,51.11,34.3,21.9,12.3,0,52.15,4.3833333333333
-"Waterland (gemeente)","Noord-Holland",17623,52.11,13.5,7.7,5.8,0,52.45,5.0166666666667
-"Weert (gemeente)","Limburg (Nederlandse provincie)",50874,104.32,22.2,11.5,10.7,0,51.25,5.7
-"West Betuwe","Gelderland",52742,216.12,9.6,5.6,4,0,51.883333333333,5.2833333333333
-"West Maas en Waal","Gelderland",20082,76.76,8.5,5.5,2.9,0,51.883333333333,5.5166666666667
-"Westerkwartier (gemeente)","Groningen (provincie)",64984,362.69,7.3,4.3,3,0,53.216666666667,6.35
-"Westerveld (gemeente)","Drenthe",19858,278.35,6.4,4.2,2.2,0,52.766666666667,6.2333333333333
-"Westervoort","Gelderland",15115,7.03,18.6,9.3,9.4,0,51.95,5.9666666666667
-"Westerwolde (gemeente)","Groningen (provincie)",26331,275.67,13,6.1,6.9,0,53.083333333333,7.1166666666667
-"Westland (gemeente)","Zuid-Holland",114996,81.27,16,9.2,6.8,0,52,4.2166666666667
-"Weststellingwerf","Friesland",26500,220.3,7.8,4.1,3.8,0,52.883333333333,6
-"Wierden","Overijssel",24879,94.63,7.3,4.6,2.7,0,52.35,6.5833333333333
-"Wijchen (gemeente)","Gelderland",41519,66.18,12.6,7.6,5,0,51.8,5.7166666666667
-"Wijdemeren","Noord-Holland",24645,47.6,14.4,9,5.4,0,52.216666666667,5.1
-"Wijk bij Duurstede","Utrecht (provincie)",24000,47.62,11.8,0,0,0,51.983333333333,5.3333333333333
+title,province,cbs_code,population,area,migrants,migrants_western,migrants_non_western,income,latitude,longitude
+"Aa en Hunze","Drenthe",1680,25728,276.09,6.7,4.2,2.5,31100,53,6.75
+"Aalsmeer","Noord-Holland",0358,33071,20.12,20.4,11.3,9.1,35300,52.233333333333,4.75
+"Aalten (gemeente)","Gelderland",0197,27269,96.54,11.4,8,3.4,28600,51.933333333333,6.5833333333333
+"Achtkarspelen","Friesland",0059,28110,102.23,4.5,2.3,2.2,26100,53.416666666667,6.25
+"Alblasserdam","Zuid-Holland",0482,20399,8.78,15.1,7,8.1,29400,51.866666666667,4.6666666666667
+"Albrandswaard","Zuid-Holland",0613,26349,21.69,21.5,7.9,13.6,35200,51.866666666667,4.4166666666667
+"Alkmaar (gemeente)","Noord-Holland",0361,111878,110.46,22.6,9.8,12.9,29100,52.616666666667,4.7666666666667
+"Almelo","Overijssel",0141,74034,67.27,26.3,10.4,15.9,26300,52.366666666667,6.6666666666667
+"Almere","Flevoland",0034,223183,129.19,43.8,10.9,32.9,29400,52.366666666667,5.2166666666667
+"Alphen aan den Rijn (gemeente)","Zuid-Holland",0484,114313,126.23,20.8,9.4,11.4,31400,52.133333333333,4.65
+"Alphen-Chaam","Noord-Brabant",1723,10462,93.04,14.5,11.8,2.8,33000,51.483333333333,4.8666666666667
+"Altena (Nederlandse gemeente)","Noord-Brabant",1959,57776,200.63,7.5,4.7,2.8,31100,51.766666666667,4.95
+"Ameland (hoofdbetekenis)","Friesland",0060,3834,59.11,8.1,6.5,1.6,0,53.45,5.75
+"Amersfoort (hoofdbetekenis)","Utrecht (provincie)",0307,160902,62.62,25.1,8.9,16.1,31500,52.15,5.3833333333333
+"Amstelveen","Noord-Holland",0362,94396,41.13,45.8,19.7,26.1,33500,52.3,4.8333333333333
+"Amsterdam (gemeente)","Noord-Holland",0363,922679,165.5,55.6,19.5,36.1,29400,52.366666666667,4.8833333333333
+"Apeldoorn (gemeente)","Gelderland",0200,167205,339.89,18.1,8.4,9.7,29700,52.216666666667,5.95
+"Arnhem","Gelderland",0202,165896,97.82,32.8,11.8,21,26100,51.983333333333,5.9166666666667
+"Assen","Drenthe",0106,69426,81.89,16.2,8,8.3,27700,52.983333333333,6.55
+"Asten (gemeente)","Noord-Brabant",0743,17267,70.17,11.3,7.6,3.7,30300,51.4,5.7333333333333
+"Baarle-Nassau","Noord-Brabant",0744,7080,76.14,25.8,22.7,3.1,31200,51.45,4.9333333333333
+"Baarn","Utrecht (provincie)",0308,25032,32.54,18.5,9.8,8.6,37400,52.216666666667,5.3
+"Barendrecht","Zuid-Holland",0489,48807,19.75,25.2,7.8,17.4,34300,51.85,4.5333333333333
+"Barneveld (gemeente)","Gelderland",0203,61769,175.9,8.9,4.1,4.8,31100,52.133333333333,5.5833333333333
+"Beek (gemeente)","Limburg (Nederlandse provincie)",0888,16152,21.03,15.2,10.3,5,30400,50.933333333333,5.7833333333333
+"Beekdaelen","Limburg (Nederlandse provincie)",1954,35941,78.3,15.7,12.4,3.3,30300,50.933333333333,5.8833333333333
+"Beesel (gemeente)","Limburg (Nederlandse provincie)",0889,13450,27.99,16.9,11.2,5.7,28500,51.266666666667,6.0333333333333
+"Berg en Dal (gemeente)","Gelderland",1945,35439,86.31,14.5,10.2,4.3,29600,51.783333333333,5.9333333333333
+"Bergeijk (gemeente)","Noord-Brabant",1724,19089,101,10.8,8.1,2.6,32700,51.316666666667,5.35
+"Bergen (Limburg, gemeente)","Limburg (Nederlandse provincie)",0893,13100,103.24,15.8,12.9,2.9,28900,51.583333333333,6.0333333333333
+"Bergen (Noord-Holland)","Noord-Holland",0373,30133,98.96,13.6,9.8,3.9,37300,52.666666666667,4.7
+"Bergen op Zoom (gemeente)","Noord-Brabant",0748,68970,79.96,25.7,10.4,15.3,29000,51.5,4.2833333333333
+"Berkelland","Gelderland",1859,43992,258.06,8,5,2.9,29300,52.116666666667,6.5166666666667
+"Bernheze","Noord-Brabant",1721,32277,89.73,9.2,6.2,3,31900,51.683333333333,5.5166666666667
+"Best","Noord-Brabant",0753,30883,34.3,17.5,9.9,7.6,32900,51.5,5.3833333333333
+"Beuningen (Gelderland)","Gelderland",0209,26576,43.65,13.1,7.6,5.4,31300,51.85,5.75
+"Beverwijk","Noord-Holland",0375,42678,18.4,27.7,12.1,15.6,28700,52.483333333333,4.65
+"Bladel (gemeente)","Noord-Brabant",1728,21020,75.33,10.5,7.3,3.3,31400,51.366666666667,5.2166666666667
+"Blaricum","Noord-Holland",0376,12486,11.11,19.8,10.8,8.9,50700,52.266666666667,5.2333333333333
+"Bloemendaal (Noord-Holland)","Noord-Holland",0377,23932,39.79,19.2,13.9,5.3,51700,52.4,4.6166666666667
+"Bodegraven-Reeuwijk","Zuid-Holland",1901,36303,75.38,13.4,6.6,6.9,34700,52.05,4.7166666666667
+"Boekel (gemeente)","Noord-Brabant",0755,11204,34.51,8.3,6.2,2.2,31300,51.6,5.6666666666667
+"Bonaire","Caribisch Nederland",9001,22573,288,0,0,0,0,12.166666666667,68.25
+"Borger-Odoorn","Drenthe",1681,25915,274.53,6.4,4.3,2.1,28500,52.85,6.85
+"Borne (Overijssel)","Overijssel",0147,24518,26,11,6.3,4.8,30500,52.3,6.75
+"Borsele (gemeente)","Zeeland (provincie)",0654,23164,141.57,9.5,6.5,3,30600,51.433333333333,3.8166666666667
+"Boxtel (gemeente)","Noord-Brabant",0757,33828,63.73,16.9,8.4,8.5,30300,51.583333333333,5.3333333333333
+"Breda (gemeente)","Noord-Brabant",0758,186504,125.74,24.2,11.5,12.8,30300,51.583333333333,4.7833333333333
+"Bronckhorst (hoofdbetekenis)","Gelderland",1876,36261,283.5,6.1,4.1,2,32800,52.05,6.3
+"Brummen (gemeente)","Gelderland",0213,21109,83.65,12.1,6.1,6,30700,52.1,6.1
+"Brunssum","Limburg (Nederlandse provincie)",0899,27647,17.25,24.1,18.5,5.6,26300,50.95,5.9666666666667
+"Bunnik (gemeente)","Utrecht (provincie)",0312,15997,36.97,13.2,7.6,5.6,35200,52.066666666667,5.2
+"Bunschoten","Utrecht (provincie)",0313,22502,30.38,11.7,6.3,5.3,31900,52.25,5.3666666666667
+"Buren (gemeente)","Gelderland",0214,27719,133.89,8.7,5.9,2.8,33000,51.9,5.3333333333333
+"Capelle aan den IJssel","Zuid-Holland",0502,67513,14.14,36.2,11.3,24.9,29100,51.933333333333,4.5833333333333
+"Castricum","Noord-Holland",0383,36298,49.68,11.7,7.1,4.5,35500,52.55,4.6666666666667
+"Coevorden (gemeente)","Drenthe",0109,35741,296.07,9.2,5.3,3.9,28700,52.65,6.7333333333333
+"Cranendonck","Noord-Brabant",1706,20879,76.4,18.2,11.5,6.7,31300,51.266666666667,5.5666666666667
+"Culemborg","Gelderland",0216,29732,29.29,23.7,9.3,14.3,30900,51.95,5.2333333333333
+"Dalfsen (gemeente)","Overijssel",0148,29599,165.07,5.9,3.3,2.6,31200,52.5,6.25
+"Dantumadeel","Friesland",1891,19173,84.66,4.5,2.2,2.4,26500,53.283333333333,5.9833333333333
+"De Bilt (gemeente)","Utrecht (provincie)",0310,43871,66.12,18.3,9.7,8.6,36200,52.1,5.1833333333333
+"De Friese Meren","Friesland",1940,51993,351.29,8.2,4.6,3.6,28700,52.933333333333,5.7
+"De Ronde Venen","Utrecht (provincie)",0736,45664,99.92,17.1,8.9,8.2,35800,52.2,4.8666666666667
+"De Wolden","Drenthe",1690,24585,224.55,5.3,3.2,2.2,30300,52.666666666667,6.4166666666667
+"Delft","Zuid-Holland",0503,106184,22.65,36.7,15.2,21.5,28200,52,4.35
+"Den Haag","Zuid-Holland",0518,562446,82.45,55.6,19.3,36.3,0,52.083333333333,4.3
+"Den Helder","Noord-Holland",0400,56524,45.25,20.5,9.8,10.7,26400,52.95,4.7666666666667
+"Deurne (Nederlandse gemeente)","Noord-Brabant",0762,33010,116.93,9.7,5.8,3.9,29500,51.45,5.7833333333333
+"Deventer (gemeente)","Overijssel",0150,102831,130.68,22.3,9.1,13.2,27600,52.266666666667,6.2
+"Diemen","Noord-Holland",0384,32786,11.99,47.9,17.5,30.4,29500,52.333333333333,4.95
+"Dijk en Waard","Noord-Holland",1980,89087,62.09,34.5,15.6,18.9,0,52.666666666667,4.8333333333333
+"Dinkelland","Overijssel",1774,26746,175.71,8.1,5.9,2.2,30800,52.366666666667,7
+"Doesburg","Gelderland",0221,11073,11.53,20.3,9.6,10.8,26800,52.016666666667,6.1333333333333
+"Doetinchem (gemeente)","Gelderland",0222,59265,79.05,14.7,7.4,7.3,28000,51.966666666667,6.2833333333333
+"Dongen (gemeente)","Noord-Brabant",0766,27252,29.24,14,7,7,29800,51.616666666667,4.9333333333333
+"Dordrecht","Zuid-Holland",0505,121563,78.54,30.7,11.6,19.1,27900,51.8,4.6666666666667
+"Drechterland (gemeente)","Noord-Holland",0498,20413,58.89,11,7,4,31000,52.683333333333,5.1666666666667
+"Drimmelen (gemeente)","Noord-Brabant",1719,28030,95.18,9.8,6.8,3,31300,51.683333333333,4.7833333333333
+"Dronten","Flevoland",0303,43523,333.57,17.6,8.5,9.1,29000,52.516666666667,5.7166666666667
+"Druten","Gelderland",0225,19532,37.64,12.6,6.4,6.2,29600,51.883333333333,5.6
+"Duiven (gemeente)","Gelderland",0226,24986,33.9,14.7,8.4,6.2,29600,51.95,6.0166666666667
+"Echt-Susteren","Limburg (Nederlandse provincie)",1711,32001,103.07,17.4,13.2,4.1,29000,51.083333333333,5.8666666666667
+"Edam-Volendam","Noord-Holland",0385,36812,54.33,9.5,4.4,5.1,33000,52.5,5.05
+"Ede (gemeente)","Gelderland",0228,122140,318.18,15.9,7.2,8.8,30000,52.05,5.6666666666667
+"Eemnes","Utrecht (provincie)",0317,9618,31.04,14,7.6,6.4,33700,52.25,5.25
+"Eemsdelta","Groningen (provincie)",1979,45317,267.89,0,0,0,33700,53.333333333333,6.8333333333333
+"Eersel (gemeente)","Noord-Brabant",0770,19995,82.46,9.8,6.5,3.3,35000,51.35,5.3
+"Eijsden-Margraten","Limburg (Nederlandse provincie)",1903,26010,77.55,13.3,10.6,2.8,32100,50.783333333333,5.75
+"Eindhoven","Noord-Brabant",0772,243669,87.66,37.5,15.4,22.1,28900,51.433333333333,5.4666666666667
+"Elburg (gemeente)","Gelderland",0230,24010,63.82,6.4,3.5,2.9,28300,52.45,5.85
+"Emmen (gemeente)","Drenthe",0114,108852,335.18,12.4,6.9,5.4,26200,52.783333333333,6.8833333333333
+"Enkhuizen","Noord-Holland",0388,18873,12.68,16.9,9.5,7.4,28200,52.7,5.3
+"Enschede","Overijssel",0153,161194,140.83,30.3,12.8,17.5,25400,52.216666666667,6.8833333333333
+"Epe (gemeente)","Gelderland",0232,33246,156.07,11.8,6.2,5.7,29600,52.333333333333,5.9166666666667
+"Ermelo (gemeente)","Gelderland",0233,27516,85.63,11.2,6,5.2,31100,52.283333333333,5.6666666666667
+"Etten-Leur","Noord-Brabant",0777,44652,55.3,19.5,9.6,9.9,29400,51.566666666667,4.6333333333333
+"Geertruidenberg (gemeente)","Noord-Brabant",0779,22104,26.63,10.7,6.4,4.3,29700,51.7,4.85
+"Geldrop-Mierlo","Noord-Brabant",1771,40484,31.01,17.9,9.6,8.3,30000,51.416666666667,5.55
+"Gemert-Bakel","Noord-Brabant",1652,31364,122.14,11.3,7.8,3.5,29300,51.516666666667,5.7166666666667
+"Gennep (gemeente)","Limburg (Nederlandse provincie)",0907,17771,47.62,14.1,9.7,4.4,28600,51.683333333333,5.9666666666667
+"Gilze en Rijen","Noord-Brabant",0784,26939,65.38,17,7.9,9.1,29400,51.55,4.9166666666667
+"Goeree-Overflakkee","Zuid-Holland",1924,51579,260.48,7,4.2,2.8,30300,51.75,4.1166666666667
+"Goes (gemeente)","Zeeland (provincie)",0664,39432,92.58,16.4,8.6,7.8,28900,51.516666666667,3.8333333333333
+"Goirle (gemeente)","Noord-Brabant",0785,24204,42.99,11.6,6.8,4.8,31200,51.516666666667,5.0666666666667
+"Gooise Meren","Noord-Holland",1942,60423,41.59,21.7,12.5,9.2,38200,52.266666666667,5.1666666666667
+"Gorinchem","Zuid-Holland",0512,38506,18.83,26.6,10,16.6,28800,51.833333333333,4.9666666666667
+"Gouda (hoofdbetekenis)","Zuid-Holland",0513,75298,16.5,26.3,9.2,17.1,28900,52.016666666667,4.7
+"Groningen (gemeente)","Groningen (provincie)",0014,238016,185.6,24.7,12.6,12.1,25700,53.216666666667,6.5666666666667
+"Gulpen-Wittem","Limburg (Nederlandse provincie)",1729,14177,73.18,14.1,11.7,2.4,29300,50.8,5.8833333333333
+"Haaksbergen","Overijssel",0158,24494,104.82,12.5,6.7,5.8,29200,52.15,6.7333333333333
+"Haarlem","Noord-Holland",0392,165650,29.17,30.8,14.3,16.5,30300,52.383333333333,4.6333333333333
+"Haarlemmermeer","Noord-Holland",0394,162344,197.48,28.5,11.7,16.8,32600,52.316666666667,4.6833333333333
+"Halderberge","Noord-Brabant",1655,31020,74.47,15.9,7.9,8,29500,51.583333333333,4.5166666666667
+"Hardenberg (gemeente)","Overijssel",0160,62579,312.28,6.9,3.8,3.1,27900,52.566666666667,6.6
+"Harderwijk","Gelderland",0243,48946,38.89,19.2,6.9,12.2,28700,52.35,5.6166666666667
+"Hardinxveld-Giessendam","Zuid-Holland",0523,18678,16.91,7.5,3.6,3.9,29400,51.833333333333,4.8333333333333
+"Harlingen (gemeente)","Friesland",0072,16192,24.96,12.4,7.6,4.8,26000,53.3,5.6833333333333
+"Hattem","Gelderland",0244,12569,23.08,8,4.5,3.5,31500,52.483333333333,6.0666666666667
+"Heemskerk (hoofdbetekenis)","Noord-Holland",0396,39451,27.34,20.9,9.5,11.3,29800,52.5,4.6666666666667
+"Heemstede (Noord-Holland)","Noord-Holland",0397,27766,9.18,20.2,13.1,7.1,40500,52.35,4.6166666666667
+"Heerde (gemeente)","Gelderland",0246,19227,78.74,6.1,3.4,2.8,0,52.4,6.05
+"Heerenveen (gemeente)","Friesland",0074,51654,190.09,12.3,5.5,6.8,0,52.966666666667,6.05
+"Heerlen","Limburg (Nederlandse provincie)",0917,87116,44.94,29.1,18.4,10.7,0,50.883333333333,5.9666666666667
+"Heeze-Leende","Noord-Brabant",1658,16640,104.02,11.1,7.6,3.5,0,51.366666666667,5.55
+"Heiloo","Noord-Holland",0399,24280,18.7,13.1,8.1,5,0,52.6,4.7
+"Hellendoorn (gemeente)","Overijssel",0163,36245,137.91,7,4.1,2.9,0,52.35,6.45
+"Helmond","Noord-Brabant",0794,94967,53.18,27.8,14.2,13.6,0,51.483333333333,5.65
+"Hendrik-Ido-Ambacht","Zuid-Holland",0531,32176,10.61,14.8,6.3,8.5,0,51.85,4.6333333333333
+"Hengelo (Overijssel)","Overijssel",0164,82384,60.84,23.3,9.7,13.6,0,52.266666666667,6.7833333333333
+"'s-Hertogenbosch (gemeente)","Noord-Brabant",0796,158952,109.99,20.9,9.1,11.8,0,51.683333333333,5.3
+"Het Hogeland","Groningen (provincie)",1966,48255,482.75,7.7,4.4,3.3,0,53.4,6.6666666666667
+"Heumen (gemeente)","Gelderland",0252,16779,39.76,14,9.1,4.8,0,51.783333333333,5.8666666666667
+"Heusden (gemeente)","Noord-Brabant",0797,45854,78.88,14.5,7.9,6.6,0,51.7,5.1666666666667
+"Hillegom","Zuid-Holland",0534,22518,12.87,18.5,11.6,6.9,0,52.3,4.5833333333333
+"Hilvarenbeek (gemeente)","Noord-Brabant",0798,15956,94.85,8.1,5.6,2.5,0,51.483333333333,5.1333333333333
+"Hilversum","Noord-Holland",0402,93396,45.61,29.1,14,15.1,0,52.216666666667,5.1833333333333
+"Hoeksche Waard (gemeente)","Zuid-Holland",1963,89846,268.93,9.4,5.4,4.1,0,51.766666666667,4.4666666666667
+"Hof van Twente","Overijssel",1735,35450,212.56,9.3,5.7,3.7,0,52.25,6.7
+"Hollands Kroon (gemeente)","Noord-Holland",1911,49387,357.34,12,8.5,3.5,0,52.866666666667,4.8
+"Hoogeveen (gemeente)","Drenthe",0118,56437,127.54,11.1,5.8,5.3,0,52.066666666667,6.4666666666667
+"Hoorn (Noord-Holland)","Noord-Holland",0405,75240,20.38,24.4,9.5,14.9,0,52.633333333333,5.05
+"Horst aan de Maas","Limburg (Nederlandse provincie)",1507,43642,188.73,12.1,9.1,3,0,51.433333333333,6.1
+"Houten","Utrecht (provincie)",0321,50593,54.94,16,7.4,8.6,0,52.033333333333,5.1666666666667
+"Huizen","Noord-Holland",0406,41215,15.81,21.2,10,11.2,0,52.283333333333,5.25
+"Hulst (gemeente)","Zeeland (provincie)",0677 ,27586,201.71,28.7,25.4,3.3,0,51.316666666667,4.05
+"IJsselstein","Utrecht (provincie)",0353,33501,21.07,20.8,7.3,13.5,0,52.016666666667,5.05
+"Kaag en Braassem","Zuid-Holland",1884,28590,63.24,11.9,6.7,5.2,0,52.2,4.6166666666667
+"Kampen (gemeente)","Overijssel",0166,55650,142.18,10.2,4.3,6,0,52.55,5.9
+"Kapelle (gemeente)","Zeeland (provincie)",0678,13029,37.13,9.8,6.2,3.6,0,51.5,3.95
+"Katwijk (Zuid-Holland)","Zuid-Holland",0537,66635,24.75,11.5,5.8,5.7,0,52.2,4.4
+"Kerkrade (gemeente)","Limburg (Nederlandse provincie)",0928,45642,21.91,32.1,25.2,6.9,0,50.85,6.05
+"Koggenland","Noord-Holland",1598,23517,80.32,8.7,5,3.7,0,52.633333333333,4.95
+"Krimpen aan den IJssel","Zuid-Holland",0542,29501,7.69,16.6,7.5,9.1,0,51.916666666667,4.6
+"Krimpenerwaard (gemeente)","Zuid-Holland",1931,57729,148.4,11.4,5.4,6,0,51.983333333333,4.7833333333333
+"Laarbeek (gemeente)","Noord-Brabant",1659,23253,55.35,9.4,6.6,2.7,0,51.516666666667,5.6166666666667
+"Land van Cuijk (gemeente)","Noord-Brabant",1982,91489,351.87,12.3,6.9,5.4,0,51.666666666667,5.8666666666667
+"Landgraaf (gemeente)","Limburg (Nederlandse provincie)",0882,37146,24.58,23.1,18.4,4.7,0,50.9,6.0166666666667
+"Landsmeer","Noord-Holland",0415,11688,22.53,18.1,9.2,8.9,0,52.416666666667,4.9
+"Lansingerland","Zuid-Holland",1621,64737,53.42,18.9,7.5,11.3,0,52,4.5
+"Laren (Noord-Holland)","Noord-Holland",0417,11724,12.41,20.6,14.2,6.4,0,52.25,5.2166666666667
+"Leeuwarden (gemeente)","Friesland",0080,127064,238.38,17.7,7.9,9.9,0,53.2,5.7833333333333
+"Leiden (hoofdbetekenis)","Zuid-Holland",0546,127046,21.91,32.2,15.2,17,0,52.15,4.4833333333333
+"Leiderdorp","Zuid-Holland",0547,27723,11.58,22.1,9.9,12.2,0,52.15,4.5333333333333
+"Leidschendam-Voorburg","Zuid-Holland",1916,77798,32.55,32.4,14.8,17.6,0,52.083333333333,4.4
+"Lelystad","Flevoland",0995,83192,230.32,32.7,10.9,21.8,0,52.5,5.4666666666667
+"Leudal (gemeente)","Limburg (Nederlandse provincie)",1640,36106,162.73,13,9.9,3.1,0,51.25,5.9
+"Leusden","Utrecht (provincie)",0327,31514,58.54,14.2,8.1,6.2,0,52.133333333333,5.4166666666667
+"Lingewaard","Gelderland",1705,47241,62,10.7,6.8,3.9,0,51.9,5.9
+"Lisse","Zuid-Holland",0553,23373,15.69,14.1,8.8,5.2,0,52.25,4.55
+"Lochem (gemeente)","Gelderland",0262,34302,213.03,10.8,6,4.9,0,52.15,6.4
+"Loon op Zand (gemeente)","Noord-Brabant",0809,23802,49.94,11.4,7.1,4.3,0,51.616666666667,5.0666666666667
+"Lopik (gemeente)","Utrecht (provincie)",0331,14698,75.57,9.4,4.3,5.1,0,4.95,51.983333333333
+"Losser (gemeente)","Overijssel",0168,23386,98.76,14.6,10.9,3.7,0,52.25,7
+"Maasdriel","Gelderland",0263,26041,66.11,13.1,9.4,3.7,0,51.766666666667,5.3333333333333
+"Maasgouw (gemeente)","Limburg (Nederlandse provincie)",1641,24358,45.71,14.7,11.6,3,0,51.15,5.8833333333333
+"Maashorst (gemeente)","Noord-Brabant",1991,58934,138.24,0,0,0,0,51.683333333333,5.6166666666667
+"Maassluis","Zuid-Holland",0556,35346,8.48,28.6,9.1,19.5,0,51.933333333333,4.25
+"Maastricht","Limburg (Nederlandse provincie)",0935,122692,55.99,33.1,21.6,11.6,0,50.85,5.6833333333333
+"Medemblik (gemeente)","Noord-Holland",0420,46071,121.42,13.2,8.1,5.1,0,52.766666666667,5.1
+"Meerssen (gemeente)","Limburg (Nederlandse provincie)",0938,18594,26.96,12.9,9.6,3.3,0,50.883333333333,5.75
+"Meierijstad","Noord-Brabant",1948,83706,184.09,14.5,7.8,6.7,0,51.583333333333,5.4833333333333
+"Meppel","Drenthe",0119,35454,55.53,12,5.8,6.2,0,52.7,6.1833333333333
+"Middelburg (gemeente)","Zeeland (provincie)",0687,49919,48.42,19.4,10.1,9.3,0,51.5,3.6166666666667
+"Midden-Delfland","Zuid-Holland",1842,19449,47.19,12.6,6.4,6.3,0,51.966666666667,4.3
+"Midden-Drenthe","Drenthe",1731,34011,340.51,7.3,4.6,2.7,0,52.85,6.5
+"Midden-Groningen","Groningen (provincie)",1952,61573,280,14.8,6.4,8.5,0,53.15,6.75
+"Moerdijk (gemeente)","Noord-Brabant",1709,37717,159.15,12.4,7.3,5.1,0,51.65,4.5166666666667
+"Molenlanden","Zuid-Holland",1978,45143,181.73,7,4,2.9,0,51.85,4.8
+"Montferland (gemeente)","Gelderland",1955,36891,105.7,12.4,8.5,4,0,51.933333333333,6.15
+"Montfoort","Utrecht (provincie)",0335,13911,37.57,10.5,9.9,5.5,0,52.033333333333,4.95
+"Mook en Middelaar","Limburg (Nederlandse provincie)",0944,8024,17.38,14.1,9.9,4.1,0,51.75,5.8666666666667
+"Neder-Betuwe (gemeente)","Gelderland",1740,25457,59.98,8.6,5.9,2.7,0,51.933333333333,5.6333333333333
+"Nederweert (gemeente)","Limburg (Nederlandse provincie)",0946,17476,99.98,9.5,6.7,2.8,0,51.283333333333,5.75
+"Nieuwegein","Utrecht (provincie)",0356,65540,23.51,27.9,10.4,17.5,0,52.016666666667,5.0833333333333
+"Nieuwkoop","Zuid-Holland",0569,29434,78.05,11.2,6.5,4.7,0,52.15,4.8
+"Nijkerk (gemeente)","Gelderland",0267,45029,69.34,12.1,5.4,6.7,0,52.2,5.4833333333333
+"Nijmegen (hoofdbetekenis)","Gelderland",0268,182399,53.09,26.5,12.1,14.4,0,51.833333333333,5.8666666666667
+"Nissewaard","Zuid-Holland",1930,86857,73.58,25.3,9.5,15.8,0,51.833333333333,4.3
+"Noardeast-Fryslân","Friesland",1970,45818,377.83,5.8,3.2,2.6,0,53.316666666667,5.9833333333333
+"Noord-Beveland","Zeeland (provincie)",1695,7881,85.96,13.4,10.4,3,0,51.583333333333,3.7333333333333
+"Noordenveld (gemeente)","Drenthe",1699,31612,199.41,7.9,4.6,3.3,0,53.133333333333,6.4166666666667
+"Noordoostpolder","Flevoland",0171,49909,458.17,15.8,8.1,7.8,0,52.716666666667,5.7
+"Noordwijk (Zuid-Holland)","Zuid-Holland",0575,45258,58.37,17.9,12.5,5.4,0,52.25,4.4333333333333
+"Nuenen, Gerwen en Nederwetten","Noord-Brabant",0820,24046,33.71,13.5,9.1,4.4,0,51.483333333333,5.5166666666667
+"Nunspeet (gemeente)","Gelderland",0302,28749,128.74,7.1,3.6,3.5,0,52.333333333333,5.7833333333333
+"Oegstgeest","Zuid-Holland",0579,25795,7.31,24.8,15.7,9.1,0,52.183333333333,4.4666666666667
+"Oirschot (gemeente)","Noord-Brabant",0823,19197,101.78,8.1,5.2,3,0,51.5,5.3
+"Oisterwijk (gemeente)","Noord-Brabant",0824,32963,63.84,11.5,6.6,4.9,0,51.566666666667,5.2
+"Oldambt (gemeente)","Groningen (provincie)",1895,39073,226.66,11.6,7.2,4.1,0,53.2,7.0833333333333
+"Oldebroek (gemeente)","Gelderland",0269,24263,97.65,6,3.4,2.6,0,52.466666666667,5.9166666666667
+"Oldenzaal","Overijssel",0173,31921,21.55,15.8,7.9,7.9,0,52.3,6.9166666666667
+"Olst-Wijhe","Overijssel",1773,18682,113.84,8.3,4.6,3.7,0,52.333333333333,6.1
+"Ommen (gemeente)","Overijssel",0175,18955,179.9,7.8,4.6,3.2,0,52.516666666667,6.4166666666667
+"Oost Gelre","Gelderland",1586,29863,109.93,8.4,5.2,3.1,0,51.983333333333,6.5833333333333
+"Oosterhout (gemeente)","Noord-Brabant",0826,57466,71.47,20.7,9.5,11.2,0,51.65,4.85
+"Ooststellingwerf","Friesland",0085,25854,223.42,7.2,4.3,2.9,0,53,6.2833333333333
+"Oostzaan","Noord-Holland",0431,9719,11.53,14.5,6.5,8,0,52.433333333333,4.8666666666667
+"Opmeer","Noord-Holland",0432,12158,41.5,9.4,6.4,3,0,52.7,4.9666666666667
+"Opsterland","Friesland",0086,30064,224.4,6.4,3.5,2.9,0,53.083333333333,6.1333333333333
+"Oss (gemeente)","Noord-Brabant",0828,94457,163.16,19.4,9.4,9.9,0,51.75,5.5166666666667
+"Oude IJsselstreek","Gelderland",1509,39624,136.15,13.7,7.2,6.5,0,51.866666666667,6.3833333333333
+"Ouder-Amstel","Noord-Holland",0437,14265,24.08,28.1,13.3,14.8,0,52.283333333333,4.9
+"Oudewater","Utrecht (provincie)",0589,10237,38.9,8.8,4.5,4.3,0,52.016666666667,4.8666666666667
+"Overbetuwe","Gelderland",1734,48703,109.19,11.9,7.1,4.8,0,51.866666666667,5.85
+"Papendrecht","Zuid-Holland",0590,32267,9.41,18.6,8.4,10.2,0,51.833333333333,4.7
+"Peel en Maas","Limburg (Nederlandse provincie)",1894,45314,159.37,11.3,7.4,3.9,0,51.316666666667,5.9833333333333
+"Pekela","Groningen (provincie)",0765,12429,49.04,9.1,5.9,3.1,0,53.1,7
+"Pijnacker-Nootdorp","Zuid-Holland",1926,57688,37.08,22,8.8,13.1,0,52.016666666667,4.4166666666667
+"Purmerend (gemeente)","Noord-Holland",0439,94129,95.22,27.6,9.4,18.1,0,52.5,4.95
+"Putten (gemeente)","Gelderland",0273,24894,85.22,7.9,4.4,3.5,0,52.233333333333,5.5833333333333
+"Raalte (gemeente)","Overijssel",0177,38468,170.99,6.7,3.4,3.3,0,52.4,6.2833333333333
+"Reimerswaal (gemeente)","Zeeland (provincie)",0703,23265,101.8,14.5,10.1,4.4,0,51.45,4.0166666666667
+"Renkum (gemeente)","Gelderland",0274,31459,45.95,15.6,9.7,5.9,0,51.983333333333,5.85
+"Renswoude","Utrecht (provincie)",0339,5748,18.4,7.3,4.2,3.1,0,52.066666666667,5.5333333333333
+"Reusel-De Mierden","Noord-Brabant",1667,13551,77.88,9.1,6.4,2.7,0,51.35,5.15
+"Rheden (gemeente)","Gelderland",0275,43522,81.74,17.2,9.5,7.7,0,52,6.0333333333333
+"Rhenen","Utrecht (provincie)",0340,20332,42.08,12,5.9,6.1,0,51.95,5.5666666666667
+"Ridderkerk","Zuid-Holland",0597,47503,23.72,20,7.8,12.1,0,51.866666666667,4.6
+"Rijssen-Holten","Overijssel",1742,38502,94.13,8.1,3,5.2,0,52.3,6.5166666666667
+"Rijswijk (Zuid-Holland)","Zuid-Holland",0603,58050,13.96,36.8,15.2,21.5,0,52.033333333333,4.3166666666667
+"Roerdalen","Limburg (Nederlandse provincie)",1669,20699,88.21,17.6,14,3.6,0,51.133333333333,6
+"Roermond (gemeente)","Limburg (Nederlandse provincie)",0957,59992,60.81,29.7,15,14.6,0,51.2,5.9833333333333
+"Roosendaal (gemeente)","Noord-Brabant",1674,77578,106.5,26.1,11.9,14.2,0,51.533333333333,4.4666666666667
+"Rotterdam (gemeente)","Zuid-Holland",0599,664311,217.55,52.3,13.4,38.9,0,51.95,4.4166666666667
+"Rozendaal","Gelderland",0277,1754,27.9,15.4,9.9,5.5,0,52,5.9666666666667
+"Rucphen (gemeente)","Noord-Brabant",0840,23608,64.41,10.3,7.1,3.2,0,51.516666666667,4.55
+"Saba","Caribisch Nederland",9003,1911,13,0,0,0,0,17.616666666667,63.233333333333
+"Schagen (gemeente)","Noord-Holland",0441,47477,168.25,11.4,7,4.4,0,52.783333333333,4.75
+"Scherpenzeel (Gelderland)","Gelderland",0279,10393,13.79,7.6,4.4,3.2,0,52.066666666667,5.4833333333333
+"Schiedam","Zuid-Holland",0606,80723,17.82,43.7,13.9,29.8,0,51.916666666667,4.4
+"Schiermonnikoog","Friesland",0088,982,40.5,10.9,8.2,2.6,0,53.466666666667,6.15
+"Schouwen-Duiveland","Zeeland (provincie)",1676,34521,229.65,9.9,6.6,3.3,0,51.666666666667,3.8833333333333
+"Simpelveld (gemeente)","Limburg (Nederlandse provincie)",0965,10361,16.03,18.2,15.8,2.4,0,50.883333333333,5.9166666666667
+"Sint Eustatius","Caribisch Nederland",9002,3242,21,0,0,0,0,17.483333333333,62.966666666667
+"Sint-Michielsgestel (gemeente)","Noord-Brabant",0845,30121,58.38,8.7,5.4,3.3,0,51.633333333333,5.35
+"Sittard-Geleen","Limburg (Nederlandse provincie)",1883,92177,79.01,22.4,15,7.4,0,51,5.85
+"Sliedrecht","Zuid-Holland",0610,26211,12.84,14.7,4.9,9.8,0,51.816666666667,4.7666666666667
+"Sluis (gemeente)","Zeeland (provincie)",1714,23244,279.36,28.1,24.9,3.2,0,51.333333333333,3.5
+"Smallingerland","Friesland",0090,56173,117.31,11.7,5.2,6.5,0,53.166666666667,6.1666666666667
+"Soest (Nederland)","Utrecht (provincie)",0342,47423,46.24,21.6,8.8,12.9,0,52.183333333333,5.2833333333333
+"Someren (gemeente)","Noord-Brabant",0847,20090,80.27,10.1,7.4,2.7,0,51.383333333333,5.7
+"Son en Breugel","Noord-Brabant",0848,18027,25.95,13.5,9,4.5,0,51.5,5.5
+"Stadskanaal (gemeente)","Groningen (provincie)",0037,32169,117.64,7.9,4.7,3.2,0,52.983333333333,6.95
+"Staphorst (gemeente)","Overijssel",0180,17640,133.99,4.6,2.5,2.1,0,52.633333333333,6.2
+"Stede Broec","Noord-Holland",0532,22116,14.5,13.4,8.1,5.2,0,52.7,5.2166666666667
+"Steenbergen (gemeente)","Noord-Brabant",0851,24582,146.43,15.3,11.4,3.8,0,51.583333333333,4.3166666666667
+"Steenwijkerland","Overijssel",1708,45383,288.27,8.8,4.7,4.1,0,52.783333333333,6.1166666666667
+"Stein (gemeente)","Limburg (Nederlandse provincie)",0971,24783,21.08,14.3,10.8,3.5,0,50.966666666667,5.75
+"Stichtse Vecht","Utrecht (provincie)",1904,65755,96.1,18.8,9.2,9.6,0,52.2,5
+"Súdwest-Fryslân","Friesland",1900,90873,523.01,9.3,5.1,4.2,0,53,5.5333333333333
+"Terneuzen (gemeente)","Zeeland (provincie)",0715,54990,250.38,28,19.8,8.2,0,51.3,3.8333333333333
+"Terschelling","Friesland",0093,4890,85.26,7.9,6,1.9,0,53.4,5.35
+"Texel","Noord-Holland",0448,13950,162,11,7.2,3.8,0,53.066666666667,4.8
+"Teylingen (gemeente)","Zuid-Holland",1525,38521,28.38,16.3,9.6,6.7,0,52.216666666667,4.5
+"Tholen (gemeente)","Zeeland (provincie)",0716,26793,146.71,9.4,5.7,3.7,0,51.583333333333,4.1166666666667
+"Tiel","Gelderland",0281,42672,32.88,27,10.9,16.2,0,51.883333333333,5.4333333333333
+"Tilburg (gemeente)","Noord-Brabant",0855,227794,116.17,28.8,12.2,16.6,0,51.55,5.0833333333333
+"Tubbergen (gemeente)","Overijssel",0183,21413,147,4.7,3.3,1.4,0,52.4,6.7666666666667
+"Twenterand","Overijssel",1700,33867,106.17,5.4,3.1,2.3,0,52.4,6.6166666666667
+"Tynaarlo (gemeente)","Drenthe",1730,34603,143,8.8,5.3,3.5,0,53.066666666667,6.5666666666667
+"Tietjerksteradeel","Friesland",0737,32441,148.86,6.5,3.2,3.3,0,53.183333333333,5.9833333333333
+"Uitgeest","Noord-Holland",0450,13441,19.16,12.6,6.9,5.7,0,52.516666666667,4.7
+"Uithoorn","Noord-Holland",0451,31406,18.14,27.1,12.3,14.7,0,52.233333333333,4.8166666666667
+"Urk","Flevoland",0184,21847,13.15,4.2,1.6,2.5,0,52.65,5.6
+"Utrecht (stad)","Utrecht (provincie)",0344,368024,93.83,36.1,12.2,23.9,0,52.083333333333,5.1166666666667
+"Utrechtse Heuvelrug (gemeente)","Utrecht (provincie)",1581,50353,132.01,15.8,8.5,7.3,0,52.033333333333,5.45
+"Vaals (gemeente)","Limburg (Nederlandse provincie)",0981,10173,23.89,52.1,46.8,5.3,0,50.766666666667,6.0166666666667
+"Valkenburg aan de Geul","Limburg (Nederlandse provincie)",0994,16456,36.73,15,11.5,3.5,0,50.85,5.8166666666667
+"Valkenswaard (gemeente)","Noord-Brabant",0858,31548,54.92,14.5,9.6,5,0,51.35,5.4666666666667
+"Veendam (gemeente)","Groningen (provincie)",0047,27620,76,13.1,5.4,7.7,0,53.1,6.8666666666667
+"Veenendaal","Utrecht (provincie)",0345,68563,19.46,18.6,6.1,12.5,0,52.016666666667,5.55
+"Veere (gemeente)","Zeeland (provincie)",0717,22071,132.56,8.8,6.2,2.6,0,51.55,3.5333333333333
+"Veldhoven (hoofdbetekenis)","Noord-Brabant",0861,46452,31.69,18.4,10.4,8,0,51.4,5.4
+"Velsen","Noord-Holland",0453,68857,45.2,19.5,9.9,9.6,0,52.466666666667,4.6166666666667
+"Venlo (gemeente)","Limburg (Nederlandse provincie)",0983,103312,124.25,28.9,16.7,12.2,0,51.366666666667,6.1666666666667
+"Venray (gemeente)","Limburg (Nederlandse provincie)",0984,44648,163.27,20.8,11.5,9.3,0,51.533333333333,5.9666666666667
+"Vijfheerenlanden (gemeente)","Utrecht (provincie)",1961,60184,146.41,17,6.3,10.7,0,51.933333333333,5.0666666666667
+"Vlaardingen","Zuid-Holland",0622,75126,23.57,32.1,10.7,21.4,0,51.916666666667,4.35
+"Vlieland (hoofdbetekenis)","Friesland",0096,1254,39.15,15.2,13.2,2.1,0,53.466666666667,5.1
+"Vlissingen","Zeeland (provincie)",0718,45182,34.31,26.6,14.4,12.2,0,51.45,3.5833333333333
+"Voerendaal (gemeente)","Limburg (Nederlandse provincie)",0986,12419,31.51,14,10.6,3.4,0,50.883333333333,5.9166666666667
+"Voorne aan Zee","Zuid-Holland",1992,73993,174.81,0,0,0,0,51.866666666667,4.1333333333333
+"Voorschoten","Zuid-Holland",0626,25585,11.14,22.6,13.1,9.5,0,52.116666666667,4.45
+"Voorst (gemeente)","Gelderland",0285,25227,122.97,8.3,4.9,3.4,0,52.233333333333,6.0833333333333
+"Vught (gemeente)","Noord-Brabant",0865,32113,33.75,14.3,9.2,5.2,0,51.65,5.2833333333333
+"Waadhoeke","Friesland",1949,46800,284.86,9.1,5.5,3.6,0,53.183333333333,5.5333333333333
+"Waalre (gemeente)","Noord-Brabant",0866,17965,22.39,17.5,11.1,6.5,0,51.383333333333,5.4333333333333
+"Waalwijk (gemeente)","Noord-Brabant",0867,49934,64.58,19,10.2,8.8,0,51.7,5.1
+"Waddinxveen","Zuid-Holland",0627,32690,27.77,17.5,8,9.5,0,52.033333333333,4.6333333333333
+"Wageningen (Nederland)","Gelderland",0289,41098,30.42,28.1,14,14.2,0,51.966666666667,5.6666666666667
+"Wassenaar (gemeente)","Zuid-Holland",0629,27131,51.11,34.3,21.9,12.3,0,52.15,4.3833333333333
+"Waterland (gemeente)","Noord-Holland",0852,17623,52.11,13.5,7.7,5.8,0,52.45,5.0166666666667
+"Weert (gemeente)","Limburg (Nederlandse provincie)",0988,50874,104.32,22.2,11.5,10.7,0,51.25,5.7
+"West Betuwe","Gelderland",1960,52742,216.12,9.6,5.6,4,0,51.883333333333,5.2833333333333
+"West Maas en Waal","Gelderland",0668,20082,76.76,8.5,5.5,2.9,0,51.883333333333,5.5166666666667
+"Westerkwartier (gemeente)","Groningen (provincie)",1969,64984,362.69,7.3,4.3,3,0,53.216666666667,6.35
+"Westerveld (gemeente)","Drenthe",1701,19858,278.35,6.4,4.2,2.2,0,52.766666666667,6.2333333333333
+"Westervoort","Gelderland",0293,15115,7.03,18.6,9.3,9.4,0,51.95,5.9666666666667
+"Westerwolde (gemeente)","Groningen (provincie)",1950,26331,275.67,13,6.1,6.9,0,53.083333333333,7.1166666666667
+"Westland (gemeente)","Zuid-Holland",1783,114996,81.27,16,9.2,6.8,0,52,4.2166666666667
+"Weststellingwerf","Friesland",0098,26500,220.3,7.8,4.1,3.8,0,52.883333333333,6
+"Wierden","Overijssel",0189,24879,94.63,7.3,4.6,2.7,0,52.35,6.5833333333333
+"Wijchen (gemeente)","Gelderland",0296,41519,66.18,12.6,7.6,5,0,51.8,5.7166666666667
+"Wijdemeren","Noord-Holland",1696,24645,47.6,14.4,9,5.4,0,52.216666666667,5.1
+"Wijk bij Duurstede","Utrecht (provincie)",0352,24000,47.62,11.8,0,0,0,51.983333333333,5.3333333333333
+"Winterswijk (gemeente)","Gelderland",0294,29250,138.14,14.9,8.7,6.2,0,51.966666666667,6.7166666666667
+"Woensdrecht (gemeente)","Noord-Brabant",0873,22178,91.66,24,20.5,3.5,0,51.433333333333,4.3
+"Woerden","Utrecht (provincie)",0632,53253,88.57,15.4,6.9,8.6,0,52.083333333333,4.8833333333333
+"Wormerland","Noord-Holland",0880,16606,38.59,14,6.5,7.5,0,52.5,4.8666666666667
+"Woudenberg","Utrecht (provincie)",0351,14410,36.53,10.6,4.8,5.9,0,52.066666666667,5.4
+"Zaanstad","Noord-Holland",0479,159806,73.87,33.3,10.9,22.3,0,52.466666666667,4.7833333333333
+"Zaltbommel (gemeente)","Gelderland",0297,30315,79.38,13.9,7.9,6,0,51.816666666667,5.25
+"Zandvoort","Noord-Holland",0473,17557,32.12,23.4,14.3,9,0,52.366666666667,4.5333333333333
+"Zeewolde","Flevoland",0050,23719,247.23,18.4,12.8,5.6,0,52.333333333333,5.5333333333333
+"Zeist","Utrecht (provincie)",0355,66612,48.51,23.6,9.7,14,0,52.083333333333,5.2333333333333
+"Zevenaar (gemeente)","Gelderland",0299,45065,92.6,14.9,10,4.9,0,51.916666666667,6.0833333333333
+"Zoetermeer","Zuid-Holland",0637,127047,34.45,32.1,10.9,21.2,0,52.05,4.5
+"Zoeterwoude","Zuid-Holland",0638,9465,21.19,13.1,6.6,6.4,0,52.1,4.5
+"Zuidplas (gemeente)","Zuid-Holland",1892,47114,58.02,17.3,8.2,9.1,0,52.016666666667,4.6166666666667
+"Zundert (gemeente)","Noord-Brabant",0879,22527,120.65,16,12.4,3.6,0,51.466666666667,4.65
+"Zutphen (gemeente)","Gelderland",0301,48545,40.95,18.1,8.6,9.5,0,52.133333333333,6.2
+"Zwartewaterland","Overijssel",1896,23390,82.49,6.2,3.6,2.7,0,52.583333333333,6.0833333333333
+"Zwijndrecht (Nederland)","Zuid-Holland",0642,44992,20.3,23.2,8.2,15,0,51.816666666667,4.65
+"Zwolle (hoofdbetekenis)","Overijssel",0193,132454,111.1,17.4,6.8,10.5,0,52.516666666667,6.0833333333333

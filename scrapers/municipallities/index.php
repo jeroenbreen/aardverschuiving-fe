@@ -60,12 +60,22 @@ function get_lat_lon($url) {
     }
 }
 
-$max = 500;
+// var_dump($rows);
+
+$start = 327;
+$max = 346;
+$todo = $max - $start;
 
 foreach ($rows as $row) {
-    if ($index > 1 && count($ms) < $max) {
+    if ($index > $start && count($ms) < $todo ) {
         $m = new stdClass();
-        $m->title = $row->find('th', 0)->find('a', 1)->title;
+        $title_el = $row->find('th', 0)->find('a', 1);
+        if ($title_el) {
+            $m->title = $title_el->title;
+        } else {
+            $m->title = '';
+        }
+        $m->cbsCode = get_td_content($row, 0, 'td');
         $m->province = $row->find('td', 1)->find('a', 0)->title;
         $m->population = (int)str_replace('.', '', get_td_content($row, 2, 'td'));
         $m->area = comma_to_float(get_td_content($row, 3, 'td'));
@@ -92,6 +102,7 @@ foreach ($rows as $row) {
 foreach ($ms as $m) {
     echo '"' . $m->title . '",';
     echo '"' . $m->province . '",';
+    echo $m->cbsCode . ",";
     echo $m->population . ",";
     echo $m->area . ",";
     echo $m->migrants . ",";

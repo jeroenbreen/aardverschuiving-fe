@@ -1,9 +1,8 @@
-import { Municipality } from "../types";
-
-const municipalities: Municipality[] = [
+export default [
     {
         title: "Aa en Hunze",
         province: "Drenthe",
+        cbs_code: 1680,
         population: 25728,
         area: 276.09,
         migrants: 6.7,
@@ -16,6 +15,7 @@ const municipalities: Municipality[] = [
     {
         title: "Aalsmeer",
         province: "Noord-Holland",
+        cbs_code: "0358",
         population: 33071,
         area: 20.12,
         migrants: 20.4,
@@ -28,6 +28,7 @@ const municipalities: Municipality[] = [
     {
         title: "Aalten (gemeente)",
         province: "Gelderland",
+        cbs_code: "0197",
         population: 27269,
         area: 96.54,
         migrants: 11.4,
@@ -40,6 +41,7 @@ const municipalities: Municipality[] = [
     {
         title: "Achtkarspelen",
         province: "Friesland",
+        cbs_code: "0059",
         population: 28110,
         area: 102.23,
         migrants: 4.5,
@@ -52,6 +54,7 @@ const municipalities: Municipality[] = [
     {
         title: "Alblasserdam",
         province: "Zuid-Holland",
+        cbs_code: "0482",
         population: 20399,
         area: 8.78,
         migrants: 15.1,
@@ -64,6 +67,7 @@ const municipalities: Municipality[] = [
     {
         title: "Albrandswaard",
         province: "Zuid-Holland",
+        cbs_code: "0613",
         population: 26349,
         area: 21.69,
         migrants: 21.5,
@@ -76,6 +80,7 @@ const municipalities: Municipality[] = [
     {
         title: "Alkmaar (gemeente)",
         province: "Noord-Holland",
+        cbs_code: "0361",
         population: 111878,
         area: 110.46,
         migrants: 22.6,
@@ -88,6 +93,7 @@ const municipalities: Municipality[] = [
     {
         title: "Almelo",
         province: "Overijssel",
+        cbs_code: "0141",
         population: 74034,
         area: 67.27,
         migrants: 26.3,
@@ -100,6 +106,7 @@ const municipalities: Municipality[] = [
     {
         title: "Almere",
         province: "Flevoland",
+        cbs_code: "0034",
         population: 223183,
         area: 129.19,
         migrants: 43.8,
@@ -112,6 +119,7 @@ const municipalities: Municipality[] = [
     {
         title: "Alphen aan den Rijn (gemeente)",
         province: "Zuid-Holland",
+        cbs_code: "0484",
         population: 114313,
         area: 126.23,
         migrants: 20.8,
@@ -124,6 +132,7 @@ const municipalities: Municipality[] = [
     {
         title: "Alphen-Chaam",
         province: "Noord-Brabant",
+        cbs_code: 1723,
         population: 10462,
         area: 93.04,
         migrants: 14.5,
@@ -136,6 +145,7 @@ const municipalities: Municipality[] = [
     {
         title: "Altena (Nederlandse gemeente)",
         province: "Noord-Brabant",
+        cbs_code: 1959,
         population: 57776,
         area: 200.63,
         migrants: 7.5,
@@ -148,6 +158,7 @@ const municipalities: Municipality[] = [
     {
         title: "Ameland (hoofdbetekenis)",
         province: "Friesland",
+        cbs_code: "0060",
         population: 3834,
         area: 59.11,
         migrants: 8.1,
@@ -160,6 +171,7 @@ const municipalities: Municipality[] = [
     {
         title: "Amersfoort (hoofdbetekenis)",
         province: "Utrecht (provincie)",
+        cbs_code: "0307",
         population: 160902,
         area: 62.62,
         migrants: 25.1,
@@ -172,6 +184,7 @@ const municipalities: Municipality[] = [
     {
         title: "Amstelveen",
         province: "Noord-Holland",
+        cbs_code: "0362",
         population: 94396,
         area: 41.13,
         migrants: 45.8,
@@ -184,6 +197,7 @@ const municipalities: Municipality[] = [
     {
         title: "Amsterdam (gemeente)",
         province: "Noord-Holland",
+        cbs_code: "0363",
         population: 922679,
         area: 165.5,
         migrants: 55.6,
@@ -196,6 +210,7 @@ const municipalities: Municipality[] = [
     {
         title: "Apeldoorn (gemeente)",
         province: "Gelderland",
+        cbs_code: "0200",
         population: 167205,
         area: 339.89,
         migrants: 18.1,
@@ -208,6 +223,7 @@ const municipalities: Municipality[] = [
     {
         title: "Arnhem",
         province: "Gelderland",
+        cbs_code: "0202",
         population: 165896,
         area: 97.82,
         migrants: 32.8,
@@ -220,6 +236,7 @@ const municipalities: Municipality[] = [
     {
         title: "Assen",
         province: "Drenthe",
+        cbs_code: "0106",
         population: 69426,
         area: 81.89,
         migrants: 16.2,
@@ -232,6 +249,7 @@ const municipalities: Municipality[] = [
     {
         title: "Asten (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0743",
         population: 17267,
         area: 70.17,
         migrants: 11.3,
@@ -244,6 +262,7 @@ const municipalities: Municipality[] = [
     {
         title: "Baarle-Nassau",
         province: "Noord-Brabant",
+        cbs_code: "0744",
         population: 7080,
         area: 76.14,
         migrants: 25.8,
@@ -256,6 +275,7 @@ const municipalities: Municipality[] = [
     {
         title: "Baarn",
         province: "Utrecht (provincie)",
+        cbs_code: "0308",
         population: 25032,
         area: 32.54,
         migrants: 18.5,
@@ -268,6 +288,7 @@ const municipalities: Municipality[] = [
     {
         title: "Barendrecht",
         province: "Zuid-Holland",
+        cbs_code: "0489",
         population: 48807,
         area: 19.75,
         migrants: 25.2,
@@ -280,6 +301,7 @@ const municipalities: Municipality[] = [
     {
         title: "Barneveld (gemeente)",
         province: "Gelderland",
+        cbs_code: "0203",
         population: 61769,
         area: 175.9,
         migrants: 8.9,
@@ -292,6 +314,7 @@ const municipalities: Municipality[] = [
     {
         title: "Beek (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0888",
         population: 16152,
         area: 21.03,
         migrants: 15.2,
@@ -304,6 +327,7 @@ const municipalities: Municipality[] = [
     {
         title: "Beekdaelen",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: 1954,
         population: 35941,
         area: 78.3,
         migrants: 15.7,
@@ -316,6 +340,7 @@ const municipalities: Municipality[] = [
     {
         title: "Beesel (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0889",
         population: 13450,
         area: 27.99,
         migrants: 16.9,
@@ -328,6 +353,7 @@ const municipalities: Municipality[] = [
     {
         title: "Berg en Dal (gemeente)",
         province: "Gelderland",
+        cbs_code: 1945,
         population: 35439,
         area: 86.31,
         migrants: 14.5,
@@ -340,6 +366,7 @@ const municipalities: Municipality[] = [
     {
         title: "Bergeijk (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: 1724,
         population: 19089,
         area: 101,
         migrants: 10.8,
@@ -352,6 +379,7 @@ const municipalities: Municipality[] = [
     {
         title: "Bergen (Limburg, gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0893",
         population: 13100,
         area: 103.24,
         migrants: 15.8,
@@ -364,6 +392,7 @@ const municipalities: Municipality[] = [
     {
         title: "Bergen (Noord-Holland)",
         province: "Noord-Holland",
+        cbs_code: "0373",
         population: 30133,
         area: 98.96,
         migrants: 13.6,
@@ -376,6 +405,7 @@ const municipalities: Municipality[] = [
     {
         title: "Bergen op Zoom (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0748",
         population: 68970,
         area: 79.96,
         migrants: 25.7,
@@ -388,6 +418,7 @@ const municipalities: Municipality[] = [
     {
         title: "Berkelland",
         province: "Gelderland",
+        cbs_code: 1859,
         population: 43992,
         area: 258.06,
         migrants: 8,
@@ -400,6 +431,7 @@ const municipalities: Municipality[] = [
     {
         title: "Bernheze",
         province: "Noord-Brabant",
+        cbs_code: 1721,
         population: 32277,
         area: 89.73,
         migrants: 9.2,
@@ -412,6 +444,7 @@ const municipalities: Municipality[] = [
     {
         title: "Best",
         province: "Noord-Brabant",
+        cbs_code: "0753",
         population: 30883,
         area: 34.3,
         migrants: 17.5,
@@ -424,6 +457,7 @@ const municipalities: Municipality[] = [
     {
         title: "Beuningen (Gelderland)",
         province: "Gelderland",
+        cbs_code: "0209",
         population: 26576,
         area: 43.65,
         migrants: 13.1,
@@ -436,6 +470,7 @@ const municipalities: Municipality[] = [
     {
         title: "Beverwijk",
         province: "Noord-Holland",
+        cbs_code: "0375",
         population: 42678,
         area: 18.4,
         migrants: 27.7,
@@ -448,6 +483,7 @@ const municipalities: Municipality[] = [
     {
         title: "Bladel (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: 1728,
         population: 21020,
         area: 75.33,
         migrants: 10.5,
@@ -460,6 +496,7 @@ const municipalities: Municipality[] = [
     {
         title: "Blaricum",
         province: "Noord-Holland",
+        cbs_code: "0376",
         population: 12486,
         area: 11.11,
         migrants: 19.8,
@@ -472,6 +509,7 @@ const municipalities: Municipality[] = [
     {
         title: "Bloemendaal (Noord-Holland)",
         province: "Noord-Holland",
+        cbs_code: "0377",
         population: 23932,
         area: 39.79,
         migrants: 19.2,
@@ -484,6 +522,7 @@ const municipalities: Municipality[] = [
     {
         title: "Bodegraven-Reeuwijk",
         province: "Zuid-Holland",
+        cbs_code: 1901,
         population: 36303,
         area: 75.38,
         migrants: 13.4,
@@ -496,6 +535,7 @@ const municipalities: Municipality[] = [
     {
         title: "Boekel (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0755",
         population: 11204,
         area: 34.51,
         migrants: 8.3,
@@ -508,6 +548,7 @@ const municipalities: Municipality[] = [
     {
         title: "Bonaire",
         province: "Caribisch Nederland",
+        cbs_code: 9001,
         population: 22573,
         area: 288,
         migrants: 0,
@@ -520,6 +561,7 @@ const municipalities: Municipality[] = [
     {
         title: "Borger-Odoorn",
         province: "Drenthe",
+        cbs_code: 1681,
         population: 25915,
         area: 274.53,
         migrants: 6.4,
@@ -532,6 +574,7 @@ const municipalities: Municipality[] = [
     {
         title: "Borne (Overijssel)",
         province: "Overijssel",
+        cbs_code: "0147",
         population: 24518,
         area: 26,
         migrants: 11,
@@ -544,6 +587,7 @@ const municipalities: Municipality[] = [
     {
         title: "Borsele (gemeente)",
         province: "Zeeland (provincie)",
+        cbs_code: "0654",
         population: 23164,
         area: 141.57,
         migrants: 9.5,
@@ -556,6 +600,7 @@ const municipalities: Municipality[] = [
     {
         title: "Boxtel (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0757",
         population: 33828,
         area: 63.73,
         migrants: 16.9,
@@ -568,6 +613,7 @@ const municipalities: Municipality[] = [
     {
         title: "Breda (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0758",
         population: 186504,
         area: 125.74,
         migrants: 24.2,
@@ -580,6 +626,7 @@ const municipalities: Municipality[] = [
     {
         title: "Bronckhorst (hoofdbetekenis)",
         province: "Gelderland",
+        cbs_code: 1876,
         population: 36261,
         area: 283.5,
         migrants: 6.1,
@@ -592,6 +639,7 @@ const municipalities: Municipality[] = [
     {
         title: "Brummen (gemeente)",
         province: "Gelderland",
+        cbs_code: "0213",
         population: 21109,
         area: 83.65,
         migrants: 12.1,
@@ -604,6 +652,7 @@ const municipalities: Municipality[] = [
     {
         title: "Brunssum",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0899",
         population: 27647,
         area: 17.25,
         migrants: 24.1,
@@ -616,6 +665,7 @@ const municipalities: Municipality[] = [
     {
         title: "Bunnik (gemeente)",
         province: "Utrecht (provincie)",
+        cbs_code: "0312",
         population: 15997,
         area: 36.97,
         migrants: 13.2,
@@ -628,6 +678,7 @@ const municipalities: Municipality[] = [
     {
         title: "Bunschoten",
         province: "Utrecht (provincie)",
+        cbs_code: "0313",
         population: 22502,
         area: 30.38,
         migrants: 11.7,
@@ -640,6 +691,7 @@ const municipalities: Municipality[] = [
     {
         title: "Buren (gemeente)",
         province: "Gelderland",
+        cbs_code: "0214",
         population: 27719,
         area: 133.89,
         migrants: 8.7,
@@ -652,6 +704,7 @@ const municipalities: Municipality[] = [
     {
         title: "Capelle aan den IJssel",
         province: "Zuid-Holland",
+        cbs_code: "0502",
         population: 67513,
         area: 14.14,
         migrants: 36.2,
@@ -664,6 +717,7 @@ const municipalities: Municipality[] = [
     {
         title: "Castricum",
         province: "Noord-Holland",
+        cbs_code: "0383",
         population: 36298,
         area: 49.68,
         migrants: 11.7,
@@ -676,6 +730,7 @@ const municipalities: Municipality[] = [
     {
         title: "Coevorden (gemeente)",
         province: "Drenthe",
+        cbs_code: "0109",
         population: 35741,
         area: 296.07,
         migrants: 9.2,
@@ -688,6 +743,7 @@ const municipalities: Municipality[] = [
     {
         title: "Cranendonck",
         province: "Noord-Brabant",
+        cbs_code: 1706,
         population: 20879,
         area: 76.4,
         migrants: 18.2,
@@ -700,6 +756,7 @@ const municipalities: Municipality[] = [
     {
         title: "Culemborg",
         province: "Gelderland",
+        cbs_code: "0216",
         population: 29732,
         area: 29.29,
         migrants: 23.7,
@@ -712,6 +769,7 @@ const municipalities: Municipality[] = [
     {
         title: "Dalfsen (gemeente)",
         province: "Overijssel",
+        cbs_code: "0148",
         population: 29599,
         area: 165.07,
         migrants: 5.9,
@@ -724,6 +782,7 @@ const municipalities: Municipality[] = [
     {
         title: "Dantumadeel",
         province: "Friesland",
+        cbs_code: 1891,
         population: 19173,
         area: 84.66,
         migrants: 4.5,
@@ -736,6 +795,7 @@ const municipalities: Municipality[] = [
     {
         title: "De Bilt (gemeente)",
         province: "Utrecht (provincie)",
+        cbs_code: "0310",
         population: 43871,
         area: 66.12,
         migrants: 18.3,
@@ -748,6 +808,7 @@ const municipalities: Municipality[] = [
     {
         title: "De Friese Meren",
         province: "Friesland",
+        cbs_code: 1940,
         population: 51993,
         area: 351.29,
         migrants: 8.2,
@@ -760,6 +821,7 @@ const municipalities: Municipality[] = [
     {
         title: "De Ronde Venen",
         province: "Utrecht (provincie)",
+        cbs_code: "0736",
         population: 45664,
         area: 99.92,
         migrants: 17.1,
@@ -772,6 +834,7 @@ const municipalities: Municipality[] = [
     {
         title: "De Wolden",
         province: "Drenthe",
+        cbs_code: 1690,
         population: 24585,
         area: 224.55,
         migrants: 5.3,
@@ -784,6 +847,7 @@ const municipalities: Municipality[] = [
     {
         title: "Delft",
         province: "Zuid-Holland",
+        cbs_code: "0503",
         population: 106184,
         area: 22.65,
         migrants: 36.7,
@@ -796,6 +860,7 @@ const municipalities: Municipality[] = [
     {
         title: "Den Haag",
         province: "Zuid-Holland",
+        cbs_code: "0518",
         population: 562446,
         area: 82.45,
         migrants: 55.6,
@@ -808,6 +873,7 @@ const municipalities: Municipality[] = [
     {
         title: "Den Helder",
         province: "Noord-Holland",
+        cbs_code: "0400",
         population: 56524,
         area: 45.25,
         migrants: 20.5,
@@ -820,6 +886,7 @@ const municipalities: Municipality[] = [
     {
         title: "Deurne (Nederlandse gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0762",
         population: 33010,
         area: 116.93,
         migrants: 9.7,
@@ -832,6 +899,7 @@ const municipalities: Municipality[] = [
     {
         title: "Deventer (gemeente)",
         province: "Overijssel",
+        cbs_code: "0150",
         population: 102831,
         area: 130.68,
         migrants: 22.3,
@@ -844,6 +912,7 @@ const municipalities: Municipality[] = [
     {
         title: "Diemen",
         province: "Noord-Holland",
+        cbs_code: "0384",
         population: 32786,
         area: 11.99,
         migrants: 47.9,
@@ -856,6 +925,7 @@ const municipalities: Municipality[] = [
     {
         title: "Dijk en Waard",
         province: "Noord-Holland",
+        cbs_code: 1980,
         population: 89087,
         area: 62.09,
         migrants: 34.5,
@@ -868,6 +938,7 @@ const municipalities: Municipality[] = [
     {
         title: "Dinkelland",
         province: "Overijssel",
+        cbs_code: 1774,
         population: 26746,
         area: 175.71,
         migrants: 8.1,
@@ -880,6 +951,7 @@ const municipalities: Municipality[] = [
     {
         title: "Doesburg",
         province: "Gelderland",
+        cbs_code: "0221",
         population: 11073,
         area: 11.53,
         migrants: 20.3,
@@ -892,6 +964,7 @@ const municipalities: Municipality[] = [
     {
         title: "Doetinchem (gemeente)",
         province: "Gelderland",
+        cbs_code: "0222",
         population: 59265,
         area: 79.05,
         migrants: 14.7,
@@ -904,6 +977,7 @@ const municipalities: Municipality[] = [
     {
         title: "Dongen (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0766",
         population: 27252,
         area: 29.24,
         migrants: 14,
@@ -916,6 +990,7 @@ const municipalities: Municipality[] = [
     {
         title: "Dordrecht",
         province: "Zuid-Holland",
+        cbs_code: "0505",
         population: 121563,
         area: 78.54,
         migrants: 30.7,
@@ -928,6 +1003,7 @@ const municipalities: Municipality[] = [
     {
         title: "Drechterland (gemeente)",
         province: "Noord-Holland",
+        cbs_code: "0498",
         population: 20413,
         area: 58.89,
         migrants: 11,
@@ -940,6 +1016,7 @@ const municipalities: Municipality[] = [
     {
         title: "Drimmelen (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: 1719,
         population: 28030,
         area: 95.18,
         migrants: 9.8,
@@ -952,6 +1029,7 @@ const municipalities: Municipality[] = [
     {
         title: "Dronten",
         province: "Flevoland",
+        cbs_code: "0303",
         population: 43523,
         area: 333.57,
         migrants: 17.6,
@@ -964,6 +1042,7 @@ const municipalities: Municipality[] = [
     {
         title: "Druten",
         province: "Gelderland",
+        cbs_code: "0225",
         population: 19532,
         area: 37.64,
         migrants: 12.6,
@@ -976,6 +1055,7 @@ const municipalities: Municipality[] = [
     {
         title: "Duiven (gemeente)",
         province: "Gelderland",
+        cbs_code: "0226",
         population: 24986,
         area: 33.9,
         migrants: 14.7,
@@ -988,6 +1068,7 @@ const municipalities: Municipality[] = [
     {
         title: "Echt-Susteren",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: 1711,
         population: 32001,
         area: 103.07,
         migrants: 17.4,
@@ -1000,6 +1081,7 @@ const municipalities: Municipality[] = [
     {
         title: "Edam-Volendam",
         province: "Noord-Holland",
+        cbs_code: "0385",
         population: 36812,
         area: 54.33,
         migrants: 9.5,
@@ -1012,6 +1094,7 @@ const municipalities: Municipality[] = [
     {
         title: "Ede (gemeente)",
         province: "Gelderland",
+        cbs_code: "0228",
         population: 122140,
         area: 318.18,
         migrants: 15.9,
@@ -1024,6 +1107,7 @@ const municipalities: Municipality[] = [
     {
         title: "Eemnes",
         province: "Utrecht (provincie)",
+        cbs_code: "0317",
         population: 9618,
         area: 31.04,
         migrants: 14,
@@ -1036,6 +1120,7 @@ const municipalities: Municipality[] = [
     {
         title: "Eemsdelta",
         province: "Groningen (provincie)",
+        cbs_code: 1979,
         population: 45317,
         area: 267.89,
         migrants: 0,
@@ -1048,6 +1133,7 @@ const municipalities: Municipality[] = [
     {
         title: "Eersel (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0770",
         population: 19995,
         area: 82.46,
         migrants: 9.8,
@@ -1060,6 +1146,7 @@ const municipalities: Municipality[] = [
     {
         title: "Eijsden-Margraten",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: 1903,
         population: 26010,
         area: 77.55,
         migrants: 13.3,
@@ -1072,6 +1159,7 @@ const municipalities: Municipality[] = [
     {
         title: "Eindhoven",
         province: "Noord-Brabant",
+        cbs_code: "0772",
         population: 243669,
         area: 87.66,
         migrants: 37.5,
@@ -1084,6 +1172,7 @@ const municipalities: Municipality[] = [
     {
         title: "Elburg (gemeente)",
         province: "Gelderland",
+        cbs_code: "0230",
         population: 24010,
         area: 63.82,
         migrants: 6.4,
@@ -1096,6 +1185,7 @@ const municipalities: Municipality[] = [
     {
         title: "Emmen (gemeente)",
         province: "Drenthe",
+        cbs_code: "0114",
         population: 108852,
         area: 335.18,
         migrants: 12.4,
@@ -1108,6 +1198,7 @@ const municipalities: Municipality[] = [
     {
         title: "Enkhuizen",
         province: "Noord-Holland",
+        cbs_code: "0388",
         population: 18873,
         area: 12.68,
         migrants: 16.9,
@@ -1120,6 +1211,7 @@ const municipalities: Municipality[] = [
     {
         title: "Enschede",
         province: "Overijssel",
+        cbs_code: "0153",
         population: 161194,
         area: 140.83,
         migrants: 30.3,
@@ -1132,6 +1224,7 @@ const municipalities: Municipality[] = [
     {
         title: "Epe (gemeente)",
         province: "Gelderland",
+        cbs_code: "0232",
         population: 33246,
         area: 156.07,
         migrants: 11.8,
@@ -1144,6 +1237,7 @@ const municipalities: Municipality[] = [
     {
         title: "Ermelo (gemeente)",
         province: "Gelderland",
+        cbs_code: "0233",
         population: 27516,
         area: 85.63,
         migrants: 11.2,
@@ -1156,6 +1250,7 @@ const municipalities: Municipality[] = [
     {
         title: "Etten-Leur",
         province: "Noord-Brabant",
+        cbs_code: "0777",
         population: 44652,
         area: 55.3,
         migrants: 19.5,
@@ -1168,6 +1263,7 @@ const municipalities: Municipality[] = [
     {
         title: "Geertruidenberg (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0779",
         population: 22104,
         area: 26.63,
         migrants: 10.7,
@@ -1180,6 +1276,7 @@ const municipalities: Municipality[] = [
     {
         title: "Geldrop-Mierlo",
         province: "Noord-Brabant",
+        cbs_code: 1771,
         population: 40484,
         area: 31.01,
         migrants: 17.9,
@@ -1192,6 +1289,7 @@ const municipalities: Municipality[] = [
     {
         title: "Gemert-Bakel",
         province: "Noord-Brabant",
+        cbs_code: 1652,
         population: 31364,
         area: 122.14,
         migrants: 11.3,
@@ -1204,6 +1302,7 @@ const municipalities: Municipality[] = [
     {
         title: "Gennep (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0907",
         population: 17771,
         area: 47.62,
         migrants: 14.1,
@@ -1216,6 +1315,7 @@ const municipalities: Municipality[] = [
     {
         title: "Gilze en Rijen",
         province: "Noord-Brabant",
+        cbs_code: "0784",
         population: 26939,
         area: 65.38,
         migrants: 17,
@@ -1228,6 +1328,7 @@ const municipalities: Municipality[] = [
     {
         title: "Goeree-Overflakkee",
         province: "Zuid-Holland",
+        cbs_code: 1924,
         population: 51579,
         area: 260.48,
         migrants: 7,
@@ -1240,6 +1341,7 @@ const municipalities: Municipality[] = [
     {
         title: "Goes (gemeente)",
         province: "Zeeland (provincie)",
+        cbs_code: "0664",
         population: 39432,
         area: 92.58,
         migrants: 16.4,
@@ -1252,6 +1354,7 @@ const municipalities: Municipality[] = [
     {
         title: "Goirle (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0785",
         population: 24204,
         area: 42.99,
         migrants: 11.6,
@@ -1264,6 +1367,7 @@ const municipalities: Municipality[] = [
     {
         title: "Gooise Meren",
         province: "Noord-Holland",
+        cbs_code: 1942,
         population: 60423,
         area: 41.59,
         migrants: 21.7,
@@ -1276,6 +1380,7 @@ const municipalities: Municipality[] = [
     {
         title: "Gorinchem",
         province: "Zuid-Holland",
+        cbs_code: "0512",
         population: 38506,
         area: 18.83,
         migrants: 26.6,
@@ -1288,6 +1393,7 @@ const municipalities: Municipality[] = [
     {
         title: "Gouda (hoofdbetekenis)",
         province: "Zuid-Holland",
+        cbs_code: "0513",
         population: 75298,
         area: 16.5,
         migrants: 26.3,
@@ -1300,6 +1406,7 @@ const municipalities: Municipality[] = [
     {
         title: "Groningen (gemeente)",
         province: "Groningen (provincie)",
+        cbs_code: "0014",
         population: 238016,
         area: 185.6,
         migrants: 24.7,
@@ -1312,6 +1419,7 @@ const municipalities: Municipality[] = [
     {
         title: "Gulpen-Wittem",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: 1729,
         population: 14177,
         area: 73.18,
         migrants: 14.1,
@@ -1324,6 +1432,7 @@ const municipalities: Municipality[] = [
     {
         title: "Haaksbergen",
         province: "Overijssel",
+        cbs_code: "0158",
         population: 24494,
         area: 104.82,
         migrants: 12.5,
@@ -1336,6 +1445,7 @@ const municipalities: Municipality[] = [
     {
         title: "Haarlem",
         province: "Noord-Holland",
+        cbs_code: "0392",
         population: 165650,
         area: 29.17,
         migrants: 30.8,
@@ -1348,6 +1458,7 @@ const municipalities: Municipality[] = [
     {
         title: "Haarlemmermeer",
         province: "Noord-Holland",
+        cbs_code: "0394",
         population: 162344,
         area: 197.48,
         migrants: 28.5,
@@ -1360,6 +1471,7 @@ const municipalities: Municipality[] = [
     {
         title: "Halderberge",
         province: "Noord-Brabant",
+        cbs_code: 1655,
         population: 31020,
         area: 74.47,
         migrants: 15.9,
@@ -1372,6 +1484,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hardenberg (gemeente)",
         province: "Overijssel",
+        cbs_code: "0160",
         population: 62579,
         area: 312.28,
         migrants: 6.9,
@@ -1384,6 +1497,7 @@ const municipalities: Municipality[] = [
     {
         title: "Harderwijk",
         province: "Gelderland",
+        cbs_code: "0243",
         population: 48946,
         area: 38.89,
         migrants: 19.2,
@@ -1396,6 +1510,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hardinxveld-Giessendam",
         province: "Zuid-Holland",
+        cbs_code: "0523",
         population: 18678,
         area: 16.91,
         migrants: 7.5,
@@ -1408,6 +1523,7 @@ const municipalities: Municipality[] = [
     {
         title: "Harlingen (gemeente)",
         province: "Friesland",
+        cbs_code: "0072",
         population: 16192,
         area: 24.96,
         migrants: 12.4,
@@ -1420,6 +1536,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hattem",
         province: "Gelderland",
+        cbs_code: "0244",
         population: 12569,
         area: 23.08,
         migrants: 8,
@@ -1432,6 +1549,7 @@ const municipalities: Municipality[] = [
     {
         title: "Heemskerk (hoofdbetekenis)",
         province: "Noord-Holland",
+        cbs_code: "0396",
         population: 39451,
         area: 27.34,
         migrants: 20.9,
@@ -1444,6 +1562,7 @@ const municipalities: Municipality[] = [
     {
         title: "Heemstede (Noord-Holland)",
         province: "Noord-Holland",
+        cbs_code: "0397",
         population: 27766,
         area: 9.18,
         migrants: 20.2,
@@ -1456,6 +1575,7 @@ const municipalities: Municipality[] = [
     {
         title: "Heerde (gemeente)",
         province: "Gelderland",
+        cbs_code: "0246",
         population: 19227,
         area: 78.74,
         migrants: 6.1,
@@ -1468,6 +1588,7 @@ const municipalities: Municipality[] = [
     {
         title: "Heerenveen (gemeente)",
         province: "Friesland",
+        cbs_code: "0074",
         population: 51654,
         area: 190.09,
         migrants: 12.3,
@@ -1480,6 +1601,7 @@ const municipalities: Municipality[] = [
     {
         title: "Heerlen",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0917",
         population: 87116,
         area: 44.94,
         migrants: 29.1,
@@ -1492,6 +1614,7 @@ const municipalities: Municipality[] = [
     {
         title: "Heeze-Leende",
         province: "Noord-Brabant",
+        cbs_code: 1658,
         population: 16640,
         area: 104.02,
         migrants: 11.1,
@@ -1504,6 +1627,7 @@ const municipalities: Municipality[] = [
     {
         title: "Heiloo",
         province: "Noord-Holland",
+        cbs_code: "0399",
         population: 24280,
         area: 18.7,
         migrants: 13.1,
@@ -1516,6 +1640,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hellendoorn (gemeente)",
         province: "Overijssel",
+        cbs_code: "0163",
         population: 36245,
         area: 137.91,
         migrants: 7,
@@ -1528,6 +1653,7 @@ const municipalities: Municipality[] = [
     {
         title: "Helmond",
         province: "Noord-Brabant",
+        cbs_code: "0794",
         population: 94967,
         area: 53.18,
         migrants: 27.8,
@@ -1540,6 +1666,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hendrik-Ido-Ambacht",
         province: "Zuid-Holland",
+        cbs_code: "0531",
         population: 32176,
         area: 10.61,
         migrants: 14.8,
@@ -1552,6 +1679,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hengelo (Overijssel)",
         province: "Overijssel",
+        cbs_code: "0164",
         population: 82384,
         area: 60.84,
         migrants: 23.3,
@@ -1564,6 +1692,7 @@ const municipalities: Municipality[] = [
     {
         title: "'s-Hertogenbosch (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0796",
         population: 158952,
         area: 109.99,
         migrants: 20.9,
@@ -1576,6 +1705,7 @@ const municipalities: Municipality[] = [
     {
         title: "Het Hogeland",
         province: "Groningen (provincie)",
+        cbs_code: 1966,
         population: 48255,
         area: 482.75,
         migrants: 7.7,
@@ -1588,6 +1718,7 @@ const municipalities: Municipality[] = [
     {
         title: "Heumen (gemeente)",
         province: "Gelderland",
+        cbs_code: "0252",
         population: 16779,
         area: 39.76,
         migrants: 14,
@@ -1600,6 +1731,7 @@ const municipalities: Municipality[] = [
     {
         title: "Heusden (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0797",
         population: 45854,
         area: 78.88,
         migrants: 14.5,
@@ -1612,6 +1744,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hillegom",
         province: "Zuid-Holland",
+        cbs_code: "0534",
         population: 22518,
         area: 12.87,
         migrants: 18.5,
@@ -1624,6 +1757,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hilvarenbeek (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0798",
         population: 15956,
         area: 94.85,
         migrants: 8.1,
@@ -1636,6 +1770,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hilversum",
         province: "Noord-Holland",
+        cbs_code: "0402",
         population: 93396,
         area: 45.61,
         migrants: 29.1,
@@ -1648,6 +1783,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hoeksche Waard (gemeente)",
         province: "Zuid-Holland",
+        cbs_code: 1963,
         population: 89846,
         area: 268.93,
         migrants: 9.4,
@@ -1660,6 +1796,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hof van Twente",
         province: "Overijssel",
+        cbs_code: 1735,
         population: 35450,
         area: 212.56,
         migrants: 9.3,
@@ -1672,6 +1809,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hollands Kroon (gemeente)",
         province: "Noord-Holland",
+        cbs_code: 1911,
         population: 49387,
         area: 357.34,
         migrants: 12,
@@ -1684,6 +1822,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hoogeveen (gemeente)",
         province: "Drenthe",
+        cbs_code: "0118",
         population: 56437,
         area: 127.54,
         migrants: 11.1,
@@ -1696,6 +1835,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hoorn (Noord-Holland)",
         province: "Noord-Holland",
+        cbs_code: "0405",
         population: 75240,
         area: 20.38,
         migrants: 24.4,
@@ -1708,6 +1848,7 @@ const municipalities: Municipality[] = [
     {
         title: "Horst aan de Maas",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: 1507,
         population: 43642,
         area: 188.73,
         migrants: 12.1,
@@ -1720,6 +1861,7 @@ const municipalities: Municipality[] = [
     {
         title: "Houten",
         province: "Utrecht (provincie)",
+        cbs_code: "0321",
         population: 50593,
         area: 54.94,
         migrants: 16,
@@ -1732,6 +1874,7 @@ const municipalities: Municipality[] = [
     {
         title: "Huizen",
         province: "Noord-Holland",
+        cbs_code: "0406",
         population: 41215,
         area: 15.81,
         migrants: 21.2,
@@ -1744,6 +1887,7 @@ const municipalities: Municipality[] = [
     {
         title: "Hulst (gemeente)",
         province: "Zeeland (provincie)",
+        cbs_code: "0677",
         population: 27586,
         area: 201.71,
         migrants: 28.7,
@@ -1756,6 +1900,7 @@ const municipalities: Municipality[] = [
     {
         title: "IJsselstein",
         province: "Utrecht (provincie)",
+        cbs_code: "0353",
         population: 33501,
         area: 21.07,
         migrants: 20.8,
@@ -1768,6 +1913,7 @@ const municipalities: Municipality[] = [
     {
         title: "Kaag en Braassem",
         province: "Zuid-Holland",
+        cbs_code: 1884,
         population: 28590,
         area: 63.24,
         migrants: 11.9,
@@ -1780,6 +1926,7 @@ const municipalities: Municipality[] = [
     {
         title: "Kampen (gemeente)",
         province: "Overijssel",
+        cbs_code: "0166",
         population: 55650,
         area: 142.18,
         migrants: 10.2,
@@ -1792,6 +1939,7 @@ const municipalities: Municipality[] = [
     {
         title: "Kapelle (gemeente)",
         province: "Zeeland (provincie)",
+        cbs_code: "0678",
         population: 13029,
         area: 37.13,
         migrants: 9.8,
@@ -1804,6 +1952,7 @@ const municipalities: Municipality[] = [
     {
         title: "Katwijk (Zuid-Holland)",
         province: "Zuid-Holland",
+        cbs_code: "0537",
         population: 66635,
         area: 24.75,
         migrants: 11.5,
@@ -1816,6 +1965,7 @@ const municipalities: Municipality[] = [
     {
         title: "Kerkrade (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0928",
         population: 45642,
         area: 21.91,
         migrants: 32.1,
@@ -1828,6 +1978,7 @@ const municipalities: Municipality[] = [
     {
         title: "Koggenland",
         province: "Noord-Holland",
+        cbs_code: 1598,
         population: 23517,
         area: 80.32,
         migrants: 8.7,
@@ -1840,6 +1991,7 @@ const municipalities: Municipality[] = [
     {
         title: "Krimpen aan den IJssel",
         province: "Zuid-Holland",
+        cbs_code: "0542",
         population: 29501,
         area: 7.69,
         migrants: 16.6,
@@ -1852,6 +2004,7 @@ const municipalities: Municipality[] = [
     {
         title: "Krimpenerwaard (gemeente)",
         province: "Zuid-Holland",
+        cbs_code: 1931,
         population: 57729,
         area: 148.4,
         migrants: 11.4,
@@ -1864,6 +2017,7 @@ const municipalities: Municipality[] = [
     {
         title: "Laarbeek (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: 1659,
         population: 23253,
         area: 55.35,
         migrants: 9.4,
@@ -1876,6 +2030,7 @@ const municipalities: Municipality[] = [
     {
         title: "Land van Cuijk (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: 1982,
         population: 91489,
         area: 351.87,
         migrants: 12.3,
@@ -1888,6 +2043,7 @@ const municipalities: Municipality[] = [
     {
         title: "Landgraaf (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0882",
         population: 37146,
         area: 24.58,
         migrants: 23.1,
@@ -1900,6 +2056,7 @@ const municipalities: Municipality[] = [
     {
         title: "Landsmeer",
         province: "Noord-Holland",
+        cbs_code: "0415",
         population: 11688,
         area: 22.53,
         migrants: 18.1,
@@ -1912,6 +2069,7 @@ const municipalities: Municipality[] = [
     {
         title: "Lansingerland",
         province: "Zuid-Holland",
+        cbs_code: 1621,
         population: 64737,
         area: 53.42,
         migrants: 18.9,
@@ -1924,6 +2082,7 @@ const municipalities: Municipality[] = [
     {
         title: "Laren (Noord-Holland)",
         province: "Noord-Holland",
+        cbs_code: "0417",
         population: 11724,
         area: 12.41,
         migrants: 20.6,
@@ -1936,6 +2095,7 @@ const municipalities: Municipality[] = [
     {
         title: "Leeuwarden (gemeente)",
         province: "Friesland",
+        cbs_code: "0080",
         population: 127064,
         area: 238.38,
         migrants: 17.7,
@@ -1948,6 +2108,7 @@ const municipalities: Municipality[] = [
     {
         title: "Leiden (hoofdbetekenis)",
         province: "Zuid-Holland",
+        cbs_code: "0546",
         population: 127046,
         area: 21.91,
         migrants: 32.2,
@@ -1960,6 +2121,7 @@ const municipalities: Municipality[] = [
     {
         title: "Leiderdorp",
         province: "Zuid-Holland",
+        cbs_code: "0547",
         population: 27723,
         area: 11.58,
         migrants: 22.1,
@@ -1972,6 +2134,7 @@ const municipalities: Municipality[] = [
     {
         title: "Leidschendam-Voorburg",
         province: "Zuid-Holland",
+        cbs_code: 1916,
         population: 77798,
         area: 32.55,
         migrants: 32.4,
@@ -1984,6 +2147,7 @@ const municipalities: Municipality[] = [
     {
         title: "Lelystad",
         province: "Flevoland",
+        cbs_code: "0995",
         population: 83192,
         area: 230.32,
         migrants: 32.7,
@@ -1996,6 +2160,7 @@ const municipalities: Municipality[] = [
     {
         title: "Leudal (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: 1640,
         population: 36106,
         area: 162.73,
         migrants: 13,
@@ -2008,6 +2173,7 @@ const municipalities: Municipality[] = [
     {
         title: "Leusden",
         province: "Utrecht (provincie)",
+        cbs_code: "0327",
         population: 31514,
         area: 58.54,
         migrants: 14.2,
@@ -2020,6 +2186,7 @@ const municipalities: Municipality[] = [
     {
         title: "Lingewaard",
         province: "Gelderland",
+        cbs_code: 1705,
         population: 47241,
         area: 62,
         migrants: 10.7,
@@ -2032,6 +2199,7 @@ const municipalities: Municipality[] = [
     {
         title: "Lisse",
         province: "Zuid-Holland",
+        cbs_code: "0553",
         population: 23373,
         area: 15.69,
         migrants: 14.1,
@@ -2044,6 +2212,7 @@ const municipalities: Municipality[] = [
     {
         title: "Lochem (gemeente)",
         province: "Gelderland",
+        cbs_code: "0262",
         population: 34302,
         area: 213.03,
         migrants: 10.8,
@@ -2056,6 +2225,7 @@ const municipalities: Municipality[] = [
     {
         title: "Loon op Zand (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0809",
         population: 23802,
         area: 49.94,
         migrants: 11.4,
@@ -2068,6 +2238,7 @@ const municipalities: Municipality[] = [
     {
         title: "Lopik (gemeente)",
         province: "Utrecht (provincie)",
+        cbs_code: "0331",
         population: 14698,
         area: 75.57,
         migrants: 9.4,
@@ -2080,6 +2251,7 @@ const municipalities: Municipality[] = [
     {
         title: "Losser (gemeente)",
         province: "Overijssel",
+        cbs_code: "0168",
         population: 23386,
         area: 98.76,
         migrants: 14.6,
@@ -2092,6 +2264,7 @@ const municipalities: Municipality[] = [
     {
         title: "Maasdriel",
         province: "Gelderland",
+        cbs_code: "0263",
         population: 26041,
         area: 66.11,
         migrants: 13.1,
@@ -2104,6 +2277,7 @@ const municipalities: Municipality[] = [
     {
         title: "Maasgouw (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: 1641,
         population: 24358,
         area: 45.71,
         migrants: 14.7,
@@ -2116,6 +2290,7 @@ const municipalities: Municipality[] = [
     {
         title: "Maashorst (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: 1991,
         population: 58934,
         area: 138.24,
         migrants: 0,
@@ -2128,6 +2303,7 @@ const municipalities: Municipality[] = [
     {
         title: "Maassluis",
         province: "Zuid-Holland",
+        cbs_code: "0556",
         population: 35346,
         area: 8.48,
         migrants: 28.6,
@@ -2140,6 +2316,7 @@ const municipalities: Municipality[] = [
     {
         title: "Maastricht",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0935",
         population: 122692,
         area: 55.99,
         migrants: 33.1,
@@ -2152,6 +2329,7 @@ const municipalities: Municipality[] = [
     {
         title: "Medemblik (gemeente)",
         province: "Noord-Holland",
+        cbs_code: "0420",
         population: 46071,
         area: 121.42,
         migrants: 13.2,
@@ -2164,6 +2342,7 @@ const municipalities: Municipality[] = [
     {
         title: "Meerssen (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0938",
         population: 18594,
         area: 26.96,
         migrants: 12.9,
@@ -2176,6 +2355,7 @@ const municipalities: Municipality[] = [
     {
         title: "Meierijstad",
         province: "Noord-Brabant",
+        cbs_code: 1948,
         population: 83706,
         area: 184.09,
         migrants: 14.5,
@@ -2188,6 +2368,7 @@ const municipalities: Municipality[] = [
     {
         title: "Meppel",
         province: "Drenthe",
+        cbs_code: "0119",
         population: 35454,
         area: 55.53,
         migrants: 12,
@@ -2200,6 +2381,7 @@ const municipalities: Municipality[] = [
     {
         title: "Middelburg (gemeente)",
         province: "Zeeland (provincie)",
+        cbs_code: "0687",
         population: 49919,
         area: 48.42,
         migrants: 19.4,
@@ -2212,6 +2394,7 @@ const municipalities: Municipality[] = [
     {
         title: "Midden-Delfland",
         province: "Zuid-Holland",
+        cbs_code: 1842,
         population: 19449,
         area: 47.19,
         migrants: 12.6,
@@ -2224,6 +2407,7 @@ const municipalities: Municipality[] = [
     {
         title: "Midden-Drenthe",
         province: "Drenthe",
+        cbs_code: 1731,
         population: 34011,
         area: 340.51,
         migrants: 7.3,
@@ -2236,6 +2420,7 @@ const municipalities: Municipality[] = [
     {
         title: "Midden-Groningen",
         province: "Groningen (provincie)",
+        cbs_code: 1952,
         population: 61573,
         area: 280,
         migrants: 14.8,
@@ -2248,6 +2433,7 @@ const municipalities: Municipality[] = [
     {
         title: "Moerdijk (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: 1709,
         population: 37717,
         area: 159.15,
         migrants: 12.4,
@@ -2260,6 +2446,7 @@ const municipalities: Municipality[] = [
     {
         title: "Molenlanden",
         province: "Zuid-Holland",
+        cbs_code: 1978,
         population: 45143,
         area: 181.73,
         migrants: 7,
@@ -2272,6 +2459,7 @@ const municipalities: Municipality[] = [
     {
         title: "Montferland (gemeente)",
         province: "Gelderland",
+        cbs_code: 1955,
         population: 36891,
         area: 105.7,
         migrants: 12.4,
@@ -2284,6 +2472,7 @@ const municipalities: Municipality[] = [
     {
         title: "Montfoort",
         province: "Utrecht (provincie)",
+        cbs_code: "0335",
         population: 13911,
         area: 37.57,
         migrants: 10.5,
@@ -2296,6 +2485,7 @@ const municipalities: Municipality[] = [
     {
         title: "Mook en Middelaar",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0944",
         population: 8024,
         area: 17.38,
         migrants: 14.1,
@@ -2308,6 +2498,7 @@ const municipalities: Municipality[] = [
     {
         title: "Neder-Betuwe (gemeente)",
         province: "Gelderland",
+        cbs_code: 1740,
         population: 25457,
         area: 59.98,
         migrants: 8.6,
@@ -2320,6 +2511,7 @@ const municipalities: Municipality[] = [
     {
         title: "Nederweert (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0946",
         population: 17476,
         area: 99.98,
         migrants: 9.5,
@@ -2332,6 +2524,7 @@ const municipalities: Municipality[] = [
     {
         title: "Nieuwegein",
         province: "Utrecht (provincie)",
+        cbs_code: "0356",
         population: 65540,
         area: 23.51,
         migrants: 27.9,
@@ -2344,6 +2537,7 @@ const municipalities: Municipality[] = [
     {
         title: "Nieuwkoop",
         province: "Zuid-Holland",
+        cbs_code: "0569",
         population: 29434,
         area: 78.05,
         migrants: 11.2,
@@ -2356,6 +2550,7 @@ const municipalities: Municipality[] = [
     {
         title: "Nijkerk (gemeente)",
         province: "Gelderland",
+        cbs_code: "0267",
         population: 45029,
         area: 69.34,
         migrants: 12.1,
@@ -2368,6 +2563,7 @@ const municipalities: Municipality[] = [
     {
         title: "Nijmegen (hoofdbetekenis)",
         province: "Gelderland",
+        cbs_code: "0268",
         population: 182399,
         area: 53.09,
         migrants: 26.5,
@@ -2380,6 +2576,7 @@ const municipalities: Municipality[] = [
     {
         title: "Nissewaard",
         province: "Zuid-Holland",
+        cbs_code: 1930,
         population: 86857,
         area: 73.58,
         migrants: 25.3,
@@ -2392,6 +2589,7 @@ const municipalities: Municipality[] = [
     {
         title: "Noardeast-Fryslân",
         province: "Friesland",
+        cbs_code: 1970,
         population: 45818,
         area: 377.83,
         migrants: 5.8,
@@ -2404,6 +2602,7 @@ const municipalities: Municipality[] = [
     {
         title: "Noord-Beveland",
         province: "Zeeland (provincie)",
+        cbs_code: 1695,
         population: 7881,
         area: 85.96,
         migrants: 13.4,
@@ -2416,6 +2615,7 @@ const municipalities: Municipality[] = [
     {
         title: "Noordenveld (gemeente)",
         province: "Drenthe",
+        cbs_code: 1699,
         population: 31612,
         area: 199.41,
         migrants: 7.9,
@@ -2428,6 +2628,7 @@ const municipalities: Municipality[] = [
     {
         title: "Noordoostpolder",
         province: "Flevoland",
+        cbs_code: "0171",
         population: 49909,
         area: 458.17,
         migrants: 15.8,
@@ -2440,6 +2641,7 @@ const municipalities: Municipality[] = [
     {
         title: "Noordwijk (Zuid-Holland)",
         province: "Zuid-Holland",
+        cbs_code: "0575",
         population: 45258,
         area: 58.37,
         migrants: 17.9,
@@ -2452,6 +2654,7 @@ const municipalities: Municipality[] = [
     {
         title: "Nuenen, Gerwen en Nederwetten",
         province: "Noord-Brabant",
+        cbs_code: "0820",
         population: 24046,
         area: 33.71,
         migrants: 13.5,
@@ -2464,6 +2667,7 @@ const municipalities: Municipality[] = [
     {
         title: "Nunspeet (gemeente)",
         province: "Gelderland",
+        cbs_code: "0302",
         population: 28749,
         area: 128.74,
         migrants: 7.1,
@@ -2476,6 +2680,7 @@ const municipalities: Municipality[] = [
     {
         title: "Oegstgeest",
         province: "Zuid-Holland",
+        cbs_code: "0579",
         population: 25795,
         area: 7.31,
         migrants: 24.8,
@@ -2488,6 +2693,7 @@ const municipalities: Municipality[] = [
     {
         title: "Oirschot (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0823",
         population: 19197,
         area: 101.78,
         migrants: 8.1,
@@ -2500,6 +2706,7 @@ const municipalities: Municipality[] = [
     {
         title: "Oisterwijk (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0824",
         population: 32963,
         area: 63.84,
         migrants: 11.5,
@@ -2512,6 +2719,7 @@ const municipalities: Municipality[] = [
     {
         title: "Oldambt (gemeente)",
         province: "Groningen (provincie)",
+        cbs_code: 1895,
         population: 39073,
         area: 226.66,
         migrants: 11.6,
@@ -2524,6 +2732,7 @@ const municipalities: Municipality[] = [
     {
         title: "Oldebroek (gemeente)",
         province: "Gelderland",
+        cbs_code: "0269",
         population: 24263,
         area: 97.65,
         migrants: 6,
@@ -2536,6 +2745,7 @@ const municipalities: Municipality[] = [
     {
         title: "Oldenzaal",
         province: "Overijssel",
+        cbs_code: "0173",
         population: 31921,
         area: 21.55,
         migrants: 15.8,
@@ -2548,6 +2758,7 @@ const municipalities: Municipality[] = [
     {
         title: "Olst-Wijhe",
         province: "Overijssel",
+        cbs_code: 1773,
         population: 18682,
         area: 113.84,
         migrants: 8.3,
@@ -2560,6 +2771,7 @@ const municipalities: Municipality[] = [
     {
         title: "Ommen (gemeente)",
         province: "Overijssel",
+        cbs_code: "0175",
         population: 18955,
         area: 179.9,
         migrants: 7.8,
@@ -2572,6 +2784,7 @@ const municipalities: Municipality[] = [
     {
         title: "Oost Gelre",
         province: "Gelderland",
+        cbs_code: 1586,
         population: 29863,
         area: 109.93,
         migrants: 8.4,
@@ -2584,6 +2797,7 @@ const municipalities: Municipality[] = [
     {
         title: "Oosterhout (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0826",
         population: 57466,
         area: 71.47,
         migrants: 20.7,
@@ -2596,6 +2810,7 @@ const municipalities: Municipality[] = [
     {
         title: "Ooststellingwerf",
         province: "Friesland",
+        cbs_code: "0085",
         population: 25854,
         area: 223.42,
         migrants: 7.2,
@@ -2608,6 +2823,7 @@ const municipalities: Municipality[] = [
     {
         title: "Oostzaan",
         province: "Noord-Holland",
+        cbs_code: "0431",
         population: 9719,
         area: 11.53,
         migrants: 14.5,
@@ -2620,6 +2836,7 @@ const municipalities: Municipality[] = [
     {
         title: "Opmeer",
         province: "Noord-Holland",
+        cbs_code: "0432",
         population: 12158,
         area: 41.5,
         migrants: 9.4,
@@ -2632,6 +2849,7 @@ const municipalities: Municipality[] = [
     {
         title: "Opsterland",
         province: "Friesland",
+        cbs_code: "0086",
         population: 30064,
         area: 224.4,
         migrants: 6.4,
@@ -2644,6 +2862,7 @@ const municipalities: Municipality[] = [
     {
         title: "Oss (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0828",
         population: 94457,
         area: 163.16,
         migrants: 19.4,
@@ -2656,6 +2875,7 @@ const municipalities: Municipality[] = [
     {
         title: "Oude IJsselstreek",
         province: "Gelderland",
+        cbs_code: 1509,
         population: 39624,
         area: 136.15,
         migrants: 13.7,
@@ -2668,6 +2888,7 @@ const municipalities: Municipality[] = [
     {
         title: "Ouder-Amstel",
         province: "Noord-Holland",
+        cbs_code: "0437",
         population: 14265,
         area: 24.08,
         migrants: 28.1,
@@ -2680,6 +2901,7 @@ const municipalities: Municipality[] = [
     {
         title: "Oudewater",
         province: "Utrecht (provincie)",
+        cbs_code: "0589",
         population: 10237,
         area: 38.9,
         migrants: 8.8,
@@ -2692,6 +2914,7 @@ const municipalities: Municipality[] = [
     {
         title: "Overbetuwe",
         province: "Gelderland",
+        cbs_code: 1734,
         population: 48703,
         area: 109.19,
         migrants: 11.9,
@@ -2704,6 +2927,7 @@ const municipalities: Municipality[] = [
     {
         title: "Papendrecht",
         province: "Zuid-Holland",
+        cbs_code: "0590",
         population: 32267,
         area: 9.41,
         migrants: 18.6,
@@ -2716,6 +2940,7 @@ const municipalities: Municipality[] = [
     {
         title: "Peel en Maas",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: 1894,
         population: 45314,
         area: 159.37,
         migrants: 11.3,
@@ -2728,6 +2953,7 @@ const municipalities: Municipality[] = [
     {
         title: "Pekela",
         province: "Groningen (provincie)",
+        cbs_code: "0765",
         population: 12429,
         area: 49.04,
         migrants: 9.1,
@@ -2740,6 +2966,7 @@ const municipalities: Municipality[] = [
     {
         title: "Pijnacker-Nootdorp",
         province: "Zuid-Holland",
+        cbs_code: 1926,
         population: 57688,
         area: 37.08,
         migrants: 22,
@@ -2752,6 +2979,7 @@ const municipalities: Municipality[] = [
     {
         title: "Purmerend (gemeente)",
         province: "Noord-Holland",
+        cbs_code: "0439",
         population: 94129,
         area: 95.22,
         migrants: 27.6,
@@ -2764,6 +2992,7 @@ const municipalities: Municipality[] = [
     {
         title: "Putten (gemeente)",
         province: "Gelderland",
+        cbs_code: "0273",
         population: 24894,
         area: 85.22,
         migrants: 7.9,
@@ -2776,6 +3005,7 @@ const municipalities: Municipality[] = [
     {
         title: "Raalte (gemeente)",
         province: "Overijssel",
+        cbs_code: "0177",
         population: 38468,
         area: 170.99,
         migrants: 6.7,
@@ -2788,6 +3018,7 @@ const municipalities: Municipality[] = [
     {
         title: "Reimerswaal (gemeente)",
         province: "Zeeland (provincie)",
+        cbs_code: "0703",
         population: 23265,
         area: 101.8,
         migrants: 14.5,
@@ -2800,6 +3031,7 @@ const municipalities: Municipality[] = [
     {
         title: "Renkum (gemeente)",
         province: "Gelderland",
+        cbs_code: "0274",
         population: 31459,
         area: 45.95,
         migrants: 15.6,
@@ -2812,6 +3044,7 @@ const municipalities: Municipality[] = [
     {
         title: "Renswoude",
         province: "Utrecht (provincie)",
+        cbs_code: "0339",
         population: 5748,
         area: 18.4,
         migrants: 7.3,
@@ -2824,6 +3057,7 @@ const municipalities: Municipality[] = [
     {
         title: "Reusel-De Mierden",
         province: "Noord-Brabant",
+        cbs_code: 1667,
         population: 13551,
         area: 77.88,
         migrants: 9.1,
@@ -2836,6 +3070,7 @@ const municipalities: Municipality[] = [
     {
         title: "Rheden (gemeente)",
         province: "Gelderland",
+        cbs_code: "0275",
         population: 43522,
         area: 81.74,
         migrants: 17.2,
@@ -2848,6 +3083,7 @@ const municipalities: Municipality[] = [
     {
         title: "Rhenen",
         province: "Utrecht (provincie)",
+        cbs_code: "0340",
         population: 20332,
         area: 42.08,
         migrants: 12,
@@ -2860,6 +3096,7 @@ const municipalities: Municipality[] = [
     {
         title: "Ridderkerk",
         province: "Zuid-Holland",
+        cbs_code: "0597",
         population: 47503,
         area: 23.72,
         migrants: 20,
@@ -2872,6 +3109,7 @@ const municipalities: Municipality[] = [
     {
         title: "Rijssen-Holten",
         province: "Overijssel",
+        cbs_code: 1742,
         population: 38502,
         area: 94.13,
         migrants: 8.1,
@@ -2884,6 +3122,7 @@ const municipalities: Municipality[] = [
     {
         title: "Rijswijk (Zuid-Holland)",
         province: "Zuid-Holland",
+        cbs_code: "0603",
         population: 58050,
         area: 13.96,
         migrants: 36.8,
@@ -2896,6 +3135,7 @@ const municipalities: Municipality[] = [
     {
         title: "Roerdalen",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: 1669,
         population: 20699,
         area: 88.21,
         migrants: 17.6,
@@ -2908,6 +3148,7 @@ const municipalities: Municipality[] = [
     {
         title: "Roermond (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0957",
         population: 59992,
         area: 60.81,
         migrants: 29.7,
@@ -2920,6 +3161,7 @@ const municipalities: Municipality[] = [
     {
         title: "Roosendaal (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: 1674,
         population: 77578,
         area: 106.5,
         migrants: 26.1,
@@ -2932,6 +3174,7 @@ const municipalities: Municipality[] = [
     {
         title: "Rotterdam (gemeente)",
         province: "Zuid-Holland",
+        cbs_code: "0599",
         population: 664311,
         area: 217.55,
         migrants: 52.3,
@@ -2944,6 +3187,7 @@ const municipalities: Municipality[] = [
     {
         title: "Rozendaal",
         province: "Gelderland",
+        cbs_code: "0277",
         population: 1754,
         area: 27.9,
         migrants: 15.4,
@@ -2956,6 +3200,7 @@ const municipalities: Municipality[] = [
     {
         title: "Rucphen (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0840",
         population: 23608,
         area: 64.41,
         migrants: 10.3,
@@ -2968,6 +3213,7 @@ const municipalities: Municipality[] = [
     {
         title: "Saba",
         province: "Caribisch Nederland",
+        cbs_code: 9003,
         population: 1911,
         area: 13,
         migrants: 0,
@@ -2980,6 +3226,7 @@ const municipalities: Municipality[] = [
     {
         title: "Schagen (gemeente)",
         province: "Noord-Holland",
+        cbs_code: "0441",
         population: 47477,
         area: 168.25,
         migrants: 11.4,
@@ -2992,6 +3239,7 @@ const municipalities: Municipality[] = [
     {
         title: "Scherpenzeel (Gelderland)",
         province: "Gelderland",
+        cbs_code: "0279",
         population: 10393,
         area: 13.79,
         migrants: 7.6,
@@ -3004,6 +3252,7 @@ const municipalities: Municipality[] = [
     {
         title: "Schiedam",
         province: "Zuid-Holland",
+        cbs_code: "0606",
         population: 80723,
         area: 17.82,
         migrants: 43.7,
@@ -3016,6 +3265,7 @@ const municipalities: Municipality[] = [
     {
         title: "Schiermonnikoog",
         province: "Friesland",
+        cbs_code: "0088",
         population: 982,
         area: 40.5,
         migrants: 10.9,
@@ -3028,6 +3278,7 @@ const municipalities: Municipality[] = [
     {
         title: "Schouwen-Duiveland",
         province: "Zeeland (provincie)",
+        cbs_code: 1676,
         population: 34521,
         area: 229.65,
         migrants: 9.9,
@@ -3040,6 +3291,7 @@ const municipalities: Municipality[] = [
     {
         title: "Simpelveld (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0965",
         population: 10361,
         area: 16.03,
         migrants: 18.2,
@@ -3052,6 +3304,7 @@ const municipalities: Municipality[] = [
     {
         title: "Sint Eustatius",
         province: "Caribisch Nederland",
+        cbs_code: 9002,
         population: 3242,
         area: 21,
         migrants: 0,
@@ -3064,6 +3317,7 @@ const municipalities: Municipality[] = [
     {
         title: "Sint-Michielsgestel (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0845",
         population: 30121,
         area: 58.38,
         migrants: 8.7,
@@ -3076,6 +3330,7 @@ const municipalities: Municipality[] = [
     {
         title: "Sittard-Geleen",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: 1883,
         population: 92177,
         area: 79.01,
         migrants: 22.4,
@@ -3088,6 +3343,7 @@ const municipalities: Municipality[] = [
     {
         title: "Sliedrecht",
         province: "Zuid-Holland",
+        cbs_code: "0610",
         population: 26211,
         area: 12.84,
         migrants: 14.7,
@@ -3100,6 +3356,7 @@ const municipalities: Municipality[] = [
     {
         title: "Sluis (gemeente)",
         province: "Zeeland (provincie)",
+        cbs_code: 1714,
         population: 23244,
         area: 279.36,
         migrants: 28.1,
@@ -3112,6 +3369,7 @@ const municipalities: Municipality[] = [
     {
         title: "Smallingerland",
         province: "Friesland",
+        cbs_code: "0090",
         population: 56173,
         area: 117.31,
         migrants: 11.7,
@@ -3124,6 +3382,7 @@ const municipalities: Municipality[] = [
     {
         title: "Soest (Nederland)",
         province: "Utrecht (provincie)",
+        cbs_code: "0342",
         population: 47423,
         area: 46.24,
         migrants: 21.6,
@@ -3136,6 +3395,7 @@ const municipalities: Municipality[] = [
     {
         title: "Someren (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0847",
         population: 20090,
         area: 80.27,
         migrants: 10.1,
@@ -3148,6 +3408,7 @@ const municipalities: Municipality[] = [
     {
         title: "Son en Breugel",
         province: "Noord-Brabant",
+        cbs_code: "0848",
         population: 18027,
         area: 25.95,
         migrants: 13.5,
@@ -3160,6 +3421,7 @@ const municipalities: Municipality[] = [
     {
         title: "Stadskanaal (gemeente)",
         province: "Groningen (provincie)",
+        cbs_code: "0037",
         population: 32169,
         area: 117.64,
         migrants: 7.9,
@@ -3172,6 +3434,7 @@ const municipalities: Municipality[] = [
     {
         title: "Staphorst (gemeente)",
         province: "Overijssel",
+        cbs_code: "0180",
         population: 17640,
         area: 133.99,
         migrants: 4.6,
@@ -3184,6 +3447,7 @@ const municipalities: Municipality[] = [
     {
         title: "Stede Broec",
         province: "Noord-Holland",
+        cbs_code: "0532",
         population: 22116,
         area: 14.5,
         migrants: 13.4,
@@ -3196,6 +3460,7 @@ const municipalities: Municipality[] = [
     {
         title: "Steenbergen (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0851",
         population: 24582,
         area: 146.43,
         migrants: 15.3,
@@ -3208,6 +3473,7 @@ const municipalities: Municipality[] = [
     {
         title: "Steenwijkerland",
         province: "Overijssel",
+        cbs_code: 1708,
         population: 45383,
         area: 288.27,
         migrants: 8.8,
@@ -3220,6 +3486,7 @@ const municipalities: Municipality[] = [
     {
         title: "Stein (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0971",
         population: 24783,
         area: 21.08,
         migrants: 14.3,
@@ -3232,6 +3499,7 @@ const municipalities: Municipality[] = [
     {
         title: "Stichtse Vecht",
         province: "Utrecht (provincie)",
+        cbs_code: 1904,
         population: 65755,
         area: 96.1,
         migrants: 18.8,
@@ -3244,6 +3512,7 @@ const municipalities: Municipality[] = [
     {
         title: "Súdwest-Fryslân",
         province: "Friesland",
+        cbs_code: 1900,
         population: 90873,
         area: 523.01,
         migrants: 9.3,
@@ -3256,6 +3525,7 @@ const municipalities: Municipality[] = [
     {
         title: "Terneuzen (gemeente)",
         province: "Zeeland (provincie)",
+        cbs_code: "0715",
         population: 54990,
         area: 250.38,
         migrants: 28,
@@ -3268,6 +3538,7 @@ const municipalities: Municipality[] = [
     {
         title: "Terschelling",
         province: "Friesland",
+        cbs_code: "0093",
         population: 4890,
         area: 85.26,
         migrants: 7.9,
@@ -3280,6 +3551,7 @@ const municipalities: Municipality[] = [
     {
         title: "Texel",
         province: "Noord-Holland",
+        cbs_code: "0448",
         population: 13950,
         area: 162,
         migrants: 11,
@@ -3292,6 +3564,7 @@ const municipalities: Municipality[] = [
     {
         title: "Teylingen (gemeente)",
         province: "Zuid-Holland",
+        cbs_code: 1525,
         population: 38521,
         area: 28.38,
         migrants: 16.3,
@@ -3304,6 +3577,7 @@ const municipalities: Municipality[] = [
     {
         title: "Tholen (gemeente)",
         province: "Zeeland (provincie)",
+        cbs_code: "0716",
         population: 26793,
         area: 146.71,
         migrants: 9.4,
@@ -3316,6 +3590,7 @@ const municipalities: Municipality[] = [
     {
         title: "Tiel",
         province: "Gelderland",
+        cbs_code: "0281",
         population: 42672,
         area: 32.88,
         migrants: 27,
@@ -3328,6 +3603,7 @@ const municipalities: Municipality[] = [
     {
         title: "Tilburg (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0855",
         population: 227794,
         area: 116.17,
         migrants: 28.8,
@@ -3340,6 +3616,7 @@ const municipalities: Municipality[] = [
     {
         title: "Tubbergen (gemeente)",
         province: "Overijssel",
+        cbs_code: "0183",
         population: 21413,
         area: 147,
         migrants: 4.7,
@@ -3352,6 +3629,7 @@ const municipalities: Municipality[] = [
     {
         title: "Twenterand",
         province: "Overijssel",
+        cbs_code: 1700,
         population: 33867,
         area: 106.17,
         migrants: 5.4,
@@ -3364,6 +3642,7 @@ const municipalities: Municipality[] = [
     {
         title: "Tynaarlo (gemeente)",
         province: "Drenthe",
+        cbs_code: 1730,
         population: 34603,
         area: 143,
         migrants: 8.8,
@@ -3376,6 +3655,7 @@ const municipalities: Municipality[] = [
     {
         title: "Tietjerksteradeel",
         province: "Friesland",
+        cbs_code: "0737",
         population: 32441,
         area: 148.86,
         migrants: 6.5,
@@ -3388,6 +3668,7 @@ const municipalities: Municipality[] = [
     {
         title: "Uitgeest",
         province: "Noord-Holland",
+        cbs_code: "0450",
         population: 13441,
         area: 19.16,
         migrants: 12.6,
@@ -3400,6 +3681,7 @@ const municipalities: Municipality[] = [
     {
         title: "Uithoorn",
         province: "Noord-Holland",
+        cbs_code: "0451",
         population: 31406,
         area: 18.14,
         migrants: 27.1,
@@ -3412,6 +3694,7 @@ const municipalities: Municipality[] = [
     {
         title: "Urk",
         province: "Flevoland",
+        cbs_code: "0184",
         population: 21847,
         area: 13.15,
         migrants: 4.2,
@@ -3424,6 +3707,7 @@ const municipalities: Municipality[] = [
     {
         title: "Utrecht (stad)",
         province: "Utrecht (provincie)",
+        cbs_code: "0344",
         population: 368024,
         area: 93.83,
         migrants: 36.1,
@@ -3436,6 +3720,7 @@ const municipalities: Municipality[] = [
     {
         title: "Utrechtse Heuvelrug (gemeente)",
         province: "Utrecht (provincie)",
+        cbs_code: 1581,
         population: 50353,
         area: 132.01,
         migrants: 15.8,
@@ -3448,6 +3733,7 @@ const municipalities: Municipality[] = [
     {
         title: "Vaals (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0981",
         population: 10173,
         area: 23.89,
         migrants: 52.1,
@@ -3460,6 +3746,7 @@ const municipalities: Municipality[] = [
     {
         title: "Valkenburg aan de Geul",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0994",
         population: 16456,
         area: 36.73,
         migrants: 15,
@@ -3472,6 +3759,7 @@ const municipalities: Municipality[] = [
     {
         title: "Valkenswaard (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0858",
         population: 31548,
         area: 54.92,
         migrants: 14.5,
@@ -3484,6 +3772,7 @@ const municipalities: Municipality[] = [
     {
         title: "Veendam (gemeente)",
         province: "Groningen (provincie)",
+        cbs_code: "0047",
         population: 27620,
         area: 76,
         migrants: 13.1,
@@ -3496,6 +3785,7 @@ const municipalities: Municipality[] = [
     {
         title: "Veenendaal",
         province: "Utrecht (provincie)",
+        cbs_code: "0345",
         population: 68563,
         area: 19.46,
         migrants: 18.6,
@@ -3508,6 +3798,7 @@ const municipalities: Municipality[] = [
     {
         title: "Veere (gemeente)",
         province: "Zeeland (provincie)",
+        cbs_code: "0717",
         population: 22071,
         area: 132.56,
         migrants: 8.8,
@@ -3520,6 +3811,7 @@ const municipalities: Municipality[] = [
     {
         title: "Veldhoven (hoofdbetekenis)",
         province: "Noord-Brabant",
+        cbs_code: "0861",
         population: 46452,
         area: 31.69,
         migrants: 18.4,
@@ -3532,6 +3824,7 @@ const municipalities: Municipality[] = [
     {
         title: "Velsen",
         province: "Noord-Holland",
+        cbs_code: "0453",
         population: 68857,
         area: 45.2,
         migrants: 19.5,
@@ -3544,6 +3837,7 @@ const municipalities: Municipality[] = [
     {
         title: "Venlo (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0983",
         population: 103312,
         area: 124.25,
         migrants: 28.9,
@@ -3556,6 +3850,7 @@ const municipalities: Municipality[] = [
     {
         title: "Venray (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0984",
         population: 44648,
         area: 163.27,
         migrants: 20.8,
@@ -3568,6 +3863,7 @@ const municipalities: Municipality[] = [
     {
         title: "Vijfheerenlanden (gemeente)",
         province: "Utrecht (provincie)",
+        cbs_code: 1961,
         population: 60184,
         area: 146.41,
         migrants: 17,
@@ -3580,6 +3876,7 @@ const municipalities: Municipality[] = [
     {
         title: "Vlaardingen",
         province: "Zuid-Holland",
+        cbs_code: "0622",
         population: 75126,
         area: 23.57,
         migrants: 32.1,
@@ -3592,6 +3889,7 @@ const municipalities: Municipality[] = [
     {
         title: "Vlieland (hoofdbetekenis)",
         province: "Friesland",
+        cbs_code: "0096",
         population: 1254,
         area: 39.15,
         migrants: 15.2,
@@ -3604,6 +3902,7 @@ const municipalities: Municipality[] = [
     {
         title: "Vlissingen",
         province: "Zeeland (provincie)",
+        cbs_code: "0718",
         population: 45182,
         area: 34.31,
         migrants: 26.6,
@@ -3616,6 +3915,7 @@ const municipalities: Municipality[] = [
     {
         title: "Voerendaal (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0986",
         population: 12419,
         area: 31.51,
         migrants: 14,
@@ -3628,6 +3928,7 @@ const municipalities: Municipality[] = [
     {
         title: "Voorne aan Zee",
         province: "Zuid-Holland",
+        cbs_code: 1992,
         population: 73993,
         area: 174.81,
         migrants: 0,
@@ -3640,6 +3941,7 @@ const municipalities: Municipality[] = [
     {
         title: "Voorschoten",
         province: "Zuid-Holland",
+        cbs_code: "0626",
         population: 25585,
         area: 11.14,
         migrants: 22.6,
@@ -3652,6 +3954,7 @@ const municipalities: Municipality[] = [
     {
         title: "Voorst (gemeente)",
         province: "Gelderland",
+        cbs_code: "0285",
         population: 25227,
         area: 122.97,
         migrants: 8.3,
@@ -3664,6 +3967,7 @@ const municipalities: Municipality[] = [
     {
         title: "Vught (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0865",
         population: 32113,
         area: 33.75,
         migrants: 14.3,
@@ -3676,6 +3980,7 @@ const municipalities: Municipality[] = [
     {
         title: "Waadhoeke",
         province: "Friesland",
+        cbs_code: 1949,
         population: 46800,
         area: 284.86,
         migrants: 9.1,
@@ -3688,6 +3993,7 @@ const municipalities: Municipality[] = [
     {
         title: "Waalre (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0866",
         population: 17965,
         area: 22.39,
         migrants: 17.5,
@@ -3700,6 +4006,7 @@ const municipalities: Municipality[] = [
     {
         title: "Waalwijk (gemeente)",
         province: "Noord-Brabant",
+        cbs_code: "0867",
         population: 49934,
         area: 64.58,
         migrants: 19,
@@ -3712,6 +4019,7 @@ const municipalities: Municipality[] = [
     {
         title: "Waddinxveen",
         province: "Zuid-Holland",
+        cbs_code: "0627",
         population: 32690,
         area: 27.77,
         migrants: 17.5,
@@ -3724,6 +4032,7 @@ const municipalities: Municipality[] = [
     {
         title: "Wageningen (Nederland)",
         province: "Gelderland",
+        cbs_code: "0289",
         population: 41098,
         area: 30.42,
         migrants: 28.1,
@@ -3736,6 +4045,7 @@ const municipalities: Municipality[] = [
     {
         title: "Wassenaar (gemeente)",
         province: "Zuid-Holland",
+        cbs_code: "0629",
         population: 27131,
         area: 51.11,
         migrants: 34.3,
@@ -3748,6 +4058,7 @@ const municipalities: Municipality[] = [
     {
         title: "Waterland (gemeente)",
         province: "Noord-Holland",
+        cbs_code: "0852",
         population: 17623,
         area: 52.11,
         migrants: 13.5,
@@ -3760,6 +4071,7 @@ const municipalities: Municipality[] = [
     {
         title: "Weert (gemeente)",
         province: "Limburg (Nederlandse provincie)",
+        cbs_code: "0988",
         population: 50874,
         area: 104.32,
         migrants: 22.2,
@@ -3772,6 +4084,7 @@ const municipalities: Municipality[] = [
     {
         title: "West Betuwe",
         province: "Gelderland",
+        cbs_code: 1960,
         population: 52742,
         area: 216.12,
         migrants: 9.6,
@@ -3784,6 +4097,7 @@ const municipalities: Municipality[] = [
     {
         title: "West Maas en Waal",
         province: "Gelderland",
+        cbs_code: "0668",
         population: 20082,
         area: 76.76,
         migrants: 8.5,
@@ -3796,6 +4110,7 @@ const municipalities: Municipality[] = [
     {
         title: "Westerkwartier (gemeente)",
         province: "Groningen (provincie)",
+        cbs_code: 1969,
         population: 64984,
         area: 362.69,
         migrants: 7.3,
@@ -3808,6 +4123,7 @@ const municipalities: Municipality[] = [
     {
         title: "Westerveld (gemeente)",
         province: "Drenthe",
+        cbs_code: 1701,
         population: 19858,
         area: 278.35,
         migrants: 6.4,
@@ -3820,6 +4136,7 @@ const municipalities: Municipality[] = [
     {
         title: "Westervoort",
         province: "Gelderland",
+        cbs_code: "0293",
         population: 15115,
         area: 7.03,
         migrants: 18.6,
@@ -3832,6 +4149,7 @@ const municipalities: Municipality[] = [
     {
         title: "Westerwolde (gemeente)",
         province: "Groningen (provincie)",
+        cbs_code: 1950,
         population: 26331,
         area: 275.67,
         migrants: 13,
@@ -3844,6 +4162,7 @@ const municipalities: Municipality[] = [
     {
         title: "Westland (gemeente)",
         province: "Zuid-Holland",
+        cbs_code: 1783,
         population: 114996,
         area: 81.27,
         migrants: 16,
@@ -3856,6 +4175,7 @@ const municipalities: Municipality[] = [
     {
         title: "Weststellingwerf",
         province: "Friesland",
+        cbs_code: "0098",
         population: 26500,
         area: 220.3,
         migrants: 7.8,
@@ -3868,6 +4188,7 @@ const municipalities: Municipality[] = [
     {
         title: "Wierden",
         province: "Overijssel",
+        cbs_code: "0189",
         population: 24879,
         area: 94.63,
         migrants: 7.3,
@@ -3880,6 +4201,7 @@ const municipalities: Municipality[] = [
     {
         title: "Wijchen (gemeente)",
         province: "Gelderland",
+        cbs_code: "0296",
         population: 41519,
         area: 66.18,
         migrants: 12.6,
@@ -3892,6 +4214,7 @@ const municipalities: Municipality[] = [
     {
         title: "Wijdemeren",
         province: "Noord-Holland",
+        cbs_code: 1696,
         population: 24645,
         area: 47.6,
         migrants: 14.4,
@@ -3904,6 +4227,7 @@ const municipalities: Municipality[] = [
     {
         title: "Wijk bij Duurstede",
         province: "Utrecht (provincie)",
+        cbs_code: "0352",
         population: 24000,
         area: 47.62,
         migrants: 11.8,
@@ -3913,6 +4237,251 @@ const municipalities: Municipality[] = [
         latitude: 51.983333333333,
         longitude: 5.3333333333333,
     },
+    {
+        title: "Winterswijk (gemeente)",
+        province: "Gelderland",
+        cbs_code: "0294",
+        population: 29250,
+        area: 138.14,
+        migrants: 14.9,
+        migrants_western: 8.7,
+        migrants_non_western: 6.2,
+        income: 0,
+        latitude: 51.966666666667,
+        longitude: 6.7166666666667,
+    },
+    {
+        title: "Woensdrecht (gemeente)",
+        province: "Noord-Brabant",
+        cbs_code: "0873",
+        population: 22178,
+        area: 91.66,
+        migrants: 24,
+        migrants_western: 20.5,
+        migrants_non_western: 3.5,
+        income: 0,
+        latitude: 51.433333333333,
+        longitude: 4.3,
+    },
+    {
+        title: "Woerden",
+        province: "Utrecht (provincie)",
+        cbs_code: "0632",
+        population: 53253,
+        area: 88.57,
+        migrants: 15.4,
+        migrants_western: 6.9,
+        migrants_non_western: 8.6,
+        income: 0,
+        latitude: 52.083333333333,
+        longitude: 4.8833333333333,
+    },
+    {
+        title: "Wormerland",
+        province: "Noord-Holland",
+        cbs_code: "0880",
+        population: 16606,
+        area: 38.59,
+        migrants: 14,
+        migrants_western: 6.5,
+        migrants_non_western: 7.5,
+        income: 0,
+        latitude: 52.5,
+        longitude: 4.8666666666667,
+    },
+    {
+        title: "Woudenberg",
+        province: "Utrecht (provincie)",
+        cbs_code: "0351",
+        population: 14410,
+        area: 36.53,
+        migrants: 10.6,
+        migrants_western: 4.8,
+        migrants_non_western: 5.9,
+        income: 0,
+        latitude: 52.066666666667,
+        longitude: 5.4,
+    },
+    {
+        title: "Zaanstad",
+        province: "Noord-Holland",
+        cbs_code: "0479",
+        population: 159806,
+        area: 73.87,
+        migrants: 33.3,
+        migrants_western: 10.9,
+        migrants_non_western: 22.3,
+        income: 0,
+        latitude: 52.466666666667,
+        longitude: 4.7833333333333,
+    },
+    {
+        title: "Zaltbommel (gemeente)",
+        province: "Gelderland",
+        cbs_code: "0297",
+        population: 30315,
+        area: 79.38,
+        migrants: 13.9,
+        migrants_western: 7.9,
+        migrants_non_western: 6,
+        income: 0,
+        latitude: 51.816666666667,
+        longitude: 5.25,
+    },
+    {
+        title: "Zandvoort",
+        province: "Noord-Holland",
+        cbs_code: "0473",
+        population: 17557,
+        area: 32.12,
+        migrants: 23.4,
+        migrants_western: 14.3,
+        migrants_non_western: 9,
+        income: 0,
+        latitude: 52.366666666667,
+        longitude: 4.5333333333333,
+    },
+    {
+        title: "Zeewolde",
+        province: "Flevoland",
+        cbs_code: "0050",
+        population: 23719,
+        area: 247.23,
+        migrants: 18.4,
+        migrants_western: 12.8,
+        migrants_non_western: 5.6,
+        income: 0,
+        latitude: 52.333333333333,
+        longitude: 5.5333333333333,
+    },
+    {
+        title: "Zeist",
+        province: "Utrecht (provincie)",
+        cbs_code: "0355",
+        population: 66612,
+        area: 48.51,
+        migrants: 23.6,
+        migrants_western: 9.7,
+        migrants_non_western: 14,
+        income: 0,
+        latitude: 52.083333333333,
+        longitude: 5.2333333333333,
+    },
+    {
+        title: "Zevenaar (gemeente)",
+        province: "Gelderland",
+        cbs_code: "0299",
+        population: 45065,
+        area: 92.6,
+        migrants: 14.9,
+        migrants_western: 10,
+        migrants_non_western: 4.9,
+        income: 0,
+        latitude: 51.916666666667,
+        longitude: 6.0833333333333,
+    },
+    {
+        title: "Zoetermeer",
+        province: "Zuid-Holland",
+        cbs_code: "0637",
+        population: 127047,
+        area: 34.45,
+        migrants: 32.1,
+        migrants_western: 10.9,
+        migrants_non_western: 21.2,
+        income: 0,
+        latitude: 52.05,
+        longitude: 4.5,
+    },
+    {
+        title: "Zoeterwoude",
+        province: "Zuid-Holland",
+        cbs_code: "0638",
+        population: 9465,
+        area: 21.19,
+        migrants: 13.1,
+        migrants_western: 6.6,
+        migrants_non_western: 6.4,
+        income: 0,
+        latitude: 52.1,
+        longitude: 4.5,
+    },
+    {
+        title: "Zuidplas (gemeente)",
+        province: "Zuid-Holland",
+        cbs_code: 1892,
+        population: 47114,
+        area: 58.02,
+        migrants: 17.3,
+        migrants_western: 8.2,
+        migrants_non_western: 9.1,
+        income: 0,
+        latitude: 52.016666666667,
+        longitude: 4.6166666666667,
+    },
+    {
+        title: "Zundert (gemeente)",
+        province: "Noord-Brabant",
+        cbs_code: "0879",
+        population: 22527,
+        area: 120.65,
+        migrants: 16,
+        migrants_western: 12.4,
+        migrants_non_western: 3.6,
+        income: 0,
+        latitude: 51.466666666667,
+        longitude: 4.65,
+    },
+    {
+        title: "Zutphen (gemeente)",
+        province: "Gelderland",
+        cbs_code: "0301",
+        population: 48545,
+        area: 40.95,
+        migrants: 18.1,
+        migrants_western: 8.6,
+        migrants_non_western: 9.5,
+        income: 0,
+        latitude: 52.133333333333,
+        longitude: 6.2,
+    },
+    {
+        title: "Zwartewaterland",
+        province: "Overijssel",
+        cbs_code: 1896,
+        population: 23390,
+        area: 82.49,
+        migrants: 6.2,
+        migrants_western: 3.6,
+        migrants_non_western: 2.7,
+        income: 0,
+        latitude: 52.583333333333,
+        longitude: 6.0833333333333,
+    },
+    {
+        title: "Zwijndrecht (Nederland)",
+        province: "Zuid-Holland",
+        cbs_code: "0642",
+        population: 44992,
+        area: 20.3,
+        migrants: 23.2,
+        migrants_western: 8.2,
+        migrants_non_western: 15,
+        income: 0,
+        latitude: 51.816666666667,
+        longitude: 4.65,
+    },
+    {
+        title: "Zwolle (hoofdbetekenis)",
+        province: "Overijssel",
+        cbs_code: "0193",
+        population: 132454,
+        area: 111.1,
+        migrants: 17.4,
+        migrants_western: 6.8,
+        migrants_non_western: 10.5,
+        income: 0,
+        latitude: 52.516666666667,
+        longitude: 6.0833333333333,
+    },
 ];
-
-export default municipalities;
