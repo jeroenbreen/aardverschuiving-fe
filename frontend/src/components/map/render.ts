@@ -1,15 +1,12 @@
 import { GeoJSON } from "./../../types";
-import * as d3 from "d3";
+import { getGeoJson } from "./geojson";
 
-const v: "1" | "2" = "2";
+// todo use bertin.update()
 
 const getMap = (geojson: GeoJSON): HTMLElement => {
     const bertin = window.bertin;
-
-    // @ts-ignore
-    const values = v === "1" ? "level" : "population_2021MM10";
-    // @ts-ignore
-    const name = v === "1" ? "name" : "Municipality_name_2022";
+    const values = "population_2021MM10";
+    const name = "Municipality_name_2022";
 
     return bertin.draw({
         params: {
@@ -18,42 +15,40 @@ const getMap = (geojson: GeoJSON): HTMLElement => {
         },
         layers: [
             {
-                type: "layer",
+                type: "square",
                 geojson,
                 values,
-                demers: false,
-                k: 50,
+                demers: true,
+                k: 40,
                 fill: "red",
-                tooltip: ["$" + name, "$" + values, "thousands inh."],
+                tooltip: ["$" + name, "$" + values],
             },
         ],
     });
 };
 
-const toMultiPolygon = (geojson: GeoJSON) => {
+const getGeometry = (geometry: any) => {
+    const list = geometry.coordinates[0];
+    const point = list[0];
+    return {
+        type: "Point",
+        coordinates: point,
+    };
+};
+
+const geometryToPoint = (geojson: GeoJSON) => {
     const features = geojson.features.map((feature: any) => {
-        const coordinates = feature.geometry.coordinates;
-        if (feature.geometry.type === "Polygon") {
-            feature.geometry.coordinates = [coordinates];
-            feature.geometry.type = "MultiPolygon";
-        }
+        feature.geometry = getGeometry(feature.geometry);
         return feature;
     });
 
-    geojson.features = [features[0]];
+    geojson.features = features;
     return geojson;
 };
 
-export const render = (el: HTMLElement) => {
+export const render = (el: HTMLElement, items: any[]) => {
     el.replaceChildren();
-
-    const geoJsonFile = "geojson/netherlands" + v + ".json";
-
-    d3.json(geoJsonFile).then((g) => {
-        // const set = toMultiPolygon(geoJson);
-        // @ts-ignore
-        const set = v === "1" ? g : toMultiPolygon(g);
-        const map = getMap(set) as HTMLElement;
-        el.appendChild(map);
-    });
+    const geoJson = getGeoJson(items);
+    const map = getMap(geoJson) as HTMLElement;
+    el.appendChild(map);
 };

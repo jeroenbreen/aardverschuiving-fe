@@ -2245,8 +2245,8 @@ export default [
         migrants_western: 4.3,
         migrants_non_western: 5.1,
         income: 0,
-        latitude: 4.95,
-        longitude: 51.983333333333,
+        longitude: 4.95,
+        latitude: 51.983,
     },
     {
         title: "Losser (gemeente)",
