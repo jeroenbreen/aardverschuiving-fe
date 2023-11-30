@@ -17,6 +17,16 @@ export interface FeatureProperties {
     party_id: number;
 }
 
+export interface MapSourceItem {
+    title: string;
+    population: number;
+    color: string;
+    cbs_code: string;
+    party_id: number;
+    latitude: number;
+    longitude: number;
+}
+
 export interface Feature {
     type: string;
     properties: FeatureProperties;

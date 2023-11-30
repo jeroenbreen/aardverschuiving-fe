@@ -1,27 +1,20 @@
-import { Feature, GeoJSON, Municipality } from "../../types";
+import { Feature, GeoJSON, MapSourceItem } from "../../types";
 
 const round = (value: number) => {
     return value;
 };
 
-export const getGeoJson = (municipalities: Municipality[]): GeoJSON => {
+export const getGeoJson = (mapSourceItems: MapSourceItem[]): GeoJSON => {
     const features = [];
-    for (const municipality of municipalities) {
+    for (const item of mapSourceItems) {
         const feature = {
             type: "Feature",
             properties: {
-                title: municipality.title,
-                population: municipality.population,
-                color: "black",
-                cbs_code: municipality.cbs_code,
-                party_id: 0,
+                ...item,
             },
             geometry: {
                 type: "Point",
-                coordinates: [
-                    round(municipality.longitude),
-                    round(municipality.latitude),
-                ],
+                coordinates: [round(item.longitude), round(item.latitude)],
             },
         } as Feature;
         features.push(feature);

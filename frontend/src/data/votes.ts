@@ -1,9 +1,10 @@
-import { Vote } from "../types";
+import { VoteSet } from "../types";
 
-const votes: Vote[] = [
+const votes: VoteSet[] = [
     {
         party_id: 1,
         election_id: 1,
+        municipality_code: "",
         votes: 6954,
     },
 ];

@@ -1,12 +1,12 @@
 import { defineStore } from "pinia";
-import { Election, Municipality, Party, Vote } from "./../types";
+import { Election, Municipality, Party, VoteSet } from "./../types";
 
 interface MainState {
     loaded: boolean;
     elections: Election[];
     municipalities: Municipality[];
     parties: Party[];
-    votes: Vote[];
+    votes: VoteSet[];
     currentMunicipality: Municipality | null;
     currentElection: Election | null;
 }
