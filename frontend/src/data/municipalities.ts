@@ -3298,8 +3298,8 @@ export default [
         migrants_western: 15.8,
         migrants_non_western: 2.4,
         income: 0,
-        latitude: 50.883333333333,
-        longitude: 5.9166666666667,
+        latitude: 50.8833,
+        longitude: 5.91666,
     },
     {
         title: "Sint Eustatius",

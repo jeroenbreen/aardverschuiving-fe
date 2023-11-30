@@ -1,17 +1,24 @@
 import { GeoJSON, Municipality } from "../../types";
 
+const round = (value: number) => {
+    return value;
+};
+
 export const getGeoJson = (municipalities: Municipality[]): GeoJSON => {
     const features = [];
     for (const municipality of municipalities) {
         const feature = {
             type: "Feature",
             properties: {
-                Municipality_name_2022: municipality.title,
-                population_2021MM10: municipality.population,
+                title: municipality.title,
+                population: municipality.population,
             },
             geometry: {
                 type: "Point",
-                coordinates: [municipality.longitude, municipality.latitude],
+                coordinates: [
+                    round(municipality.longitude),
+                    round(municipality.latitude),
+                ],
             },
         };
         features.push(feature);
