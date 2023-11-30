@@ -16,7 +16,7 @@ module.exports = {
         ecmaVersion: 2020,
     },
 
-    ignorePatterns: ["data/municipalities.ts"],
+    ignorePatterns: ["data/municipalities.ts", "**/bertin/*"],
 
     rules: {
         "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",

@@ -24,5 +24,11 @@ export const useMainStore = defineStore("main", {
         } as MainState;
     },
     getters: {},
-    actions: {},
+    actions: {
+        selectMunicipality(cbs_code: string) {
+            this.currentMunicipality = this.municipalities.find(
+                (m) => m.cbs_code === cbs_code
+            )!;
+        },
+    },
 });
