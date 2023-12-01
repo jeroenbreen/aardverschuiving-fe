@@ -41,27 +41,7 @@ export const useMainStore = defineStore("main", {
                     };
                 })
                 .filter((v) => v.municipality && v.party && v.election);
-            for (const item of set) {
-                if (item.votes > window.config.votes.max) {
-                    // break the bigger sets into chunks
-                    const chunks = Math.ceil(
-                        item.votes / window.config.votes.max
-                    );
-                    for (let i = 0; i < chunks; i++) {
-                        votes.push({
-                            ...item,
-                            votes: window.config.votes.max,
-                        });
-                    }
-                    votes.push({
-                        ...item,
-                        votes: item.votes % window.config.votes.max,
-                    });
-                } else {
-                    votes.push(item);
-                }
-            }
-            return votes;
+            return set;
         },
     },
     actions: {
