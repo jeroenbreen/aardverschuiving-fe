@@ -1,7 +1,7 @@
 import { App } from "./App";
-import { VoteSetHeavy } from "../../../types";
-
-type CellDirection = "nw" | "n" | "ne" | "e" | "se" | "s" | "sw" | "w";
+import { Party, VoteSetHeavy } from "../../../types";
+import { getShell, getRibSizeForShell, getAreaInsideShell } from "./shell";
+import { settings } from "./settings";
 
 export class Cell {
     app: App;
@@ -9,8 +9,7 @@ export class Cell {
     indexY: number;
     x: number;
     y: number;
-    width: number;
-    height: number;
+    size: number;
     voteSets: VoteSetHeavy[];
     cellSize: number;
 
@@ -20,8 +19,7 @@ export class Cell {
         indexY: number,
         x: number,
         y: number,
-        width: number,
-        height: number,
+        size: number,
         cellSize: number
     ) {
         this.app = app;
@@ -29,27 +27,12 @@ export class Cell {
         this.indexY = indexY;
         this.x = x;
         this.y = y;
-        this.width = width;
-        this.height = height;
+        this.size = size;
         this.cellSize = cellSize;
         this.voteSets = [];
     }
 
-    getNeighbour = (distanceIndex: number) => {
-        const getShell = (distanceIndex: number) => {
-            // todo
-            return 0;
-        };
-
-        const getRibSizeForShell = (shell: number) => {
-            return (shell + 1) * 2 + 1;
-        };
-
-        const getAreaInsideShell = (shell: number) => {
-            const ribSizeInside = getRibSizeForShell(shell - 1);
-            return ribSizeInside * ribSizeInside - 1;
-        };
-
+    getNeighbour(distanceIndex: number) {
         const getCoordinatesForShell = (
             shell: number,
             distanceIndex: number
@@ -104,58 +87,80 @@ export class Cell {
         const distanceIndexInShell = distanceIndex - areaInside; // 0
         const coordinates = getCoordinatesForShell(shell, distanceIndexInShell); // [-1, -1]
 
-        console.log(
-            distanceIndex,
-            shell,
-            areaInside,
-            distanceIndexInShell,
-            coordinates
-        );
+        // console.log(
+        //     distanceIndex,
+        //     shell,
+        //     areaInside,
+        //     distanceIndexInShell,
+        //     coordinates
+        // );
         return this.app.getCellFromCoordinates(
             this.indexX + coordinates.x,
             this.indexY + coordinates.y
         );
-    };
+    }
 
-    addVoteSet = (voteSet: VoteSetHeavy) => {
+    addVoteSet(voteSet: VoteSetHeavy) {
         if (this.isEmpty() || this.voteSets[0].party === voteSet.party) {
             this.voteSets.push(voteSet);
         }
-    };
+    }
+
+    filledPercentage() {
+        return (100 * this.getPopulation()) / this.cellSize;
+    }
 
     draw(ctx: CanvasRenderingContext2D) {
-        if (this.voteSets.length > 0) {
+        if (this.voteSets.length > 0 && this.doDraw()) {
             const voteSet = this.voteSets[0];
             if (voteSet.party) {
+                let size, x, y;
+                if (settings.notFullCells === "reduce") {
+                    size = this.size * (this.filledPercentage() / 100);
+                    x = this.x + (this.size - size) / 2;
+                    y = this.y + (this.size - size) / 2;
+                } else {
+                    size = this.size;
+                    x = this.x;
+                    y = this.y;
+                }
                 ctx.fillStyle = voteSet.party.color;
-                ctx.fillRect(this.x, this.y, this.width, this.height);
-                ctx.strokeStyle = "black";
-                ctx.rect(this.x, this.y, this.width, this.height);
-                ctx.stroke();
+                ctx.fillRect(x, y, size, size);
             }
-        } else {
-            ctx.fillStyle = "white";
-            ctx.strokeStyle = "black";
-            ctx.rect(this.x, this.y, this.width, this.height);
-            ctx.stroke();
         }
     }
 
-    getPopulation = () => {
+    doDraw() {
+        if (settings.notFullCells === "reduce") {
+            return true;
+        } else {
+            return this.filledPercentage() > 50;
+        }
+    }
+
+    getPopulation() {
         return this.voteSets.reduce((acc, voteSet) => {
             return acc + voteSet.votes;
         }, 0);
-    };
+    }
 
-    isEmpty = () => {
+    isEmpty() {
         return this.voteSets.length === 0;
-    };
+    }
 
     // todo, maybe cache this
     // clear/reset on addVoteSet
-    getSpace = () => {
+    getSpace() {
         return this.cellSize - this.getPopulation();
-    };
+    }
+
+    matchesParty(party: Party) {
+        if (this.isEmpty()) {
+            return true;
+        } else {
+            return this.voteSets[0].party === party;
+        }
+    }
 
     log() {
         const voteSet = this.voteSets[0];

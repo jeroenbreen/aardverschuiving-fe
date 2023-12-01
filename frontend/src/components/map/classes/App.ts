@@ -1,13 +1,6 @@
 import { VoteSetHeavy } from "../../../types";
 import { Cell } from "./Cell";
-import { settings } from "./settings";
-
-const boundingBox = {
-    x1: 3.31497114423,
-    x2: 7.09205325687,
-    y1: 53.5104033474,
-    y2: 50.803721015,
-};
+import { settings, boundingBox, ratio } from "./settings";
 
 // todo cache coordinates for each municipality
 
@@ -17,36 +10,50 @@ export class App {
     cells: Cell[];
     totalPopulation: number;
     cellSize: number;
-    grid: number;
+    gridHorizontal: number;
+    gridVertical: number;
+    skipped: number;
     // chunks: VoteSetHeavy[];
 
     constructor(ctx: CanvasRenderingContext2D, voteSets: VoteSetHeavy[]) {
         this.ctx = ctx;
         this.voteSets = this.order(voteSets);
         this.totalPopulation = this.getTotalPopulation();
-        this.grid = 20;
+        this.gridHorizontal = settings.grid;
+        this.gridVertical = Math.round(this.gridHorizontal * ratio);
+        this.skipped = 0;
         this.cellSize = this.getCellSize();
         this.cells = this.createCells();
         this.init();
     }
 
     init() {
-        const runs = 20;
+        const runs = 10000;
         for (let i = 0; i < runs; i++) {
-            this.run();
+            if (this.voteSets.length > 0) {
+                this.run();
+            }
         }
         this.draw();
         this.report();
     }
 
     report() {
-        // const totalSpaceLeft = this.cells.reduce((acc, cell) => {
-        //     return acc + cell.getSpace();
-        // }, 0);
-        const cellsFull = this.cells.reduce((acc, cell) => {
-            return acc + cell.getSpace() === 0 ? 1 : 0;
+        const usedPopulation = this.cells.reduce((acc, cell) => {
+            return acc + cell.getPopulation();
         }, 0);
-        console.log("cellsFull: " + cellsFull);
+
+        const drawnPopulation = this.cells.reduce((acc, cell) => {
+            return acc + (cell.doDraw() ? cell.getPopulation() : 0);
+        }, 0);
+        console.log("usedPopulation: " + usedPopulation);
+        console.log("voteSets left: " + this.voteSets.length);
+        console.log("Skipped: " + this.skipped);
+        console.log(
+            "Drawn %: " +
+                Math.round(100 * (drawnPopulation / this.totalPopulation)) +
+                "%"
+        );
     }
 
     run() {
@@ -71,9 +78,10 @@ export class App {
             }
             const index = this.voteSets.indexOf(biggest);
             this.voteSets.splice(index, 1);
-            // cell.log();
         } else {
-            console.log("no nearest");
+            this.skipped += biggest.votes;
+            const index = this.voteSets.indexOf(biggest);
+            this.voteSets.splice(index, 1);
         }
     }
 
@@ -89,39 +97,44 @@ export class App {
             return null;
         } else {
             if (cell.isEmpty()) {
-                console.log(
-                    "empty cell, adding " +
-                        voteSet.municipality.title +
-                        " at [" +
-                        cell.indexX +
-                        ", " +
-                        cell.indexY +
-                        "]"
-                );
+                // console.log(
+                //     "empty cell, adding " +
+                //         voteSet.municipality.title +
+                //         " at [" +
+                //         cell.indexX +
+                //         ", " +
+                //         cell.indexY +
+                //         "]"
+                // );
                 return cell;
             } else {
-                console.log("not empty for " + voteSet.municipality.title);
-                const max = 9;
+                // console.log("not empty for " + voteSet.municipality.title);
+                const max = 250;
                 let distance = 0;
                 let cellWithSpace = null;
+                // todo keep score of nearest available neighbour
                 while (!cellWithSpace && distance < max) {
                     const neighbour = cell.getNeighbour(distance);
-                    if (neighbour && neighbour.getSpace() > 0) {
+                    if (
+                        neighbour &&
+                        neighbour.getSpace() > 0 &&
+                        voteSet.party &&
+                        neighbour.matchesParty(voteSet.party)
+                    ) {
                         cellWithSpace = neighbour;
                     }
                     distance++;
                 }
-                if (cellWithSpace) {
-                    console.log(
-                        "found neighbour at [" +
-                            cellWithSpace.indexX +
-                            ", " +
-                            cellWithSpace.indexY +
-                            "]"
-                    );
-                } else {
-                    console.log("problem");
-                }
+                // if (cellWithSpace) {
+                //     console.log(
+                //         "found neighbour at [" +
+                //             cellWithSpace.indexX +
+                //             ", " +
+                //             cellWithSpace.indexY +
+                //             "]"
+                //     );
+                // }
+
                 return cellWithSpace;
             }
         }
@@ -130,10 +143,10 @@ export class App {
     getExactCellForVoteSet(voteSet: VoteSetHeavy) {
         const longScale = boundingBox.x2 - boundingBox.x1;
         const deltaLong = voteSet.municipality.longitude - boundingBox.x1;
-        const x = Math.round((deltaLong / longScale) * this.grid) - 1;
+        const x = Math.round((deltaLong / longScale) * this.gridHorizontal) - 1;
         const latScale = boundingBox.y1 - boundingBox.y2;
         const deltaLat = boundingBox.y1 - voteSet.municipality.latitude;
-        const y = Math.round((deltaLat / latScale) * this.grid) - 1;
+        const y = Math.round((deltaLat / latScale) * this.gridVertical) - 1;
         return this.getCellFromCoordinates(x, y);
     }
 
@@ -157,26 +170,24 @@ export class App {
 
     getCellSize() {
         const assumedOccupation = 0.25;
-        const cells = this.grid * this.grid;
+        const cells = this.gridHorizontal * this.gridVertical;
         const effectiveCells = Math.round(cells * assumedOccupation);
         return Math.round(this.totalPopulation / effectiveCells);
     }
 
     createCells() {
         const cells = [];
-        const cellWidth = settings.width / this.grid;
-        const cellHeight = settings.height / this.grid;
-        for (let y = 0; y < this.grid; y += 1) {
-            for (let x = 0; x < this.grid; x += 1) {
+        const size = settings.width / this.gridHorizontal;
+        for (let y = 0; y < this.gridVertical; y += 1) {
+            for (let x = 0; x < this.gridHorizontal; x += 1) {
                 cells.push(
                     new Cell(
                         this,
                         x,
                         y,
-                        x * cellWidth,
-                        y * cellHeight,
-                        cellWidth,
-                        cellHeight,
+                        x * size,
+                        y * size,
+                        size,
                         this.cellSize
                     )
                 );

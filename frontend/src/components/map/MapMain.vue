@@ -26,7 +26,6 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .MapMain {
-    width: 500px;
-    height: 500px;
+    padding: 20px;
 }
 </style>

@@ -1,6 +1,6 @@
 window.config = {
     votes: {
-        min: 10000,
+        min: 1,
         max: 5000,
     },
 };
