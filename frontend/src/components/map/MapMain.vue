@@ -2,14 +2,19 @@
 import { onMounted, ref } from "vue";
 import { render } from "./render";
 import { useMainStore } from "../../stores/main";
-import { FeatureProperties, VoteSetHeavy } from "../../types";
+import { VoteSetHeavy } from "../../types";
 
 const store = useMainStore();
 const el = ref<HTMLElement | null>(null);
 
-const callback = (properties: FeatureProperties) => {
-    store.selectMunicipality(properties.cbs_code);
-    console.log(properties.party_id);
+const callback = (cell: any) => {
+    console.log(cell);
+    if (cell.voteSets.length > 0) {
+        const voteSet = cell.voteSets[0];
+        store.selectMunicipality(voteSet.municipality.cbs_code);
+        store.selectParty(voteSet.party.id);
+    }
+    // console.log(properties.party_id);
 };
 
 onMounted(() => {

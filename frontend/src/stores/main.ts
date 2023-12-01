@@ -9,6 +9,7 @@ interface MainState {
     votes: VoteSet[];
     currentMunicipality: Municipality | null;
     currentElection: Election | null;
+    currentParty: Party | null;
 }
 
 export const useMainStore = defineStore("main", {
@@ -21,12 +22,12 @@ export const useMainStore = defineStore("main", {
             votes: [],
             currentMunicipality: null,
             currentElection: null,
+            currentParty: null,
         } as MainState;
     },
     getters: {
         voteSetsHeavy(state: MainState) {
-            const votes = [];
-            const set = state.votes
+            return state.votes
                 .filter((v) => v.votes > window.config.votes.min)
                 .map((v) => {
                     return {
@@ -41,7 +42,18 @@ export const useMainStore = defineStore("main", {
                     };
                 })
                 .filter((v) => v.municipality && v.party && v.election);
-            return set;
+        },
+        voteSetsForMunicipality(state: MainState) {
+            return state.votes
+                .filter((v) => {
+                    return (
+                        v.municipality_code ===
+                        state.currentMunicipality?.cbs_code
+                    );
+                })
+                .sort((a, b) => {
+                    return b.votes - a.votes;
+                });
         },
     },
     actions: {
@@ -49,6 +61,9 @@ export const useMainStore = defineStore("main", {
             this.currentMunicipality = this.municipalities.find(
                 (m) => m.cbs_code === cbs_code
             )!;
+        },
+        selectParty(id: number) {
+            this.currentParty = this.parties.find((p) => p.id === id)!;
         },
     },
 });

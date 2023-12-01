@@ -1,21 +1,21 @@
 import { Party } from "../types";
 
 const parties: Party[] = [
-    // {
-    //     id: 999,
-    //     name: "Blanco",
-    //     isParty: false,
-    //     color: "grey",
-    // },
-    // {
-    //     id: 1000,
-    //     name: "Ongeldig",
-    //     isParty: false,
-    //     color: "grey",
-    // },
+    {
+        id: 999,
+        name: "Blanco",
+        isParty: false,
+        color: "grey",
+    },
+    {
+        id: 1000,
+        name: "Ongeldig",
+        isParty: false,
+        color: "grey",
+    },
     {
         id: 1,
-        name: "GROENLINKS / Partij van de Arbeid (PvdA)",
+        name: "GL+PvdA",
         isParty: true,
         color: "#a90000",
     },
@@ -33,7 +33,7 @@ const parties: Party[] = [
     },
     {
         id: 4,
-        name: "PVV (Partij voor de Vrijheid)",
+        name: "PVV",
         isParty: true,
         color: "#70d4ff",
     },
@@ -63,16 +63,16 @@ const parties: Party[] = [
     },
     {
         id: 9,
-        name: "SP (Socialistische Partij)",
+        name: "SP",
         isParty: true,
         color: "#f00031",
     },
-    // {
-    //     id: 10,
-    //     name: "BIJ1",
-    //     isParty: true,
-    //     color: "#000000",
-    // },
+    {
+        id: 10,
+        name: "BIJ1",
+        isParty: true,
+        color: "#000000",
+    },
     {
         id: 11,
         name: "Forum voor Democratie",
@@ -97,84 +97,84 @@ const parties: Party[] = [
         isParty: true,
         color: "#005c00",
     },
-    // {
-    //     id: 15,
-    //     name: "JA21",
-    //     isParty: true,
-    //     color: "#003599",
-    // },
-    // {
-    //     id: 16,
-    //     name: "BVNL / Groep Van Haga",
-    //     isParty: true,
-    //     color: "#000000",
-    // },
-    // {
-    //     id: 17,
-    //     name: "50PLUS",
-    //     isParty: true,
-    //     color: "#000000",
-    // },
-    // {
-    //     id: 18,
-    //     name: "Piratenpartij - De Groenen",
-    //     isParty: true,
-    //     color: "#000000",
-    // },
-    // {
-    //     id: 19,
-    //     name: "Staatkundig Gereformeerde Partij (SGP)",
-    //     isParty: true,
-    //     color: "#f08836",
-    // },
-    // {
-    //     id: 20,
-    //     name: "Splinter",
-    //     isParty: true,
-    //     color: "#000000",
-    // },
-    // {
-    //     id: 21,
-    //     name: "LEF - Voor de Nieuwe Generatie",
-    //     isParty: true,
-    //     color: "#000000",
-    // },
-    // {
-    //     id: 22,
-    //     name: "Nederland met een PLAN",
-    //     isParty: true,
-    //     color: "#000000",
-    // },
-    // {
-    //     id: 23,
-    //     name: "LP (Libertaire Partij)",
-    //     isParty: true,
-    //     color: "#000000",
-    // },
-    // {
-    //     id: 24,
-    //     name: "PartijvdSport",
-    //     isParty: true,
-    //     color: "#000000",
-    // },
-    // {
-    //     id: 25,
-    //     name: "Politieke Partij voor Basisinkomen",
-    //     isParty: true,
-    //     color: "#000000",
-    // },
-    // {
-    //     id: 26,
-    //     name: "Samen voor Nederland",
-    //     isParty: true,
-    //     color: "#000000",
-    // },
-    // {
-    //     id: 27,
-    //     name: "Overige 2021",
-    //     isParty: true,
-    //     color: "#000000",
-    // },
+    {
+        id: 15,
+        name: "JA21",
+        isParty: true,
+        color: "#003599",
+    },
+    {
+        id: 16,
+        name: "BVNL",
+        isParty: true,
+        color: "#000000",
+    },
+    {
+        id: 17,
+        name: "50PLUS",
+        isParty: true,
+        color: "#000000",
+    },
+    {
+        id: 18,
+        name: "Piratenpartij",
+        isParty: true,
+        color: "#000000",
+    },
+    {
+        id: 19,
+        name: "SGP",
+        isParty: true,
+        color: "#f08836",
+    },
+    {
+        id: 20,
+        name: "Splinter",
+        isParty: true,
+        color: "#000000",
+    },
+    {
+        id: 21,
+        name: "LEF",
+        isParty: true,
+        color: "#000000",
+    },
+    {
+        id: 22,
+        name: "Nederland met een PLAN",
+        isParty: true,
+        color: "#000000",
+    },
+    {
+        id: 23,
+        name: "LP",
+        isParty: true,
+        color: "#000000",
+    },
+    {
+        id: 24,
+        name: "PartijvdSport",
+        isParty: true,
+        color: "#000000",
+    },
+    {
+        id: 25,
+        name: "PPv Basisinkomen",
+        isParty: true,
+        color: "#000000",
+    },
+    {
+        id: 26,
+        name: "Samen voor Nederland",
+        isParty: true,
+        color: "#000000",
+    },
+    {
+        id: 27,
+        name: "Overige 2021",
+        isParty: true,
+        color: "#000000",
+    },
 ];
 
 export default parties;

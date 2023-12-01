@@ -2,32 +2,48 @@ import { VoteSetHeavy } from "../../../types";
 import { Cell } from "./Cell";
 import { settings, boundingBox, ratio } from "./settings";
 
+type Callback = any;
+
 // todo cache coordinates for each municipality
 
 export class App {
+    width: number;
+    height: number;
     ctx: CanvasRenderingContext2D;
     voteSets: VoteSetHeavy[];
     cells: Cell[];
     totalPopulation: number;
+    cellPopulation: number;
     cellSize: number;
     gridHorizontal: number;
     gridVertical: number;
     skipped: number;
+    turn: number;
     // chunks: VoteSetHeavy[];
 
-    constructor(ctx: CanvasRenderingContext2D, voteSets: VoteSetHeavy[]) {
+    constructor(
+        ctx: CanvasRenderingContext2D,
+        width: number,
+        height: number,
+        voteSets: VoteSetHeavy[],
+        onClick: Callback
+    ) {
+        this.width = width;
+        this.height = height;
+        this.cellSize = 0;
+        this.turn = 0;
         this.ctx = ctx;
         this.voteSets = this.order(voteSets);
         this.totalPopulation = this.getTotalPopulation();
         this.gridHorizontal = settings.grid;
         this.gridVertical = Math.round(this.gridHorizontal * ratio);
         this.skipped = 0;
-        this.cellSize = this.getCellSize();
+        this.cellPopulation = this.getCellPopulation();
         this.cells = this.createCells();
-        this.init();
+        this.init(onClick);
     }
 
-    init() {
+    init(onClick: Callback) {
         const runs = 10000;
         for (let i = 0; i < runs; i++) {
             if (this.voteSets.length > 0) {
@@ -36,6 +52,20 @@ export class App {
         }
         this.draw();
         this.report();
+        this.initClick(onClick);
+    }
+
+    initClick(onClick: Callback) {
+        this.ctx.canvas.addEventListener("click", (e) => {
+            const x = e.clientX - this.ctx.canvas.offsetLeft;
+            const y = e.clientY - this.ctx.canvas.offsetTop;
+            const xs = Math.floor((x / this.width) * this.gridHorizontal);
+            const ys = Math.floor((y / this.height) * this.gridVertical);
+            const cell = this.getCellFromCoordinates(xs, ys);
+            if (cell) {
+                onClick(cell);
+            }
+        });
     }
 
     report() {
@@ -96,19 +126,17 @@ export class App {
         if (!cell) {
             return null;
         } else {
-            if (cell.isEmpty()) {
-                // console.log(
-                //     "empty cell, adding " +
-                //         voteSet.municipality.title +
-                //         " at [" +
-                //         cell.indexX +
-                //         ", " +
-                //         cell.indexY +
-                //         "]"
-                // );
+            if (
+                cell.isEmpty() ||
+                (voteSet.party &&
+                    cell.matchesParty(voteSet.party) &&
+                    cell.getSpace() > 0)
+            ) {
+                // keep score of the first use
+                cell.turn = this.turn;
+                this.turn++;
                 return cell;
             } else {
-                // console.log("not empty for " + voteSet.municipality.title);
                 const max = 250;
                 let distance = 0;
                 let cellWithSpace = null;
@@ -125,16 +153,6 @@ export class App {
                     }
                     distance++;
                 }
-                // if (cellWithSpace) {
-                //     console.log(
-                //         "found neighbour at [" +
-                //             cellWithSpace.indexX +
-                //             ", " +
-                //             cellWithSpace.indexY +
-                //             "]"
-                //     );
-                // }
-
                 return cellWithSpace;
             }
         }
@@ -168,7 +186,7 @@ export class App {
         }, 0);
     }
 
-    getCellSize() {
+    getCellPopulation() {
         const assumedOccupation = 0.25;
         const cells = this.gridHorizontal * this.gridVertical;
         const effectiveCells = Math.round(cells * assumedOccupation);
@@ -177,7 +195,8 @@ export class App {
 
     createCells() {
         const cells = [];
-        const size = settings.width / this.gridHorizontal;
+        const size = this.width / this.gridHorizontal;
+        this.cellSize = size;
         for (let y = 0; y < this.gridVertical; y += 1) {
             for (let x = 0; x < this.gridHorizontal; x += 1) {
                 cells.push(
@@ -188,7 +207,7 @@ export class App {
                         x * size,
                         y * size,
                         size,
-                        this.cellSize
+                        this.cellPopulation
                     )
                 );
             }

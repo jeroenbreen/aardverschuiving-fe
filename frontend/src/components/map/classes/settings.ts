@@ -18,5 +18,3 @@ export const ratio =
     (boundingBox.x2 - boundingBox.x1) /
     (boundingBox.y1 - boundingBox.y2) /
     factor;
-
-console.log(ratio);

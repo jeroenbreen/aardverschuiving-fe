@@ -11,7 +11,8 @@ export class Cell {
     y: number;
     size: number;
     voteSets: VoteSetHeavy[];
-    cellSize: number;
+    cellPopulation: number;
+    turn: number;
 
     constructor(
         app: App,
@@ -20,7 +21,7 @@ export class Cell {
         x: number,
         y: number,
         size: number,
-        cellSize: number
+        cellPopulation: number
     ) {
         this.app = app;
         this.indexX = indexX;
@@ -28,7 +29,8 @@ export class Cell {
         this.x = x;
         this.y = y;
         this.size = size;
-        this.cellSize = cellSize;
+        this.cellPopulation = cellPopulation;
+        this.turn = 0;
         this.voteSets = [];
     }
 
@@ -107,7 +109,7 @@ export class Cell {
     }
 
     filledPercentage() {
-        return (100 * this.getPopulation()) / this.cellSize;
+        return (100 * this.getPopulation()) / this.cellPopulation;
     }
 
     draw(ctx: CanvasRenderingContext2D) {
@@ -151,7 +153,7 @@ export class Cell {
     // todo, maybe cache this
     // clear/reset on addVoteSet
     getSpace() {
-        return this.cellSize - this.getPopulation();
+        return this.cellPopulation - this.getPopulation();
     }
 
     matchesParty(party: Party) {

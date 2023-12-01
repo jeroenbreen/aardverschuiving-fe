@@ -13,7 +13,13 @@ export const render = (
         canvas.width = settings.width;
         canvas.height = settings.width * ratio;
         el.replaceChildren(canvas);
-        const app = new App(ctx, voteSets);
+        const app = new App(
+            ctx,
+            canvas.width,
+            canvas.height,
+            voteSets,
+            onClick
+        );
         console.log(app);
     }
 };
