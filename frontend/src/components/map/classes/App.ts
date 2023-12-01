@@ -1,8 +1,6 @@
-import { VoteSetHeavy } from "../../../types";
+import { VoteSetHeavy, Callback } from "../../../types";
 import { Cell } from "./Cell";
-import { settings, boundingBox, ratio } from "./settings";
-
-type Callback = any;
+import { boundingBox, ratio } from "./settings";
 
 // todo cache coordinates for each municipality
 
@@ -26,6 +24,7 @@ export class App {
         width: number,
         height: number,
         voteSets: VoteSetHeavy[],
+        grid: number,
         onClick: Callback
     ) {
         this.width = width;
@@ -35,7 +34,7 @@ export class App {
         this.ctx = ctx;
         this.voteSets = this.order(voteSets);
         this.totalPopulation = this.getTotalPopulation();
-        this.gridHorizontal = settings.grid;
+        this.gridHorizontal = grid;
         this.gridVertical = Math.round(this.gridHorizontal * ratio);
         this.skipped = 0;
         this.cellPopulation = this.getCellPopulation();
@@ -51,14 +50,15 @@ export class App {
             }
         }
         this.draw();
-        this.report();
+        // this.report();
         this.initClick(onClick);
     }
 
     initClick(onClick: Callback) {
         this.ctx.canvas.addEventListener("click", (e) => {
-            const x = e.clientX - this.ctx.canvas.offsetLeft;
-            const y = e.clientY - this.ctx.canvas.offsetTop;
+            const bb = this.ctx.canvas.getBoundingClientRect();
+            const x = e.clientX - bb.x;
+            const y = e.clientY - bb.y;
             const xs = Math.floor((x / this.width) * this.gridHorizontal);
             const ys = Math.floor((y / this.height) * this.gridVertical);
             const cell = this.getCellFromCoordinates(xs, ys);

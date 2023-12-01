@@ -45,7 +45,7 @@ const parties: Party[] = [
     },
     {
         id: 6,
-        name: "Nieuw Sociaal Contract",
+        name: "NSC",
         isParty: true,
         color: "#F7C106",
     },
@@ -75,7 +75,7 @@ const parties: Party[] = [
     },
     {
         id: 11,
-        name: "Forum voor Democratie",
+        name: "FVD",
         isParty: true,
         color: "#ad72d2",
     },
@@ -141,7 +141,7 @@ const parties: Party[] = [
     },
     {
         id: 22,
-        name: "Nederland met een PLAN",
+        name: "NL met een plan",
         isParty: true,
         color: "#000000",
     },
@@ -165,7 +165,7 @@ const parties: Party[] = [
     },
     {
         id: 26,
-        name: "Samen voor Nederland",
+        name: "Samen voor NL",
         isParty: true,
         color: "#000000",
     },

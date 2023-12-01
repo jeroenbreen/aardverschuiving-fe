@@ -1,3 +1,5 @@
+export type Callback = any;
+
 export interface GeoJSON {
     type: "FeatureCollection";
     crs: {

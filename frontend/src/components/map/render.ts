@@ -1,25 +1,24 @@
-import { VoteSetHeavy } from "../../types";
+import { VoteSetHeavy, Callback } from "../../types";
 import { App } from "./classes/App";
 import { settings, ratio } from "./classes/settings";
 
 export const render = (
-    el: HTMLElement,
+    canvas: HTMLCanvasElement,
     voteSets: VoteSetHeavy[],
-    onClick: () => void
+    onClick: Callback,
+    grid: number
 ) => {
-    const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
     if (ctx) {
         canvas.width = settings.width;
         canvas.height = settings.width * ratio;
-        el.replaceChildren(canvas);
         const app = new App(
             ctx,
             canvas.width,
             canvas.height,
             voteSets,
+            grid,
             onClick
         );
-        console.log(app);
     }
 };

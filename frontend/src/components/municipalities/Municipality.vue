@@ -59,16 +59,20 @@ const municipality = computed<Municipality>(() => store.currentMunicipality);
 .Municipality {
     width: 320px;
     padding-top: var(--size-4);
+    margin-right: 32px;
 }
 
 table {
     margin-top: 12px;
+    width: 100%;
+
     td {
         font-size: var(--text-s);
-        padding-right: var(--size-4);
+
         border-bottom: 1px solid var(--color-grey-1);
 
         &:first-child {
+            padding-right: var(--size-4);
         }
 
         &:last-child {

@@ -10,6 +10,7 @@ interface MainState {
     currentMunicipality: Municipality | null;
     currentElection: Election | null;
     currentParty: Party | null;
+    grid: number;
 }
 
 export const useMainStore = defineStore("main", {
@@ -23,6 +24,7 @@ export const useMainStore = defineStore("main", {
             currentMunicipality: null,
             currentElection: null,
             currentParty: null,
+            grid: 40,
         } as MainState;
     },
     getters: {
