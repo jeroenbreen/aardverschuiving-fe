@@ -6,6 +6,11 @@ export * from "./map";
 
 declare global {
     interface Window {
-        bertin: any;
+        config: {
+            votes: {
+                min: number;
+                max: number;
+            };
+        };
     }
 }

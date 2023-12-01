@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, defineEmits } from "vue";
+import { onMounted, ref } from "vue";
 import { render } from "./render";
 import { useMainStore } from "../../stores/main";
 import { FeatureProperties, VoteSetHeavy } from "../../types";
@@ -14,16 +14,7 @@ const callback = (properties: FeatureProperties) => {
 
 onMounted(() => {
     if (el.value) {
-        const voteSets: VoteSetHeavy[] = store.municipalities
-            .filter((m) => m.province !== "Caribisch Nederland")
-            .map((m) => {
-                return {
-                    party: null,
-                    election: null,
-                    municipality: m,
-                    votes: m.population,
-                };
-            });
+        const voteSets: VoteSetHeavy[] = store.voteSetsHeavy;
         render(el.value, voteSets, callback);
     }
 });

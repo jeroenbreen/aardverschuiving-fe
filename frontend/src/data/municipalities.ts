@@ -2,7 +2,7 @@ export default [
     {
         title: "Aa en Hunze",
         province: "Drenthe",
-        cbs_code: 1680,
+        cbs_code: "1680",
         population: 25728,
         area: 276.09,
         migrants: 6.7,
@@ -132,7 +132,7 @@ export default [
     {
         title: "Alphen-Chaam",
         province: "Noord-Brabant",
-        cbs_code: 1723,
+        cbs_code: "1723",
         population: 10462,
         area: 93.04,
         migrants: 14.5,
@@ -145,7 +145,7 @@ export default [
     {
         title: "Altena (Nederlandse gemeente)",
         province: "Noord-Brabant",
-        cbs_code: 1959,
+        cbs_code: "1959",
         population: 57776,
         area: 200.63,
         migrants: 7.5,
@@ -327,7 +327,7 @@ export default [
     {
         title: "Beekdaelen",
         province: "Limburg (Nederlandse provincie)",
-        cbs_code: 1954,
+        cbs_code: "1954",
         population: 35941,
         area: 78.3,
         migrants: 15.7,
@@ -353,7 +353,7 @@ export default [
     {
         title: "Berg en Dal (gemeente)",
         province: "Gelderland",
-        cbs_code: 1945,
+        cbs_code: "1945",
         population: 35439,
         area: 86.31,
         migrants: 14.5,
@@ -366,7 +366,7 @@ export default [
     {
         title: "Bergeijk (gemeente)",
         province: "Noord-Brabant",
-        cbs_code: 1724,
+        cbs_code: "1724",
         population: 19089,
         area: 101,
         migrants: 10.8,
@@ -418,7 +418,7 @@ export default [
     {
         title: "Berkelland",
         province: "Gelderland",
-        cbs_code: 1859,
+        cbs_code: "1859",
         population: 43992,
         area: 258.06,
         migrants: 8,
@@ -431,7 +431,7 @@ export default [
     {
         title: "Bernheze",
         province: "Noord-Brabant",
-        cbs_code: 1721,
+        cbs_code: "1721",
         population: 32277,
         area: 89.73,
         migrants: 9.2,
@@ -483,7 +483,7 @@ export default [
     {
         title: "Bladel (gemeente)",
         province: "Noord-Brabant",
-        cbs_code: 1728,
+        cbs_code: "1728",
         population: 21020,
         area: 75.33,
         migrants: 10.5,
@@ -522,7 +522,7 @@ export default [
     {
         title: "Bodegraven-Reeuwijk",
         province: "Zuid-Holland",
-        cbs_code: 1901,
+        cbs_code: "1901",
         population: 36303,
         area: 75.38,
         migrants: 13.4,
@@ -546,22 +546,9 @@ export default [
         longitude: 5.6666666666667,
     },
     {
-        title: "Bonaire",
-        province: "Caribisch Nederland",
-        cbs_code: 9001,
-        population: 22573,
-        area: 288,
-        migrants: 0,
-        migrants_western: 0,
-        migrants_non_western: 0,
-        income: 0,
-        latitude: 12.166666666667,
-        longitude: 68.25,
-    },
-    {
         title: "Borger-Odoorn",
         province: "Drenthe",
-        cbs_code: 1681,
+        cbs_code: "1681",
         population: 25915,
         area: 274.53,
         migrants: 6.4,
@@ -626,7 +613,7 @@ export default [
     {
         title: "Bronckhorst (hoofdbetekenis)",
         province: "Gelderland",
-        cbs_code: 1876,
+        cbs_code: "1876",
         population: 36261,
         area: 283.5,
         migrants: 6.1,
@@ -743,7 +730,7 @@ export default [
     {
         title: "Cranendonck",
         province: "Noord-Brabant",
-        cbs_code: 1706,
+        cbs_code: "1706",
         population: 20879,
         area: 76.4,
         migrants: 18.2,
@@ -782,7 +769,7 @@ export default [
     {
         title: "Dantumadeel",
         province: "Friesland",
-        cbs_code: 1891,
+        cbs_code: "1891",
         population: 19173,
         area: 84.66,
         migrants: 4.5,
@@ -808,7 +795,7 @@ export default [
     {
         title: "De Friese Meren",
         province: "Friesland",
-        cbs_code: 1940,
+        cbs_code: "1940",
         population: 51993,
         area: 351.29,
         migrants: 8.2,
@@ -834,7 +821,7 @@ export default [
     {
         title: "De Wolden",
         province: "Drenthe",
-        cbs_code: 1690,
+        cbs_code: "1690",
         population: 24585,
         area: 224.55,
         migrants: 5.3,
@@ -925,7 +912,7 @@ export default [
     {
         title: "Dijk en Waard",
         province: "Noord-Holland",
-        cbs_code: 1980,
+        cbs_code: "1980",
         population: 89087,
         area: 62.09,
         migrants: 34.5,
@@ -938,7 +925,7 @@ export default [
     {
         title: "Dinkelland",
         province: "Overijssel",
-        cbs_code: 1774,
+        cbs_code: "1774",
         population: 26746,
         area: 175.71,
         migrants: 8.1,
@@ -1016,7 +1003,7 @@ export default [
     {
         title: "Drimmelen (gemeente)",
         province: "Noord-Brabant",
-        cbs_code: 1719,
+        cbs_code: "1719",
         population: 28030,
         area: 95.18,
         migrants: 9.8,
@@ -1068,7 +1055,7 @@ export default [
     {
         title: "Echt-Susteren",
         province: "Limburg (Nederlandse provincie)",
-        cbs_code: 1711,
+        cbs_code: "1711",
         population: 32001,
         area: 103.07,
         migrants: 17.4,
@@ -1120,7 +1107,7 @@ export default [
     {
         title: "Eemsdelta",
         province: "Groningen (provincie)",
-        cbs_code: 1979,
+        cbs_code: "1979",
         population: 45317,
         area: 267.89,
         migrants: 0,
@@ -1146,7 +1133,7 @@ export default [
     {
         title: "Eijsden-Margraten",
         province: "Limburg (Nederlandse provincie)",
-        cbs_code: 1903,
+        cbs_code: "1903",
         population: 26010,
         area: 77.55,
         migrants: 13.3,
@@ -1276,7 +1263,7 @@ export default [
     {
         title: "Geldrop-Mierlo",
         province: "Noord-Brabant",
-        cbs_code: 1771,
+        cbs_code: "1771",
         population: 40484,
         area: 31.01,
         migrants: 17.9,
@@ -1289,7 +1276,7 @@ export default [
     {
         title: "Gemert-Bakel",
         province: "Noord-Brabant",
-        cbs_code: 1652,
+        cbs_code: "1652",
         population: 31364,
         area: 122.14,
         migrants: 11.3,
@@ -1328,7 +1315,7 @@ export default [
     {
         title: "Goeree-Overflakkee",
         province: "Zuid-Holland",
-        cbs_code: 1924,
+        cbs_code: "1924",
         population: 51579,
         area: 260.48,
         migrants: 7,
@@ -1367,7 +1354,7 @@ export default [
     {
         title: "Gooise Meren",
         province: "Noord-Holland",
-        cbs_code: 1942,
+        cbs_code: "1942",
         population: 60423,
         area: 41.59,
         migrants: 21.7,
@@ -1419,7 +1406,7 @@ export default [
     {
         title: "Gulpen-Wittem",
         province: "Limburg (Nederlandse provincie)",
-        cbs_code: 1729,
+        cbs_code: "1729",
         population: 14177,
         area: 73.18,
         migrants: 14.1,
@@ -1471,7 +1458,7 @@ export default [
     {
         title: "Halderberge",
         province: "Noord-Brabant",
-        cbs_code: 1655,
+        cbs_code: "1655",
         population: 31020,
         area: 74.47,
         migrants: 15.9,
@@ -1614,7 +1601,7 @@ export default [
     {
         title: "Heeze-Leende",
         province: "Noord-Brabant",
-        cbs_code: 1658,
+        cbs_code: "1658",
         population: 16640,
         area: 104.02,
         migrants: 11.1,
@@ -1705,7 +1692,7 @@ export default [
     {
         title: "Het Hogeland",
         province: "Groningen (provincie)",
-        cbs_code: 1966,
+        cbs_code: "1966",
         population: 48255,
         area: 482.75,
         migrants: 7.7,
@@ -1783,7 +1770,7 @@ export default [
     {
         title: "Hoeksche Waard (gemeente)",
         province: "Zuid-Holland",
-        cbs_code: 1963,
+        cbs_code: "1963",
         population: 89846,
         area: 268.93,
         migrants: 9.4,
@@ -1796,7 +1783,7 @@ export default [
     {
         title: "Hof van Twente",
         province: "Overijssel",
-        cbs_code: 1735,
+        cbs_code: "1735",
         population: 35450,
         area: 212.56,
         migrants: 9.3,
@@ -1809,7 +1796,7 @@ export default [
     {
         title: "Hollands Kroon (gemeente)",
         province: "Noord-Holland",
-        cbs_code: 1911,
+        cbs_code: "1911",
         population: 49387,
         area: 357.34,
         migrants: 12,
@@ -1848,7 +1835,7 @@ export default [
     {
         title: "Horst aan de Maas",
         province: "Limburg (Nederlandse provincie)",
-        cbs_code: 1507,
+        cbs_code: "1507",
         population: 43642,
         area: 188.73,
         migrants: 12.1,
@@ -1913,7 +1900,7 @@ export default [
     {
         title: "Kaag en Braassem",
         province: "Zuid-Holland",
-        cbs_code: 1884,
+        cbs_code: "1884",
         population: 28590,
         area: 63.24,
         migrants: 11.9,
@@ -1978,7 +1965,7 @@ export default [
     {
         title: "Koggenland",
         province: "Noord-Holland",
-        cbs_code: 1598,
+        cbs_code: "1598",
         population: 23517,
         area: 80.32,
         migrants: 8.7,
@@ -2004,7 +1991,7 @@ export default [
     {
         title: "Krimpenerwaard (gemeente)",
         province: "Zuid-Holland",
-        cbs_code: 1931,
+        cbs_code: "1931",
         population: 57729,
         area: 148.4,
         migrants: 11.4,
@@ -2017,7 +2004,7 @@ export default [
     {
         title: "Laarbeek (gemeente)",
         province: "Noord-Brabant",
-        cbs_code: 1659,
+        cbs_code: "1659",
         population: 23253,
         area: 55.35,
         migrants: 9.4,
@@ -2030,7 +2017,7 @@ export default [
     {
         title: "Land van Cuijk (gemeente)",
         province: "Noord-Brabant",
-        cbs_code: 1982,
+        cbs_code: "1982",
         population: 91489,
         area: 351.87,
         migrants: 12.3,
@@ -2069,7 +2056,7 @@ export default [
     {
         title: "Lansingerland",
         province: "Zuid-Holland",
-        cbs_code: 1621,
+        cbs_code: "1621",
         population: 64737,
         area: 53.42,
         migrants: 18.9,
@@ -2134,7 +2121,7 @@ export default [
     {
         title: "Leidschendam-Voorburg",
         province: "Zuid-Holland",
-        cbs_code: 1916,
+        cbs_code: "1916",
         population: 77798,
         area: 32.55,
         migrants: 32.4,
@@ -2160,7 +2147,7 @@ export default [
     {
         title: "Leudal (gemeente)",
         province: "Limburg (Nederlandse provincie)",
-        cbs_code: 1640,
+        cbs_code: "1640",
         population: 36106,
         area: 162.73,
         migrants: 13,
@@ -2186,7 +2173,7 @@ export default [
     {
         title: "Lingewaard",
         province: "Gelderland",
-        cbs_code: 1705,
+        cbs_code: "1705",
         population: 47241,
         area: 62,
         migrants: 10.7,
@@ -2277,7 +2264,7 @@ export default [
     {
         title: "Maasgouw (gemeente)",
         province: "Limburg (Nederlandse provincie)",
-        cbs_code: 1641,
+        cbs_code: "1641",
         population: 24358,
         area: 45.71,
         migrants: 14.7,
@@ -2290,7 +2277,7 @@ export default [
     {
         title: "Maashorst (gemeente)",
         province: "Noord-Brabant",
-        cbs_code: 1991,
+        cbs_code: "1991",
         population: 58934,
         area: 138.24,
         migrants: 0,
@@ -2355,7 +2342,7 @@ export default [
     {
         title: "Meierijstad",
         province: "Noord-Brabant",
-        cbs_code: 1948,
+        cbs_code: "1948",
         population: 83706,
         area: 184.09,
         migrants: 14.5,
@@ -2394,7 +2381,7 @@ export default [
     {
         title: "Midden-Delfland",
         province: "Zuid-Holland",
-        cbs_code: 1842,
+        cbs_code: "1842",
         population: 19449,
         area: 47.19,
         migrants: 12.6,
@@ -2407,7 +2394,7 @@ export default [
     {
         title: "Midden-Drenthe",
         province: "Drenthe",
-        cbs_code: 1731,
+        cbs_code: "1731",
         population: 34011,
         area: 340.51,
         migrants: 7.3,
@@ -2420,7 +2407,7 @@ export default [
     {
         title: "Midden-Groningen",
         province: "Groningen (provincie)",
-        cbs_code: 1952,
+        cbs_code: "1952",
         population: 61573,
         area: 280,
         migrants: 14.8,
@@ -2433,7 +2420,7 @@ export default [
     {
         title: "Moerdijk (gemeente)",
         province: "Noord-Brabant",
-        cbs_code: 1709,
+        cbs_code: "1709",
         population: 37717,
         area: 159.15,
         migrants: 12.4,
@@ -2446,7 +2433,7 @@ export default [
     {
         title: "Molenlanden",
         province: "Zuid-Holland",
-        cbs_code: 1978,
+        cbs_code: "1978",
         population: 45143,
         area: 181.73,
         migrants: 7,
@@ -2459,7 +2446,7 @@ export default [
     {
         title: "Montferland (gemeente)",
         province: "Gelderland",
-        cbs_code: 1955,
+        cbs_code: "1955",
         population: 36891,
         area: 105.7,
         migrants: 12.4,
@@ -2498,7 +2485,7 @@ export default [
     {
         title: "Neder-Betuwe (gemeente)",
         province: "Gelderland",
-        cbs_code: 1740,
+        cbs_code: "1740",
         population: 25457,
         area: 59.98,
         migrants: 8.6,
@@ -2576,7 +2563,7 @@ export default [
     {
         title: "Nissewaard",
         province: "Zuid-Holland",
-        cbs_code: 1930,
+        cbs_code: "1930",
         population: 86857,
         area: 73.58,
         migrants: 25.3,
@@ -2589,7 +2576,7 @@ export default [
     {
         title: "Noardeast-Fryslân",
         province: "Friesland",
-        cbs_code: 1970,
+        cbs_code: "1970",
         population: 45818,
         area: 377.83,
         migrants: 5.8,
@@ -2602,7 +2589,7 @@ export default [
     {
         title: "Noord-Beveland",
         province: "Zeeland (provincie)",
-        cbs_code: 1695,
+        cbs_code: "1695",
         population: 7881,
         area: 85.96,
         migrants: 13.4,
@@ -2615,7 +2602,7 @@ export default [
     {
         title: "Noordenveld (gemeente)",
         province: "Drenthe",
-        cbs_code: 1699,
+        cbs_code: "1699",
         population: 31612,
         area: 199.41,
         migrants: 7.9,
@@ -2719,7 +2706,7 @@ export default [
     {
         title: "Oldambt (gemeente)",
         province: "Groningen (provincie)",
-        cbs_code: 1895,
+        cbs_code: "1895",
         population: 39073,
         area: 226.66,
         migrants: 11.6,
@@ -2758,7 +2745,7 @@ export default [
     {
         title: "Olst-Wijhe",
         province: "Overijssel",
-        cbs_code: 1773,
+        cbs_code: "1773",
         population: 18682,
         area: 113.84,
         migrants: 8.3,
@@ -2784,7 +2771,7 @@ export default [
     {
         title: "Oost Gelre",
         province: "Gelderland",
-        cbs_code: 1586,
+        cbs_code: "1586",
         population: 29863,
         area: 109.93,
         migrants: 8.4,
@@ -2875,7 +2862,7 @@ export default [
     {
         title: "Oude IJsselstreek",
         province: "Gelderland",
-        cbs_code: 1509,
+        cbs_code: "1509",
         population: 39624,
         area: 136.15,
         migrants: 13.7,
@@ -2914,7 +2901,7 @@ export default [
     {
         title: "Overbetuwe",
         province: "Gelderland",
-        cbs_code: 1734,
+        cbs_code: "1734",
         population: 48703,
         area: 109.19,
         migrants: 11.9,
@@ -2940,7 +2927,7 @@ export default [
     {
         title: "Peel en Maas",
         province: "Limburg (Nederlandse provincie)",
-        cbs_code: 1894,
+        cbs_code: "1894",
         population: 45314,
         area: 159.37,
         migrants: 11.3,
@@ -2966,7 +2953,7 @@ export default [
     {
         title: "Pijnacker-Nootdorp",
         province: "Zuid-Holland",
-        cbs_code: 1926,
+        cbs_code: "1926",
         population: 57688,
         area: 37.08,
         migrants: 22,
@@ -3057,7 +3044,7 @@ export default [
     {
         title: "Reusel-De Mierden",
         province: "Noord-Brabant",
-        cbs_code: 1667,
+        cbs_code: "1667",
         population: 13551,
         area: 77.88,
         migrants: 9.1,
@@ -3109,7 +3096,7 @@ export default [
     {
         title: "Rijssen-Holten",
         province: "Overijssel",
-        cbs_code: 1742,
+        cbs_code: "1742",
         population: 38502,
         area: 94.13,
         migrants: 8.1,
@@ -3135,7 +3122,7 @@ export default [
     {
         title: "Roerdalen",
         province: "Limburg (Nederlandse provincie)",
-        cbs_code: 1669,
+        cbs_code: "1669",
         population: 20699,
         area: 88.21,
         migrants: 17.6,
@@ -3161,7 +3148,7 @@ export default [
     {
         title: "Roosendaal (gemeente)",
         province: "Noord-Brabant",
-        cbs_code: 1674,
+        cbs_code: "1674",
         population: 77578,
         area: 106.5,
         migrants: 26.1,
@@ -3209,19 +3196,6 @@ export default [
         income: 0,
         latitude: 51.516666666667,
         longitude: 4.55,
-    },
-    {
-        title: "Saba",
-        province: "Caribisch Nederland",
-        cbs_code: 9003,
-        population: 1911,
-        area: 13,
-        migrants: 0,
-        migrants_western: 0,
-        migrants_non_western: 0,
-        income: 0,
-        latitude: 17.616666666667,
-        longitude: 63.233333333333,
     },
     {
         title: "Schagen (gemeente)",
@@ -3278,7 +3252,7 @@ export default [
     {
         title: "Schouwen-Duiveland",
         province: "Zeeland (provincie)",
-        cbs_code: 1676,
+        cbs_code: "1676",
         population: 34521,
         area: 229.65,
         migrants: 9.9,
@@ -3302,19 +3276,6 @@ export default [
         longitude: 5.91666,
     },
     {
-        title: "Sint Eustatius",
-        province: "Caribisch Nederland",
-        cbs_code: 9002,
-        population: 3242,
-        area: 21,
-        migrants: 0,
-        migrants_western: 0,
-        migrants_non_western: 0,
-        income: 0,
-        latitude: 17.483333333333,
-        longitude: 62.966666666667,
-    },
-    {
         title: "Sint-Michielsgestel (gemeente)",
         province: "Noord-Brabant",
         cbs_code: "0845",
@@ -3330,7 +3291,7 @@ export default [
     {
         title: "Sittard-Geleen",
         province: "Limburg (Nederlandse provincie)",
-        cbs_code: 1883,
+        cbs_code: "1883",
         population: 92177,
         area: 79.01,
         migrants: 22.4,
@@ -3356,7 +3317,7 @@ export default [
     {
         title: "Sluis (gemeente)",
         province: "Zeeland (provincie)",
-        cbs_code: 1714,
+        cbs_code: "1714",
         population: 23244,
         area: 279.36,
         migrants: 28.1,
@@ -3473,7 +3434,7 @@ export default [
     {
         title: "Steenwijkerland",
         province: "Overijssel",
-        cbs_code: 1708,
+        cbs_code: "1708",
         population: 45383,
         area: 288.27,
         migrants: 8.8,
@@ -3499,7 +3460,7 @@ export default [
     {
         title: "Stichtse Vecht",
         province: "Utrecht (provincie)",
-        cbs_code: 1904,
+        cbs_code: "1904",
         population: 65755,
         area: 96.1,
         migrants: 18.8,
@@ -3512,7 +3473,7 @@ export default [
     {
         title: "Súdwest-Fryslân",
         province: "Friesland",
-        cbs_code: 1900,
+        cbs_code: "1900",
         population: 90873,
         area: 523.01,
         migrants: 9.3,
@@ -3564,7 +3525,7 @@ export default [
     {
         title: "Teylingen (gemeente)",
         province: "Zuid-Holland",
-        cbs_code: 1525,
+        cbs_code: "1525",
         population: 38521,
         area: 28.38,
         migrants: 16.3,
@@ -3629,7 +3590,7 @@ export default [
     {
         title: "Twenterand",
         province: "Overijssel",
-        cbs_code: 1700,
+        cbs_code: "1700",
         population: 33867,
         area: 106.17,
         migrants: 5.4,
@@ -3642,7 +3603,7 @@ export default [
     {
         title: "Tynaarlo (gemeente)",
         province: "Drenthe",
-        cbs_code: 1730,
+        cbs_code: "1730",
         population: 34603,
         area: 143,
         migrants: 8.8,
@@ -3720,7 +3681,7 @@ export default [
     {
         title: "Utrechtse Heuvelrug (gemeente)",
         province: "Utrecht (provincie)",
-        cbs_code: 1581,
+        cbs_code: "1581",
         population: 50353,
         area: 132.01,
         migrants: 15.8,
@@ -3863,7 +3824,7 @@ export default [
     {
         title: "Vijfheerenlanden (gemeente)",
         province: "Utrecht (provincie)",
-        cbs_code: 1961,
+        cbs_code: "1961",
         population: 60184,
         area: 146.41,
         migrants: 17,
@@ -3928,7 +3889,7 @@ export default [
     {
         title: "Voorne aan Zee",
         province: "Zuid-Holland",
-        cbs_code: 1992,
+        cbs_code: "1992",
         population: 73993,
         area: 174.81,
         migrants: 0,
@@ -3980,7 +3941,7 @@ export default [
     {
         title: "Waadhoeke",
         province: "Friesland",
-        cbs_code: 1949,
+        cbs_code: "1949",
         population: 46800,
         area: 284.86,
         migrants: 9.1,
@@ -4084,7 +4045,7 @@ export default [
     {
         title: "West Betuwe",
         province: "Gelderland",
-        cbs_code: 1960,
+        cbs_code: "1960",
         population: 52742,
         area: 216.12,
         migrants: 9.6,
@@ -4110,7 +4071,7 @@ export default [
     {
         title: "Westerkwartier (gemeente)",
         province: "Groningen (provincie)",
-        cbs_code: 1969,
+        cbs_code: "1969",
         population: 64984,
         area: 362.69,
         migrants: 7.3,
@@ -4123,7 +4084,7 @@ export default [
     {
         title: "Westerveld (gemeente)",
         province: "Drenthe",
-        cbs_code: 1701,
+        cbs_code: "1701",
         population: 19858,
         area: 278.35,
         migrants: 6.4,
@@ -4149,7 +4110,7 @@ export default [
     {
         title: "Westerwolde (gemeente)",
         province: "Groningen (provincie)",
-        cbs_code: 1950,
+        cbs_code: "1950",
         population: 26331,
         area: 275.67,
         migrants: 13,
@@ -4162,7 +4123,7 @@ export default [
     {
         title: "Westland (gemeente)",
         province: "Zuid-Holland",
-        cbs_code: 1783,
+        cbs_code: "1783",
         population: 114996,
         area: 81.27,
         migrants: 16,
@@ -4214,7 +4175,7 @@ export default [
     {
         title: "Wijdemeren",
         province: "Noord-Holland",
-        cbs_code: 1696,
+        cbs_code: "1696",
         population: 24645,
         area: 47.6,
         migrants: 14.4,
@@ -4409,7 +4370,7 @@ export default [
     {
         title: "Zuidplas (gemeente)",
         province: "Zuid-Holland",
-        cbs_code: 1892,
+        cbs_code: "1892",
         population: 47114,
         area: 58.02,
         migrants: 17.3,
@@ -4448,7 +4409,7 @@ export default [
     {
         title: "Zwartewaterland",
         province: "Overijssel",
-        cbs_code: 1896,
+        cbs_code: "1896",
         population: 23390,
         area: 82.49,
         migrants: 6.2,
@@ -4484,4 +4445,43 @@ export default [
         latitude: 52.516666666667,
         longitude: 6.0833333333333,
     },
+    // {
+    //     title: "Bonaire",
+    //     province: "Caribisch Nederland",
+    //     cbs_code: 9001,
+    //     population: 22573,
+    //     area: 288,
+    //     migrants: 0,
+    //     migrants_western: 0,
+    //     migrants_non_western: 0,
+    //     income: 0,
+    //     latitude: 12.166666666667,
+    //     longitude: 68.25,
+    // },
+    // {
+    //     title: "Sint Eustatius",
+    //     province: "Caribisch Nederland",
+    //     cbs_code: 9002,
+    //     population: 3242,
+    //     area: 21,
+    //     migrants: 0,
+    //     migrants_western: 0,
+    //     migrants_non_western: 0,
+    //     income: 0,
+    //     latitude: 17.483333333333,
+    //     longitude: 62.966666666667,
+    // },
+    // {
+    //     title: "Saba",
+    //     province: "Caribisch Nederland",
+    //     cbs_code: 9003,
+    //     population: 1911,
+    //     area: 13,
+    //     migrants: 0,
+    //     migrants_western: 0,
+    //     migrants_non_western: 0,
+    //     income: 0,
+    //     latitude: 17.616666666667,
+    //     longitude: 63.233333333333,
+    // },
 ];

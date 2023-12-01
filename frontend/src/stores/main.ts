@@ -23,7 +23,47 @@ export const useMainStore = defineStore("main", {
             currentElection: null,
         } as MainState;
     },
-    getters: {},
+    getters: {
+        voteSetsHeavy(state: MainState) {
+            const votes = [];
+            const set = state.votes
+                .filter((v) => v.votes > window.config.votes.min)
+                .map((v) => {
+                    return {
+                        votes: v.votes,
+                        party: state.parties.find((p) => p.id === v.party_id)!,
+                        election: state.elections.find(
+                            (e) => e.id === v.election_id
+                        ),
+                        municipality: state.municipalities.find(
+                            (m) => m.cbs_code === v.municipality_code
+                        ),
+                    };
+                })
+                .filter((v) => v.municipality && v.party && v.election);
+            for (const item of set) {
+                if (item.votes > window.config.votes.max) {
+                    // break the bigger sets into chunks
+                    const chunks = Math.ceil(
+                        item.votes / window.config.votes.max
+                    );
+                    for (let i = 0; i < chunks; i++) {
+                        votes.push({
+                            ...item,
+                            votes: window.config.votes.max,
+                        });
+                    }
+                    votes.push({
+                        ...item,
+                        votes: item.votes % window.config.votes.max,
+                    });
+                } else {
+                    votes.push(item);
+                }
+            }
+            return votes;
+        },
+    },
     actions: {
         selectMunicipality(cbs_code: string) {
             this.currentMunicipality = this.municipalities.find(

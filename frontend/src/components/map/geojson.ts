@@ -1,7 +1,11 @@
 import { Feature, GeoJSON, MapSourceItem } from "../../types";
 
-const round = (value: number) => {
-    return value;
+const round = (value: number, addRandom: boolean) => {
+    let base = value * 1000;
+    if (addRandom) {
+        base += 30 * Math.random();
+    }
+    return Math.round(base) / 1000;
 };
 
 export const getGeoJson = (mapSourceItems: MapSourceItem[]): GeoJSON => {
@@ -14,7 +18,10 @@ export const getGeoJson = (mapSourceItems: MapSourceItem[]): GeoJSON => {
             },
             geometry: {
                 type: "Point",
-                coordinates: [round(item.longitude), round(item.latitude)],
+                coordinates: [
+                    round(item.longitude, true),
+                    round(item.latitude, true),
+                ],
             },
         } as Feature;
         features.push(feature);
