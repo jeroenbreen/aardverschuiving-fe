@@ -6,8 +6,7 @@ import MapParty from "@/components/map/MapParty";
 const store = useMainStore();
 
 const parties = computed(() => {
-    const ids = [4, 1, 2, 6];
-    return ids.map((id) => {
+    return store.selectedParties.map((id) => {
         return store.parties.find((p) => p.id === id);
     });
 });
@@ -25,5 +24,15 @@ const parties = computed(() => {
 
 <style lang="scss" scoped>
 .MapParties {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #888;
+    padding: 8px;
+    width: 230px;
+    pointer-events: none;
+
+    .MapParty {
+        width: 50%;
+    }
 }
 </style>

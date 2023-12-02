@@ -11,6 +11,7 @@ interface MainState {
     currentElection: Election | null;
     currentParty: Party | null;
     grid: number;
+    selectedParties: number[];
 }
 
 export const useMainStore = defineStore("main", {
@@ -25,12 +26,12 @@ export const useMainStore = defineStore("main", {
             currentElection: null,
             currentParty: null,
             grid: 40,
+            selectedParties: [1, 2, 3, 4, 6, 9, 12, 14],
         } as MainState;
     },
     getters: {
         voteSetsHeavy(state: MainState) {
             return state.votes
-                .filter((v) => v.votes > window.config.votes.min)
                 .map((v) => {
                     return {
                         votes: v.votes,
@@ -57,6 +58,24 @@ export const useMainStore = defineStore("main", {
                     return b.votes - a.votes;
                 });
         },
+        electionResults(state: MainState) {
+            if (!state.currentElection) {
+                return [];
+            } else {
+                return state.currentElection.results
+                    .sort((a, b) => {
+                        return b.votes - a.votes;
+                    })
+                    .map((r) => {
+                        return {
+                            votes: r.votes,
+                            party: state.parties.find(
+                                (p) => p.id === r.party_id
+                            )!,
+                        };
+                    });
+            }
+        },
     },
     actions: {
         selectMunicipality(cbs_code: string) {
@@ -66,6 +85,14 @@ export const useMainStore = defineStore("main", {
         },
         selectParty(id: number) {
             this.currentParty = this.parties.find((p) => p.id === id)!;
+        },
+        toggleParty(party: Party) {
+            const index = this.selectedParties.indexOf(party.id);
+            if (index === -1) {
+                this.selectedParties.push(party.id);
+            } else {
+                this.selectedParties.splice(index, 1);
+            }
         },
     },
 });

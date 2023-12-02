@@ -17,7 +17,7 @@ export class App {
     gridVertical: number;
     skipped: number;
     turn: number;
-    // chunks: VoteSetHeavy[];
+    selectedParties: number[];
 
     constructor(
         ctx: CanvasRenderingContext2D,
@@ -25,7 +25,8 @@ export class App {
         height: number,
         voteSets: VoteSetHeavy[],
         grid: number,
-        onClick: Callback
+        onClick: Callback,
+        selectedParties: number[]
     ) {
         this.width = width;
         this.height = height;
@@ -39,6 +40,7 @@ export class App {
         this.skipped = 0;
         this.cellPopulation = this.getCellPopulation();
         this.cells = this.createCells();
+        this.selectedParties = selectedParties;
         this.init(onClick);
     }
 
@@ -117,7 +119,7 @@ export class App {
 
     draw() {
         for (const cell of this.cells) {
-            cell.draw(this.ctx);
+            cell.draw(this.ctx, this.selectedParties);
         }
     }
 

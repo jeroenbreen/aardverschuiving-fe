@@ -112,7 +112,7 @@ export class Cell {
         return (100 * this.getPopulation()) / this.cellPopulation;
     }
 
-    draw(ctx: CanvasRenderingContext2D) {
+    draw(ctx: CanvasRenderingContext2D, selectedParties: number[]) {
         if (this.voteSets.length > 0 && this.doDraw()) {
             const voteSet = this.voteSets[0];
             if (voteSet.party) {
@@ -126,8 +126,12 @@ export class Cell {
                     x = this.x;
                     y = this.y;
                 }
-                ctx.fillStyle = voteSet.party.color;
-                ctx.fillRect(x, y, size, size);
+                const party = this.getParty();
+                if (party) {
+                    const drawParty = selectedParties.includes(party.id);
+                    ctx.fillStyle = drawParty ? party.color : "#fff";
+                    ctx.fillRect(x, y, size, size);
+                }
             }
         }
     }
@@ -156,11 +160,19 @@ export class Cell {
         return this.cellPopulation - this.getPopulation();
     }
 
+    getParty() {
+        if (this.isEmpty()) {
+            return null;
+        } else {
+            return this.voteSets[0].party;
+        }
+    }
+
     matchesParty(party: Party) {
         if (this.isEmpty()) {
             return true;
         } else {
-            return this.voteSets[0].party === party;
+            return this.getParty() === party;
         }
     }
 

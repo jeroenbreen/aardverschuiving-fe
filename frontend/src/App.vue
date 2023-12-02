@@ -10,6 +10,23 @@ import Municipality from "./components/municipalities/Municipality.vue";
 
 const store = useMainStore();
 
+const count = () => {
+    //
+    const votes = store.parties.map((party) => {
+        const votes = store.votes.filter((vote) => {
+            return vote.party_id === party.id;
+        });
+        const n = votes.reduce((acc, v) => {
+            return acc + v.votes;
+        }, 0);
+        return {
+            party_id: party.id,
+            votes: n,
+        };
+    });
+    console.log(votes);
+};
+
 onMounted(() => {
     store.elections = elections;
     store.votes = votes;

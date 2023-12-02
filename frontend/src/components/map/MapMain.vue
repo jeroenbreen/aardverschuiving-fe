@@ -19,7 +19,7 @@ const callback = (cell: any) => {
 const update = () => {
     if (el.value) {
         const voteSets: VoteSetHeavy[] = [...store.voteSetsHeavy];
-        render(el.value, voteSets, callback, store.grid);
+        render(el.value, voteSets, callback, store.grid, store.selectedParties);
     }
 };
 
@@ -31,6 +31,17 @@ watch(
     () => store.grid,
     () => {
         update();
+    }
+);
+
+// todo create direct update function that only redraws
+watch(
+    () => store.selectedParties,
+    () => {
+        update();
+    },
+    {
+        deep: true,
     }
 );
 </script>

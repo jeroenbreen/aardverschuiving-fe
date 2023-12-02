@@ -4,6 +4,7 @@ import { useMainStore } from "@/stores/main";
 import MunicipalityPicker from "./MunicipalityPicker.vue";
 import ElectionPicker from "./ElectionPicker.vue";
 import GridSlider from "./GridSlider.vue";
+import PartyPicker from "./PartyPicker.vue";
 
 const store = useMainStore();
 
@@ -25,6 +26,7 @@ const setGrid = (grid: number) => {
         <municipality-picker @select="setCurrent" />
         <election-picker @select="setCurrentElection" />
         <grid-slider @select="setGrid" />
+        <party-picker />
     </div>
 </template>
 

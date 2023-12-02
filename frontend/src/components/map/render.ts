@@ -6,7 +6,8 @@ export const render = (
     canvas: HTMLCanvasElement,
     voteSets: VoteSetHeavy[],
     onClick: Callback,
-    grid: number
+    grid: number,
+    selectedParties: number[]
 ) => {
     const ctx = canvas.getContext("2d");
     if (ctx) {
@@ -18,7 +19,8 @@ export const render = (
             canvas.height,
             voteSets,
             grid,
-            onClick
+            onClick,
+            selectedParties
         );
     }
 };

@@ -20,15 +20,23 @@ const partyColor = computed(() => {
     return party.value ? party.value.color : "";
 });
 
-const isActivate = computed(() => {
+const isCurrent = computed(() => {
     return (
         store.currentParty && store.currentParty.id === props.voteSet.party_id
     );
 });
+
+const isActive = computed(() => {
+    return store.selectedParties.includes(props.voteSet.party_id);
+});
 </script>
 
 <template>
-    <div class="MunicipalityVoteSet" :data-is-active="isActivate">
+    <div
+        class="MunicipalityVoteSet"
+        :data-is-current="isCurrent"
+        :data-is-active="isActive"
+    >
         <div
             class="MunicipalityVoteSet__color"
             :style="{ backgroundColor: partyColor }"
@@ -65,9 +73,13 @@ const isActivate = computed(() => {
         text-align: right;
     }
 
-    &[data-is-active="true"] {
+    &[data-is-current="true"] {
         background-color: #f5f5f5;
         border: 1px solid #000;
+    }
+
+    &[data-is-active="false"] {
+        opacity: 0.3;
     }
 }
 </style>
