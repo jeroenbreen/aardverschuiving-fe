@@ -3,6 +3,7 @@ import { useMainStore } from "../../stores/main";
 import { computed } from "vue";
 import { Municipality } from "@/types";
 import MunicipalityElection from "./MunicipalityElection.vue";
+import MunicipaliltyRelations from "./MunicipaliltyRelations.vue";
 
 const store = useMainStore();
 const municipality = computed<Municipality>(() => store.currentMunicipality);
@@ -49,6 +50,8 @@ const municipality = computed<Municipality>(() => store.currentMunicipality);
                     <td>{{ municipality.migrants_non_western }}%</td>
                 </tr>
             </table>
+
+            <municipalilty-relations :municipality="municipality" />
 
             <municipality-election />
         </template>

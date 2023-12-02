@@ -13,3 +13,8 @@ export interface VoteSetHeavy {
     municipality: Municipality;
     votes: number;
 }
+
+export interface VoteResult {
+    party_id: number;
+    votes: number;
+}

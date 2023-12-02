@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
-import { Election, Municipality, Party, VoteSet } from "./../types";
+import { Election, Municipality, Party, VoteResult, VoteSet } from "./../types";
+import { getDeviation, resultsToPercentage } from "../tools/votes";
 
 interface MainState {
     loaded: boolean;
@@ -12,6 +13,13 @@ interface MainState {
     currentParty: Party | null;
     grid: number;
     selectedParties: number[];
+}
+
+interface MainStateWithGetters extends MainState {
+    electionResults: { party: Party; votes: number }[];
+    voteSetsForMunicipality: VoteSet[];
+    electionResultsNormalised: VoteResult[];
+    municipalityResultsNormalised: VoteResult[];
 }
 
 export const useMainStore = defineStore("main", {
@@ -75,6 +83,26 @@ export const useMainStore = defineStore("main", {
                         };
                     });
             }
+        },
+        electionResultsNormalised(state: MainState) {
+            const st = state as MainStateWithGetters;
+            const set = st.electionResults.map((r) => {
+                return {
+                    votes: r.votes,
+                    party_id: r.party.id,
+                };
+            });
+            return resultsToPercentage(set);
+        },
+        municipalityResultsNormalised(state: MainState) {
+            const st = state as MainStateWithGetters;
+            return resultsToPercentage(st.voteSetsForMunicipality);
+        },
+        municipalityResultsDeviation(state: MainState) {
+            const st = state as MainStateWithGetters;
+            const election = st.electionResultsNormalised;
+            const municipality = st.municipalityResultsNormalised;
+            return getDeviation(election, municipality);
         },
     },
     actions: {

@@ -32,7 +32,9 @@ onMounted(() => {
     store.votes = votes;
     store.municipalities = municipalities;
     store.parties = parties;
-    store.currentMunicipality = municipalities[0];
+    store.currentMunicipality = municipalities.find(
+        (m) => m.cbs_code === "1676"
+    );
     store.currentElection = elections[0];
     store.loaded = true;
 });
@@ -42,7 +44,7 @@ onMounted(() => {
     <div class="App" v-if="store.loaded">
         <tools />
         <municipality />
-        <router-view />
+        <!--        <router-view />-->
     </div>
 </template>
 
