@@ -68,11 +68,11 @@ watch(
         4px 5px 24px rgba(0, 0, 0, 0.04);
 
     &__title {
-        line-height: 1;
+        line-height: 0.9;
         font-weight: 900;
         position: absolute;
-        top: 40px;
-        left: 40px;
+        top: 30px;
+        left: 30px;
         width: 160px;
         z-index: 1;
         text-align: center;
@@ -80,15 +80,15 @@ watch(
 
         div:nth-child(1) {
             font-weight: 400;
-            font-size: 16px;
+            font-size: 18px;
         }
 
         div:nth-child(2) {
-            font-size: 32px;
+            font-size: 36px;
         }
 
         div:nth-child(3) {
-            font-size: 56px;
+            font-size: 63px;
         }
     }
 
