@@ -34,18 +34,24 @@ export class App {
         this.turn = 0;
         this.ctx = ctx;
         this.voteSets = this.order(voteSets);
-        this.totalPopulation = this.getTotalPopulation();
-        this.gridHorizontal = grid;
-        this.gridVertical = Math.round(this.gridHorizontal * ratio);
         this.skipped = 0;
-        this.cellPopulation = this.getCellPopulation();
-        this.cells = this.createCells();
+        this.totalPopulation = this.getTotalPopulation();
         this.selectedParties = selectedParties;
-        this.init(onClick);
+        this.cells = [];
+        this.gridHorizontal = 0;
+        this.gridVertical = 0;
+        this.cellPopulation = 0;
+        this.initClick(onClick);
+        this.init(grid);
     }
 
-    init(onClick: Callback) {
-        const runs = 10000;
+    init(grid: number) {
+        this.clear();
+        this.gridHorizontal = grid;
+        this.gridVertical = Math.round(this.gridHorizontal * ratio);
+        this.cellPopulation = this.getCellPopulation();
+        this.cells = this.createCells();
+        const runs = 1000;
         for (let i = 0; i < runs; i++) {
             if (this.voteSets.length > 0) {
                 this.run();
@@ -53,7 +59,16 @@ export class App {
         }
         this.draw();
         // this.report();
-        this.initClick(onClick);
+    }
+
+    updateGrid(grid: number, voteSets: VoteSetHeavy[]) {
+        this.cells = [];
+        this.voteSets = this.order(voteSets);
+        this.init(grid);
+    }
+
+    clear() {
+        this.ctx.clearRect(0, 0, this.width, this.height);
     }
 
     initClick(onClick: Callback) {
@@ -121,6 +136,12 @@ export class App {
         for (const cell of this.cells) {
             cell.draw(this.ctx, this.selectedParties);
         }
+    }
+
+    updateSelectedParties(selectedParties: number[]) {
+        this.clear();
+        this.selectedParties = selectedParties;
+        this.draw();
     }
 
     getNearestCellWithSpaceForVoteSet(voteSet: VoteSetHeavy) {

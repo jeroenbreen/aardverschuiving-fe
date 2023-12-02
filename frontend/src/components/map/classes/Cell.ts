@@ -116,24 +116,32 @@ export class Cell {
         if (this.voteSets.length > 0 && this.doDraw()) {
             const voteSet = this.voteSets[0];
             if (voteSet.party) {
-                let size, x, y;
-                if (settings.notFullCells === "reduce") {
-                    size = this.size * (this.filledPercentage() / 100);
-                    x = this.x + (this.size - size) / 2;
-                    y = this.y + (this.size - size) / 2;
+                if (selectedParties.includes(voteSet.party.id)) {
+                    let size, x, y;
+                    if (settings.notFullCells === "reduce") {
+                        size = this.size * (this.filledPercentage() / 100);
+                        x = this.x + (this.size - size) / 2;
+                        y = this.y + (this.size - size) / 2;
+                    } else {
+                        size = this.size;
+                        x = this.x;
+                        y = this.y;
+                    }
+                    const party = this.getParty();
+                    if (party) {
+                        ctx.fillStyle = party.color;
+                        ctx.fillRect(x, y, size, size);
+                    }
                 } else {
-                    size = this.size;
-                    x = this.x;
-                    y = this.y;
-                }
-                const party = this.getParty();
-                if (party) {
-                    const drawParty = selectedParties.includes(party.id);
-                    ctx.fillStyle = drawParty ? party.color : "#fff";
-                    ctx.fillRect(x, y, size, size);
+                    this.drawBlank(ctx);
                 }
             }
         }
+    }
+
+    drawBlank(ctx: CanvasRenderingContext2D) {
+        ctx.fillStyle = "#fff";
+        ctx.fillRect(this.x, this.y, this.size, this.size);
     }
 
     doDraw() {

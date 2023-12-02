@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from "vue";
-import { render } from "./render";
 import { useMainStore } from "../../stores/main";
 import { VoteSetHeavy } from "../../types";
 import MapParties from "./MapParties.vue";
+import { ratio, settings } from "./classes/settings";
+import { App } from "./classes/App";
 
 const store = useMainStore();
 const el = ref<HTMLElement>();
+const app = ref<App>();
 
 const callback = (cell: any) => {
     if (cell.voteSets.length > 0) {
@@ -16,29 +18,44 @@ const callback = (cell: any) => {
     }
 };
 
-const update = () => {
+const create = () => {
     if (el.value) {
         const voteSets: VoteSetHeavy[] = [...store.voteSetsHeavy];
-        render(el.value, voteSets, callback, store.grid, store.selectedParties);
+        const canvas = el.value;
+        const ctx = canvas.getContext("2d");
+        if (ctx) {
+            canvas.width = settings.width;
+            canvas.height = settings.width * ratio;
+            app.value = new App(
+                ctx,
+                canvas.width,
+                canvas.height,
+                voteSets,
+                store.grid,
+                callback,
+                store.selectedParties
+            );
+        }
     }
 };
 
 onMounted(() => {
-    update();
+    create();
 });
 
 watch(
     () => store.grid,
     () => {
-        update();
+        // update function is slow for some reason, dont understand why
+        // app.value.updateGrid(store.grid, [...store.voteSetsHeavy]);
+        create();
     }
 );
 
-// todo create direct update function that only redraws
 watch(
     () => store.selectedParties,
     () => {
-        update();
+        app.value.updateSelectedParties(store.selectedParties);
     },
     {
         deep: true,
