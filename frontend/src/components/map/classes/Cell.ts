@@ -1,5 +1,5 @@
 import { App } from "./App";
-import { Party, VoteSetHeavy } from "../../../types";
+import { Party, VoteSetHeavyWithDistance } from "../../../types";
 import { getShell, getRibSizeForShell, getAreaInsideShell } from "./shell";
 import { settings } from "./settings";
 
@@ -10,7 +10,7 @@ export class Cell {
     x: number;
     y: number;
     size: number;
-    voteSets: VoteSetHeavy[];
+    voteSets: VoteSetHeavyWithDistance[];
     cellPopulation: number;
     turn: number;
 
@@ -34,24 +34,24 @@ export class Cell {
         this.voteSets = [];
     }
 
-    getNeighbour(distanceIndex: number) {
+    getNeighbour(shellPosition: number) {
         const getCoordinatesForShell = (
             shell: number,
-            distanceIndex: number
+            shellPosition: number
         ) => {
             let step = 0;
             const size = getRibSizeForShell(shell); // 3
             // we start north west inside the shell
             let x = -Math.floor(size / 2);
             let y = -Math.floor(size / 2); // -1, -1
-            if (step === distanceIndex) {
+            if (step === shellPosition) {
                 return { x, y };
             }
             // walking east
             for (let i = 1; i < size; i++) {
                 x++;
                 step++;
-                if (step === distanceIndex) {
+                if (step === shellPosition) {
                     return { x, y };
                 }
             }
@@ -59,7 +59,7 @@ export class Cell {
             for (let i = 1; i < size; i++) {
                 y++;
                 step++;
-                if (step === distanceIndex) {
+                if (step === shellPosition) {
                     return { x, y };
                 }
             }
@@ -67,7 +67,7 @@ export class Cell {
             for (let i = 1; i < size; i++) {
                 x--;
                 step++;
-                if (step === distanceIndex) {
+                if (step === shellPosition) {
                     return { x, y };
                 }
             }
@@ -76,7 +76,7 @@ export class Cell {
             for (let i = 1; i < size - 1; i++) {
                 y--;
                 step++;
-                if (step === distanceIndex) {
+                if (step === shellPosition) {
                     return { x, y };
                 }
             }
@@ -84,16 +84,16 @@ export class Cell {
             return { x, y };
         };
 
-        const shell = getShell(distanceIndex); // 0
+        const shell = getShell(shellPosition); // 0
         const areaInside = getAreaInsideShell(shell); // 0
-        const distanceIndexInShell = distanceIndex - areaInside; // 0
-        const coordinates = getCoordinatesForShell(shell, distanceIndexInShell); // [-1, -1]
+        const shellPositionInShell = shellPosition - areaInside; // 0
+        const coordinates = getCoordinatesForShell(shell, shellPositionInShell); // [-1, -1]
 
         // console.log(
-        //     distanceIndex,
+        //     shellPosition,
         //     shell,
         //     areaInside,
-        //     distanceIndexInShell,
+        //     shellPositionInShell,
         //     coordinates
         // );
         return this.app.getCellFromCoordinates(
@@ -102,7 +102,13 @@ export class Cell {
         );
     }
 
-    addVoteSet(voteSet: VoteSetHeavy) {
+    getTotalDistance() {
+        return this.voteSets.reduce((acc, voteSet) => {
+            return acc + voteSet.distance * voteSet.votes;
+        }, 0);
+    }
+
+    addVoteSet(voteSet: VoteSetHeavyWithDistance) {
         if (this.isEmpty() || this.voteSets[0].party === voteSet.party) {
             this.voteSets.push(voteSet);
         }

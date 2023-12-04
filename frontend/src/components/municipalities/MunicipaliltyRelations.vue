@@ -14,12 +14,17 @@ const store = useMainStore();
 
 const municipalities = computed(() => {
     if (store.distanceList) {
-        return store.distanceList.distances.map((distance: Distance) => {
-            return store.municipalities.find(
-                (municipality) =>
-                    municipality.cbs_code === distance.target_municipality_code
-            );
-        });
+        const relations = store.distanceList.distances.map(
+            (distance: Distance) => {
+                return store.municipalities.find(
+                    (municipality) =>
+                        municipality.cbs_code ===
+                        distance.target_municipality_code
+                );
+            }
+        );
+        relations.length = 3;
+        return relations;
     } else {
         return [];
     }

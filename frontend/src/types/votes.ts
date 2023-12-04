@@ -18,3 +18,7 @@ export interface VoteResult {
     party_id: number;
     votes: number;
 }
+
+export interface VoteSetHeavyWithDistance extends VoteSetHeavy {
+    distance: number;
+}

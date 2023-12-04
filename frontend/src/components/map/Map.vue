@@ -22,6 +22,7 @@ const padding = 20;
 const baseWidth = ref(0);
 const width = computed(() => baseWidth.value + padding * 2);
 const height = computed(() => (width.value / 21) * 29.7);
+const report = ref(null);
 
 const create = () => {
     if (el.value) {
@@ -42,6 +43,7 @@ const create = () => {
                 callback,
                 store.selectedParties
             );
+            report.value = app.value.getReport();
         }
     }
 };
@@ -94,6 +96,13 @@ watch(
 
             <map-parties />
         </div>
+
+        <div class="Map__report" v-if="report">
+            Op deze kaart is {{ report.coverage }}% van de stemmers
+            vertegenwoordigd (als alle partijen zijn aangevinkt).<br />
+            De stemmers zijn gemiddeld {{ report.displacement }}km van hun eigen
+            gemeente afgebeeld [UITLEG].
+        </div>
     </div>
 </template>
 
@@ -141,6 +150,12 @@ watch(
         left: 20px;
         z-index: 1;
         pointer-events: none;
+    }
+
+    &__report {
+        padding: 20px;
+        font-style: italic;
+        font-size: var(--text-s);
     }
 }
 </style>

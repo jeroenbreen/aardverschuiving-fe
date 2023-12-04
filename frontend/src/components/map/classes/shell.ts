@@ -16,3 +16,9 @@ export const getAreaInsideShell = (shell: number) => {
     const ribSizeInside = getRibSizeForShell(shell - 1);
     return ribSizeInside * ribSizeInside - 1;
 };
+
+export const getDistanceBetweenCells = (cell1: any, cell2: any) => {
+    const a = Math.round(cell1.indexX - cell2.indexX);
+    const b = Math.round(cell1.indexY - cell2.indexY);
+    return Math.sqrt(a * a + b * b);
+};

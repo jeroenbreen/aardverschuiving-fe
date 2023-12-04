@@ -1,6 +1,11 @@
-import { VoteSetHeavy, Callback } from "../../../types";
+import {
+    VoteSetHeavy,
+    Callback,
+    VoteSetHeavyWithDistance,
+} from "../../../types";
 import { Cell } from "./Cell";
 import { boundingBox, ratio } from "./settings";
+import { getDistanceBetweenCells } from "./shell";
 
 // todo cache coordinates for each municipality
 
@@ -51,14 +56,13 @@ export class App {
         this.gridVertical = Math.round(this.gridHorizontal * ratio);
         this.cellPopulation = this.getCellPopulation();
         this.cells = this.createCells();
-        const runs = 1000;
+        const runs = 10000;
         for (let i = 0; i < runs; i++) {
             if (this.voteSets.length > 0) {
                 this.run();
             }
         }
         this.draw();
-        // this.report();
     }
 
     updateGrid(grid: number, voteSets: VoteSetHeavy[]) {
@@ -85,42 +89,59 @@ export class App {
         });
     }
 
-    report() {
-        const usedPopulation = this.cells.reduce((acc, cell) => {
-            return acc + cell.getPopulation();
-        }, 0);
-
+    getReport() {
+        // nl width 264km height 312km
+        const cellDistance = 264 / this.gridHorizontal;
         const drawnPopulation = this.cells.reduce((acc, cell) => {
             return acc + (cell.doDraw() ? cell.getPopulation() : 0);
         }, 0);
-        console.log("usedPopulation: " + usedPopulation);
-        console.log("voteSets left: " + this.voteSets.length);
-        console.log("Skipped: " + this.skipped);
-        console.log(
-            "Drawn %: " +
-                Math.round(100 * (drawnPopulation / this.totalPopulation)) +
-                "%"
+        const presentPopulation = this.cells.reduce((acc, cell) => {
+            return acc + cell.getPopulation();
+        }, 0);
+
+        const displacement = Math.round(
+            (this.cells.reduce((acc, cell) => {
+                return acc + cell.getTotalDistance();
+            }, 0) *
+                cellDistance) /
+                presentPopulation
         );
+
+        return {
+            drawnPopulation,
+            presentPopulation,
+            totalPopulation: this.totalPopulation,
+            coverage:
+                Math.round(1000 * (presentPopulation / this.totalPopulation)) /
+                10,
+            displacement,
+        };
     }
 
     run() {
         const biggest = this.voteSets[0];
         // console.log(biggest.municipality.title + " " + biggest.party?.name);
-        const cell = this.getNearestCellWithSpaceForVoteSet(biggest);
+        const { cell, distance } =
+            this.getNearestCellWithSpaceForVoteSet(biggest);
         if (cell) {
             const space = cell.getSpace();
             if (biggest.votes < space) {
-                cell.addVoteSet(biggest);
+                const itemWithDistance = {
+                    ...biggest,
+                    distance,
+                };
+                cell.addVoteSet(itemWithDistance);
             } else {
-                const rest = {
+                const rest: VoteSetHeavy = {
                     ...biggest,
                     votes: biggest.votes - space,
                 };
-                const newItem = {
+                const newItemWithDistance: VoteSetHeavyWithDistance = {
                     ...biggest,
                     votes: space,
+                    distance,
                 };
-                cell.addVoteSet(newItem);
+                cell.addVoteSet(newItemWithDistance);
                 this.voteSets.push(rest);
             }
             const index = this.voteSets.indexOf(biggest);
@@ -147,7 +168,7 @@ export class App {
     getNearestCellWithSpaceForVoteSet(voteSet: VoteSetHeavy) {
         const cell = this.getExactCellForVoteSet(voteSet);
         if (!cell) {
-            return null;
+            return { cell: null, distance: 0 };
         } else {
             if (
                 cell.isEmpty() ||
@@ -158,14 +179,14 @@ export class App {
                 // keep score of the first use
                 cell.turn = this.turn;
                 this.turn++;
-                return cell;
+                return { cell, distance: 0 };
             } else {
                 const max = 250;
-                let distance = 0;
+                let shellPosition = 0;
                 let cellWithSpace = null;
                 // todo keep score of nearest available neighbour
-                while (!cellWithSpace && distance < max) {
-                    const neighbour = cell.getNeighbour(distance);
+                while (!cellWithSpace && shellPosition < max) {
+                    const neighbour = cell.getNeighbour(shellPosition);
                     if (
                         neighbour &&
                         neighbour.getSpace() > 0 &&
@@ -174,9 +195,14 @@ export class App {
                     ) {
                         cellWithSpace = neighbour;
                     }
-                    distance++;
+                    shellPosition++;
                 }
-                return cellWithSpace;
+                return {
+                    cell: cellWithSpace,
+                    distance: cellWithSpace
+                        ? getDistanceBetweenCells(cell, cellWithSpace)
+                        : 0,
+                };
             }
         }
     }
