@@ -4,34 +4,19 @@ import { useMainStore } from "./stores/main";
 import elections from "@/data/elections";
 import votes from "@/data/votes";
 import municipalities from "@/data/municipalities";
+import distances from "@/data/distances";
 import parties from "@/data/parties";
 import Tools from "./components/tools/Tools.vue";
 import Municipality from "./components/municipalities/Municipality.vue";
 
 const store = useMainStore();
 
-const count = () => {
-    //
-    const votes = store.parties.map((party) => {
-        const votes = store.votes.filter((vote) => {
-            return vote.party_id === party.id;
-        });
-        const n = votes.reduce((acc, v) => {
-            return acc + v.votes;
-        }, 0);
-        return {
-            party_id: party.id,
-            votes: n,
-        };
-    });
-    console.log(votes);
-};
-
 onMounted(() => {
     store.elections = elections;
     store.votes = votes;
     store.municipalities = municipalities;
     store.parties = parties;
+    store.distances = distances;
     store.currentMunicipality = municipalities.find(
         (m) => m.cbs_code === "1676"
     );
@@ -44,7 +29,7 @@ onMounted(() => {
     <div class="App" v-if="store.loaded">
         <tools />
         <municipality />
-        <!--        <router-view />-->
+        <router-view />
     </div>
 </template>
 

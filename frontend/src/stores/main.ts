@@ -1,5 +1,13 @@
 import { defineStore } from "pinia";
-import { Election, Municipality, Party, VoteResult, VoteSet } from "./../types";
+import {
+    Election,
+    Municipality,
+    Party,
+    VoteResult,
+    VoteSet,
+    ElectionDistance,
+    DistanceList,
+} from "./../types";
 import { getDeviation, resultsToPercentage } from "../tools/votes";
 
 interface MainState {
@@ -13,6 +21,7 @@ interface MainState {
     currentParty: Party | null;
     grid: number;
     selectedParties: number[];
+    distances: ElectionDistance[];
 }
 
 interface MainStateWithGetters extends MainState {
@@ -30,6 +39,7 @@ export const useMainStore = defineStore("main", {
             municipalities: [],
             parties: [],
             votes: [],
+            distances: [],
             currentMunicipality: null,
             currentElection: null,
             currentParty: null,
@@ -38,6 +48,24 @@ export const useMainStore = defineStore("main", {
         } as MainState;
     },
     getters: {
+        electionResults(state: MainState) {
+            if (!state.currentElection) {
+                return [];
+            } else {
+                return state.currentElection.results
+                    .sort((a, b) => {
+                        return b.votes - a.votes;
+                    })
+                    .map((r) => {
+                        return {
+                            votes: r.votes,
+                            party: state.parties.find(
+                                (p) => p.id === r.party_id
+                            )!,
+                        };
+                    });
+            }
+        },
         voteSetsHeavy(state: MainState) {
             return state.votes
                 .map((v) => {
@@ -66,43 +94,21 @@ export const useMainStore = defineStore("main", {
                     return b.votes - a.votes;
                 });
         },
-        electionResults(state: MainState) {
-            if (!state.currentElection) {
-                return [];
+        distanceList(state: MainState): DistanceList | null {
+            const electionDistance = state.distances.find(
+                (d) => d.election_id === state.currentElection?.id
+            );
+            if (electionDistance) {
+                const distanceList = electionDistance.distances.find((d) => {
+                    return (
+                        d.municipality_code ===
+                        state.currentMunicipality?.cbs_code
+                    );
+                });
+                return distanceList ? distanceList : null;
             } else {
-                return state.currentElection.results
-                    .sort((a, b) => {
-                        return b.votes - a.votes;
-                    })
-                    .map((r) => {
-                        return {
-                            votes: r.votes,
-                            party: state.parties.find(
-                                (p) => p.id === r.party_id
-                            )!,
-                        };
-                    });
+                return null;
             }
-        },
-        electionResultsNormalised(state: MainState) {
-            const st = state as MainStateWithGetters;
-            const set = st.electionResults.map((r) => {
-                return {
-                    votes: r.votes,
-                    party_id: r.party.id,
-                };
-            });
-            return resultsToPercentage(set);
-        },
-        municipalityResultsNormalised(state: MainState) {
-            const st = state as MainStateWithGetters;
-            return resultsToPercentage(st.voteSetsForMunicipality);
-        },
-        municipalityResultsDeviation(state: MainState) {
-            const st = state as MainStateWithGetters;
-            const election = st.electionResultsNormalised;
-            const municipality = st.municipalityResultsNormalised;
-            return getDeviation(election, municipality);
         },
     },
     actions: {
