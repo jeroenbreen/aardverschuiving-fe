@@ -120,12 +120,12 @@ export class Cell {
                     let size, x, y;
                     if (settings.notFullCells === "reduce") {
                         size = this.size * (this.filledPercentage() / 100);
-                        x = this.x + (this.size - size) / 2;
-                        y = this.y + (this.size - size) / 2;
+                        x = this.x + settings.padding + (this.size - size) / 2;
+                        y = this.y + settings.padding + (this.size - size) / 2;
                     } else {
                         size = this.size;
-                        x = this.x;
-                        y = this.y;
+                        x = this.x + settings.padding;
+                        y = this.y + settings.padding;
                     }
                     const party = this.getParty();
                     if (party) {
@@ -141,7 +141,12 @@ export class Cell {
 
     drawBlank(ctx: CanvasRenderingContext2D) {
         ctx.fillStyle = "#fff";
-        ctx.fillRect(this.x, this.y, this.size, this.size);
+        ctx.fillRect(
+            this.x + settings.padding,
+            this.y + settings.padding,
+            this.size,
+            this.size
+        );
     }
 
     doDraw() {

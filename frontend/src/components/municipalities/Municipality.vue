@@ -60,9 +60,7 @@ const municipality = computed<Municipality>(() => store.currentMunicipality);
 
 <style lang="scss" scoped>
 .Municipality {
-    width: 320px;
     padding-top: var(--size-4);
-    margin-right: 32px;
 }
 
 table {

@@ -40,10 +40,30 @@ onMounted(() => {
 <style lang="scss" scoped>
 .App {
     display: flex;
+    gap: 24px;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+
+    .Tools {
+        width: 250px;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .Municipality {
+        width: 320px;
+        height: 100%;
+        overflow: auto;
+        padding-right: 20px;
+    }
+
+    .map-container {
+        flex: 1;
+        height: 100%;
+        overflow: auto;
+    }
 }
 </style>

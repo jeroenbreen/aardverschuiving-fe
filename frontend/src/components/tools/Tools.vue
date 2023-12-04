@@ -32,7 +32,6 @@ const setGrid = (grid: number) => {
 
 <style lang="scss" scoped>
 .Tools {
-    width: 250px;
     padding: var(--size-4);
     display: flex;
     flex-direction: column;
