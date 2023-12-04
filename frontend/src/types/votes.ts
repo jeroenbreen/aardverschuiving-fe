@@ -1,5 +1,14 @@
 import { Party, Election, Municipality } from "./index";
 
+export interface Origin {
+    RegioNaam: string;
+    RegioCode: string;
+    RegioUitslag: string;
+    Partij: string;
+    AantalStemmen: number;
+    AantalZetels: string;
+}
+
 export interface VoteSet {
     party_id: number;
     election_id: number;

@@ -2,18 +2,30 @@
 import { onMounted } from "vue";
 import { useMainStore } from "./stores/main";
 import elections from "@/data/elections";
-import votes from "@/data/votes";
+import votes2023 from "@/data/votes-2023";
+import votes2021 from "@/data/votes-2021";
 import municipalities from "@/data/municipalities";
 import distances from "@/data/distances";
 import parties from "@/data/parties";
 import Tools from "./components/tools/Tools.vue";
 import Municipality from "./components/municipalities/Municipality.vue";
+import { originToVotes, sumElection } from "./tools/prepairers";
 
 const store = useMainStore();
 
+const prepair = async () => {
+    const votes = await originToVotes(
+        "temp/2021.json",
+        2,
+        store.parties,
+        store.municipalities
+    );
+    console.log(votes);
+};
+
 onMounted(() => {
     store.elections = elections;
-    store.votes = votes;
+    store.votes = [...votes2021, ...votes2023];
     store.municipalities = municipalities;
     store.parties = parties;
     store.distances = distances;

@@ -1,121 +1,19 @@
 import {
     Election,
     Municipality,
-    Relation,
-    VoteResult,
     VoteSet,
     DeviationItem,
     DistanceList,
-    Distance,
+    Origin,
+    Party,
 } from "../types";
 
-const resultsToPercentage = (results: VoteResult[], doSort: boolean) => {
-    const votesTotal = results.reduce((acc, v) => {
-        return acc + v.votes;
-    }, 0);
-    const normalised = results.map((r) => {
-        return {
-            votes: Math.round((100 * r.votes) / votesTotal),
-            party_id: r.party_id,
-        };
-    });
-    if (doSort) {
-        return normalised.sort((a, b) => {
-            return b.votes - a.votes;
-        });
-    } else {
-        return normalised;
-    }
-};
-
-const getResultsForMunicipality = (
-    municipalityCode: string,
-    voteSets: VoteSet[]
-) => {
-    return voteSets.filter((v) => {
-        return v.municipality_code === municipalityCode;
-    });
-};
-
-const getDeviationItem = (
-    municipalityCode: string,
-    electionResults: VoteResult[],
-    municipalityResults: VoteResult[]
-): DeviationItem => {
-    const deviations = electionResults.map((e) => {
-        const m = municipalityResults.find((m) => m.party_id === e.party_id);
-        let deviation;
-        if (!m) {
-            // assuming a zero for the municipality
-            deviation = e.votes;
-        } else {
-            deviation = m.votes - e.votes;
-        }
-        return {
-            party_id: e.party_id,
-            deviation,
-        };
-    });
-    deviations.sort((a, b) => {
-        return Math.abs(b.deviation) - Math.abs(a.deviation);
-    });
-    return {
-        municipality_code: municipalityCode,
-        deviations,
-    };
-};
-
-const getDistance = (
-    sourceDeviationItem: DeviationItem,
-    targetDeviationItem: DeviationItem
-): Distance => {
-    let distance = 0;
-    for (const sourceDeviation of sourceDeviationItem.deviations) {
-        const targetDeviation = targetDeviationItem.deviations.find((d) => {
-            return d.party_id === sourceDeviation.party_id;
-        });
-        if (targetDeviation) {
-            distance += Math.abs(
-                sourceDeviation.deviation - targetDeviation.deviation
-            );
-        } else {
-            distance += Math.abs(sourceDeviation.deviation);
-        }
-    }
-
-    return {
-        source_municipality_code: sourceDeviationItem.municipality_code,
-        target_municipality_code: targetDeviationItem.municipality_code,
-        distance,
-    };
-};
-
-const getDistanceingList = (
-    municipality: Municipality,
-    deviations: DeviationItem[]
-): DistanceList => {
-    const distances = [];
-    const thisDeviationItem = deviations.find((d) => {
-        return d.municipality_code === municipality.cbs_code;
-    });
-    if (thisDeviationItem) {
-        for (const deviation of deviations) {
-            if (deviation !== thisDeviationItem) {
-                const distance = getDistance(thisDeviationItem, deviation);
-                distances.push(distance);
-            }
-        }
-    }
-    distances.sort((a, b) => {
-        return a.distance - b.distance;
-    });
-    distances.length = 12;
-
-    return {
-        municipality_code: municipality.cbs_code,
-        distances,
-    };
-};
+import {
+    resultsToPercentage,
+    getResultsForMunicipality,
+    getDeviationItem,
+    getDistanceingList,
+} from "./relations";
 
 export const voteSetsToRelations = (
     election: Election,
@@ -146,6 +44,66 @@ export const voteSetsToRelations = (
         results.push(distanceList);
     }
 
+    return results;
+};
+
+export const originToVotes = async (
+    path: string,
+    election_id: number,
+    parties: Party[],
+    municipalities: Municipality[]
+) => {
+    return new Promise((resolve, reject) => {
+        fetch(path)
+            .then((response) => response.json())
+            .then((data: Origin[]) => {
+                const converted = data.map((d) => {
+                    let party = parties.find((p) => p.full === d.Partij);
+                    const municipality = municipalities.find(
+                        (m) => "G" + m.cbs_code === d.RegioCode
+                    );
+                    if (!party) {
+                        switch (d.RegioUitslag) {
+                            case "AantalBlancoStemmen":
+                                party = parties.find(
+                                    (p) => p.name === "Blanco"
+                                );
+                                break;
+                            case "AantalOngeldigeStemmen":
+                                party = parties.find(
+                                    (p) => p.name === "Ongeldig"
+                                );
+                                break;
+                        }
+                    }
+                    return {
+                        election_id,
+                        party_id: party ? party.id : 0,
+                        votes: d.AantalStemmen,
+                        municipality_code: municipality
+                            ? municipality.cbs_code
+                            : "",
+                    };
+                });
+                resolve(converted.filter((c) => c.party_id !== 0));
+            })
+            .catch((error) => console.error("Error fetching JSON:", error));
+    });
+};
+
+export const sumElection = (votes: VoteSet[]) => {
+    const results = [];
+    for (const vote of votes) {
+        const index = results.findIndex((r) => r.party_id === vote.party_id);
+        if (index !== -1) {
+            results[index].votes += vote.votes;
+        } else {
+            results.push({
+                party_id: vote.party_id,
+                votes: vote.votes,
+            });
+        }
+    }
     return results;
 };
 

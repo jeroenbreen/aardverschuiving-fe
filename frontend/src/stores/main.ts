@@ -63,11 +63,17 @@ export const useMainStore = defineStore("main", {
                                 (p) => p.id === r.party_id
                             )!,
                         };
+                    })
+                    .filter((r) => {
+                        return r.party;
                     });
             }
         },
         voteSetsHeavy(state: MainState) {
             return state.votes
+                .filter((v) => {
+                    return v.election_id === state.currentElection?.id;
+                })
                 .map((v) => {
                     return {
                         votes: v.votes,
@@ -87,7 +93,8 @@ export const useMainStore = defineStore("main", {
                 .filter((v) => {
                     return (
                         v.municipality_code ===
-                        state.currentMunicipality?.cbs_code
+                            state.currentMunicipality?.cbs_code &&
+                        v.election_id === state.currentElection?.id
                     );
                 })
                 .sort((a, b) => {
@@ -127,6 +134,12 @@ export const useMainStore = defineStore("main", {
             } else {
                 this.selectedParties.splice(index, 1);
             }
+        },
+        setSelected(party_ids: number[]) {
+            this.selectedParties.length = 0;
+            party_ids.forEach((id) => {
+                this.selectedParties.push(id);
+            });
         },
     },
 });

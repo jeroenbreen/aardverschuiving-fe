@@ -61,6 +61,8 @@ watch(
     }
 );
 
+watch(() => store.currentElection, create);
+
 watch(
     () => store.selectedParties,
     () => {
@@ -83,6 +85,7 @@ watch(
         >
             <canvas ref="el" />
             <div
+                v-if="store.currentElection"
                 class="Map__title"
                 :style="{
                     width: width / 3 + 'px',
@@ -91,7 +94,7 @@ watch(
             >
                 <div>Verkiezingen</div>
                 <div>Tweede Kamer</div>
-                <div>2023</div>
+                <div>{{ store.currentElection.year }}</div>
             </div>
 
             <map-parties />

@@ -14,6 +14,11 @@ const setCurrent = (municipallity: Municipality) => {
 
 const setCurrentElection = (election: Election) => {
     store.currentElection = election;
+    // const topParties = election.results
+    //     .sort((a, b) => b.votes - a.votes)
+    //     .slice(0, 5)
+    //     .map((result) => result.party_id);
+    // store.setSelected(topParties);
 };
 
 const setGrid = (grid: number) => {
@@ -26,7 +31,7 @@ const setGrid = (grid: number) => {
         <municipality-picker @select="setCurrent" />
         <election-picker @select="setCurrentElection" />
         <grid-slider @select="setGrid" />
-        <party-picker />
+        <party-picker :key="store.currentElection" />
     </div>
 </template>
 
