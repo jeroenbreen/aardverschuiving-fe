@@ -27,7 +27,7 @@ const report = ref(null);
 
 const create = () => {
     if (el.value) {
-        console.log("create");
+        const start = new Date();
         const voteSets: VoteSetHeavy[] = [...store.voteSetsHeavy];
         const canvas = el.value;
         const ctx = canvas.getContext("2d");
@@ -45,9 +45,10 @@ const create = () => {
                 callback,
                 store.selectedParties
             );
-            console.log(app.value);
-            // report.value = app.value.getReport();
+            report.value = app.value.getReport();
         }
+        const end = new Date();
+        console.log("create time", end.getTime() - start.getTime());
     }
 };
 

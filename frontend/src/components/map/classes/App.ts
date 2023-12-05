@@ -23,6 +23,7 @@ export class App {
     skipped: number;
     turn: number;
     selectedParties: number[];
+    cache: any;
 
     constructor(
         ctx: CanvasRenderingContext2D,
@@ -46,6 +47,11 @@ export class App {
         this.gridHorizontal = 0;
         this.gridVertical = 0;
         this.cellPopulation = 0;
+        this.cache = {
+            municipalities: {},
+            coordinates: {},
+        };
+        //
         this.initClick(onClick);
         this.init(grid);
     }
@@ -92,11 +98,8 @@ export class App {
     getReport() {
         // nl width 264km height 312km
         const cellDistance = 264 / this.gridHorizontal;
-        const drawnPopulation = this.cells.reduce((acc, cell) => {
-            return acc + (cell.doDraw() ? cell.getPopulation() : 0);
-        }, 0);
         const presentPopulation = this.cells.reduce((acc, cell) => {
-            return acc + cell.getPopulation();
+            return acc + cell.population;
         }, 0);
 
         const displacement = Math.round(
@@ -108,7 +111,6 @@ export class App {
         );
 
         return {
-            drawnPopulation,
             presentPopulation,
             totalPopulation: this.totalPopulation,
             coverage:
@@ -215,19 +217,33 @@ export class App {
     }
 
     getExactCellForVoteSet(voteSet: VoteSetHeavy) {
-        const longScale = boundingBox.x2 - boundingBox.x1;
-        const deltaLong = voteSet[1].longitude - boundingBox.x1;
-        const x = Math.round((deltaLong / longScale) * this.gridHorizontal) - 1;
-        const latScale = boundingBox.y1 - boundingBox.y2;
-        const deltaLat = boundingBox.y1 - voteSet[1].latitude;
-        const y = Math.round((deltaLat / latScale) * this.gridVertical) - 1;
-        return this.getCellFromCoordinates(x, y);
+        const code = voteSet[1].cbs_code;
+        if (this.cache.municipalities[code]) {
+            return this.cache.municipalities[code];
+        } else {
+            const longScale = boundingBox.x2 - boundingBox.x1;
+            const deltaLong = voteSet[1].longitude - boundingBox.x1;
+            const x =
+                Math.round((deltaLong / longScale) * this.gridHorizontal) - 1;
+            const latScale = boundingBox.y1 - boundingBox.y2;
+            const deltaLat = boundingBox.y1 - voteSet[1].latitude;
+            const y = Math.round((deltaLat / latScale) * this.gridVertical) - 1;
+            const cell = this.getCellFromCoordinates(x, y);
+            this.cache.municipalities[code] = cell;
+            return cell;
+        }
     }
 
     getCellFromCoordinates(x: number, y: number) {
-        return this.cells.find(
-            (cell) => cell.indexX === x && cell.indexY === y
-        );
+        if (this.cache.coordinates[x + "-" + y]) {
+            return this.cache.coordinates[x + "-" + y];
+        } else {
+            const cell = this.cells.find(
+                (cell) => cell.indexX === x && cell.indexY === y
+            );
+            this.cache.coordinates[x + "-" + y] = cell;
+            return cell;
+        }
     }
 
     order(voteSets: VoteSetHeavy[]) {
