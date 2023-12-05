@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import Map from "@/components/map/Map.vue";
+// import Map from "@/components/map/Map.vue";
 
 const routes: Array<RouteRecordRaw> = [
-    {
-        path: "/",
-        name: "Map",
-        component: Map,
-    },
+    // {
+    //     path: "/",
+    //     name: "Map",
+    //     component: Map,
+    // },
 ];
 
 const router = createRouter({

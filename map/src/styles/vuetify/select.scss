@@ -1,0 +1,27 @@
+div.v-select {
+    max-width: 200px;
+
+    .v-input__details {
+        display: none;
+    }
+
+    .v-field {
+        border: 1px solid var(--color-grey-3);
+        border-radius: 16px;
+        height: 32px;
+
+        &__overlay {
+            background: transparent;
+        }
+
+        &__outline {
+            display: none;
+        }
+
+        &__input {
+            padding: 6px 12px;
+            min-height: 0;
+            font-size: 80%;
+        }
+    }
+}

@@ -31,7 +31,7 @@ export const getResultsForMunicipality = (
     voteSets: VoteSet[]
 ) => {
     return voteSets.filter((v) => {
-        return v.municipality_code === municipalityCode;
+        return v[2] === municipalityCode;
     });
 };
 

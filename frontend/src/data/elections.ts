@@ -5,6 +5,8 @@ const elections: Election[] = [
         id: 2,
         year: 2021,
         type: "tweede-kamer",
+        loaded: false,
+        url: "data/votes-2021.json",
         results: [
             {
                 party_id: 999,
@@ -152,6 +154,8 @@ const elections: Election[] = [
         id: 1,
         year: 2023,
         type: "tweede-kamer",
+        loaded: false,
+        url: "data/votes-2023.json",
         results: [
             {
                 party_id: 999,

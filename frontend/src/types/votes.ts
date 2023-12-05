@@ -5,27 +5,22 @@ export interface Origin {
     RegioCode: string;
     RegioUitslag: string;
     Partij: string;
-    AantalStemmen: number;
+    AantalStemmen: Votes;
     AantalZetels: string;
 }
 
-export interface VoteSet {
-    party_id: number;
-    election_id: number;
-    municipality_code: string;
-    votes: number;
-}
+export type Party_id = number;
+export type Election_id = number;
+export type Municipality_code = string;
+export type Votes = number;
 
-export interface VoteSetHeavy {
-    party: Party | null;
-    election: Election | null;
-    municipality: Municipality;
-    votes: number;
-}
+export type VoteSet = [Party_id, Election_id, Municipality_code, Votes];
+
+export type VoteSetHeavy = [Party | null, Election | null, Municipality, Votes];
 
 export interface VoteResult {
     party_id: number;
-    votes: number;
+    votes: Votes;
 }
 
 export interface VoteSetHeavyWithDistance extends VoteSetHeavy {

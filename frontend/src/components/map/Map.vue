@@ -5,16 +5,17 @@ import { VoteSetHeavy } from "../../types";
 import MapParties from "./MapParties.vue";
 import { ratio, settings } from "./classes/settings";
 import { App } from "./classes/App";
+import { Cell } from "./classes/Cell";
 
 const store = useMainStore();
 const el = ref<HTMLElement>();
 const app = ref<App>();
 
-const callback = (cell: any) => {
+const callback = (cell: Cell) => {
     if (cell.voteSets.length > 0) {
         const voteSet = cell.voteSets[0];
-        store.selectMunicipality(voteSet.municipality.cbs_code);
-        store.selectParty(voteSet.party.id);
+        store.selectMunicipality(voteSet[2].cbs_code);
+        store.selectParty(voteSet[0].id);
     }
 };
 

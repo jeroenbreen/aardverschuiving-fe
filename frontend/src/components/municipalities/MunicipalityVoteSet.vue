@@ -1,15 +1,18 @@
 <script setup lang="ts">
-import { computed, defineProps } from "vue";
+import { computed, defineProps, PropType } from "vue";
 import { VoteSet } from "@/types";
 import { useMainStore } from "../../stores/main";
 
 const store = useMainStore();
 const props = defineProps({
-    voteSet: VoteSet,
+    voteSet: {
+        type: Array as PropType<VoteSet>,
+        required: true,
+    },
 });
 
 const party = computed(() => {
-    return store.parties.find((p) => props.voteSet.party_id === p.id);
+    return store.parties.find((p) => props.voteSet[0] === p.id);
 });
 
 const partyTitle = computed(() => {
@@ -21,13 +24,11 @@ const partyColor = computed(() => {
 });
 
 const isCurrent = computed(() => {
-    return (
-        store.currentParty && store.currentParty.id === props.voteSet.party_id
-    );
+    return store.currentParty && store.currentParty.id === props.voteSet[0];
 });
 
 const isActive = computed(() => {
-    return store.selectedParties.includes(props.voteSet.party_id);
+    return store.selectedParties.includes(props.voteSet[0]);
 });
 </script>
 
@@ -45,7 +46,7 @@ const isActive = computed(() => {
             {{ partyTitle }}
         </div>
         <div class="MunicipalityVoteSet__votes">
-            {{ voteSet.votes }}
+            {{ voteSet[3] }}
         </div>
     </div>
 </template>

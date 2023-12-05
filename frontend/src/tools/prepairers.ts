@@ -53,7 +53,7 @@ export const originToVotes = async (
     parties: Party[],
     municipalities: Municipality[]
 ) => {
-    return new Promise((resolve, reject) => {
+    return new Promise(() => {
         fetch(path)
             .then((response) => response.json())
             .then((data: Origin[]) => {
@@ -85,22 +85,31 @@ export const originToVotes = async (
                             : "",
                     };
                 });
-                resolve(converted.filter((c) => c.party_id !== 0));
+                const lines = converted.filter((c) => c.party_id !== 0);
+                const result = lines.map((l) => {
+                    return [
+                        l.election_id,
+                        l.party_id,
+                        l.votes,
+                        l.municipality_code,
+                    ];
+                });
+                console.log(JSON.stringify(result));
             })
             .catch((error) => console.error("Error fetching JSON:", error));
     });
 };
 
-export const sumElection = (votes: VoteSet[]) => {
+export const sumElection = (voteSets: VoteSet[]) => {
     const results = [];
-    for (const vote of votes) {
-        const index = results.findIndex((r) => r.party_id === vote.party_id);
+    for (const voteSet of voteSets) {
+        const index = results.findIndex((r) => r.party_id === voteSet[0]);
         if (index !== -1) {
-            results[index].votes += vote.votes;
+            results[index].votes += voteSet[3];
         } else {
             results.push({
-                party_id: vote.party_id,
-                votes: vote.votes,
+                party_id: voteSet[0],
+                votes: voteSet[3],
             });
         }
     }

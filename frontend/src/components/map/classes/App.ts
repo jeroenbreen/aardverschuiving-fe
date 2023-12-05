@@ -172,8 +172,8 @@ export class App {
         } else {
             if (
                 cell.isEmpty() ||
-                (voteSet.party &&
-                    cell.matchesParty(voteSet.party) &&
+                (voteSet[0] &&
+                    cell.matchesParty(voteSet[0]) &&
                     cell.getSpace() > 0)
             ) {
                 // keep score of the first use
@@ -190,8 +190,8 @@ export class App {
                     if (
                         neighbour &&
                         neighbour.getSpace() > 0 &&
-                        voteSet.party &&
-                        neighbour.matchesParty(voteSet.party)
+                        voteSet[0] &&
+                        neighbour.matchesParty(voteSet[0])
                     ) {
                         cellWithSpace = neighbour;
                     }
@@ -209,10 +209,10 @@ export class App {
 
     getExactCellForVoteSet(voteSet: VoteSetHeavy) {
         const longScale = boundingBox.x2 - boundingBox.x1;
-        const deltaLong = voteSet.municipality.longitude - boundingBox.x1;
+        const deltaLong = voteSet[2].longitude - boundingBox.x1;
         const x = Math.round((deltaLong / longScale) * this.gridHorizontal) - 1;
         const latScale = boundingBox.y1 - boundingBox.y2;
-        const deltaLat = boundingBox.y1 - voteSet.municipality.latitude;
+        const deltaLat = boundingBox.y1 - voteSet[2].latitude;
         const y = Math.round((deltaLat / latScale) * this.gridVertical) - 1;
         return this.getCellFromCoordinates(x, y);
     }
@@ -231,7 +231,7 @@ export class App {
 
     getTotalPopulation() {
         return this.voteSets.reduce((acc, voteSet) => {
-            return acc + voteSet.votes;
+            return acc + voteSet[3];
         }, 0);
     }
 

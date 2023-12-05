@@ -1,3 +1,5 @@
+import { Cell } from "./Cell";
+
 export const getShell = (distanceIndex: number) => {
     let shell = 0;
     let areaInside = getAreaInsideShell(shell + 1);
@@ -17,7 +19,7 @@ export const getAreaInsideShell = (shell: number) => {
     return ribSizeInside * ribSizeInside - 1;
 };
 
-export const getDistanceBetweenCells = (cell1: any, cell2: any) => {
+export const getDistanceBetweenCells = (cell1: Cell, cell2: Cell) => {
     const a = Math.round(cell1.indexX - cell2.indexX);
     const b = Math.round(cell1.indexY - cell2.indexY);
     return Math.sqrt(a * a + b * b);
