@@ -12,9 +12,9 @@ const municipality = computed<Municipality>(() => store.currentMunicipality);
 <template>
     <div class="Municipality">
         <template v-if="municipality">
-            <h3>
+            <h1>
                 {{ municipality.title }}
-            </h3>
+            </h1>
 
             <table>
                 <tr>

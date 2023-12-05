@@ -30,6 +30,8 @@ const parties = computed(() => {
     padding: 8px;
     width: 230px;
     pointer-events: none;
+    font-family: var(--font-mono);
+    color: var(--color-black-1);
 
     .MapParty {
         width: 50%;

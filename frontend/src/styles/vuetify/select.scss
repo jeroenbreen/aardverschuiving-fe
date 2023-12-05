@@ -1,5 +1,7 @@
 div.v-select {
     max-width: 200px;
+    font-family: 'Inter', sans-serif;
+    color: #000;
 
     .v-input__details {
         display: none;
@@ -24,4 +26,9 @@ div.v-select {
             font-size: 80%;
         }
     }
+}
+
+.v-overlay-container {
+    font-family: 'Inter', sans-serif;
+    color: #000;
 }
