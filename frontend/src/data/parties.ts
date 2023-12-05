@@ -59,7 +59,7 @@ const parties: Party[] = [
     },
     {
         id: 7,
-        name: "Partij voor de Dieren",
+        name: "PvdD",
         full: "Partij voor de Dieren",
         isParty: true,
         color: "#ffff99",
@@ -101,7 +101,7 @@ const parties: Party[] = [
     },
     {
         id: 13,
-        name: "ChristenUnie",
+        name: "CU",
         full: "ChristenUnie",
         isParty: true,
         color: "#3ca0ff",

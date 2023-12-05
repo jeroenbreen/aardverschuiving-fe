@@ -4,9 +4,14 @@ import { computed } from "vue";
 import { Municipality } from "@/types";
 import MunicipalityElection from "./MunicipalityElection.vue";
 import MunicipaliltyRelations from "./MunicipaliltyRelations.vue";
+import { addDotsToNumber } from "@/tools/format";
 
 const store = useMainStore();
 const municipality = computed<Municipality>(() => store.currentMunicipality);
+
+const population = computed(() => {
+    return addDotsToNumber(municipality.value.population);
+});
 </script>
 
 <template>
@@ -20,7 +25,7 @@ const municipality = computed<Municipality>(() => store.currentMunicipality);
                 <tr>
                     <td>Inwoners</td>
                     <td>
-                        {{ municipality.population }}
+                        {{ population }}
                     </td>
                 </tr>
                 <tr>
@@ -61,6 +66,7 @@ const municipality = computed<Municipality>(() => store.currentMunicipality);
 <style lang="scss" scoped>
 .Municipality {
     padding-top: var(--size-4);
+    line-height: 1.2;
 }
 
 table {
@@ -78,6 +84,7 @@ table {
 
         &:last-child {
             text-align: right;
+            white-space: nowrap;
         }
     }
 }

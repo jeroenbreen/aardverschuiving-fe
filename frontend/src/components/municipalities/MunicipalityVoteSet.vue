@@ -2,6 +2,7 @@
 import { computed, defineProps, PropType } from "vue";
 import { VoteSet } from "@/types";
 import { useMainStore } from "../../stores/main";
+import { addDotsToNumber } from "@/tools/format";
 
 const store = useMainStore();
 const props = defineProps({
@@ -30,6 +31,10 @@ const isCurrent = computed(() => {
 const isActive = computed(() => {
     return store.selectedParties.includes(props.voteSet[2]);
 });
+
+const votes = computed(() => {
+    return addDotsToNumber(props.voteSet[3]);
+});
 </script>
 
 <template>
@@ -46,7 +51,7 @@ const isActive = computed(() => {
             {{ partyTitle }}
         </div>
         <div class="MunicipalityVoteSet__votes">
-            {{ voteSet[3] }}
+            {{ votes }}
         </div>
     </div>
 </template>
@@ -59,14 +64,14 @@ const isActive = computed(() => {
     border: 1px solid transparent;
 
     &__color {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
+        width: 16px;
+        height: 16px;
     }
 
     &__party {
         flex-grow: 1;
         padding-left: 12px;
+        padding-top: 2px;
     }
 
     &__votes {
