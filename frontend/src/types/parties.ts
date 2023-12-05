@@ -1,5 +1,7 @@
+import { Party_id } from "./votes";
+
 export interface Party {
-    id: number;
+    id: Party_id;
     name: string;
     full: string;
     isParty: boolean;

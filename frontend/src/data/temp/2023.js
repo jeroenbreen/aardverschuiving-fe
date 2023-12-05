@@ -1,6 +1,4 @@
-import { VoteSet } from "../types";
-
-const votes: VoteSet[] = [
+export default [
     {
         election_id: 1,
         party_id: 14,
@@ -53414,5 +53412,3 @@ const votes: VoteSet[] = [
         municipality_code: "0193",
     },
 ];
-
-export default votes;

@@ -1,6 +1,8 @@
+import { Municipality_code } from "./votes";
+
 export interface Municipality {
     title: string;
-    cbs_code: string;
+    cbs_code: Municipality_code;
     province: string;
     population: number;
     latitude: number;

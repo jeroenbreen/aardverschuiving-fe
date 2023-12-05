@@ -5,6 +5,7 @@ import MunicipalityPicker from "./MunicipalityPicker.vue";
 import ElectionPicker from "./ElectionPicker.vue";
 import GridSlider from "./GridSlider.vue";
 import PartyPicker from "./PartyPicker.vue";
+import { loadVotes } from "@/tools/loader";
 
 const store = useMainStore();
 
@@ -13,12 +14,12 @@ const setCurrent = (municipallity: Municipality) => {
 };
 
 const setCurrentElection = (election: Election) => {
-    store.currentElection = election;
-    // const topParties = election.results
-    //     .sort((a, b) => b.votes - a.votes)
-    //     .slice(0, 5)
-    //     .map((result) => result.party_id);
-    // store.setSelected(topParties);
+    store.loaded = false;
+    loadVotes(election.url).then((voteSets) => {
+        store.votes = voteSets;
+        store.loaded = true;
+        store.currentElection = election;
+    });
 };
 
 const setGrid = (grid: number) => {

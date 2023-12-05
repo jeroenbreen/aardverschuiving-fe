@@ -10,14 +10,18 @@ const props = defineProps({
         type: Object as PropType<Party>,
         required: true,
     },
+    i: {
+        type: Number,
+        required: true,
+    },
 });
 
-const isActive = ref(store.selectedParties.includes(props.party.id));
+const isActive = ref(store.selectedPartyRanks.includes(props.i));
 
 watch(
     () => isActive.value,
     () => {
-        store.toggleParty(props.party);
+        store.toggleParty(props.i);
     }
 );
 

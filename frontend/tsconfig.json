@@ -11,7 +11,7 @@
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
     "sourceMap": true,
-    "baseUrl": "../poll-polator",
+    "baseUrl": ".",
     "types": [
       "webpack-env"
     ],
@@ -35,7 +35,6 @@
     "tests/**/*.tsx"
   ],
   "exclude": [
-    "node_modules",
-    "bertin"
+    "node_modules"
   ]
 }

@@ -3,14 +3,13 @@ import {
     Election,
     Municipality,
     Party,
-    VoteResult,
     VoteSet,
     ElectionDistance,
     DistanceList,
 } from "./../types";
-import { getDeviation, resultsToPercentage } from "../tools/votes";
 
 interface MainState {
+    init: boolean;
     loaded: boolean;
     elections: Election[];
     municipalities: Municipality[];
@@ -20,20 +19,18 @@ interface MainState {
     currentElection: Election | null;
     currentParty: Party | null;
     grid: number;
-    selectedParties: number[];
+    selectedPartyRanks: number[];
     distances: ElectionDistance[];
 }
 
 interface MainStateWithGetters extends MainState {
     electionResults: { party: Party; votes: number }[];
-    voteSetsForMunicipality: VoteSet[];
-    electionResultsNormalised: VoteResult[];
-    municipalityResultsNormalised: VoteResult[];
 }
 
 export const useMainStore = defineStore("main", {
     state: () => {
         return {
+            init: false,
             loaded: false,
             elections: [],
             municipalities: [],
@@ -43,11 +40,18 @@ export const useMainStore = defineStore("main", {
             currentMunicipality: null,
             currentElection: null,
             currentParty: null,
-            grid: 40,
-            selectedParties: [1, 2, 3, 4, 6, 9, 12, 14],
+            grid: 20,
+            // the numbers based on ranking
+            selectedPartyRanks: [0, 1, 2, 3, 4],
         } as MainState;
     },
     getters: {
+        selectedParties(state: MainState) {
+            const st = state as MainStateWithGetters;
+            return state.selectedPartyRanks.map((i) => {
+                return st.electionResults[i]?.party.id;
+            });
+        },
         electionResults(state: MainState) {
             if (!state.currentElection) {
                 return [];
@@ -61,7 +65,7 @@ export const useMainStore = defineStore("main", {
                             votes: r.votes,
                             party: state.parties.find(
                                 (p) => p.id === r.party_id
-                            )!,
+                            ),
                         };
                     })
                     .filter((r) => {
@@ -72,33 +76,28 @@ export const useMainStore = defineStore("main", {
         voteSetsHeavy(state: MainState) {
             return state.votes
                 .filter((v) => {
-                    return v.election_id === state.currentElection?.id;
+                    return v[0] === state.currentElection?.id;
                 })
                 .map((v) => {
-                    return {
-                        votes: v.votes,
-                        party: state.parties.find((p) => p.id === v.party_id)!,
-                        election: state.elections.find(
-                            (e) => e.id === v.election_id
-                        ),
-                        municipality: state.municipalities.find(
-                            (m) => m.cbs_code === v.municipality_code
-                        ),
-                    };
+                    const e = state.elections.find((e) => e.id === v[0]);
+                    const m = state.municipalities.find(
+                        (m) => m.cbs_code === v[1]
+                    );
+                    const p = state.parties.find((p) => p.id === v[2]);
+                    return [e, m, p, v[3]];
                 })
-                .filter((v) => v.municipality && v.party && v.election);
+                .filter((v) => v[0] && v[1] && v[2]);
         },
         voteSetsForMunicipality(state: MainState) {
             return state.votes
                 .filter((v) => {
                     return (
-                        v.municipality_code ===
-                            state.currentMunicipality?.cbs_code &&
-                        v.election_id === state.currentElection?.id
+                        v[1] === state.currentMunicipality?.cbs_code &&
+                        v[0] === state.currentElection?.id
                     );
                 })
                 .sort((a, b) => {
-                    return b.votes - a.votes;
+                    return b[3] - a[3];
                 });
         },
         distanceList(state: MainState): DistanceList | null {
@@ -127,19 +126,13 @@ export const useMainStore = defineStore("main", {
         selectParty(id: number) {
             this.currentParty = this.parties.find((p) => p.id === id)!;
         },
-        toggleParty(party: Party) {
-            const index = this.selectedParties.indexOf(party.id);
+        toggleParty(i: number) {
+            const index = this.selectedPartyRanks.indexOf(i);
             if (index === -1) {
-                this.selectedParties.push(party.id);
+                this.selectedPartyRanks.push(i);
             } else {
-                this.selectedParties.splice(index, 1);
+                this.selectedPartyRanks.splice(index, 1);
             }
-        },
-        setSelected(party_ids: number[]) {
-            this.selectedParties.length = 0;
-            party_ids.forEach((id) => {
-                this.selectedParties.push(id);
-            });
         },
     },
 });

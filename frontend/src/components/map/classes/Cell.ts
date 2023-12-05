@@ -104,12 +104,12 @@ export class Cell {
 
     getTotalDistance() {
         return this.voteSets.reduce((acc, voteSet) => {
-            return acc + voteSet.distance * voteSet.votes;
+            return acc + voteSet[4] * voteSet[3];
         }, 0);
     }
 
     addVoteSet(voteSet: VoteSetHeavyWithDistance) {
-        if (this.isEmpty() || this.voteSets[0].party === voteSet.party) {
+        if (this.isEmpty() || this.voteSets[0][0] === voteSet[2]) {
             this.voteSets.push(voteSet);
         }
     }
@@ -121,8 +121,8 @@ export class Cell {
     draw(ctx: CanvasRenderingContext2D, selectedParties: number[]) {
         if (this.voteSets.length > 0 && this.doDraw()) {
             const voteSet = this.voteSets[0];
-            if (voteSet.party) {
-                if (selectedParties.includes(voteSet.party.id)) {
+            if (voteSet[2]) {
+                if (selectedParties.includes(voteSet[2].id)) {
                     let size, x, y;
                     if (settings.notFullCells === "reduce") {
                         size = this.size * (this.filledPercentage() / 100);
@@ -165,7 +165,7 @@ export class Cell {
 
     getPopulation() {
         return this.voteSets.reduce((acc, voteSet) => {
-            return acc + voteSet.votes;
+            return acc + voteSet[3];
         }, 0);
     }
 
@@ -183,7 +183,7 @@ export class Cell {
         if (this.isEmpty()) {
             return null;
         } else {
-            return this.voteSets[0].party;
+            return this.voteSets[0][2];
         }
     }
 
@@ -198,10 +198,8 @@ export class Cell {
     log() {
         const voteSet = this.voteSets[0];
         if (voteSet) {
-            if (voteSet.municipality && voteSet.party) {
-                console.log(
-                    voteSet.municipality.title + " " + voteSet.party.name
-                );
+            if (voteSet[1] && voteSet[2]) {
+                console.log(voteSet[1].title + " " + voteSet[2].name);
             }
         }
     }

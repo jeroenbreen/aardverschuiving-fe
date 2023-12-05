@@ -125,29 +125,36 @@ export class App {
             this.getNearestCellWithSpaceForVoteSet(biggest);
         if (cell) {
             const space = cell.getSpace();
-            if (biggest.votes < space) {
-                const itemWithDistance = {
-                    ...biggest,
+            if (biggest[3] < space) {
+                const itemWithDistance: VoteSetHeavyWithDistance = [
+                    biggest[0],
+                    biggest[1],
+                    biggest[2],
+                    biggest[3],
                     distance,
-                };
+                ];
                 cell.addVoteSet(itemWithDistance);
             } else {
-                const rest: VoteSetHeavy = {
-                    ...biggest,
-                    votes: biggest.votes - space,
-                };
-                const newItemWithDistance: VoteSetHeavyWithDistance = {
-                    ...biggest,
-                    votes: space,
+                const rest: VoteSetHeavy = [
+                    biggest[0],
+                    biggest[1],
+                    biggest[2],
+                    biggest[3] - space,
+                ];
+                const newItemWithDistance: VoteSetHeavyWithDistance = [
+                    biggest[0],
+                    biggest[1],
+                    biggest[2],
+                    space,
                     distance,
-                };
+                ];
                 cell.addVoteSet(newItemWithDistance);
                 this.voteSets.push(rest);
             }
             const index = this.voteSets.indexOf(biggest);
             this.voteSets.splice(index, 1);
         } else {
-            this.skipped += biggest.votes;
+            this.skipped += biggest[3];
             const index = this.voteSets.indexOf(biggest);
             this.voteSets.splice(index, 1);
         }
@@ -172,8 +179,8 @@ export class App {
         } else {
             if (
                 cell.isEmpty() ||
-                (voteSet.party &&
-                    cell.matchesParty(voteSet.party) &&
+                (voteSet[2] &&
+                    cell.matchesParty(voteSet[2]) &&
                     cell.getSpace() > 0)
             ) {
                 // keep score of the first use
@@ -190,8 +197,8 @@ export class App {
                     if (
                         neighbour &&
                         neighbour.getSpace() > 0 &&
-                        voteSet.party &&
-                        neighbour.matchesParty(voteSet.party)
+                        voteSet[2] &&
+                        neighbour.matchesParty(voteSet[2])
                     ) {
                         cellWithSpace = neighbour;
                     }
@@ -209,10 +216,10 @@ export class App {
 
     getExactCellForVoteSet(voteSet: VoteSetHeavy) {
         const longScale = boundingBox.x2 - boundingBox.x1;
-        const deltaLong = voteSet.municipality.longitude - boundingBox.x1;
+        const deltaLong = voteSet[1].longitude - boundingBox.x1;
         const x = Math.round((deltaLong / longScale) * this.gridHorizontal) - 1;
         const latScale = boundingBox.y1 - boundingBox.y2;
-        const deltaLat = boundingBox.y1 - voteSet.municipality.latitude;
+        const deltaLat = boundingBox.y1 - voteSet[1].latitude;
         const y = Math.round((deltaLat / latScale) * this.gridVertical) - 1;
         return this.getCellFromCoordinates(x, y);
     }
@@ -225,13 +232,13 @@ export class App {
 
     order(voteSets: VoteSetHeavy[]) {
         return voteSets.sort((a, b) => {
-            return b.votes - a.votes;
+            return b[3] - a[3];
         });
     }
 
     getTotalPopulation() {
         return this.voteSets.reduce((acc, voteSet) => {
-            return acc + voteSet.votes;
+            return acc + voteSet[3];
         }, 0);
     }
 

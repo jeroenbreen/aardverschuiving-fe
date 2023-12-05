@@ -5,16 +5,17 @@ import { VoteSetHeavy } from "../../types";
 import MapParties from "./MapParties.vue";
 import { ratio, settings } from "./classes/settings";
 import { App } from "./classes/App";
+import { Cell } from "./classes/Cell";
 
 const store = useMainStore();
 const el = ref<HTMLElement>();
 const app = ref<App>();
 
-const callback = (cell: any) => {
+const callback = (cell: Cell) => {
     if (cell.voteSets.length > 0) {
         const voteSet = cell.voteSets[0];
-        store.selectMunicipality(voteSet.municipality.cbs_code);
-        store.selectParty(voteSet.party.id);
+        store.selectMunicipality(voteSet[1].cbs_code);
+        store.selectParty(voteSet[2].id);
     }
 };
 
@@ -26,6 +27,7 @@ const report = ref(null);
 
 const create = () => {
     if (el.value) {
+        console.log("create");
         const voteSets: VoteSetHeavy[] = [...store.voteSetsHeavy];
         const canvas = el.value;
         const ctx = canvas.getContext("2d");
@@ -43,14 +45,11 @@ const create = () => {
                 callback,
                 store.selectedParties
             );
-            report.value = app.value.getReport();
+            console.log(app.value);
+            // report.value = app.value.getReport();
         }
     }
 };
-
-onMounted(() => {
-    create();
-});
 
 watch(
     () => store.grid,
@@ -61,10 +60,17 @@ watch(
     }
 );
 
-watch(() => store.currentElection, create);
+watch(
+    () => store.loaded,
+    () => {
+        if (store.loaded) {
+            create();
+        }
+    }
+);
 
 watch(
-    () => store.selectedParties,
+    () => store.selectedPartyRanks,
     () => {
         app.value.updateSelectedParties(store.selectedParties);
     },

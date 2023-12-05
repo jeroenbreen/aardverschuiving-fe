@@ -8,9 +8,10 @@ const store = useMainStore();
 <template>
     <div class="PartyPicker">
         <party-checkbox
-            v-for="result in store.electionResults"
-            :key="result.party_id"
+            v-for="(result, index) in store.electionResults"
+            :key="index"
             :party="result.party"
+            :i="index"
         />
     </div>
 </template>
