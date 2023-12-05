@@ -7,8 +7,6 @@ import { Cell } from "./Cell";
 import { boundingBox, ratio } from "./settings";
 import { getDistanceBetweenCells } from "./shell";
 
-// todo cache coordinates for each municipality
-
 export class App {
     width: number;
     height: number;
@@ -156,6 +154,7 @@ export class App {
             const index = this.voteSets.indexOf(biggest);
             this.voteSets.splice(index, 1);
         } else {
+            // console.log("skipped");
             this.skipped += biggest[3];
             const index = this.voteSets.indexOf(biggest);
             this.voteSets.splice(index, 1);
@@ -193,7 +192,6 @@ export class App {
                 const max = 250;
                 let shellPosition = 0;
                 let cellWithSpace = null;
-                // todo keep score of nearest available neighbour
                 while (!cellWithSpace && shellPosition < max) {
                     const neighbour = cell.getNeighbour(shellPosition);
                     if (

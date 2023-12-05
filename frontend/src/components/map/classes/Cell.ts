@@ -89,7 +89,7 @@ export class Cell {
         };
 
         if (this.cache.neighbour[shellPosition]) {
-            return this.cache.neighbour[shellPosition][shellPosition];
+            return this.cache.neighbour[shellPosition];
         } else {
             const shell = getShell(shellPosition); // 0
             const areaInside = getAreaInsideShell(shell); // 0

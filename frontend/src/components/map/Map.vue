@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import { useMainStore } from "../../stores/main";
 import { VoteSetHeavy } from "../../types";
 import MapParties from "./MapParties.vue";
