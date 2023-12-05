@@ -7,9 +7,9 @@ import distances from "@/data/distances";
 import parties from "@/data/parties";
 import Tools from "./components/tools/Tools.vue";
 import Municipality from "@/components/municipalities/Municipality.vue";
-import { Election } from "@/types";
+import { Election, VoteSet } from "@/types";
 import { loadVotes } from "@/tools/loader";
-import data from "@/data/temp/2023.js";
+import { voteSetsToRelations } from "@/tools/prepairers";
 
 const store = useMainStore();
 
@@ -18,7 +18,7 @@ const store = useMainStore();
 // };
 
 const loadElection = async (election: Election) => {
-    loadVotes(election.url).then((voteSets) => {
+    loadVotes(election.url).then((voteSets: VoteSet[]) => {
         store.votes = voteSets;
         store.loaded = true;
     });

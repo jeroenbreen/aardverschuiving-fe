@@ -192,7 +192,7 @@ const parties: Party[] = [
     },
     {
         id: 26,
-        name: "Samen voor NL",
+        name: "Samen v NL",
         full: "Samen voor NL",
         isParty: true,
         color: "#000000",
@@ -247,7 +247,7 @@ const parties: Party[] = [
     },
     {
         id: 34,
-        name: "Lijst Henk Krol",
+        name: "Henk Krol",
         full: "Lijst Henk Krol",
         isParty: true,
         color: "#000",

@@ -56,9 +56,17 @@ const population = computed(() => {
                 </tr>
             </table>
 
-            <municipalilty-relations :municipality="municipality" />
+            <div class="Municipality__section">
+                <h4>Meest overeenkomstige gemeentes:</h4>
 
-            <municipality-election />
+                <municipalilty-relations :municipality="municipality" />
+            </div>
+
+            <div class="Municipality__section">
+                <h4>Uitslag:</h4>
+
+                <municipality-election />
+            </div>
         </template>
     </div>
 </template>
@@ -67,6 +75,16 @@ const population = computed(() => {
 .Municipality {
     padding-top: var(--size-4);
     line-height: 1.2;
+
+    &__section {
+        margin-top: 32px;
+        padding: 8px 8px 8px 16px;
+        border-left: 4px solid var(--color-grey-1);
+
+        h4 {
+            margin-bottom: 12px;
+        }
+    }
 }
 
 table {
