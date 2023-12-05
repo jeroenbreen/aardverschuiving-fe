@@ -160,9 +160,11 @@ watch(
         z-index: 1;
         text-align: center;
         pointer-events: none;
+        font-family: "Recursive", sans-serif;
 
         div:nth-child(1) {
             font-weight: 400;
+            font-size: 80%;
         }
 
         div:nth-child(2) {
@@ -170,7 +172,8 @@ watch(
         }
 
         div:nth-child(3) {
-            font-size: 350%;
+            font-size: 400%;
+            font-weight: 400;
         }
     }
 
