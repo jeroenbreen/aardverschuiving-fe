@@ -208,14 +208,14 @@ const parties: Party[] = [
         name: "GroenLinks",
         full: "GROENLINKS",
         isParty: true,
-        color: "#000000",
+        color: "#39a935",
     },
     {
         id: 29,
         name: "PvdA",
         full: "Partij van de Arbeid (P.v.d.A.)",
         isParty: true,
-        color: "red",
+        color: "#e40006",
     },
     {
         id: 30,

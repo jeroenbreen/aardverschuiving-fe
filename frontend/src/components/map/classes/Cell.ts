@@ -12,7 +12,8 @@ export class Cell {
     size: number;
     voteSets: VoteSetHeavyWithDistance[];
     cellPopulation: number;
-    turn: number;
+    population: number;
+    cache: any;
 
     constructor(
         app: App,
@@ -30,8 +31,11 @@ export class Cell {
         this.y = y;
         this.size = size;
         this.cellPopulation = cellPopulation;
-        this.turn = 0;
+        this.population = 0;
         this.voteSets = [];
+        this.cache = {
+            neighbour: {},
+        };
     }
 
     getNeighbour(shellPosition: number) {
@@ -84,22 +88,23 @@ export class Cell {
             return { x, y };
         };
 
-        const shell = getShell(shellPosition); // 0
-        const areaInside = getAreaInsideShell(shell); // 0
-        const shellPositionInShell = shellPosition - areaInside; // 0
-        const coordinates = getCoordinatesForShell(shell, shellPositionInShell); // [-1, -1]
-
-        // console.log(
-        //     shellPosition,
-        //     shell,
-        //     areaInside,
-        //     shellPositionInShell,
-        //     coordinates
-        // );
-        return this.app.getCellFromCoordinates(
-            this.indexX + coordinates.x,
-            this.indexY + coordinates.y
-        );
+        if (this.cache.neighbour[shellPosition]) {
+            return this.cache.neighbour[shellPosition][shellPosition];
+        } else {
+            const shell = getShell(shellPosition); // 0
+            const areaInside = getAreaInsideShell(shell); // 0
+            const shellPositionInShell = shellPosition - areaInside; // 0
+            const coordinates = getCoordinatesForShell(
+                shell,
+                shellPositionInShell
+            ); // [-1, -1]
+            const cell = this.app.getCellFromCoordinates(
+                this.indexX + coordinates.x,
+                this.indexY + coordinates.y
+            );
+            this.cache.neighbour[shellPosition] = cell;
+            return cell;
+        }
     }
 
     getTotalDistance() {
@@ -109,74 +114,42 @@ export class Cell {
     }
 
     addVoteSet(voteSet: VoteSetHeavyWithDistance) {
-        if (this.isEmpty() || this.voteSets[0][0] === voteSet[2]) {
+        if (this.isEmpty() || this.voteSets[0][2] === voteSet[2]) {
             this.voteSets.push(voteSet);
+            this.population += voteSet[3];
         }
     }
 
     filledPercentage() {
-        return (100 * this.getPopulation()) / this.cellPopulation;
+        return (100 * this.population) / this.cellPopulation;
     }
 
     draw(ctx: CanvasRenderingContext2D, selectedParties: number[]) {
-        if (this.voteSets.length > 0 && this.doDraw()) {
+        if (this.voteSets.length > 0) {
             const voteSet = this.voteSets[0];
-            if (voteSet[2]) {
-                if (selectedParties.includes(voteSet[2].id)) {
-                    let size, x, y;
-                    if (settings.notFullCells === "reduce") {
-                        size = this.size * (this.filledPercentage() / 100);
-                        x = this.x + settings.padding + (this.size - size) / 2;
-                        y = this.y + settings.padding + (this.size - size) / 2;
-                    } else {
-                        size = this.size;
-                        x = this.x + settings.padding;
-                        y = this.y + settings.padding;
-                    }
-                    const party = this.getParty();
-                    if (party) {
-                        ctx.fillStyle = party.color;
-                        ctx.fillRect(x, y, size, size);
-                    }
-                } else {
-                    this.drawBlank(ctx);
+            if (
+                voteSet[2] &&
+                voteSet[2].id &&
+                selectedParties.includes(voteSet[2].id)
+            ) {
+                const size = this.size * (this.filledPercentage() / 100);
+                const x = this.x + settings.padding + (this.size - size) / 2;
+                const y = this.y + settings.padding + (this.size - size) / 2;
+                const party = this.getParty();
+                if (party) {
+                    ctx.fillStyle = party.color;
+                    ctx.fillRect(x, y, size, size);
                 }
             }
         }
-    }
-
-    drawBlank(ctx: CanvasRenderingContext2D) {
-        ctx.fillStyle = "#fff";
-        ctx.fillRect(
-            this.x + settings.padding,
-            this.y + settings.padding,
-            this.size,
-            this.size
-        );
-    }
-
-    doDraw() {
-        if (settings.notFullCells === "reduce") {
-            return true;
-        } else {
-            return this.filledPercentage() > 50;
-        }
-    }
-
-    getPopulation() {
-        return this.voteSets.reduce((acc, voteSet) => {
-            return acc + voteSet[3];
-        }, 0);
     }
 
     isEmpty() {
         return this.voteSets.length === 0;
     }
 
-    // todo, maybe cache this
-    // clear/reset on addVoteSet
     getSpace() {
-        return this.cellPopulation - this.getPopulation();
+        return this.cellPopulation - this.population;
     }
 
     getParty() {
@@ -192,15 +165,6 @@ export class Cell {
             return true;
         } else {
             return this.getParty() === party;
-        }
-    }
-
-    log() {
-        const voteSet = this.voteSets[0];
-        if (voteSet) {
-            if (voteSet[1] && voteSet[2]) {
-                console.log(voteSet[1].title + " " + voteSet[2].name);
-            }
         }
     }
 }

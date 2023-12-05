@@ -40,9 +40,9 @@ export const useMainStore = defineStore("main", {
             currentMunicipality: null,
             currentElection: null,
             currentParty: null,
-            grid: 20,
+            grid: 30,
             // the numbers based on ranking
-            selectedPartyRanks: [0, 1, 2, 3, 4],
+            selectedPartyRanks: [0, 1, 2, 3, 4, 5, 6],
         } as MainState;
     },
     getters: {

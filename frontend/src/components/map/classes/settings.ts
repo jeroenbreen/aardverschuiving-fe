@@ -1,7 +1,6 @@
 export const settings = {
     width: 600,
     padding: 20,
-    notFullCells: "reduce", // "reduce" | "hide"
 };
 
 export const boundingBox = {
