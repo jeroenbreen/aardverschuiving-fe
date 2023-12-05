@@ -19,11 +19,30 @@ const callback = (cell: Cell) => {
     }
 };
 
-const padding = 20;
-const baseWidth = ref(0);
-const width = computed(() => baseWidth.value + padding * 2);
-const height = computed(() => (width.value / 21) * 29.7);
+const posterPadding = 20;
+const posterWidth = settings.width + settings.padding * 2 + posterPadding * 2;
+const posterHeight = computed(() => (posterWidth / 21) * 29.7);
 const report = ref(null);
+
+function relMouseCoords(event) {
+    var totalOffsetX = 0;
+    var totalOffsetY = 0;
+    var canvasX = 0;
+    var canvasY = 0;
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    var currentElement = this;
+
+    do {
+        totalOffsetX += currentElement.offsetLeft - currentElement.scrollLeft;
+        totalOffsetY += currentElement.offsetTop - currentElement.scrollTop;
+    } while ((currentElement = currentElement.offsetParent));
+
+    canvasX = event.pageX - totalOffsetX;
+    canvasY = event.pageY - totalOffsetY;
+
+    return { x: canvasX, y: canvasY };
+}
+HTMLCanvasElement.prototype.relMouseCoords = relMouseCoords;
 
 const create = () => {
     if (el.value) {
@@ -32,14 +51,12 @@ const create = () => {
         const canvas = el.value;
         const ctx = canvas.getContext("2d");
         if (ctx) {
-            const w = settings.width + settings.padding * 2;
-            baseWidth.value = w;
-            canvas.width = w;
+            canvas.width = settings.width + settings.padding * 2;
             canvas.height = settings.width * ratio + settings.padding * 2;
             app.value = new App(
                 ctx,
-                canvas.width,
-                canvas.height,
+                settings.width,
+                settings.width * ratio,
                 voteSets,
                 store.grid,
                 callback,
@@ -86,8 +103,9 @@ watch(
         <div
             class="Map"
             :style="{
-                width: width + 'px',
-                height: height + 'px',
+                width: posterWidth + 'px',
+                height: posterHeight + 'px',
+                padding: posterPadding + 'px',
             }"
         >
             <canvas ref="el" />
@@ -95,8 +113,8 @@ watch(
                 v-if="store.currentElection"
                 class="Map__title"
                 :style="{
-                    width: width / 3 + 'px',
-                    'font-size': width / 30 + 'px',
+                    width: posterWidth / 3 + 'px',
+                    'font-size': posterWidth / 30 + 'px',
                 }"
             >
                 <div>Verkiezingen</div>
@@ -117,18 +135,20 @@ watch(
 </template>
 
 <style lang="scss" scoped>
+.map-container {
+    padding: 20px;
+}
 .Map {
     display: inline-block;
     position: relative;
-    margin: 20px;
+    margin: 0;
     box-shadow: -4px 2px 12px rgba(0, 0, 0, 0.08),
         4px 5px 24px rgba(0, 0, 0, 0.04);
 
     canvas {
         position: absolute;
-        left: 47%;
-        top: 47%;
-        transform: translate(-50%, -50%);
+        left: 3%;
+        top: 10%;
     }
 
     &__title {

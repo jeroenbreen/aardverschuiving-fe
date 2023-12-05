@@ -126,12 +126,7 @@ export class Cell {
 
     draw(ctx: CanvasRenderingContext2D, selectedParties: number[]) {
         if (this.voteSets.length > 0) {
-            const voteSet = this.voteSets[0];
-            if (
-                voteSet[2] &&
-                voteSet[2].id &&
-                selectedParties.includes(voteSet[2].id)
-            ) {
+            if (this.show(selectedParties)) {
                 const size = this.size * (this.filledPercentage() / 100);
                 const x = this.x + settings.padding + (this.size - size) / 2;
                 const y = this.y + settings.padding + (this.size - size) / 2;
@@ -142,6 +137,11 @@ export class Cell {
                 }
             }
         }
+    }
+
+    show(selectedParties: number[]) {
+        const voteSet = this.voteSets[0];
+        return voteSet && voteSet[2] && selectedParties.includes(voteSet[2].id);
     }
 
     isEmpty() {

@@ -6,6 +6,7 @@ import {
 import { Cell } from "./Cell";
 import { boundingBox, ratio } from "./settings";
 import { getDistanceBetweenCells } from "./shell";
+import { settings } from "./settings";
 
 export class App {
     width: number;
@@ -76,19 +77,35 @@ export class App {
     }
 
     clear() {
-        this.ctx.clearRect(0, 0, this.width, this.height);
+        this.ctx.clearRect(
+            0,
+            0,
+            this.width + 2 * settings.padding,
+            this.height + 2 * settings.padding
+        );
     }
 
     initClick(onClick: Callback) {
-        this.ctx.canvas.addEventListener("click", (e) => {
-            const bb = this.ctx.canvas.getBoundingClientRect();
-            const x = e.clientX - bb.x;
-            const y = e.clientY - bb.y;
-            const xs = Math.floor((x / this.width) * this.gridHorizontal);
-            const ys = Math.floor((y / this.height) * this.gridVertical);
-            const cell = this.getCellFromCoordinates(xs, ys);
-            if (cell) {
-                onClick(cell);
+        const canvas = this.ctx.canvas;
+        canvas.addEventListener("click", (e) => {
+            const cv = canvas as any;
+            const coordinates = cv.relMouseCoords(e);
+            const areaX = coordinates.x - settings.padding;
+            const areaY = coordinates.y - settings.padding;
+            // check if is inside area box
+            if (areaX > 0 && areaY > 0) {
+                const indexX = Math.floor(
+                    (areaX / this.width) * this.gridHorizontal
+                );
+                const indexY = Math.floor(
+                    (areaY / this.height) * this.gridVertical
+                );
+                const cell = this.getCellFromCoordinates(indexX, indexY);
+                if (cell && cell.show(this.selectedParties)) {
+                    onClick(cell);
+                }
+            } else {
+                console.log("outside");
             }
         });
     }
