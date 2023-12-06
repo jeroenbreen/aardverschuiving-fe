@@ -185,7 +185,7 @@ watch(
     &__report {
         padding: 20px;
         font-style: italic;
-        font-size: var(--text-s);
+        font-size: 70%;
     }
 }
 </style>

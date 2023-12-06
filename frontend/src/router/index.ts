@@ -1,11 +1,23 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import Map from "@/components/map/Map.vue";
+import Main from "@/pages/Main.vue";
+import Mission from "@/pages/Mission.vue";
+import Justification from "@/pages/Justification.vue";
 
 const routes: Array<RouteRecordRaw> = [
     {
         path: "/",
-        name: "Map",
-        component: Map,
+        name: "Main",
+        component: Main,
+    },
+    {
+        path: "/about",
+        name: "Mission",
+        component: Mission,
+    },
+    {
+        path: "/verantwoording",
+        name: "Justification",
+        component: Justification,
     },
 ];
 

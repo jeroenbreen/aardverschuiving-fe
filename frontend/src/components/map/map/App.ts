@@ -105,8 +105,6 @@ export class App {
                 if (cell && cell.show(this.selectedParties)) {
                     onClick(cell);
                 }
-            } else {
-                console.log("outside");
             }
         });
     }
