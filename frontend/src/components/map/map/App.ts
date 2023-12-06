@@ -62,6 +62,7 @@ export class App {
         this.cellPopulation = this.getCellPopulation();
         this.cells = this.createCells();
         const runs = 10000;
+
         for (let i = 0; i < runs; i++) {
             if (this.voteSets.length > 0) {
                 this.run();
@@ -166,7 +167,7 @@ export class App {
                     distance,
                 ];
                 cell.addVoteSet(newItemWithDistance);
-                this.voteSets.push(rest);
+                this.insert(rest);
             }
             const index = this.voteSets.indexOf(biggest);
             this.voteSets.splice(index, 1);
@@ -176,6 +177,20 @@ export class App {
             const index = this.voteSets.indexOf(biggest);
             this.voteSets.splice(index, 1);
         }
+    }
+
+    insert(voteSet: VoteSetHeavy) {
+        const getIndex = (voteSet: VoteSetHeavy) => {
+            for (let i = 0; i < this.voteSets.length; i++) {
+                const item = this.voteSets[i];
+                if (voteSet[3] > item[3]) {
+                    return i;
+                }
+            }
+            return -1;
+        };
+        const index = getIndex(voteSet);
+        this.voteSets.splice(index, 0, voteSet);
     }
 
     draw() {
