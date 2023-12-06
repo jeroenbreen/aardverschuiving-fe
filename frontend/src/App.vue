@@ -26,7 +26,7 @@ const loadElection = async (election: Election) => {
 
 onMounted(() => {
     store.elections = elections;
-    const currentElection = elections[0];
+    const currentElection = elections[elections.length - 1];
     store.currentElection = currentElection;
     store.municipalities = municipalities;
     store.parties = parties;
