@@ -132,6 +132,7 @@ watch(
 <style lang="scss" scoped>
 .map-container {
     padding: 20px;
+    position: relative;
 }
 .Map {
     display: inline-block;
