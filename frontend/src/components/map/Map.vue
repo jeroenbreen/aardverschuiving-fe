@@ -14,7 +14,7 @@ addToPrototype();
 const store = useMainStore();
 const el = ref<HTMLElement>();
 const app = ref<App>();
-const currentCell = ref<Cell>();
+const currentCell = ref<Cell | null>(null);
 
 const callback = (cell: Cell) => {
     if (cell.voteSets.length > 0) {
@@ -61,6 +61,7 @@ watch(
         // update function is slow for some reason, dont understand why
         // app.value.updateGrid(store.grid, [...store.voteSetsHeavy]);
         create();
+        currentCell.value = null;
     }
 );
 
