@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { VoteSet } from "@/types";
+import { VoteSet as VoteSetType } from "@/types";
 import { useMainStore } from "../../stores/main";
-import MunicipalityVoteSet from "@/components/municipalities/MunicipalityVoteSet";
+import MunicipalityVoteSet from "@/components/municipalities/MunicipalityVoteSet.vue";
 
 const store = useMainStore();
 
-const voteSets = computed<VoteSet[]>(() => store.voteSetsForMunicipality);
+const voteSets = computed<VoteSetType[]>(() => store.voteSetsForMunicipality);
 </script>
 
 <template>

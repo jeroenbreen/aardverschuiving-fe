@@ -6,16 +6,22 @@ import MapParties from "./MapParties.vue";
 import { ratio, settings } from "./classes/settings";
 import { App } from "./classes/App";
 import { Cell } from "./classes/Cell";
+import { addToPrototype } from "./classes/canvasPrototype";
+import MapCell from "./cell/MapCell.vue";
+
+addToPrototype();
 
 const store = useMainStore();
 const el = ref<HTMLElement>();
 const app = ref<App>();
+const currentCell = ref<Cell>();
 
 const callback = (cell: Cell) => {
     if (cell.voteSets.length > 0) {
         const voteSet = cell.voteSets[0];
         store.selectMunicipality(voteSet[1].cbs_code);
         store.selectParty(voteSet[2].id);
+        currentCell.value = cell;
     }
 };
 
@@ -23,26 +29,6 @@ const posterPadding = 20;
 const posterWidth = settings.width + settings.padding * 2 + posterPadding * 2;
 const posterHeight = computed(() => (posterWidth / 21) * 29.7);
 const report = ref(null);
-
-function relMouseCoords(event) {
-    var totalOffsetX = 0;
-    var totalOffsetY = 0;
-    var canvasX = 0;
-    var canvasY = 0;
-    // eslint-disable-next-line @typescript-eslint/no-this-alias
-    var currentElement = this;
-
-    do {
-        totalOffsetX += currentElement.offsetLeft - currentElement.scrollLeft;
-        totalOffsetY += currentElement.offsetTop - currentElement.scrollTop;
-    } while ((currentElement = currentElement.offsetParent));
-
-    canvasX = event.pageX - totalOffsetX;
-    canvasY = event.pageY - totalOffsetY;
-
-    return { x: canvasX, y: canvasY };
-}
-HTMLCanvasElement.prototype.relMouseCoords = relMouseCoords;
 
 const create = () => {
     if (el.value) {
@@ -83,6 +69,7 @@ watch(
     () => {
         if (store.loaded) {
             create();
+            currentCell.value = null;
         }
     }
 );
@@ -131,6 +118,14 @@ watch(
             De stemmers zijn gemiddeld {{ report.displacement }}km van hun eigen
             gemeente afgebeeld [UITLEG].
         </div>
+
+        <map-cell
+            v-if="currentCell"
+            :cell="currentCell"
+            :style="{
+                width: posterWidth + 'px',
+            }"
+        />
     </div>
 </template>
 

@@ -1,83 +1,42 @@
 <script setup lang="ts">
 import { computed, defineProps, PropType } from "vue";
-import { VoteSet } from "@/types";
-import { useMainStore } from "../../stores/main";
-import { addDotsToNumber } from "@/tools/format";
+import { VoteSet as VoteSetType } from "@/types";
+import VoteSet from "@/components/vote-set/VoteSet.vue";
+import { useMainStore } from "@/stores/main";
 
-const store = useMainStore();
 const props = defineProps({
     voteSet: {
-        type: Array as PropType<VoteSet>,
+        type: Array as PropType<VoteSetType>,
         required: true,
     },
 });
+
+const store = useMainStore();
 
 const party = computed(() => {
     return store.parties.find((p) => props.voteSet[2] === p.id);
 });
 
-const partyTitle = computed(() => {
-    return party.value ? party.value.name : "";
-});
-
-const partyColor = computed(() => {
-    return party.value ? party.value.color : "";
-});
-
 const isCurrent = computed(() => {
-    return store.currentParty && store.currentParty.id === props.voteSet[2];
+    return store.currentParty === party.value;
 });
 
 const isActive = computed(() => {
-    return store.selectedParties.includes(props.voteSet[2]);
-});
-
-const votes = computed(() => {
-    return addDotsToNumber(props.voteSet[3]);
+    return party.value && store.selectedParties.includes(party.value.id);
 });
 </script>
 
 <template>
-    <div
-        class="MunicipalityVoteSet"
-        :data-is-current="isCurrent"
-        :data-is-active="isActive"
-    >
-        <div
-            class="MunicipalityVoteSet__color"
-            :style="{ backgroundColor: partyColor }"
-        />
-        <div class="MunicipalityVoteSet__party">
-            {{ partyTitle }}
-        </div>
-        <div class="MunicipalityVoteSet__votes">
-            {{ votes }}
-        </div>
-    </div>
+    <button :data-is-current="isCurrent" :data-is-active="isActive">
+        <vote-set :vote-set="voteSet" hide-municipality />
+    </button>
 </template>
 
 <style lang="scss" scoped>
-.MunicipalityVoteSet {
-    display: flex;
-    align-items: center;
-    padding: 2px 4px;
+button {
+    display: block;
+    width: 100%;
     border: 1px solid transparent;
-
-    &__color {
-        width: 16px;
-        height: 16px;
-    }
-
-    &__party {
-        flex-grow: 1;
-        padding-left: 12px;
-        padding-top: 2px;
-    }
-
-    &__votes {
-        width: 100px;
-        text-align: right;
-    }
 
     &[data-is-current="true"] {
         background-color: #f5f5f5;

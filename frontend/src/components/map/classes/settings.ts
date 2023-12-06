@@ -1,5 +1,5 @@
 export const settings = {
-    width: 600,
+    width: 400,
     padding: 20,
 };
 

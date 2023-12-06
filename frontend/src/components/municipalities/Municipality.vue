@@ -5,6 +5,7 @@ import { Municipality } from "@/types";
 import MunicipalityElection from "./MunicipalityElection.vue";
 import MunicipaliltyRelations from "./MunicipaliltyRelations.vue";
 import { addDotsToNumber } from "@/tools/format";
+import Section from "@/components/Section.vue";
 
 const store = useMainStore();
 const municipality = computed<Municipality>(() => store.currentMunicipality);
@@ -56,17 +57,17 @@ const population = computed(() => {
                 </tr>
             </table>
 
-            <div class="Municipality__section">
+            <Section>
                 <h4>Meest overeenkomstige gemeentes:</h4>
 
                 <municipalilty-relations :municipality="municipality" />
-            </div>
+            </Section>
 
-            <div class="Municipality__section">
+            <Section>
                 <h4>Uitslag:</h4>
 
                 <municipality-election />
-            </div>
+            </Section>
         </template>
     </div>
 </template>
@@ -78,16 +79,6 @@ const population = computed(() => {
 
     h1 {
         height: 80px;
-    }
-
-    &__section {
-        margin-top: 32px;
-        padding: 8px 8px 8px 16px;
-        border-left: 4px solid var(--color-grey-1);
-
-        h4 {
-            margin-bottom: 12px;
-        }
     }
 }
 
