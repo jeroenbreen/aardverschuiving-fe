@@ -65,9 +65,7 @@ export const useMainStore = defineStore("main", {
                     .map((r) => {
                         return {
                             votes: r.votes,
-                            party: state.parties.find(
-                                (p) => p.id === r.party_id
-                            ),
+                            party: state.partyLib[r.party_id],
                         };
                     })
                     .filter((r) => {
