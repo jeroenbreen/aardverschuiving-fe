@@ -60,7 +60,7 @@ const votes = computed(() => {
 .MunicipalityVoteSet {
     display: flex;
     align-items: center;
-    padding: 2px 8px;
+    padding: 2px 4px;
     border: 1px solid transparent;
 
     &__color {

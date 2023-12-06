@@ -45,8 +45,10 @@ const select = (municipality: Municipality) => {
             v-for="(item, index) in list"
             :key="index"
         >
-            {{ item.municipality.title }}<br />
-            ({{ item.municipality.province }}) ({{ item.distance }})
+            {{ item.municipality.title }}
+            <span>
+                {{ item.municipality.province }}
+            </span>
         </button>
     </div>
 </template>
@@ -61,11 +63,16 @@ const select = (municipality: Municipality) => {
 }
 button {
     background: var(--color-grey-1);
-    padding: 2px;
+    padding: 8px 4px 4px 5px;
     margin-bottom: 4px;
     display: block;
     text-align: left;
     width: 100%;
+    line-height: 1;
+
+    span {
+        font-size: 65%;
+    }
 
     &:hover {
         background: var(--color-grey-2);

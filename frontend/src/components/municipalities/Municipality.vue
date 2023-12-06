@@ -76,6 +76,10 @@ const population = computed(() => {
     padding-top: var(--size-4);
     line-height: 1.2;
 
+    h1 {
+        height: 80px;
+    }
+
     &__section {
         margin-top: 32px;
         padding: 8px 8px 8px 16px;
@@ -93,7 +97,7 @@ table {
 
     td {
         font-size: var(--text-s);
-
+        padding-top: 2px;
         border-bottom: 1px solid var(--color-grey-1);
 
         &:first-child {
