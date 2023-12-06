@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Municipality, Election } from "@/types";
+import { Municipality, Election, VoteSet } from "@/types";
 import { useMainStore } from "@/stores/main";
 import MunicipalityPicker from "./MunicipalityPicker.vue";
 import ElectionPicker from "./ElectionPicker.vue";
@@ -14,12 +14,17 @@ const setCurrent = (municipallity: Municipality) => {
 };
 
 const setCurrentElection = (election: Election) => {
-    store.loaded = false;
-    loadVotes(election.url).then((voteSets) => {
-        store.votes = voteSets;
-        store.loaded = true;
+    if (election.voteSets.length === 0) {
+        store.currentElection = null;
+        store.loaded = false;
+        loadVotes(election.url).then((voteSets: VoteSet[]) => {
+            election.voteSets = voteSets;
+            store.loaded = true;
+            store.currentElection = election;
+        });
+    } else {
         store.currentElection = election;
-    });
+    }
 };
 
 const setGrid = (grid: number) => {

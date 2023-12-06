@@ -13,8 +13,9 @@ interface MainState {
     loaded: boolean;
     elections: Election[];
     municipalities: Municipality[];
+    municipalityLib: { [key: string]: Municipality };
     parties: Party[];
-    votes: VoteSet[];
+    partyLib: { [key: number]: Party };
     currentMunicipality: Municipality | null;
     currentElection: Election | null;
     currentParty: Party | null;
@@ -34,8 +35,9 @@ export const useMainStore = defineStore("main", {
             loaded: false,
             elections: [],
             municipalities: [],
+            municipalityLib: {},
             parties: [],
-            votes: [],
+            partyLib: {},
             distances: [],
             currentMunicipality: null,
             currentElection: null,
@@ -74,22 +76,24 @@ export const useMainStore = defineStore("main", {
             }
         },
         voteSetsHeavy(state: MainState) {
-            return state.votes
-                .filter((v) => {
-                    return v[0] === state.currentElection?.id;
-                })
-                .map((v) => {
-                    const e = state.elections.find((e) => e.id === v[0]);
-                    const m = state.municipalities.find(
-                        (m) => m.cbs_code === v[1]
-                    );
-                    const p = state.parties.find((p) => p.id === v[2]);
-                    return [e, m, p, v[3]];
-                })
-                .filter((v) => v[0] && v[1] && v[2]);
+            if (!state.currentElection) {
+                return [];
+            } else {
+                return state.currentElection.voteSets
+                    .map((v) => {
+                        const e = state.elections.find((e) => e.id === v[0]);
+                        const m = state.municipalityLib[v[1]];
+                        const p = state.partyLib[v[2]];
+                        return [e, m, p, v[3]];
+                    })
+                    .filter((v) => v[0] && v[1] && v[2]);
+            }
         },
         voteSetsForMunicipality(state: MainState) {
-            return state.votes
+            if (!state.currentElection) {
+                return [];
+            }
+            return state.currentElection.voteSets
                 .filter((v) => {
                     return (
                         v[1] === state.currentMunicipality?.cbs_code &&
@@ -121,13 +125,25 @@ export const useMainStore = defineStore("main", {
         },
     },
     actions: {
+        addMunicipalities(municipalities: Municipality[]) {
+            this.municipalities = municipalities;
+            this.municipalityLib = {};
+            municipalities.forEach((m) => {
+                this.municipalityLib[m.cbs_code] = m;
+            });
+        },
+        addParties(parties: Party[]) {
+            this.parties = parties;
+            this.partyLib = {};
+            parties.forEach((p) => {
+                this.partyLib[p.id] = p;
+            });
+        },
         selectMunicipality(cbs_code: string) {
-            this.currentMunicipality = this.municipalities.find(
-                (m) => m.cbs_code === cbs_code
-            )!;
+            this.currentMunicipality = this.municipalityLib[cbs_code];
         },
         selectParty(id: number) {
-            this.currentParty = this.parties.find((p) => p.id === id)!;
+            this.currentParty = this.partyLib[id];
         },
         toggleParty(i: number) {
             const index = this.selectedPartyRanks.indexOf(i);

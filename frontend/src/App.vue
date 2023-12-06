@@ -18,23 +18,22 @@ const store = useMainStore();
 
 const loadElection = async (election: Election) => {
     loadVotes(election.url).then((voteSets: VoteSet[]) => {
-        store.votes = voteSets;
+        election.voteSets = voteSets;
         store.loaded = true;
+        store.currentElection = election;
     });
 };
 
 onMounted(() => {
     store.elections = elections;
-    const currentElection = elections[elections.length - 1];
-    store.currentElection = currentElection;
-    store.municipalities = municipalities;
-    store.parties = parties;
+    store.addMunicipalities(municipalities);
+    store.addParties(parties);
     store.distances = distances;
     store.init = true;
     store.currentMunicipality = municipalities.find(
         (m) => m.cbs_code === "1676"
     );
-    loadElection(currentElection);
+    loadElection(elections[elections.length - 1]);
 });
 </script>
 

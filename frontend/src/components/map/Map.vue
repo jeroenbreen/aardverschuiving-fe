@@ -66,9 +66,9 @@ watch(
 );
 
 watch(
-    () => store.loaded,
+    () => store.currentElection,
     () => {
-        if (store.loaded) {
+        if (store.currentElection) {
             create();
             currentCell.value = null;
         }
@@ -110,7 +110,7 @@ watch(
                 <div>{{ store.currentElection.year }}</div>
             </div>
 
-            <map-parties />
+            <map-parties v-if="store.currentElection" />
         </div>
 
         <div class="Map__report" v-if="report">
