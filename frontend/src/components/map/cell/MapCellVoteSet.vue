@@ -13,7 +13,7 @@ defineProps({
 
 <template>
     <div class="MapCellVoteSet">
-        <vote-set :vote-set="voteSet" is-heavy small />
+        <vote-set :vote-set="voteSet" is-heavy small show-distance />
     </div>
 </template>
 

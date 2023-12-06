@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { computed, defineProps, PropType } from "vue";
-import { VoteSet } from "@/types";
+import { VoteSet, VoteSetHeavy, VoteSetHeavyWithDistance } from "@/types";
 import { useMainStore } from "../../stores/main";
 import { addDotsToNumber } from "@/tools/format";
 
 const store = useMainStore();
 const props = defineProps({
     voteSet: {
-        type: Array as PropType<VoteSet>,
+        type: Array as PropType<
+            VoteSet | VoteSetHeavy | VoteSetHeavyWithDistance
+        >,
         required: true,
     },
     isHeavy: {
@@ -19,6 +21,10 @@ const props = defineProps({
         default: false,
     },
     small: {
+        type: Boolean,
+        default: false,
+    },
+    showDistance: {
         type: Boolean,
         default: false,
     },
@@ -53,6 +59,14 @@ const partyColor = computed(() => {
 const votes = computed(() => {
     return addDotsToNumber(props.voteSet[3]);
 });
+
+const distance = computed(() => {
+    if (props.showDistance && props.voteSet.length > 4) {
+        return Math.round(props.voteSet[4] * store.cellDistance) + "km";
+    } else {
+        return "";
+    }
+});
 </script>
 
 <template>
@@ -65,6 +79,7 @@ const votes = computed(() => {
 
         <div v-if="!hideMunicipality" class="VoteSet__municipality">
             {{ municipalityTitle }}
+            <span v-if="showDistance">({{ distance }})</span>
         </div>
 
         <div class="VoteSet__votes">

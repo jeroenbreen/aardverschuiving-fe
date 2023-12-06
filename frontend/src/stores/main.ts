@@ -116,6 +116,9 @@ export const useMainStore = defineStore("main", {
                 return null;
             }
         },
+        cellDistance: (state: MainState) => {
+            return 264 / state.grid;
+        },
     },
     actions: {
         selectMunicipality(cbs_code: string) {
