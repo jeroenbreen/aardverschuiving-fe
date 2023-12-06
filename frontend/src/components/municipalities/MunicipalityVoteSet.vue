@@ -27,13 +27,13 @@ const isActive = computed(() => {
 </script>
 
 <template>
-    <button :data-is-current="isCurrent" :data-is-active="isActive">
+    <div :data-is-current="isCurrent" :data-is-active="isActive">
         <vote-set :vote-set="voteSet" hide-municipality />
-    </button>
+    </div>
 </template>
 
 <style lang="scss" scoped>
-button {
+div {
     display: block;
     width: 100%;
     border: 1px solid transparent;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineProps, PropType } from "vue";
-import { Cell } from "./../classes/Cell";
+import { Cell } from "../map/Cell";
 import MapCellVoteSet from "@/components/map/cell/MapCellVoteSet.vue";
 import Section from "@/components/Section.vue";
 

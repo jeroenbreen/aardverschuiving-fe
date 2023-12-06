@@ -3,10 +3,10 @@ import { computed, ref, watch } from "vue";
 import { useMainStore } from "../../stores/main";
 import { VoteSetHeavy } from "../../types";
 import MapParties from "./MapParties.vue";
-import { ratio, settings } from "./classes/settings";
-import { App } from "./classes/App";
-import { Cell } from "./classes/Cell";
-import { addToPrototype } from "./classes/canvasPrototype";
+import { ratio, settings } from "./map/settings";
+import { App } from "./map/App";
+import { Cell } from "./map/Cell";
+import { addToPrototype } from "./map/canvasPrototype";
 import MapCell from "./cell/MapCell.vue";
 
 addToPrototype();
