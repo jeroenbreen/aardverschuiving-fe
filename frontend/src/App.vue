@@ -5,10 +5,10 @@ import elections from "@/data/elections";
 import municipalities from "@/data/municipalities";
 import distances from "@/data/distances";
 import parties from "@/data/parties";
+import ppMenu from "@/components/menu/Menu.vue";
 
 import { Election, VoteSet } from "@/types";
 import { loadVotes } from "@/tools/loader";
-import { voteSetsToRelations } from "@/tools/prepairers";
 
 const store = useMainStore();
 
@@ -38,9 +38,32 @@ onMounted(() => {
 </script>
 
 <template>
-    <router-view />
+    <div class="App">
+        <pp-menu />
+        <div class="App__content">
+            <router-view />
+        </div>
+    </div>
 </template>
 
 <style lang="scss">
 @import "@/styles/index";
+</style>
+
+<style lang="scss" scoped>
+.App {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .Menu {
+        height: 60px;
+    }
+
+    &__content {
+        height: calc(100% - 60px);
+    }
+}
 </style>

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Main from "@/pages/Main.vue";
 import Mission from "@/pages/Mission.vue";
-import Justification from "@/pages/Justification.vue";
+import Grid from "@/pages/Grid.vue";
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -15,9 +15,9 @@ const routes: Array<RouteRecordRaw> = [
         component: Mission,
     },
     {
-        path: "/verantwoording",
-        name: "Justification",
-        component: Justification,
+        path: "/uitleg-grid",
+        name: "Grid",
+        component: Grid,
     },
 ];
 

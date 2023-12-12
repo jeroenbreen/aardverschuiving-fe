@@ -19,10 +19,6 @@ const store = useMainStore();
 .Main {
     display: flex;
     gap: 24px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
     height: 100%;
 
     .Tools {
