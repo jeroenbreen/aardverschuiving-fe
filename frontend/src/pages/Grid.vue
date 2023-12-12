@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Page from "@/components/page/Page.vue";
+</script>
 
 <template>
-    <div class="Grid">
+    <page>
         <h2>Uitleg grid</h2>
 
         <section>
@@ -27,7 +29,7 @@
                 (Gemeente 1 en Gemeente 2) in vallen.
             </p>
 
-            <img src="img/grid-1.png" alt="Uitleg grid deel 1" />
+            <img src="img/grid/grid-1.png" alt="Uitleg grid deel 1" />
         </section>
 
         <section>
@@ -50,7 +52,7 @@
                 beschikbare cel. Die vullen we met 20.000 stemmen van Partij B
                 en de overige 5.000 houden we weer apart.
             </p>
-            <img src="img/grid-2.png" alt="Uitleg grid deel 1" />
+            <img src="img/grid/grid-2.png" alt="Uitleg grid deel 1" />
         </section>
 
         <section>
@@ -62,7 +64,7 @@
                 kleiner afgebeeld.
             </p>
 
-            <img src="img/grid-3.png" alt="Uitleg grid deel 1" />
+            <img src="img/grid/grid-3.png" alt="Uitleg grid deel 1" />
 
             <p>
                 De 10.000 resterende stemmen op Partij A in Gemeente 1 is nu het
@@ -72,7 +74,7 @@
                 op Partij C. Gemeente 1 is nu volledig geplaatst op de kaart.
             </p>
 
-            <img src="img/grid-4.png" alt="Uitleg grid deel 1" />
+            <img src="img/grid/grid-4.png" alt="Uitleg grid deel 1" />
         </section>
 
         <section>
@@ -91,32 +93,7 @@
                 stemmen, worden die samengevoegd en wordt het vierkant
                 vervolgens dus groter afgebeeld.
             </p>
-            <img src="img/grid-5.png" alt="Uitleg grid deel 1" />
+            <img src="img/grid/grid-5.png" alt="Uitleg grid deel 1" />
         </section>
-    </div>
+    </page>
 </template>
-
-<style lang="scss" scoped>
-.Grid {
-    padding: 20px;
-    font-family: var(--font-sans-serif);
-    width: 100%;
-    max-width: 800px;
-
-    h2 {
-        margin-bottom: 40px;
-    }
-    h3 {
-        margin-bottom: 30px;
-    }
-
-    p {
-        margin-bottom: 20px;
-    }
-
-    section {
-        padding: 20px 0;
-        border-bottom: 1px dashed var(--color-grey-1);
-    }
-}
-</style>

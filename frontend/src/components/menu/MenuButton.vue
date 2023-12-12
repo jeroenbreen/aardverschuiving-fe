@@ -24,10 +24,13 @@ a {
     padding: 8px 6px;
     line-height: 1;
     display: inline-block;
+    margin-bottom: 2px;
+    height: 36px;
 
     &.router-link-active,
     &:hover {
-        border-bottom: 1px solid red;
+        border-bottom: 3px solid red;
+        margin-bottom: 0;
     }
 }
 </style>

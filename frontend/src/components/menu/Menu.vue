@@ -8,6 +8,10 @@ const items: MenuButtonType[] = [
         route: "Main",
     },
     {
+        label: "Doel",
+        route: "Mission",
+    },
+    {
         label: "Uitleg grid",
         route: "Grid",
     },
@@ -22,9 +26,8 @@ const items: MenuButtonType[] = [
 
 <style lang="scss" scoped>
 .Menu {
-    padding: 0 16px;
+    padding: 8px 16px;
     display: flex;
-    align-items: center;
     gap: var(--size-4);
 }
 </style>
