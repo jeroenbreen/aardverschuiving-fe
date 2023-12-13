@@ -9,6 +9,7 @@ import ppMenu from "@/components/menu/Menu.vue";
 
 import { Election, VoteSet } from "@/types";
 import { loadVotes } from "@/tools/loader";
+import { getSmallesOfParty } from "@/tools/prepairers";
 
 const store = useMainStore();
 
@@ -21,6 +22,7 @@ const loadElection = async (election: Election) => {
         election.voteSets = voteSets;
         store.currentElection = election;
         store.loaded = true;
+        getSmallesOfParty(voteSets, 15);
     });
 };
 

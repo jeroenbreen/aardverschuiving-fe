@@ -140,7 +140,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .map-container {
-    padding: 20px;
+    padding: 8px 20px 20px 20px;
     position: relative;
 }
 .Map {
@@ -191,7 +191,7 @@ onMounted(() => {
     }
 
     &__report {
-        padding: 20px;
+        margin-top: 12px;
         font-style: italic;
         font-size: 70%;
     }

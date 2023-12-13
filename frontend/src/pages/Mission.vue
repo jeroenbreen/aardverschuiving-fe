@@ -43,7 +43,7 @@ import ImageContainer from "@/components/image-container/ImageContainer.vue";
             </div>
 
             <p>
-                En inderdaad, de kaarten laten een land zien wat volledig
+                En inderdaad, de kaarten laten een land zien dat volledig
                 omgeslagen is naar PVV (voor de kaartmakers is het nog even
                 wennen welke kleur PVV te geven; RTL koos voor grijzig, NOS voor
                 lichtblauw. Ook GL+PvdA is wennen, zijn ze nou rood of groen?
@@ -114,7 +114,38 @@ import ImageContainer from "@/components/image-container/ImageContainer.vue";
         </section>
 
         <section>
-            <h3>Waarom een kaart?</h3>
+            <h3>Winner takes it all?</h3>
+
+            <p>
+                Wellicht is deze manier van kaartmaken geinspireerd door de
+                verkiezingen in de VS, waar de winnaar van een staat alle
+                kiesmannen krijgt. (zie overigens
+                <a
+                    href="https://www.nytimes.com/interactive/2016/11/01/upshot/many-ways-to-map-election-results.html"
+                    target="_blank"
+                    >dit artikel</a
+                >
+                over afwegingen die de NY Times maakte in hun
+                verkiezingskaarten)
+            </p>
+
+            <p>
+                Maar ons systeem is anders, bij ons geldt niet "winner takes it
+                all". Ook die 58 duizends stemmers voor GL+PvdA tellen mee.<br />
+                Ook de vijf stemmers in Rozendaal (Gelderland) die op JA21
+                (kleinste partij met 1 zetel) hebben iemand die hun stem
+                vertegenwoordigt in de Tweede Kamer.
+            </p>
+
+            <image-container
+                :size="250"
+                image-alt="Verkiezingskaart VS"
+                image="img/doel/usa.jpeg"
+            />
+        </section>
+
+        <section>
+            <h3>Waarom eigenlijk een kaart?</h3>
 
             <p>
                 Het medium <b>kaart</b> is voor ontwepers en developers een
@@ -146,12 +177,12 @@ import ImageContainer from "@/components/image-container/ImageContainer.vue";
                 die nog steeds de antwoorden probeert te geven op vragen als:<br />
                 Welke kleur is het land dit jaar?<br />
                 Zijn er regionale trends of verbanden te zien?<br />
-                Wat stemt "de stad"? En stemt "het Platteland" zoveel anders?
+                Wat stemt "de Stad"? En stemt "het Platteland" zoveel anders?
             </p>
 
             <p>
                 In de keuzes die we maken mag het wie/wat/waar iets aan
-                concessies doen, als je dat wilt weten zijn de tabellen er
+                concessies doen, want als je dat wilt weten zijn de tabellen er
                 immers ook nog steeds.<br />
                 En een laatste uitdaging is om de kaart iconisch te houden, de
                 unieke vorm van Nederland moet wel behouden blijven.

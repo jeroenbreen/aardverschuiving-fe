@@ -163,3 +163,12 @@ export const missingVotes = (voteSets: VoteSet[]) => {
     console.log(totalVotes);
     console.log((100 * mostVotes) / totalVotes);
 };
+
+export const getSmallesOfParty = (voteSets: VoteSet[], party_id: number) => {
+    const partyVotes = voteSets.filter((v) => v[2] === party_id);
+    const sorted = partyVotes.sort((a, b) => {
+        return a[3] - b[3];
+    });
+    console.log(sorted);
+    return sorted[0];
+};

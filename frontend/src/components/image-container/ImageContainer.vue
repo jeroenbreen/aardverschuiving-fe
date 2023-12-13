@@ -12,11 +12,11 @@ defineProps({
     },
     href: {
         type: String,
-        required: true,
+        required: false,
     },
     label: {
         type: String,
-        required: true,
+        required: false,
     },
     size: {
         type: Number,
@@ -28,7 +28,7 @@ defineProps({
 <template>
     <div class="ImageContainer" :style="{ width: size + 'px' }">
         <img :src="image" :alt="imageAlt" />
-        <a :href="href" target="_blank">
+        <a v-if="href" :href="href" target="_blank">
             {{ label }}
         </a>
     </div>

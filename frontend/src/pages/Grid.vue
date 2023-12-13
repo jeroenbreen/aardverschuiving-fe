@@ -48,9 +48,9 @@ import Page from "@/components/page/Page.vue";
                 Vervolgens is Partij B in Gemeente 1 aan de beurt. Deze partij
                 heeft 25.000 stemmen. Maar de exacte cel die hoort bij de
                 gemeente is nu al gevuld, dus we kijken rondom de cel (arbitrair
-                starten vanaf noord-west in een cirkel met de klok mee) naar een
-                beschikbare cel. Die vullen we met 20.000 stemmen van Partij B
-                en de overige 5.000 houden we weer apart.
+                startend vanaf noord-west in een cirkel met de klok mee) naar
+                een beschikbare cel. Die vullen we met 20.000 stemmen van Partij
+                B en de overige 5.000 houden we weer apart.
             </p>
             <img src="img/grid/grid-2.png" alt="Uitleg grid deel 1" />
         </section>
