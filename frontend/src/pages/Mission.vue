@@ -5,8 +5,9 @@ import ImageContainer from "@/components/image-container/ImageContainer.vue";
 
 <template>
     <page>
+        <h2>"Het hele land kleurt PVV!"</h2>
+
         <section>
-            <h3>"Het hele land kleurt PVV!"</h3>
             <p>
                 Na de verkiezingen van 22 november 2023 verschenen weer allerlei
                 koppen in de kranten met de strekking van "Nederland kleurt PVV"

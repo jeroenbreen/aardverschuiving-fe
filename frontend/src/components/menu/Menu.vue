@@ -15,6 +15,10 @@ const items: MenuButtonType[] = [
         label: "Uitleg grid",
         route: "Grid",
     },
+    {
+        label: "Uitleg overeenkomstige gemeentes",
+        route: "MatchingMunicipalities",
+    },
 ];
 </script>
 

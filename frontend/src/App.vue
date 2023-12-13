@@ -19,8 +19,8 @@ const store = useMainStore();
 const loadElection = async (election: Election) => {
     loadVotes(election.url).then((voteSets: VoteSet[]) => {
         election.voteSets = voteSets;
-        store.loaded = true;
         store.currentElection = election;
+        store.loaded = true;
     });
 };
 
@@ -30,9 +30,10 @@ onMounted(() => {
     store.addParties(parties);
     store.distances = distances;
     store.init = true;
-    store.currentMunicipality = municipalities.find(
-        (m) => m.cbs_code === "1676"
-    );
+    const m = municipalities.find((m) => m.cbs_code === "0363");
+    if (m) {
+        store.currentMunicipality = m;
+    }
     loadElection(elections[elections.length - 1]);
 });
 </script>
@@ -40,7 +41,7 @@ onMounted(() => {
 <template>
     <div class="App">
         <pp-menu />
-        <div class="App__content">
+        <div class="App__content" v-if="store.loaded">
             <router-view />
         </div>
     </div>
