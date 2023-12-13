@@ -123,7 +123,9 @@ onMounted(() => {
             Op deze kaart is {{ report.coverage }}% van de stemmers
             vertegenwoordigd (als alle partijen zijn aangevinkt).<br />
             De stemmers zijn gemiddeld {{ report.displacement }}km van hun eigen
-            gemeente afgebeeld [UITLEG].
+            gemeente afgebeeld [<router-link :to="{ name: 'Grid' }"
+                >UITLEG</router-link
+            >].
         </div>
 
         <map-cell
