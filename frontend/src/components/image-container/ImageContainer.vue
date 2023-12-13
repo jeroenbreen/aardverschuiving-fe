@@ -28,7 +28,7 @@ defineProps({
 <template>
     <div class="ImageContainer" :style="{ width: size + 'px' }">
         <img :src="image" :alt="imageAlt" />
-        <a href="href" target="_blank">
+        <a :href="href" target="_blank">
             {{ label }}
         </a>
     </div>
@@ -42,6 +42,7 @@ defineProps({
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 20px;
 
     img {
         width: 100%;

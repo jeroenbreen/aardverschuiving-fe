@@ -7,6 +7,7 @@ import {
     Origin,
     Party,
     ElectionDistance,
+    Votes,
 } from "../types";
 
 import {
@@ -136,3 +137,29 @@ export const sumElection = (voteSets: VoteSet[]) => {
 //     });
 //     console.log(votes);
 // };
+
+export const missingVotes = (voteSets: VoteSet[]) => {
+    const mLib: any = {};
+    let totalVotes = 0;
+    let mostVotes = 0;
+    for (const voteSet of voteSets) {
+        const code = voteSet[1];
+        if (!mLib[code]) {
+            mLib[code] = [];
+        } else {
+            mLib[code].push(voteSet);
+        }
+    }
+    for (const code in mLib) {
+        const m: VoteSet[] = mLib[code];
+        m.sort((a, b) => {
+            return b[3] - a[3];
+        });
+        mostVotes += m[0][3];
+        for (const voteSet of m) {
+            totalVotes += voteSet[3];
+        }
+    }
+    console.log(totalVotes);
+    console.log((100 * mostVotes) / totalVotes);
+};
