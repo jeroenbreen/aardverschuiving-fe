@@ -4,6 +4,7 @@ import GridSlider from "@/components/tools/GridSlider.vue";
 import Election from "@/components/election/Election.vue";
 import { computed } from "vue";
 import ThresholdSlider from "@/components/tools/ThresholdSlider.vue";
+import WidthSlider from "@/components/tools/WidthSlider.vue";
 
 const store = useMainStore();
 
@@ -15,6 +16,7 @@ const loadedElections = computed(() => store.elections.filter((e) => e.loaded));
         <div class="Main__tools">
             <GridSlider />
             <ThresholdSlider />
+            <WidthSlider />
         </div>
         <div class="Main__content">
             <Election
@@ -30,15 +32,24 @@ const loadedElections = computed(() => store.elections.filter((e) => e.loaded));
 .Main {
     height: 100%;
     background: #ddd;
+    --h: 100px;
 
     &__tools {
-        height: 70px;
+        height: var(--h);
         padding: 8px var(--size-4);
     }
 
     &__content {
         display: flex;
-        height: calc(100% - 70px);
+        gap: 20px;
+        justify-content: flex-start;
+        height: calc(100% - var(--h));
+        padding: 20px;
+        overflow: auto;
+
+        & > * {
+            flex-shrink: 0;
+        }
     }
 }
 </style>

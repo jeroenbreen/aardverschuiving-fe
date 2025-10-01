@@ -6,7 +6,6 @@ import {
 import { Cell } from "./Cell";
 import { boundingBox, ratio } from "./settings";
 import { getDistanceBetweenCells } from "./shell";
-import { settings } from "./settings";
 
 export class App {
     width: number;
@@ -81,8 +80,8 @@ export class App {
         this.ctx.clearRect(
             0,
             0,
-            this.width + 2 * settings.padding,
-            this.height + 2 * settings.padding
+            this.width + 2 * (this.width / 10),
+            this.height + 2 * (this.width / 10)
         );
     }
 
@@ -91,8 +90,8 @@ export class App {
         canvas.addEventListener("click", (e) => {
             const cv = canvas as any;
             const coordinates = cv.relMouseCoords(e);
-            const areaX = coordinates.x - settings.padding;
-            const areaY = coordinates.y - settings.padding;
+            const areaX = coordinates.x - this.width / 10;
+            const areaY = coordinates.y - this.width / 10;
             // check if is inside area box
             if (areaX > 0 && areaY > 0) {
                 const indexX = Math.floor(

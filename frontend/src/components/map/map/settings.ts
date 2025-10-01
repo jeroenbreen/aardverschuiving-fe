@@ -1,8 +1,3 @@
-export const settings = {
-    width: 400,
-    padding: 20,
-};
-
 export const boundingBox = {
     x1: 3.31497114423,
     x2: 7.09205325687,

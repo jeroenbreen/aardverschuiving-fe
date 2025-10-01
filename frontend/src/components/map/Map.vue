@@ -3,7 +3,7 @@ import { computed, defineProps, onMounted, ref, watch } from "vue";
 import { useMainStore } from "../../stores/main";
 import { Election, Party, VoteSetHeavy } from "../../types";
 import MapParties from "./MapParties.vue";
-import { ratio, settings } from "./map/settings";
+import { ratio } from "./map/settings";
 import { App } from "./map/App";
 import { Cell } from "./map/Cell";
 import { addToPrototype } from "./map/canvasPrototype";
@@ -12,6 +12,9 @@ import MapCell from "./cell/MapCell.vue";
 const props = defineProps<{
     election: Election;
     parties: Party[];
+    width: number;
+    height: number;
+    padding: number;
 }>();
 
 addToPrototype();
@@ -34,9 +37,6 @@ const electionType = computed(() => {
     return props.election.type.split("-").join(" ");
 });
 
-const posterPadding = 20;
-const posterWidth = settings.width + settings.padding * 2 + posterPadding * 2;
-const posterHeight = computed(() => (posterWidth / 21) * 29.7);
 const report = ref(null);
 
 const create = () => {
@@ -54,12 +54,12 @@ const create = () => {
         const canvas = el.value;
         const ctx = canvas.getContext("2d");
         if (ctx) {
-            canvas.width = settings.width + settings.padding * 2;
-            canvas.height = settings.width * ratio + settings.padding * 2;
+            canvas.width = store.width + (store.width / 10) * 2;
+            canvas.height = store.width * ratio + (store.width / 10) * 2;
             app.value = new App(
                 ctx,
-                settings.width,
-                settings.width * ratio,
+                store.width,
+                store.width * ratio,
                 voteSets,
                 store.grid,
                 callback,
@@ -77,6 +77,14 @@ watch(
     () => {
         // update function is slow for some reason, dont understand why
         // app.value.updateGrid(store.grid, [...store.voteSetsHeavy]);
+        create();
+        currentCell.value = null;
+    }
+);
+
+watch(
+    () => store.width,
+    () => {
         create();
         currentCell.value = null;
     }
@@ -102,17 +110,16 @@ onMounted(() => {
         <div
             class="Map"
             :style="{
-                width: posterWidth + 'px',
-                height: posterHeight + 'px',
-                padding: posterPadding + 'px',
+                height: height + 'px',
+                padding: padding + 'px',
             }"
         >
             <canvas ref="el" />
             <div
                 class="Map__title"
                 :style="{
-                    width: posterWidth / 3 + 'px',
-                    'font-size': posterWidth / 30 + 'px',
+                    width: width / 3 + 'px',
+                    'font-size': width / 30 + 'px',
                 }"
             >
                 <div>Verkiezingen</div>
@@ -147,6 +154,7 @@ onMounted(() => {
     position: relative;
 }
 .Map {
+    width: 100%;
     display: inline-block;
     position: relative;
     margin: 0;

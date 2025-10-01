@@ -1,14 +1,8 @@
 import { defineStore } from "pinia";
-import {
-    Election,
-    Municipality,
-    Party,
-    VoteSet,
-    ElectionDistance,
-    DistanceList,
-} from "./../types";
+import { Election, Municipality, Party, ElectionDistance } from "./../types";
 
 interface MainState {
+    width: number;
     init: boolean;
     elections: Election[];
     municipalities: Municipality[];
@@ -20,13 +14,10 @@ interface MainState {
     distances: ElectionDistance[];
 }
 
-interface MainStateWithGetters extends MainState {
-    electionResults: { party: Party; votes: number }[];
-}
-
 export const useMainStore = defineStore("main", {
     state: () => {
         return {
+            width: 300,
             init: false,
             elections: [],
             municipalities: [],
@@ -40,22 +31,6 @@ export const useMainStore = defineStore("main", {
         } as MainState;
     },
     getters: {
-        // distanceList(state: MainState): DistanceList | null {
-        //     const electionDistance = state.distances.find(
-        //         (d) => d.election_id === state.currentElection?.id
-        //     );
-        //     if (electionDistance) {
-        //         const distanceList = electionDistance.distances.find((d) => {
-        //             return (
-        //                 d.municipality_code ===
-        //                 state.currentMunicipality?.cbs_code
-        //             );
-        //         });
-        //         return distanceList ? distanceList : null;
-        //     } else {
-        //         return null;
-        //     }
-        // },
         cellDistance: (state: MainState) => {
             return 264 / state.grid;
         },

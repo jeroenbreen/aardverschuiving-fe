@@ -1,7 +1,6 @@
 import { App } from "./App";
 import { Party, VoteSetHeavyWithDistance } from "../../../types";
 import { getShell, getRibSizeForShell, getAreaInsideShell } from "./shell";
-import { settings } from "./settings";
 
 export class Cell {
     app: App;
@@ -128,8 +127,8 @@ export class Cell {
         if (this.voteSets.length > 0) {
             if (this.show(selectedParties)) {
                 const size = this.size * (this.filledPercentage() / 100);
-                const x = this.x + settings.padding + (this.size - size) / 2;
-                const y = this.y + settings.padding + (this.size - size) / 2;
+                const x = this.x + this.app.width / 10 + (this.size - size) / 2;
+                const y = this.y + this.app.width / 10 + (this.size - size) / 2;
                 const party = this.getParty();
                 if (party) {
                     ctx.fillStyle = party.color;
