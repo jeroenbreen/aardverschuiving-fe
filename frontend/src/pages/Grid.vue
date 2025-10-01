@@ -11,7 +11,7 @@ import Page from "@/components/page/Page.vue";
                 Uitgangspunt van dit project, is om zoveel mogelijk stemmers te
                 representeren op de kaart. Om dit te bereiken moeten wat
                 concessies gedaan worden op het gebied van wie/wat/waar. Niet
-                elke stemmer zal precies belanden in zijn eigen Gemeente. We
+                elke stemmer zal precies belanden in zijn eigen gemeente. We
                 gebruiken een principe van cellen op een grid vullen, wat
                 hieronder uitgelegd wordt.
             </p>

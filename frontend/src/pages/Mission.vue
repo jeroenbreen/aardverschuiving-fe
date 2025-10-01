@@ -148,7 +148,7 @@ import ImageContainer from "@/components/image-container/ImageContainer.vue";
             <h3>Waarom eigenlijk een kaart?</h3>
 
             <p>
-                Het medium <b>kaart</b> is voor ontwepers en developers een
+                Het medium <b>kaart</b> is voor ontwerpers en developers een
                 aantrekkelijke manier om de verkiezingsuitslag te visualiseren.
                 Maar het heeft een aantal intrinsieke nadelen die gevoelsmatige
                 vertekeningen geven.
