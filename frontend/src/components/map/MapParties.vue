@@ -1,20 +1,16 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import { useMainStore } from "../../stores/main";
+import { defineProps } from "vue";
 import MapParty from "@/components/map/MapParty";
+import { Party } from "@/types";
 
-const store = useMainStore();
-
-const parties = computed(() => {
-    return store.selectedParties.map((id) => {
-        return store.parties.find((p) => p.id === id);
-    });
-});
+defineProps<{
+    parties: Party[];
+}>();
 </script>
 
 <template>
     <div class="MapParties">
-        <map-party
+        <MapParty
             v-for="(party, index) of parties"
             :key="index"
             :party="party"

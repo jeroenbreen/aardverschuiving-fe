@@ -2,10 +2,6 @@
 import { defineEmits, ref, watch } from "vue";
 import { useMainStore } from "@/stores/main";
 
-const emit = defineEmits<{
-    select: (value: number) => void;
-}>();
-
 const store = useMainStore();
 const localValue = ref(store.grid);
 
@@ -18,7 +14,7 @@ watch(
             clearTimeout(timer);
         }
         timer = setTimeout(() => {
-            emit("select", localValue.value);
+            store.grid = localValue.value;
         }, 100);
     }
 );
@@ -26,12 +22,25 @@ watch(
 
 <template>
     <div class="GridSlider">
+        <div class="GridSlider__slider">
+            <v-slider v-model="localValue" :min="5" :max="50" :step="2" />
+        </div>
         <label> Grid </label>
-        <v-slider v-model="localValue" :min="5" :max="80" :step="2" />
     </div>
 </template>
 
 <style lang="scss" scoped>
 .GridSlider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    label {
+        font-size: 15px;
+    }
+
+    &__slider {
+        width: 150px;
+    }
 }
 </style>

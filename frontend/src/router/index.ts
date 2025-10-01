@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import Main from "@/pages/Main.vue";
+import Main from "@/pages/Main/Main.vue";
 import Mission from "@/pages/Mission.vue";
 import Grid from "@/pages/Grid.vue";
 import MatchingMunicipalities from "@/pages/MatchingMunicipalities.vue";

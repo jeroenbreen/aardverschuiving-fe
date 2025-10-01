@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, defineProps, onMounted, ref, watch } from "vue";
 import { useMainStore } from "../../stores/main";
-import { VoteSetHeavy } from "../../types";
+import { Election, Party, VoteSetHeavy } from "../../types";
 import MapParties from "./MapParties.vue";
 import { ratio, settings } from "./map/settings";
 import { App } from "./map/App";
@@ -9,21 +9,30 @@ import { Cell } from "./map/Cell";
 import { addToPrototype } from "./map/canvasPrototype";
 import MapCell from "./cell/MapCell.vue";
 
+const props = defineProps<{
+    election: Election;
+    parties: Party[];
+}>();
+
 addToPrototype();
 
 const store = useMainStore();
-const el = ref<HTMLElement>();
+const el = ref<HTMLCanvasElement>();
 const app = ref<App>();
 const currentCell = ref<Cell | null>(null);
 
 const callback = (cell: Cell) => {
     if (cell.voteSets.length > 0) {
-        const voteSet = cell.voteSets[0];
-        store.selectMunicipality(voteSet[1].cbs_code);
-        store.selectParty(voteSet[2].id);
-        currentCell.value = cell;
+        // const voteSet = cell.voteSets[0];
+        // store.selectMunicipality(voteSet[1].cbs_code);
+        // store.selectParty(voteSet[2].id);
+        // currentCell.value = cell;
     }
 };
+
+const electionType = computed(() => {
+    return props.election.type.split("-").join(" ");
+});
 
 const posterPadding = 20;
 const posterWidth = settings.width + settings.padding * 2 + posterPadding * 2;
@@ -33,7 +42,15 @@ const report = ref(null);
 const create = () => {
     if (el.value) {
         const start = new Date();
-        const voteSets: VoteSetHeavy[] = [...store.voteSetsHeavy];
+        const voteSets: VoteSetHeavy[] = props.election.voteSets
+            .map((v) => {
+                const e = props.election;
+                const m = store.municipalityLib[v[1]];
+                const p = store.partyLib[v[2]];
+                return [e, m, p, v[3]];
+            })
+            .filter((v) => v[0] && v[1] && v[2]);
+
         const canvas = el.value;
         const ctx = canvas.getContext("2d");
         if (ctx) {
@@ -46,7 +63,7 @@ const create = () => {
                 voteSets,
                 store.grid,
                 callback,
-                store.selectedParties
+                props.parties.map((p) => p.id)
             );
             report.value = app.value.getReport();
         }
@@ -66,19 +83,9 @@ watch(
 );
 
 watch(
-    () => store.currentElection,
+    () => props.parties,
     () => {
-        if (store.currentElection) {
-            create();
-            currentCell.value = null;
-        }
-    }
-);
-
-watch(
-    () => store.selectedPartyRanks,
-    () => {
-        app.value.updateSelectedParties(store.selectedParties);
+        app.value.updateSelectedParties(props.parties.map((p) => p.id));
     },
     {
         deep: true,
@@ -86,9 +93,7 @@ watch(
 );
 
 onMounted(() => {
-    if (store.currentElection) {
-        create();
-    }
+    create();
 });
 </script>
 
@@ -104,7 +109,6 @@ onMounted(() => {
         >
             <canvas ref="el" />
             <div
-                v-if="store.currentElection"
                 class="Map__title"
                 :style="{
                     width: posterWidth / 3 + 'px',
@@ -112,16 +116,16 @@ onMounted(() => {
                 }"
             >
                 <div>Verkiezingen</div>
-                <div>Tweede Kamer</div>
-                <div>{{ store.currentElection.year }}</div>
+                <div style="text-transform: capitalize">{{ electionType }}</div>
+                <div>{{ election.year }}</div>
             </div>
 
-            <map-parties v-if="store.currentElection" />
+            <MapParties :parties="parties" />
         </div>
 
         <div class="Map__report" v-if="report">
             Op deze kaart is {{ report.coverage }}% van de stemmers
-            vertegenwoordigd (als alle partijen zijn aangevinkt).<br />
+            vertegenwoordigd (als alle partijen getoond worden).<br />
             De stemmers zijn gemiddeld {{ report.displacement }}km van hun eigen
             gemeente afgebeeld [<router-link :to="{ name: 'Grid' }"
                 >UITLEG</router-link
@@ -140,13 +144,13 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .map-container {
-    padding: 8px 20px 20px 20px;
     position: relative;
 }
 .Map {
     display: inline-block;
     position: relative;
     margin: 0;
+    background: #fff;
     box-shadow: -4px 2px 12px rgba(0, 0, 0, 0.08),
         4px 5px 24px rgba(0, 0, 0, 0.04);
 

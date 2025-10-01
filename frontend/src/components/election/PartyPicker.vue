@@ -1,28 +1,33 @@
 <script setup lang="ts">
-import { useMainStore } from "@/stores/main";
 import PartyCheckbox from "./PartyCheckbox.vue";
+import { defineProps } from "vue";
+import { Party } from "@/types";
 
-const store = useMainStore();
+defineProps<{
+    parties: { party: Party; display: boolean }[];
+}>();
 </script>
 
 <template>
     <div class="PartyPicker">
-        <party-checkbox
-            v-for="(result, index) in store.electionResults"
+        <PartyCheckbox
+            v-for="(item, index) in parties"
             :key="index"
-            :party="result.party"
-            :i="index"
+            :item="item"
         />
     </div>
 </template>
 
 <style lang="scss" scoped>
 .PartyPicker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
     button {
         border: 1px solid #000;
         font-size: var(--text-s);
         padding: 0 4px;
-        margin-bottom: 8px;
     }
 }
 </style>

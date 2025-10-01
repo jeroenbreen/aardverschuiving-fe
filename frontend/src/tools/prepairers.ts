@@ -99,7 +99,7 @@ export const originToVotes = async (
                         l.municipality_code,
                     ];
                 });
-                console.log(JSON.stringify(result));
+                //console.log(JSON.stringify(result));
             })
             .catch((error) => console.error("Error fetching JSON:", error));
     });
@@ -160,8 +160,8 @@ export const missingVotes = (voteSets: VoteSet[]) => {
             totalVotes += voteSet[3];
         }
     }
-    console.log(totalVotes);
-    console.log((100 * mostVotes) / totalVotes);
+    // console.log(totalVotes);
+    // console.log((100 * mostVotes) / totalVotes);
 };
 
 export const getSmallesOfParty = (voteSets: VoteSet[], party_id: number) => {
@@ -169,6 +169,6 @@ export const getSmallesOfParty = (voteSets: VoteSet[], party_id: number) => {
     const sorted = partyVotes.sort((a, b) => {
         return a[3] - b[3];
     });
-    console.log(sorted);
+    // console.log(sorted);
     return sorted[0];
 };

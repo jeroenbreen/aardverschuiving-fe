@@ -197,12 +197,13 @@ const parties: Party[] = [
         isParty: true,
         color: "#000000",
     },
-    // {
-    //     id: 27,
-    //     name: "Overige 2021",
-    //     isParty: true,
-    //     color: "#000000",
-    // },
+    {
+        id: 27,
+        name: "Overige 2021",
+        full: "Overige 2021",
+        isParty: true,
+        color: "#000000",
+    },
     {
         id: 28,
         name: "GroenLinks",

@@ -26,17 +26,13 @@ const setCurrentElection = (election: Election) => {
         store.currentElection = election;
     }
 };
-
-const setGrid = (grid: number) => {
-    store.grid = grid;
-};
 </script>
 
 <template>
     <div class="Tools">
         <municipality-picker @select="setCurrent" />
         <election-picker @select="setCurrentElection" />
-        <grid-slider @select="setGrid" />
+
         <party-picker :key="store.currentElection" />
     </div>
 </template>

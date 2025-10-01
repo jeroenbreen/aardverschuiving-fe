@@ -1,28 +1,20 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
 import { useMainStore } from "./stores/main";
+import ppMenu from "@/components/menu/Menu.vue";
+import { onMounted } from "vue";
 import elections from "@/data/elections";
 import municipalities from "@/data/municipalities";
-import distances from "@/data/distances";
 import parties from "@/data/parties";
-import ppMenu from "@/components/menu/Menu.vue";
-
-import { Election, VoteSet } from "@/types";
+import distances from "@/data/distances";
+import { Election as ElectionType, VoteSet } from "@/types";
 import { loadVotes } from "@/tools/loader";
-import { getSmallesOfParty } from "@/tools/prepairers";
 
 const store = useMainStore();
 
-// const prepair = async () => {
-//     originToVotes("temp/2021.json", 2, store.parties, store.municipalities);
-// };
-
-const loadElection = async (election: Election) => {
+const loadElection = async (election: ElectionType) => {
     loadVotes(election.url).then((voteSets: VoteSet[]) => {
         election.voteSets = voteSets;
-        store.currentElection = election;
-        store.loaded = true;
-        getSmallesOfParty(voteSets, 15);
+        election.loaded = true;
     });
 };
 
@@ -32,18 +24,16 @@ onMounted(() => {
     store.addParties(parties);
     store.distances = distances;
     store.init = true;
-    const m = municipalities.find((m) => m.cbs_code === "0363");
-    if (m) {
-        store.currentMunicipality = m;
+    for (const election of store.elections) {
+        loadElection(election);
     }
-    loadElection(elections[elections.length - 1]);
 });
 </script>
 
 <template>
     <div class="App">
         <pp-menu />
-        <div class="App__content" v-if="store.loaded">
+        <div class="App__content">
             <router-view />
         </div>
     </div>
