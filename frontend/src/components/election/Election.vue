@@ -27,25 +27,11 @@ const parties = computed(() => {
 const selectedParties = computed(() => {
     return parties.value.filter((p) => p.display).map((i) => i.party);
 });
-
-const posterPadding = 20;
-
-const posterWidth = computed(() => {
-    return store.width + (store.width / 10) * 2 + posterPadding * 2;
-});
-
-const posterHeight = computed(() => (posterWidth.value / 21) * 29.7);
 </script>
 
 <template>
-    <div class="Election" :style="{ width: posterWidth + 'px' }">
-        <ElectionMap
-            :election="election"
-            :parties="selectedParties"
-            :width="posterWidth"
-            :height="posterHeight"
-            :padding="posterPadding"
-        />
+    <div class="Election" :style="{ width: store.width + 'px' }">
+        <ElectionMap :election="election" :parties="selectedParties" />
         <!--        <municipality />-->
     </div>
 </template>

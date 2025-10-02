@@ -12,9 +12,6 @@ import MapCell from "./cell/MapCell.vue";
 const props = defineProps<{
     election: Election;
     parties: Party[];
-    width: number;
-    height: number;
-    padding: number;
 }>();
 
 addToPrototype();
@@ -54,12 +51,13 @@ const create = () => {
         const canvas = el.value;
         const ctx = canvas.getContext("2d");
         if (ctx) {
-            canvas.width = store.width + (store.width / 10) * 2;
-            canvas.height = store.width * ratio + (store.width / 10) * 2;
+            const netWidth = store.width - 2 * padding.value;
+            canvas.width = store.width;
+            canvas.height = store.width * ratio;
             app.value = new App(
                 ctx,
-                store.width,
-                store.width * ratio,
+                netWidth,
+                netWidth * ratio,
                 voteSets,
                 store.grid,
                 callback,
@@ -71,6 +69,9 @@ const create = () => {
         console.log("create time", end.getTime() - start.getTime());
     }
 };
+
+const height = computed(() => (store.width * 29.7) / 21);
+const padding = computed(() => store.width / 13);
 
 watch(
     () => store.grid,
@@ -118,8 +119,8 @@ onMounted(() => {
             <div
                 class="Map__title"
                 :style="{
-                    width: width / 3 + 'px',
-                    'font-size': width / 30 + 'px',
+                    width: store.width / 3 + 'px',
+                    'font-size': store.width / 30 + 'px',
                 }"
             >
                 <div>Verkiezingen</div>
@@ -143,7 +144,7 @@ onMounted(() => {
             v-if="currentCell"
             :cell="currentCell"
             :style="{
-                width: posterWidth + 'px',
+                width: store.width + 'px',
             }"
         />
     </div>
@@ -159,12 +160,11 @@ onMounted(() => {
     position: relative;
     margin: 0;
     background: #fff;
-    box-shadow: -4px 2px 12px rgba(0, 0, 0, 0.08),
-        4px 5px 24px rgba(0, 0, 0, 0.04);
+    box-shadow: -4px 2px 8px rgba(0, 0, 0, 0.1), 4px 5px 16px rgba(0, 0, 0, 0.1);
 
     canvas {
         position: absolute;
-        left: 3%;
+        left: 0;
         top: 10%;
     }
 
