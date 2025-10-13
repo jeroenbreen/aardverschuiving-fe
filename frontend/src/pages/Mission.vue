@@ -109,7 +109,8 @@ import ImageContainer from "@/components/image-container/ImageContainer.vue";
 
             <p>
                 Op de kaart van 2023 volgens het gekozen principe (dus die van
-                oa RTL en NOS) is slecht 27.6% van de stemmen zichtbaar!
+                oa RTL en NOS)
+                <strong> is slecht 27.6% van de stemmen zichtbaar!</strong>
             </p>
         </section>
 
@@ -131,7 +132,7 @@ import ImageContainer from "@/components/image-container/ImageContainer.vue";
 
             <p>
                 Maar ons systeem is anders, bij ons geldt niet "winner takes it
-                all". Ook die 58 duizends stemmers voor GL+PvdA tellen mee.<br />
+                all". Ook die 58 duizend stemmers voor GL+PvdA tellen mee.<br />
                 Ook de vijf stemmers in Rozendaal (Gelderland) die op JA21
                 (kleinste partij met 1 zetel) hebben iemand die hun stem
                 vertegenwoordigt in de Tweede Kamer.

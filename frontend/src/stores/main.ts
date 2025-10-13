@@ -19,7 +19,7 @@ export const useMainStore = defineStore("main", {
     state: () => {
         return {
             width: 300,
-            mapMode: false,
+            mapMode: true,
             init: false,
             elections: [],
             municipalities: [],

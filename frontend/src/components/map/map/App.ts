@@ -182,9 +182,12 @@ export class App {
     getReport() {
         // nl width 264km height 312km
         const cellDistance = 264 / this.gridHorizontal;
-        const presentPopulation = this.cells.reduce((acc, cell) => {
-            return acc + cell.population;
-        }, 0);
+        let presentPopulation = 0;
+        for (const appParty of this.appParties) {
+            if (this.selectedParties.includes(appParty.party.id)) {
+                presentPopulation += appParty.population;
+            }
+        }
 
         const displacement = Math.round(
             (this.cells.reduce((acc, cell) => {

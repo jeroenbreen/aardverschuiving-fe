@@ -143,7 +143,7 @@ onMounted(() => {
 
         <div class="Map__report" v-if="report">
             Op deze kaart is {{ report.coverage }}% van de stemmers
-            vertegenwoordigd (als alle partijen getoond worden).<br />
+            vertegenwoordigd.<br />
             De stemmers zijn gemiddeld {{ report.displacement }}km van hun eigen
             gemeente afgebeeld [<router-link :to="{ name: 'Grid' }"
                 >UITLEG</router-link
