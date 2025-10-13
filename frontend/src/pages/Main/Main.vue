@@ -5,6 +5,7 @@ import Election from "@/components/election/Election.vue";
 import { computed, onMounted, ref } from "vue";
 import ThresholdSlider from "@/components/tools/ThresholdSlider.vue";
 import WidthSlider from "@/components/tools/WidthSlider.vue";
+import DrawSwitch from "@/components/tools/DrawSwitch.vue";
 
 const store = useMainStore();
 
@@ -34,7 +35,9 @@ onMounted(() => {
             <GridSlider />
             <ThresholdSlider />
             <WidthSlider v-if="measured" />
+            <DrawSwitch />
         </div>
+
         <div
             ref="content"
             class="Main__content"
