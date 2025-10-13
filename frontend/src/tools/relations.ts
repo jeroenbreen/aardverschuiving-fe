@@ -30,9 +30,17 @@ export const getResultsForMunicipality = (
     municipalityCode: string,
     voteSets: VoteSet[]
 ) => {
-    return voteSets.filter((v) => {
-        return v[2] === municipalityCode;
-    });
+    return voteSets
+        .filter((v) => {
+            return v[1] === municipalityCode;
+        })
+        .map((value) => {
+            return {
+                party_id: value[2],
+                municipality_code: value[1],
+                votes: value[3],
+            };
+        });
 };
 
 export const getDeviationItem = (

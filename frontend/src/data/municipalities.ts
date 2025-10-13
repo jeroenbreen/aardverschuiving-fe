@@ -26,7 +26,7 @@ export default [
         longitude: 4.75,
     },
     {
-        title: "Aalten (gemeente)",
+        title: "Aalten",
         province: "Gelderland",
         cbs_code: "0197",
         population: 27269,
@@ -78,7 +78,7 @@ export default [
         longitude: 4.4166666666667,
     },
     {
-        title: "Alkmaar (gemeente)",
+        title: "Alkmaar",
         province: "Noord-Holland",
         cbs_code: "0361",
         population: 111878,
@@ -117,7 +117,7 @@ export default [
         longitude: 5.2166666666667,
     },
     {
-        title: "Alphen aan den Rijn (gemeente)",
+        title: "Alphen aan den Rijn",
         province: "Zuid-Holland",
         cbs_code: "0484",
         population: 114313,
@@ -143,7 +143,7 @@ export default [
         longitude: 4.8666666666667,
     },
     {
-        title: "Altena (Nederlandse gemeente)",
+        title: "Altena",
         province: "Noord-Brabant",
         cbs_code: "1959",
         population: 57776,
@@ -156,7 +156,7 @@ export default [
         longitude: 4.95,
     },
     {
-        title: "Ameland (hoofdbetekenis)",
+        title: "Ameland",
         province: "Friesland",
         cbs_code: "0060",
         population: 3834,
@@ -169,8 +169,8 @@ export default [
         longitude: 5.75,
     },
     {
-        title: "Amersfoort (hoofdbetekenis)",
-        province: "Utrecht (provincie)",
+        title: "Amersfoort",
+        province: "Utrecht",
         cbs_code: "0307",
         population: 160902,
         area: 62.62,
@@ -195,7 +195,7 @@ export default [
         longitude: 4.8333333333333,
     },
     {
-        title: "Amsterdam (gemeente)",
+        title: "Amsterdam",
         province: "Noord-Holland",
         cbs_code: "0363",
         population: 922679,
@@ -208,7 +208,7 @@ export default [
         longitude: 4.8833333333333,
     },
     {
-        title: "Apeldoorn (gemeente)",
+        title: "Apeldoorn",
         province: "Gelderland",
         cbs_code: "0200",
         population: 167205,
@@ -247,7 +247,7 @@ export default [
         longitude: 6.55,
     },
     {
-        title: "Asten (gemeente)",
+        title: "Asten",
         province: "Noord-Brabant",
         cbs_code: "0743",
         population: 17267,
@@ -274,7 +274,7 @@ export default [
     },
     {
         title: "Baarn",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0308",
         population: 25032,
         area: 32.54,
@@ -299,7 +299,7 @@ export default [
         longitude: 4.5333333333333,
     },
     {
-        title: "Barneveld (gemeente)",
+        title: "Barneveld",
         province: "Gelderland",
         cbs_code: "0203",
         population: 61769,
@@ -312,8 +312,8 @@ export default [
         longitude: 5.5833333333333,
     },
     {
-        title: "Beek (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Beek",
+        province: "Limburg",
         cbs_code: "0888",
         population: 16152,
         area: 21.03,
@@ -326,7 +326,7 @@ export default [
     },
     {
         title: "Beekdaelen",
-        province: "Limburg (Nederlandse provincie)",
+        province: "Limburg",
         cbs_code: "1954",
         population: 35941,
         area: 78.3,
@@ -338,8 +338,8 @@ export default [
         longitude: 5.8833333333333,
     },
     {
-        title: "Beesel (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Beesel",
+        province: "Limburg",
         cbs_code: "0889",
         population: 13450,
         area: 27.99,
@@ -351,7 +351,7 @@ export default [
         longitude: 6.0333333333333,
     },
     {
-        title: "Berg en Dal (gemeente)",
+        title: "Berg en Dal",
         province: "Gelderland",
         cbs_code: "1945",
         population: 35439,
@@ -364,7 +364,7 @@ export default [
         longitude: 5.9333333333333,
     },
     {
-        title: "Bergeijk (gemeente)",
+        title: "Bergeijk",
         province: "Noord-Brabant",
         cbs_code: "1724",
         population: 19089,
@@ -377,8 +377,8 @@ export default [
         longitude: 5.35,
     },
     {
-        title: "Bergen (Limburg, gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Bergen",
+        province: "Limburg",
         cbs_code: "0893",
         population: 13100,
         area: 103.24,
@@ -390,7 +390,7 @@ export default [
         longitude: 6.0333333333333,
     },
     {
-        title: "Bergen (Noord-Holland)",
+        title: "Bergen",
         province: "Noord-Holland",
         cbs_code: "0373",
         population: 30133,
@@ -403,7 +403,7 @@ export default [
         longitude: 4.7,
     },
     {
-        title: "Bergen op Zoom (gemeente)",
+        title: "Bergen op Zoom",
         province: "Noord-Brabant",
         cbs_code: "0748",
         population: 68970,
@@ -455,7 +455,7 @@ export default [
         longitude: 5.3833333333333,
     },
     {
-        title: "Beuningen (Gelderland)",
+        title: "Beuningen",
         province: "Gelderland",
         cbs_code: "0209",
         population: 26576,
@@ -481,7 +481,7 @@ export default [
         longitude: 4.65,
     },
     {
-        title: "Bladel (gemeente)",
+        title: "Bladel",
         province: "Noord-Brabant",
         cbs_code: "1728",
         population: 21020,
@@ -507,7 +507,7 @@ export default [
         longitude: 5.2333333333333,
     },
     {
-        title: "Bloemendaal (Noord-Holland)",
+        title: "Bloemendaal",
         province: "Noord-Holland",
         cbs_code: "0377",
         population: 23932,
@@ -533,7 +533,7 @@ export default [
         longitude: 4.7166666666667,
     },
     {
-        title: "Boekel (gemeente)",
+        title: "Boekel",
         province: "Noord-Brabant",
         cbs_code: "0755",
         population: 11204,
@@ -559,7 +559,7 @@ export default [
         longitude: 6.85,
     },
     {
-        title: "Borne (Overijssel)",
+        title: "Borne",
         province: "Overijssel",
         cbs_code: "0147",
         population: 24518,
@@ -572,8 +572,8 @@ export default [
         longitude: 6.75,
     },
     {
-        title: "Borsele (gemeente)",
-        province: "Zeeland (provincie)",
+        title: "Borsele",
+        province: "Zeeland",
         cbs_code: "0654",
         population: 23164,
         area: 141.57,
@@ -585,7 +585,7 @@ export default [
         longitude: 3.8166666666667,
     },
     {
-        title: "Boxtel (gemeente)",
+        title: "Boxtel",
         province: "Noord-Brabant",
         cbs_code: "0757",
         population: 33828,
@@ -598,7 +598,7 @@ export default [
         longitude: 5.3333333333333,
     },
     {
-        title: "Breda (gemeente)",
+        title: "Breda",
         province: "Noord-Brabant",
         cbs_code: "0758",
         population: 186504,
@@ -611,7 +611,7 @@ export default [
         longitude: 4.7833333333333,
     },
     {
-        title: "Bronckhorst (hoofdbetekenis)",
+        title: "Bronckhorst",
         province: "Gelderland",
         cbs_code: "1876",
         population: 36261,
@@ -624,7 +624,7 @@ export default [
         longitude: 6.3,
     },
     {
-        title: "Brummen (gemeente)",
+        title: "Brummen",
         province: "Gelderland",
         cbs_code: "0213",
         population: 21109,
@@ -638,7 +638,7 @@ export default [
     },
     {
         title: "Brunssum",
-        province: "Limburg (Nederlandse provincie)",
+        province: "Limburg",
         cbs_code: "0899",
         population: 27647,
         area: 17.25,
@@ -650,8 +650,8 @@ export default [
         longitude: 5.9666666666667,
     },
     {
-        title: "Bunnik (gemeente)",
-        province: "Utrecht (provincie)",
+        title: "Bunnik",
+        province: "Utrecht",
         cbs_code: "0312",
         population: 15997,
         area: 36.97,
@@ -664,7 +664,7 @@ export default [
     },
     {
         title: "Bunschoten",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0313",
         population: 22502,
         area: 30.38,
@@ -676,7 +676,7 @@ export default [
         longitude: 5.3666666666667,
     },
     {
-        title: "Buren (gemeente)",
+        title: "Buren",
         province: "Gelderland",
         cbs_code: "0214",
         population: 27719,
@@ -715,7 +715,7 @@ export default [
         longitude: 4.6666666666667,
     },
     {
-        title: "Coevorden (gemeente)",
+        title: "Coevorden",
         province: "Drenthe",
         cbs_code: "0109",
         population: 35741,
@@ -754,7 +754,7 @@ export default [
         longitude: 5.2333333333333,
     },
     {
-        title: "Dalfsen (gemeente)",
+        title: "Dalfsen",
         province: "Overijssel",
         cbs_code: "0148",
         population: 29599,
@@ -780,8 +780,8 @@ export default [
         longitude: 5.9833333333333,
     },
     {
-        title: "De Bilt (gemeente)",
-        province: "Utrecht (provincie)",
+        title: "De Bilt",
+        province: "Utrecht",
         cbs_code: "0310",
         population: 43871,
         area: 66.12,
@@ -807,7 +807,7 @@ export default [
     },
     {
         title: "De Ronde Venen",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0736",
         population: 45664,
         area: 99.92,
@@ -871,7 +871,7 @@ export default [
         longitude: 4.7666666666667,
     },
     {
-        title: "Deurne (Nederlandse gemeente)",
+        title: "Deurne",
         province: "Noord-Brabant",
         cbs_code: "0762",
         population: 33010,
@@ -884,7 +884,7 @@ export default [
         longitude: 5.7833333333333,
     },
     {
-        title: "Deventer (gemeente)",
+        title: "Deventer",
         province: "Overijssel",
         cbs_code: "0150",
         population: 102831,
@@ -949,7 +949,7 @@ export default [
         longitude: 6.1333333333333,
     },
     {
-        title: "Doetinchem (gemeente)",
+        title: "Doetinchem",
         province: "Gelderland",
         cbs_code: "0222",
         population: 59265,
@@ -962,7 +962,7 @@ export default [
         longitude: 6.2833333333333,
     },
     {
-        title: "Dongen (gemeente)",
+        title: "Dongen",
         province: "Noord-Brabant",
         cbs_code: "0766",
         population: 27252,
@@ -988,7 +988,7 @@ export default [
         longitude: 4.6666666666667,
     },
     {
-        title: "Drechterland (gemeente)",
+        title: "Drechterland",
         province: "Noord-Holland",
         cbs_code: "0498",
         population: 20413,
@@ -1001,7 +1001,7 @@ export default [
         longitude: 5.1666666666667,
     },
     {
-        title: "Drimmelen (gemeente)",
+        title: "Drimmelen",
         province: "Noord-Brabant",
         cbs_code: "1719",
         population: 28030,
@@ -1040,7 +1040,7 @@ export default [
         longitude: 5.6,
     },
     {
-        title: "Duiven (gemeente)",
+        title: "Duiven",
         province: "Gelderland",
         cbs_code: "0226",
         population: 24986,
@@ -1054,7 +1054,7 @@ export default [
     },
     {
         title: "Echt-Susteren",
-        province: "Limburg (Nederlandse provincie)",
+        province: "Limburg",
         cbs_code: "1711",
         population: 32001,
         area: 103.07,
@@ -1079,7 +1079,7 @@ export default [
         longitude: 5.05,
     },
     {
-        title: "Ede (gemeente)",
+        title: "Ede",
         province: "Gelderland",
         cbs_code: "0228",
         population: 122140,
@@ -1093,7 +1093,7 @@ export default [
     },
     {
         title: "Eemnes",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0317",
         population: 9618,
         area: 31.04,
@@ -1106,7 +1106,7 @@ export default [
     },
     {
         title: "Eemsdelta",
-        province: "Groningen (provincie)",
+        province: "Groningen",
         cbs_code: "1979",
         population: 45317,
         area: 267.89,
@@ -1118,7 +1118,7 @@ export default [
         longitude: 6.8333333333333,
     },
     {
-        title: "Eersel (gemeente)",
+        title: "Eersel",
         province: "Noord-Brabant",
         cbs_code: "0770",
         population: 19995,
@@ -1132,7 +1132,7 @@ export default [
     },
     {
         title: "Eijsden-Margraten",
-        province: "Limburg (Nederlandse provincie)",
+        province: "Limburg",
         cbs_code: "1903",
         population: 26010,
         area: 77.55,
@@ -1157,7 +1157,7 @@ export default [
         longitude: 5.4666666666667,
     },
     {
-        title: "Elburg (gemeente)",
+        title: "Elburg",
         province: "Gelderland",
         cbs_code: "0230",
         population: 24010,
@@ -1170,7 +1170,7 @@ export default [
         longitude: 5.85,
     },
     {
-        title: "Emmen (gemeente)",
+        title: "Emmen",
         province: "Drenthe",
         cbs_code: "0114",
         population: 108852,
@@ -1209,7 +1209,7 @@ export default [
         longitude: 6.8833333333333,
     },
     {
-        title: "Epe (gemeente)",
+        title: "Epe",
         province: "Gelderland",
         cbs_code: "0232",
         population: 33246,
@@ -1222,7 +1222,7 @@ export default [
         longitude: 5.9166666666667,
     },
     {
-        title: "Ermelo (gemeente)",
+        title: "Ermelo",
         province: "Gelderland",
         cbs_code: "0233",
         population: 27516,
@@ -1248,7 +1248,7 @@ export default [
         longitude: 4.6333333333333,
     },
     {
-        title: "Geertruidenberg (gemeente)",
+        title: "Geertruidenberg",
         province: "Noord-Brabant",
         cbs_code: "0779",
         population: 22104,
@@ -1287,8 +1287,8 @@ export default [
         longitude: 5.7166666666667,
     },
     {
-        title: "Gennep (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Gennep",
+        province: "Limburg",
         cbs_code: "0907",
         population: 17771,
         area: 47.62,
@@ -1326,8 +1326,8 @@ export default [
         longitude: 4.1166666666667,
     },
     {
-        title: "Goes (gemeente)",
-        province: "Zeeland (provincie)",
+        title: "Goes",
+        province: "Zeeland",
         cbs_code: "0664",
         population: 39432,
         area: 92.58,
@@ -1339,7 +1339,7 @@ export default [
         longitude: 3.8333333333333,
     },
     {
-        title: "Goirle (gemeente)",
+        title: "Goirle",
         province: "Noord-Brabant",
         cbs_code: "0785",
         population: 24204,
@@ -1378,7 +1378,7 @@ export default [
         longitude: 4.9666666666667,
     },
     {
-        title: "Gouda (hoofdbetekenis)",
+        title: "Gouda",
         province: "Zuid-Holland",
         cbs_code: "0513",
         population: 75298,
@@ -1391,8 +1391,8 @@ export default [
         longitude: 4.7,
     },
     {
-        title: "Groningen (gemeente)",
-        province: "Groningen (provincie)",
+        title: "Groningen",
+        province: "Groningen",
         cbs_code: "0014",
         population: 238016,
         area: 185.6,
@@ -1405,7 +1405,7 @@ export default [
     },
     {
         title: "Gulpen-Wittem",
-        province: "Limburg (Nederlandse provincie)",
+        province: "Limburg",
         cbs_code: "1729",
         population: 14177,
         area: 73.18,
@@ -1469,7 +1469,7 @@ export default [
         longitude: 4.5166666666667,
     },
     {
-        title: "Hardenberg (gemeente)",
+        title: "Hardenberg",
         province: "Overijssel",
         cbs_code: "0160",
         population: 62579,
@@ -1508,7 +1508,7 @@ export default [
         longitude: 4.8333333333333,
     },
     {
-        title: "Harlingen (gemeente)",
+        title: "Harlingen",
         province: "Friesland",
         cbs_code: "0072",
         population: 16192,
@@ -1534,7 +1534,7 @@ export default [
         longitude: 6.0666666666667,
     },
     {
-        title: "Heemskerk (hoofdbetekenis)",
+        title: "Heemskerk",
         province: "Noord-Holland",
         cbs_code: "0396",
         population: 39451,
@@ -1547,7 +1547,7 @@ export default [
         longitude: 4.6666666666667,
     },
     {
-        title: "Heemstede (Noord-Holland)",
+        title: "Heemstede",
         province: "Noord-Holland",
         cbs_code: "0397",
         population: 27766,
@@ -1560,7 +1560,7 @@ export default [
         longitude: 4.6166666666667,
     },
     {
-        title: "Heerde (gemeente)",
+        title: "Heerde",
         province: "Gelderland",
         cbs_code: "0246",
         population: 19227,
@@ -1573,7 +1573,7 @@ export default [
         longitude: 6.05,
     },
     {
-        title: "Heerenveen (gemeente)",
+        title: "Heerenveen",
         province: "Friesland",
         cbs_code: "0074",
         population: 51654,
@@ -1587,7 +1587,7 @@ export default [
     },
     {
         title: "Heerlen",
-        province: "Limburg (Nederlandse provincie)",
+        province: "Limburg",
         cbs_code: "0917",
         population: 87116,
         area: 44.94,
@@ -1625,7 +1625,7 @@ export default [
         longitude: 4.7,
     },
     {
-        title: "Hellendoorn (gemeente)",
+        title: "Hellendoorn",
         province: "Overijssel",
         cbs_code: "0163",
         population: 36245,
@@ -1664,7 +1664,7 @@ export default [
         longitude: 4.6333333333333,
     },
     {
-        title: "Hengelo (Overijssel)",
+        title: "Hengelo",
         province: "Overijssel",
         cbs_code: "0164",
         population: 82384,
@@ -1677,7 +1677,7 @@ export default [
         longitude: 6.7833333333333,
     },
     {
-        title: "'s-Hertogenbosch (gemeente)",
+        title: "'s-Hertogenbosch",
         province: "Noord-Brabant",
         cbs_code: "0796",
         population: 158952,
@@ -1691,7 +1691,7 @@ export default [
     },
     {
         title: "Het Hogeland",
-        province: "Groningen (provincie)",
+        province: "Groningen",
         cbs_code: "1966",
         population: 48255,
         area: 482.75,
@@ -1703,7 +1703,7 @@ export default [
         longitude: 6.6666666666667,
     },
     {
-        title: "Heumen (gemeente)",
+        title: "Heumen",
         province: "Gelderland",
         cbs_code: "0252",
         population: 16779,
@@ -1716,7 +1716,7 @@ export default [
         longitude: 5.8666666666667,
     },
     {
-        title: "Heusden (gemeente)",
+        title: "Heusden",
         province: "Noord-Brabant",
         cbs_code: "0797",
         population: 45854,
@@ -1742,7 +1742,7 @@ export default [
         longitude: 4.5833333333333,
     },
     {
-        title: "Hilvarenbeek (gemeente)",
+        title: "Hilvarenbeek",
         province: "Noord-Brabant",
         cbs_code: "0798",
         population: 15956,
@@ -1768,7 +1768,7 @@ export default [
         longitude: 5.1833333333333,
     },
     {
-        title: "Hoeksche Waard (gemeente)",
+        title: "Hoeksche Waard",
         province: "Zuid-Holland",
         cbs_code: "1963",
         population: 89846,
@@ -1794,7 +1794,7 @@ export default [
         longitude: 6.7,
     },
     {
-        title: "Hollands Kroon (gemeente)",
+        title: "Hollands Kroon",
         province: "Noord-Holland",
         cbs_code: "1911",
         population: 49387,
@@ -1807,7 +1807,7 @@ export default [
         longitude: 4.8,
     },
     {
-        title: "Hoogeveen (gemeente)",
+        title: "Hoogeveen",
         province: "Drenthe",
         cbs_code: "0118",
         population: 56437,
@@ -1820,7 +1820,7 @@ export default [
         longitude: 6.4666666666667,
     },
     {
-        title: "Hoorn (Noord-Holland)",
+        title: "Hoorn",
         province: "Noord-Holland",
         cbs_code: "0405",
         population: 75240,
@@ -1834,7 +1834,7 @@ export default [
     },
     {
         title: "Horst aan de Maas",
-        province: "Limburg (Nederlandse provincie)",
+        province: "Limburg",
         cbs_code: "1507",
         population: 43642,
         area: 188.73,
@@ -1847,7 +1847,7 @@ export default [
     },
     {
         title: "Houten",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0321",
         population: 50593,
         area: 54.94,
@@ -1872,8 +1872,8 @@ export default [
         longitude: 5.25,
     },
     {
-        title: "Hulst (gemeente)",
-        province: "Zeeland (provincie)",
+        title: "Hulst",
+        province: "Zeeland",
         cbs_code: "0677",
         population: 27586,
         area: 201.71,
@@ -1886,7 +1886,7 @@ export default [
     },
     {
         title: "IJsselstein",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0353",
         population: 33501,
         area: 21.07,
@@ -1911,7 +1911,7 @@ export default [
         longitude: 4.6166666666667,
     },
     {
-        title: "Kampen (gemeente)",
+        title: "Kampen",
         province: "Overijssel",
         cbs_code: "0166",
         population: 55650,
@@ -1924,8 +1924,8 @@ export default [
         longitude: 5.9,
     },
     {
-        title: "Kapelle (gemeente)",
-        province: "Zeeland (provincie)",
+        title: "Kapelle",
+        province: "Zeeland",
         cbs_code: "0678",
         population: 13029,
         area: 37.13,
@@ -1937,7 +1937,7 @@ export default [
         longitude: 3.95,
     },
     {
-        title: "Katwijk (Zuid-Holland)",
+        title: "Katwijk",
         province: "Zuid-Holland",
         cbs_code: "0537",
         population: 66635,
@@ -1950,8 +1950,8 @@ export default [
         longitude: 4.4,
     },
     {
-        title: "Kerkrade (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Kerkrade",
+        province: "Limburg",
         cbs_code: "0928",
         population: 45642,
         area: 21.91,
@@ -1989,7 +1989,7 @@ export default [
         longitude: 4.6,
     },
     {
-        title: "Krimpenerwaard (gemeente)",
+        title: "Krimpenerwaard",
         province: "Zuid-Holland",
         cbs_code: "1931",
         population: 57729,
@@ -2002,7 +2002,7 @@ export default [
         longitude: 4.7833333333333,
     },
     {
-        title: "Laarbeek (gemeente)",
+        title: "Laarbeek",
         province: "Noord-Brabant",
         cbs_code: "1659",
         population: 23253,
@@ -2015,7 +2015,7 @@ export default [
         longitude: 5.6166666666667,
     },
     {
-        title: "Land van Cuijk (gemeente)",
+        title: "Land van Cuijk",
         province: "Noord-Brabant",
         cbs_code: "1982",
         population: 91489,
@@ -2028,8 +2028,8 @@ export default [
         longitude: 5.8666666666667,
     },
     {
-        title: "Landgraaf (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Landgraaf",
+        province: "Limburg",
         cbs_code: "0882",
         population: 37146,
         area: 24.58,
@@ -2067,7 +2067,7 @@ export default [
         longitude: 4.5,
     },
     {
-        title: "Laren (Noord-Holland)",
+        title: "Laren",
         province: "Noord-Holland",
         cbs_code: "0417",
         population: 11724,
@@ -2080,7 +2080,7 @@ export default [
         longitude: 5.2166666666667,
     },
     {
-        title: "Leeuwarden (gemeente)",
+        title: "Leeuwarden",
         province: "Friesland",
         cbs_code: "0080",
         population: 127064,
@@ -2093,7 +2093,7 @@ export default [
         longitude: 5.7833333333333,
     },
     {
-        title: "Leiden (hoofdbetekenis)",
+        title: "Leiden",
         province: "Zuid-Holland",
         cbs_code: "0546",
         population: 127046,
@@ -2145,8 +2145,8 @@ export default [
         longitude: 5.4666666666667,
     },
     {
-        title: "Leudal (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Leudal",
+        province: "Limburg",
         cbs_code: "1640",
         population: 36106,
         area: 162.73,
@@ -2159,7 +2159,7 @@ export default [
     },
     {
         title: "Leusden",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0327",
         population: 31514,
         area: 58.54,
@@ -2197,7 +2197,7 @@ export default [
         longitude: 4.55,
     },
     {
-        title: "Lochem (gemeente)",
+        title: "Lochem",
         province: "Gelderland",
         cbs_code: "0262",
         population: 34302,
@@ -2210,7 +2210,7 @@ export default [
         longitude: 6.4,
     },
     {
-        title: "Loon op Zand (gemeente)",
+        title: "Loon op Zand",
         province: "Noord-Brabant",
         cbs_code: "0809",
         population: 23802,
@@ -2223,8 +2223,8 @@ export default [
         longitude: 5.0666666666667,
     },
     {
-        title: "Lopik (gemeente)",
-        province: "Utrecht (provincie)",
+        title: "Lopik",
+        province: "Utrecht",
         cbs_code: "0331",
         population: 14698,
         area: 75.57,
@@ -2236,7 +2236,7 @@ export default [
         latitude: 51.983,
     },
     {
-        title: "Losser (gemeente)",
+        title: "Losser",
         province: "Overijssel",
         cbs_code: "0168",
         population: 23386,
@@ -2262,8 +2262,8 @@ export default [
         longitude: 5.3333333333333,
     },
     {
-        title: "Maasgouw (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Maasgouw",
+        province: "Limburg",
         cbs_code: "1641",
         population: 24358,
         area: 45.71,
@@ -2275,7 +2275,7 @@ export default [
         longitude: 5.8833333333333,
     },
     {
-        title: "Maashorst (gemeente)",
+        title: "Maashorst",
         province: "Noord-Brabant",
         cbs_code: "1991",
         population: 58934,
@@ -2302,7 +2302,7 @@ export default [
     },
     {
         title: "Maastricht",
-        province: "Limburg (Nederlandse provincie)",
+        province: "Limburg",
         cbs_code: "0935",
         population: 122692,
         area: 55.99,
@@ -2314,7 +2314,7 @@ export default [
         longitude: 5.6833333333333,
     },
     {
-        title: "Medemblik (gemeente)",
+        title: "Medemblik",
         province: "Noord-Holland",
         cbs_code: "0420",
         population: 46071,
@@ -2327,8 +2327,8 @@ export default [
         longitude: 5.1,
     },
     {
-        title: "Meerssen (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Meerssen",
+        province: "Limburg",
         cbs_code: "0938",
         population: 18594,
         area: 26.96,
@@ -2366,8 +2366,8 @@ export default [
         longitude: 6.1833333333333,
     },
     {
-        title: "Middelburg (gemeente)",
-        province: "Zeeland (provincie)",
+        title: "Middelburg",
+        province: "Zeeland",
         cbs_code: "0687",
         population: 49919,
         area: 48.42,
@@ -2406,7 +2406,7 @@ export default [
     },
     {
         title: "Midden-Groningen",
-        province: "Groningen (provincie)",
+        province: "Groningen",
         cbs_code: "1952",
         population: 61573,
         area: 280,
@@ -2418,7 +2418,7 @@ export default [
         longitude: 6.75,
     },
     {
-        title: "Moerdijk (gemeente)",
+        title: "Moerdijk",
         province: "Noord-Brabant",
         cbs_code: "1709",
         population: 37717,
@@ -2444,7 +2444,7 @@ export default [
         longitude: 4.8,
     },
     {
-        title: "Montferland (gemeente)",
+        title: "Montferland",
         province: "Gelderland",
         cbs_code: "1955",
         population: 36891,
@@ -2458,7 +2458,7 @@ export default [
     },
     {
         title: "Montfoort",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0335",
         population: 13911,
         area: 37.57,
@@ -2471,7 +2471,7 @@ export default [
     },
     {
         title: "Mook en Middelaar",
-        province: "Limburg (Nederlandse provincie)",
+        province: "Limburg",
         cbs_code: "0944",
         population: 8024,
         area: 17.38,
@@ -2483,7 +2483,7 @@ export default [
         longitude: 5.8666666666667,
     },
     {
-        title: "Neder-Betuwe (gemeente)",
+        title: "Neder-Betuwe",
         province: "Gelderland",
         cbs_code: "1740",
         population: 25457,
@@ -2496,8 +2496,8 @@ export default [
         longitude: 5.6333333333333,
     },
     {
-        title: "Nederweert (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Nederweert",
+        province: "Limburg",
         cbs_code: "0946",
         population: 17476,
         area: 99.98,
@@ -2510,7 +2510,7 @@ export default [
     },
     {
         title: "Nieuwegein",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0356",
         population: 65540,
         area: 23.51,
@@ -2535,7 +2535,7 @@ export default [
         longitude: 4.8,
     },
     {
-        title: "Nijkerk (gemeente)",
+        title: "Nijkerk",
         province: "Gelderland",
         cbs_code: "0267",
         population: 45029,
@@ -2548,7 +2548,7 @@ export default [
         longitude: 5.4833333333333,
     },
     {
-        title: "Nijmegen (hoofdbetekenis)",
+        title: "Nijmegen",
         province: "Gelderland",
         cbs_code: "0268",
         population: 182399,
@@ -2588,7 +2588,7 @@ export default [
     },
     {
         title: "Noord-Beveland",
-        province: "Zeeland (provincie)",
+        province: "Zeeland",
         cbs_code: "1695",
         population: 7881,
         area: 85.96,
@@ -2600,7 +2600,7 @@ export default [
         longitude: 3.7333333333333,
     },
     {
-        title: "Noordenveld (gemeente)",
+        title: "Noordenveld",
         province: "Drenthe",
         cbs_code: "1699",
         population: 31612,
@@ -2626,7 +2626,7 @@ export default [
         longitude: 5.7,
     },
     {
-        title: "Noordwijk (Zuid-Holland)",
+        title: "Noordwijk",
         province: "Zuid-Holland",
         cbs_code: "0575",
         population: 45258,
@@ -2652,7 +2652,7 @@ export default [
         longitude: 5.5166666666667,
     },
     {
-        title: "Nunspeet (gemeente)",
+        title: "Nunspeet",
         province: "Gelderland",
         cbs_code: "0302",
         population: 28749,
@@ -2678,7 +2678,7 @@ export default [
         longitude: 4.4666666666667,
     },
     {
-        title: "Oirschot (gemeente)",
+        title: "Oirschot",
         province: "Noord-Brabant",
         cbs_code: "0823",
         population: 19197,
@@ -2691,7 +2691,7 @@ export default [
         longitude: 5.3,
     },
     {
-        title: "Oisterwijk (gemeente)",
+        title: "Oisterwijk",
         province: "Noord-Brabant",
         cbs_code: "0824",
         population: 32963,
@@ -2704,8 +2704,8 @@ export default [
         longitude: 5.2,
     },
     {
-        title: "Oldambt (gemeente)",
-        province: "Groningen (provincie)",
+        title: "Oldambt",
+        province: "Groningen",
         cbs_code: "1895",
         population: 39073,
         area: 226.66,
@@ -2717,7 +2717,7 @@ export default [
         longitude: 7.0833333333333,
     },
     {
-        title: "Oldebroek (gemeente)",
+        title: "Oldebroek",
         province: "Gelderland",
         cbs_code: "0269",
         population: 24263,
@@ -2756,7 +2756,7 @@ export default [
         longitude: 6.1,
     },
     {
-        title: "Ommen (gemeente)",
+        title: "Ommen",
         province: "Overijssel",
         cbs_code: "0175",
         population: 18955,
@@ -2782,7 +2782,7 @@ export default [
         longitude: 6.5833333333333,
     },
     {
-        title: "Oosterhout (gemeente)",
+        title: "Oosterhout",
         province: "Noord-Brabant",
         cbs_code: "0826",
         population: 57466,
@@ -2847,7 +2847,7 @@ export default [
         longitude: 6.1333333333333,
     },
     {
-        title: "Oss (gemeente)",
+        title: "Oss",
         province: "Noord-Brabant",
         cbs_code: "0828",
         population: 94457,
@@ -2887,7 +2887,7 @@ export default [
     },
     {
         title: "Oudewater",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0589",
         population: 10237,
         area: 38.9,
@@ -2926,7 +2926,7 @@ export default [
     },
     {
         title: "Peel en Maas",
-        province: "Limburg (Nederlandse provincie)",
+        province: "Limburg",
         cbs_code: "1894",
         population: 45314,
         area: 159.37,
@@ -2939,7 +2939,7 @@ export default [
     },
     {
         title: "Pekela",
-        province: "Groningen (provincie)",
+        province: "Groningen",
         cbs_code: "0765",
         population: 12429,
         area: 49.04,
@@ -2964,7 +2964,7 @@ export default [
         longitude: 4.4166666666667,
     },
     {
-        title: "Purmerend (gemeente)",
+        title: "Purmerend",
         province: "Noord-Holland",
         cbs_code: "0439",
         population: 94129,
@@ -2977,7 +2977,7 @@ export default [
         longitude: 4.95,
     },
     {
-        title: "Putten (gemeente)",
+        title: "Putten",
         province: "Gelderland",
         cbs_code: "0273",
         population: 24894,
@@ -2990,7 +2990,7 @@ export default [
         longitude: 5.5833333333333,
     },
     {
-        title: "Raalte (gemeente)",
+        title: "Raalte",
         province: "Overijssel",
         cbs_code: "0177",
         population: 38468,
@@ -3003,8 +3003,8 @@ export default [
         longitude: 6.2833333333333,
     },
     {
-        title: "Reimerswaal (gemeente)",
-        province: "Zeeland (provincie)",
+        title: "Reimerswaal",
+        province: "Zeeland",
         cbs_code: "0703",
         population: 23265,
         area: 101.8,
@@ -3016,7 +3016,7 @@ export default [
         longitude: 4.0166666666667,
     },
     {
-        title: "Renkum (gemeente)",
+        title: "Renkum",
         province: "Gelderland",
         cbs_code: "0274",
         population: 31459,
@@ -3030,7 +3030,7 @@ export default [
     },
     {
         title: "Renswoude",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0339",
         population: 5748,
         area: 18.4,
@@ -3055,7 +3055,7 @@ export default [
         longitude: 5.15,
     },
     {
-        title: "Rheden (gemeente)",
+        title: "Rheden",
         province: "Gelderland",
         cbs_code: "0275",
         population: 43522,
@@ -3069,7 +3069,7 @@ export default [
     },
     {
         title: "Rhenen",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0340",
         population: 20332,
         area: 42.08,
@@ -3107,7 +3107,7 @@ export default [
         longitude: 6.5166666666667,
     },
     {
-        title: "Rijswijk (Zuid-Holland)",
+        title: "Rijswijk",
         province: "Zuid-Holland",
         cbs_code: "0603",
         population: 58050,
@@ -3121,7 +3121,7 @@ export default [
     },
     {
         title: "Roerdalen",
-        province: "Limburg (Nederlandse provincie)",
+        province: "Limburg",
         cbs_code: "1669",
         population: 20699,
         area: 88.21,
@@ -3133,8 +3133,8 @@ export default [
         longitude: 6,
     },
     {
-        title: "Roermond (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Roermond",
+        province: "Limburg",
         cbs_code: "0957",
         population: 59992,
         area: 60.81,
@@ -3146,7 +3146,7 @@ export default [
         longitude: 5.9833333333333,
     },
     {
-        title: "Roosendaal (gemeente)",
+        title: "Roosendaal",
         province: "Noord-Brabant",
         cbs_code: "1674",
         population: 77578,
@@ -3159,7 +3159,7 @@ export default [
         longitude: 4.4666666666667,
     },
     {
-        title: "Rotterdam (gemeente)",
+        title: "Rotterdam",
         province: "Zuid-Holland",
         cbs_code: "0599",
         population: 664311,
@@ -3185,7 +3185,7 @@ export default [
         longitude: 5.9666666666667,
     },
     {
-        title: "Rucphen (gemeente)",
+        title: "Rucphen",
         province: "Noord-Brabant",
         cbs_code: "0840",
         population: 23608,
@@ -3198,7 +3198,7 @@ export default [
         longitude: 4.55,
     },
     {
-        title: "Schagen (gemeente)",
+        title: "Schagen",
         province: "Noord-Holland",
         cbs_code: "0441",
         population: 47477,
@@ -3211,7 +3211,7 @@ export default [
         longitude: 4.75,
     },
     {
-        title: "Scherpenzeel (Gelderland)",
+        title: "Scherpenzeel",
         province: "Gelderland",
         cbs_code: "0279",
         population: 10393,
@@ -3251,7 +3251,7 @@ export default [
     },
     {
         title: "Schouwen-Duiveland",
-        province: "Zeeland (provincie)",
+        province: "Zeeland",
         cbs_code: "1676",
         population: 34521,
         area: 229.65,
@@ -3263,8 +3263,8 @@ export default [
         longitude: 3.8833333333333,
     },
     {
-        title: "Simpelveld (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Simpelveld",
+        province: "Limburg",
         cbs_code: "0965",
         population: 10361,
         area: 16.03,
@@ -3276,7 +3276,7 @@ export default [
         longitude: 5.91666,
     },
     {
-        title: "Sint-Michielsgestel (gemeente)",
+        title: "Sint-Michielsgestel",
         province: "Noord-Brabant",
         cbs_code: "0845",
         population: 30121,
@@ -3290,7 +3290,7 @@ export default [
     },
     {
         title: "Sittard-Geleen",
-        province: "Limburg (Nederlandse provincie)",
+        province: "Limburg",
         cbs_code: "1883",
         population: 92177,
         area: 79.01,
@@ -3315,8 +3315,8 @@ export default [
         longitude: 4.7666666666667,
     },
     {
-        title: "Sluis (gemeente)",
-        province: "Zeeland (provincie)",
+        title: "Sluis",
+        province: "Zeeland",
         cbs_code: "1714",
         population: 23244,
         area: 279.36,
@@ -3341,8 +3341,8 @@ export default [
         longitude: 6.1666666666667,
     },
     {
-        title: "Soest (Nederland)",
-        province: "Utrecht (provincie)",
+        title: "Soest",
+        province: "Utrecht",
         cbs_code: "0342",
         population: 47423,
         area: 46.24,
@@ -3354,7 +3354,7 @@ export default [
         longitude: 5.2833333333333,
     },
     {
-        title: "Someren (gemeente)",
+        title: "Someren",
         province: "Noord-Brabant",
         cbs_code: "0847",
         population: 20090,
@@ -3380,8 +3380,8 @@ export default [
         longitude: 5.5,
     },
     {
-        title: "Stadskanaal (gemeente)",
-        province: "Groningen (provincie)",
+        title: "Stadskanaal",
+        province: "Groningen",
         cbs_code: "0037",
         population: 32169,
         area: 117.64,
@@ -3393,7 +3393,7 @@ export default [
         longitude: 6.95,
     },
     {
-        title: "Staphorst (gemeente)",
+        title: "Staphorst",
         province: "Overijssel",
         cbs_code: "0180",
         population: 17640,
@@ -3419,7 +3419,7 @@ export default [
         longitude: 5.2166666666667,
     },
     {
-        title: "Steenbergen (gemeente)",
+        title: "Steenbergen",
         province: "Noord-Brabant",
         cbs_code: "0851",
         population: 24582,
@@ -3445,8 +3445,8 @@ export default [
         longitude: 6.1166666666667,
     },
     {
-        title: "Stein (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Stein",
+        province: "Limburg",
         cbs_code: "0971",
         population: 24783,
         area: 21.08,
@@ -3459,7 +3459,7 @@ export default [
     },
     {
         title: "Stichtse Vecht",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "1904",
         population: 65755,
         area: 96.1,
@@ -3484,8 +3484,8 @@ export default [
         longitude: 5.5333333333333,
     },
     {
-        title: "Terneuzen (gemeente)",
-        province: "Zeeland (provincie)",
+        title: "Terneuzen",
+        province: "Zeeland",
         cbs_code: "0715",
         population: 54990,
         area: 250.38,
@@ -3523,7 +3523,7 @@ export default [
         longitude: 4.8,
     },
     {
-        title: "Teylingen (gemeente)",
+        title: "Teylingen",
         province: "Zuid-Holland",
         cbs_code: "1525",
         population: 38521,
@@ -3536,8 +3536,8 @@ export default [
         longitude: 4.5,
     },
     {
-        title: "Tholen (gemeente)",
-        province: "Zeeland (provincie)",
+        title: "Tholen",
+        province: "Zeeland",
         cbs_code: "0716",
         population: 26793,
         area: 146.71,
@@ -3562,7 +3562,7 @@ export default [
         longitude: 5.4333333333333,
     },
     {
-        title: "Tilburg (gemeente)",
+        title: "Tilburg",
         province: "Noord-Brabant",
         cbs_code: "0855",
         population: 227794,
@@ -3575,7 +3575,7 @@ export default [
         longitude: 5.0833333333333,
     },
     {
-        title: "Tubbergen (gemeente)",
+        title: "Tubbergen",
         province: "Overijssel",
         cbs_code: "0183",
         population: 21413,
@@ -3601,7 +3601,7 @@ export default [
         longitude: 6.6166666666667,
     },
     {
-        title: "Tynaarlo (gemeente)",
+        title: "Tynaarlo",
         province: "Drenthe",
         cbs_code: "1730",
         population: 34603,
@@ -3666,8 +3666,8 @@ export default [
         longitude: 5.6,
     },
     {
-        title: "Utrecht (stad)",
-        province: "Utrecht (provincie)",
+        title: "Utrecht",
+        province: "Utrecht",
         cbs_code: "0344",
         population: 368024,
         area: 93.83,
@@ -3679,8 +3679,8 @@ export default [
         longitude: 5.1166666666667,
     },
     {
-        title: "Utrechtse Heuvelrug (gemeente)",
-        province: "Utrecht (provincie)",
+        title: "Utrechtse Heuvelrug",
+        province: "Utrecht",
         cbs_code: "1581",
         population: 50353,
         area: 132.01,
@@ -3692,8 +3692,8 @@ export default [
         longitude: 5.45,
     },
     {
-        title: "Vaals (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Vaals",
+        province: "Limburg",
         cbs_code: "0981",
         population: 10173,
         area: 23.89,
@@ -3706,7 +3706,7 @@ export default [
     },
     {
         title: "Valkenburg aan de Geul",
-        province: "Limburg (Nederlandse provincie)",
+        province: "Limburg",
         cbs_code: "0994",
         population: 16456,
         area: 36.73,
@@ -3718,7 +3718,7 @@ export default [
         longitude: 5.8166666666667,
     },
     {
-        title: "Valkenswaard (gemeente)",
+        title: "Valkenswaard",
         province: "Noord-Brabant",
         cbs_code: "0858",
         population: 31548,
@@ -3731,8 +3731,8 @@ export default [
         longitude: 5.4666666666667,
     },
     {
-        title: "Veendam (gemeente)",
-        province: "Groningen (provincie)",
+        title: "Veendam",
+        province: "Groningen",
         cbs_code: "0047",
         population: 27620,
         area: 76,
@@ -3745,7 +3745,7 @@ export default [
     },
     {
         title: "Veenendaal",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0345",
         population: 68563,
         area: 19.46,
@@ -3757,8 +3757,8 @@ export default [
         longitude: 5.55,
     },
     {
-        title: "Veere (gemeente)",
-        province: "Zeeland (provincie)",
+        title: "Veere",
+        province: "Zeeland",
         cbs_code: "0717",
         population: 22071,
         area: 132.56,
@@ -3770,7 +3770,7 @@ export default [
         longitude: 3.5333333333333,
     },
     {
-        title: "Veldhoven (hoofdbetekenis)",
+        title: "Veldhoven",
         province: "Noord-Brabant",
         cbs_code: "0861",
         population: 46452,
@@ -3796,8 +3796,8 @@ export default [
         longitude: 4.6166666666667,
     },
     {
-        title: "Venlo (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Venlo",
+        province: "Limburg",
         cbs_code: "0983",
         population: 103312,
         area: 124.25,
@@ -3809,8 +3809,8 @@ export default [
         longitude: 6.1666666666667,
     },
     {
-        title: "Venray (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Venray",
+        province: "Limburg",
         cbs_code: "0984",
         population: 44648,
         area: 163.27,
@@ -3822,8 +3822,8 @@ export default [
         longitude: 5.9666666666667,
     },
     {
-        title: "Vijfheerenlanden (gemeente)",
-        province: "Utrecht (provincie)",
+        title: "Vijfheerenlanden",
+        province: "Utrecht",
         cbs_code: "1961",
         population: 60184,
         area: 146.41,
@@ -3848,7 +3848,7 @@ export default [
         longitude: 4.35,
     },
     {
-        title: "Vlieland (hoofdbetekenis)",
+        title: "Vlieland",
         province: "Friesland",
         cbs_code: "0096",
         population: 1254,
@@ -3862,7 +3862,7 @@ export default [
     },
     {
         title: "Vlissingen",
-        province: "Zeeland (provincie)",
+        province: "Zeeland",
         cbs_code: "0718",
         population: 45182,
         area: 34.31,
@@ -3874,8 +3874,8 @@ export default [
         longitude: 3.5833333333333,
     },
     {
-        title: "Voerendaal (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Voerendaal",
+        province: "Limburg",
         cbs_code: "0986",
         population: 12419,
         area: 31.51,
@@ -3913,7 +3913,7 @@ export default [
         longitude: 4.45,
     },
     {
-        title: "Voorst (gemeente)",
+        title: "Voorst",
         province: "Gelderland",
         cbs_code: "0285",
         population: 25227,
@@ -3926,7 +3926,7 @@ export default [
         longitude: 6.0833333333333,
     },
     {
-        title: "Vught (gemeente)",
+        title: "Vught",
         province: "Noord-Brabant",
         cbs_code: "0865",
         population: 32113,
@@ -3952,7 +3952,7 @@ export default [
         longitude: 5.5333333333333,
     },
     {
-        title: "Waalre (gemeente)",
+        title: "Waalre",
         province: "Noord-Brabant",
         cbs_code: "0866",
         population: 17965,
@@ -3965,7 +3965,7 @@ export default [
         longitude: 5.4333333333333,
     },
     {
-        title: "Waalwijk (gemeente)",
+        title: "Waalwijk",
         province: "Noord-Brabant",
         cbs_code: "0867",
         population: 49934,
@@ -3991,7 +3991,7 @@ export default [
         longitude: 4.6333333333333,
     },
     {
-        title: "Wageningen (Nederland)",
+        title: "Wageningen",
         province: "Gelderland",
         cbs_code: "0289",
         population: 41098,
@@ -4004,7 +4004,7 @@ export default [
         longitude: 5.6666666666667,
     },
     {
-        title: "Wassenaar (gemeente)",
+        title: "Wassenaar",
         province: "Zuid-Holland",
         cbs_code: "0629",
         population: 27131,
@@ -4017,7 +4017,7 @@ export default [
         longitude: 4.3833333333333,
     },
     {
-        title: "Waterland (gemeente)",
+        title: "Waterland",
         province: "Noord-Holland",
         cbs_code: "0852",
         population: 17623,
@@ -4030,8 +4030,8 @@ export default [
         longitude: 5.0166666666667,
     },
     {
-        title: "Weert (gemeente)",
-        province: "Limburg (Nederlandse provincie)",
+        title: "Weert",
+        province: "Limburg",
         cbs_code: "0988",
         population: 50874,
         area: 104.32,
@@ -4069,8 +4069,8 @@ export default [
         longitude: 5.5166666666667,
     },
     {
-        title: "Westerkwartier (gemeente)",
-        province: "Groningen (provincie)",
+        title: "Westerkwartier",
+        province: "Groningen",
         cbs_code: "1969",
         population: 64984,
         area: 362.69,
@@ -4082,7 +4082,7 @@ export default [
         longitude: 6.35,
     },
     {
-        title: "Westerveld (gemeente)",
+        title: "Westerveld",
         province: "Drenthe",
         cbs_code: "1701",
         population: 19858,
@@ -4108,8 +4108,8 @@ export default [
         longitude: 5.9666666666667,
     },
     {
-        title: "Westerwolde (gemeente)",
-        province: "Groningen (provincie)",
+        title: "Westerwolde",
+        province: "Groningen",
         cbs_code: "1950",
         population: 26331,
         area: 275.67,
@@ -4121,7 +4121,7 @@ export default [
         longitude: 7.1166666666667,
     },
     {
-        title: "Westland (gemeente)",
+        title: "Westland",
         province: "Zuid-Holland",
         cbs_code: "1783",
         population: 114996,
@@ -4160,7 +4160,7 @@ export default [
         longitude: 6.5833333333333,
     },
     {
-        title: "Wijchen (gemeente)",
+        title: "Wijchen",
         province: "Gelderland",
         cbs_code: "0296",
         population: 41519,
@@ -4187,7 +4187,7 @@ export default [
     },
     {
         title: "Wijk bij Duurstede",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0352",
         population: 24000,
         area: 47.62,
@@ -4199,7 +4199,7 @@ export default [
         longitude: 5.3333333333333,
     },
     {
-        title: "Winterswijk (gemeente)",
+        title: "Winterswijk",
         province: "Gelderland",
         cbs_code: "0294",
         population: 29250,
@@ -4212,7 +4212,7 @@ export default [
         longitude: 6.7166666666667,
     },
     {
-        title: "Woensdrecht (gemeente)",
+        title: "Woensdrecht",
         province: "Noord-Brabant",
         cbs_code: "0873",
         population: 22178,
@@ -4226,7 +4226,7 @@ export default [
     },
     {
         title: "Woerden",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0632",
         population: 53253,
         area: 88.57,
@@ -4252,7 +4252,7 @@ export default [
     },
     {
         title: "Woudenberg",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0351",
         population: 14410,
         area: 36.53,
@@ -4277,7 +4277,7 @@ export default [
         longitude: 4.7833333333333,
     },
     {
-        title: "Zaltbommel (gemeente)",
+        title: "Zaltbommel",
         province: "Gelderland",
         cbs_code: "0297",
         population: 30315,
@@ -4317,7 +4317,7 @@ export default [
     },
     {
         title: "Zeist",
-        province: "Utrecht (provincie)",
+        province: "Utrecht",
         cbs_code: "0355",
         population: 66612,
         area: 48.51,
@@ -4329,7 +4329,7 @@ export default [
         longitude: 5.2333333333333,
     },
     {
-        title: "Zevenaar (gemeente)",
+        title: "Zevenaar",
         province: "Gelderland",
         cbs_code: "0299",
         population: 45065,
@@ -4368,7 +4368,7 @@ export default [
         longitude: 4.5,
     },
     {
-        title: "Zuidplas (gemeente)",
+        title: "Zuidplas",
         province: "Zuid-Holland",
         cbs_code: "1892",
         population: 47114,
@@ -4381,7 +4381,7 @@ export default [
         longitude: 4.6166666666667,
     },
     {
-        title: "Zundert (gemeente)",
+        title: "Zundert",
         province: "Noord-Brabant",
         cbs_code: "0879",
         population: 22527,
@@ -4394,7 +4394,7 @@ export default [
         longitude: 4.65,
     },
     {
-        title: "Zutphen (gemeente)",
+        title: "Zutphen",
         province: "Gelderland",
         cbs_code: "0301",
         population: 48545,
@@ -4420,7 +4420,7 @@ export default [
         longitude: 6.0833333333333,
     },
     {
-        title: "Zwijndrecht (Nederland)",
+        title: "Zwijndrecht",
         province: "Zuid-Holland",
         cbs_code: "0642",
         population: 44992,
@@ -4433,7 +4433,7 @@ export default [
         longitude: 4.65,
     },
     {
-        title: "Zwolle (hoofdbetekenis)",
+        title: "Zwolle",
         province: "Overijssel",
         cbs_code: "0193",
         population: 132454,

@@ -1,4 +1,4 @@
-# poll-polator
+# map
 
 ## Project setup
 ```

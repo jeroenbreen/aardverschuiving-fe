@@ -1,20 +1,16 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import { useMainStore } from "../../stores/main";
+import { defineProps } from "vue";
 import MapParty from "@/components/map/MapParty";
+import { Party } from "@/types";
 
-const store = useMainStore();
-
-const parties = computed(() => {
-    return store.selectedParties.map((id) => {
-        return store.parties.find((p) => p.id === id);
-    });
-});
+defineProps<{
+    parties: Party[];
+}>();
 </script>
 
 <template>
     <div class="MapParties">
-        <map-party
+        <MapParty
             v-for="(party, index) of parties"
             :key="index"
             :party="party"
@@ -26,13 +22,12 @@ const parties = computed(() => {
 .MapParties {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 8px;
     border-top: 1px solid #888;
-    padding: 8px;
-    width: 230px;
+    gap: 4px 2px;
     pointer-events: none;
-
-    .MapParty {
-        width: 50%;
-    }
+    font-family: var(--font-mono);
+    color: var(--color-black-1);
+    background: #fff;
 }
 </style>

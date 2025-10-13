@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { Municipality, Election } from "@/types";
+import { Municipality, Election, VoteSet } from "@/types";
 import { useMainStore } from "@/stores/main";
 import MunicipalityPicker from "./MunicipalityPicker.vue";
 import ElectionPicker from "./ElectionPicker.vue";
 import GridSlider from "./GridSlider.vue";
 import PartyPicker from "./PartyPicker.vue";
+import { loadVotes } from "@/tools/loader";
 
 const store = useMainStore();
 
@@ -13,16 +14,17 @@ const setCurrent = (municipallity: Municipality) => {
 };
 
 const setCurrentElection = (election: Election) => {
-    store.currentElection = election;
-    // const topParties = election.results
-    //     .sort((a, b) => b.votes - a.votes)
-    //     .slice(0, 5)
-    //     .map((result) => result.party_id);
-    // store.setSelected(topParties);
-};
-
-const setGrid = (grid: number) => {
-    store.grid = grid;
+    if (election.voteSets.length === 0) {
+        store.currentElection = null;
+        store.loaded = false;
+        loadVotes(election.url).then((voteSets: VoteSet[]) => {
+            election.voteSets = voteSets;
+            store.loaded = true;
+            store.currentElection = election;
+        });
+    } else {
+        store.currentElection = election;
+    }
 };
 </script>
 
@@ -30,7 +32,7 @@ const setGrid = (grid: number) => {
     <div class="Tools">
         <municipality-picker @select="setCurrent" />
         <election-picker @select="setCurrentElection" />
-        <grid-slider @select="setGrid" />
+
         <party-picker :key="store.currentElection" />
     </div>
 </template>

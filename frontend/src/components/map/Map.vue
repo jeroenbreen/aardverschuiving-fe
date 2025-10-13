@@ -1,57 +1,78 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, defineProps, onMounted, ref, watch } from "vue";
 import { useMainStore } from "../../stores/main";
-import { VoteSetHeavy } from "../../types";
+import { Election, Party, VoteSetHeavy } from "../../types";
 import MapParties from "./MapParties.vue";
-import { ratio, settings } from "./classes/settings";
-import { App } from "./classes/App";
-import { Cell } from "./classes/Cell";
+import { ratio } from "./map/settings";
+import { App } from "./map/App";
+import { Cell } from "./map/Cell";
+import { addToPrototype } from "./map/canvasPrototype";
+import MapCell from "./cell/MapCell.vue";
+
+const props = defineProps<{
+    election: Election;
+    parties: Party[];
+}>();
+
+addToPrototype();
 
 const store = useMainStore();
-const el = ref<HTMLElement>();
+const el = ref<HTMLCanvasElement>();
 const app = ref<App>();
+const currentCell = ref<Cell | null>(null);
 
 const callback = (cell: Cell) => {
     if (cell.voteSets.length > 0) {
-        const voteSet = cell.voteSets[0];
-        store.selectMunicipality(voteSet[2].cbs_code);
-        store.selectParty(voteSet[0].id);
+        // const voteSet = cell.voteSets[0];
+        // store.selectMunicipality(voteSet[1].cbs_code);
+        // store.selectParty(voteSet[2].id);
+        // currentCell.value = cell;
     }
 };
 
-const padding = 20;
-const baseWidth = ref(0);
-const width = computed(() => baseWidth.value + padding * 2);
-const height = computed(() => (width.value / 21) * 29.7);
+const electionType = computed(() => {
+    return props.election.type.split("-").join(" ");
+});
+
 const report = ref(null);
 
 const create = () => {
     if (el.value) {
-        const voteSets: VoteSetHeavy[] = [...store.voteSetsHeavy];
+        const start = new Date();
+        const voteSets: VoteSetHeavy[] = props.election.voteSets
+            .map((v) => {
+                const e = props.election;
+                const m = store.municipalityLib[v[1]];
+                const p = store.partyLib[v[2]];
+                return [e, m, p, v[3]];
+            })
+            .filter((v) => v[0] && v[1] && v[2]);
+
         const canvas = el.value;
         const ctx = canvas.getContext("2d");
         if (ctx) {
-            const w = settings.width + settings.padding * 2;
-            baseWidth.value = w;
-            canvas.width = w;
-            canvas.height = settings.width * ratio + settings.padding * 2;
+            const netWidth = store.width - 2 * padding.value;
+            canvas.width = store.width;
+            canvas.height = store.width * ratio;
             app.value = new App(
                 ctx,
-                canvas.width,
-                canvas.height,
+                netWidth,
+                netWidth * ratio,
                 voteSets,
                 store.grid,
                 callback,
-                store.selectedParties
+                props.parties.map((p) => p.id),
+                store.mapMode
             );
             report.value = app.value.getReport();
         }
+        const end = new Date();
+        console.log("create time", end.getTime() - start.getTime());
     }
 };
 
-onMounted(() => {
-    create();
-});
+const height = computed(() => (store.width * 29.7) / 21);
+const padding = computed(() => store.width / 13);
 
 watch(
     () => store.grid,
@@ -59,20 +80,39 @@ watch(
         // update function is slow for some reason, dont understand why
         // app.value.updateGrid(store.grid, [...store.voteSetsHeavy]);
         create();
+        currentCell.value = null;
     }
 );
 
-watch(() => store.currentElection, create);
+watch(
+    () => store.mapMode,
+    () => {
+        app.value?.switchMode(store.mapMode);
+    }
+);
 
 watch(
-    () => store.selectedParties,
+    () => store.width,
     () => {
-        app.value.updateSelectedParties(store.selectedParties);
+        create();
+        currentCell.value = null;
+    }
+);
+
+watch(
+    () => props.parties,
+    () => {
+        create();
+        //app.value?.updateSelectedParties(props.parties.map((p) => p.id));
     },
     {
         deep: true,
     }
 );
+
+onMounted(() => {
+    create();
+});
 </script>
 
 <template>
@@ -80,49 +120,62 @@ watch(
         <div
             class="Map"
             :style="{
-                width: width + 'px',
                 height: height + 'px',
+                padding: padding + 'px',
             }"
         >
             <canvas ref="el" />
+
             <div
-                v-if="store.currentElection"
                 class="Map__title"
                 :style="{
-                    width: width / 3 + 'px',
-                    'font-size': width / 30 + 'px',
+                    width: store.width / 3.5 + 'px',
+                    'font-size': store.width / 35 + 'px',
                 }"
             >
                 <div>Verkiezingen</div>
-                <div>Tweede Kamer</div>
-                <div>{{ store.currentElection.year }}</div>
+                <div style="text-transform: capitalize">{{ electionType }}</div>
+                <div>{{ election.year }}</div>
             </div>
 
-            <map-parties />
+            <MapParties v-if="store.mapMode" :parties="parties" />
         </div>
 
         <div class="Map__report" v-if="report">
             Op deze kaart is {{ report.coverage }}% van de stemmers
-            vertegenwoordigd (als alle partijen zijn aangevinkt).<br />
+            vertegenwoordigd.<br />
             De stemmers zijn gemiddeld {{ report.displacement }}km van hun eigen
-            gemeente afgebeeld [UITLEG].
+            gemeente afgebeeld [<router-link :to="{ name: 'Grid' }"
+                >UITLEG</router-link
+            >].
         </div>
+
+        <map-cell
+            v-if="currentCell"
+            :cell="currentCell"
+            :style="{
+                width: store.width + 'px',
+            }"
+        />
     </div>
 </template>
 
 <style lang="scss" scoped>
+.map-container {
+    position: relative;
+}
 .Map {
+    width: 100%;
     display: inline-block;
     position: relative;
-    margin: 20px;
-    box-shadow: -4px 2px 12px rgba(0, 0, 0, 0.08),
-        4px 5px 24px rgba(0, 0, 0, 0.04);
+    margin: 0;
+    background: #fff;
+    box-shadow: -4px 2px 8px rgba(0, 0, 0, 0.1), 4px 5px 16px rgba(0, 0, 0, 0.1);
 
     canvas {
         position: absolute;
-        left: 47%;
-        top: 47%;
-        transform: translate(-50%, -50%);
+        left: 0;
+        top: 6%;
     }
 
     &__title {
@@ -134,9 +187,11 @@ watch(
         z-index: 1;
         text-align: center;
         pointer-events: none;
+        font-family: "Recursive", sans-serif;
 
         div:nth-child(1) {
             font-weight: 400;
+            font-size: 80%;
         }
 
         div:nth-child(2) {
@@ -144,7 +199,8 @@ watch(
         }
 
         div:nth-child(3) {
-            font-size: 350%;
+            font-size: 400%;
+            font-weight: 400;
         }
     }
 
@@ -152,14 +208,15 @@ watch(
         position: absolute;
         bottom: 20px;
         left: 20px;
+        right: 20px;
         z-index: 1;
         pointer-events: none;
     }
 
     &__report {
-        padding: 20px;
+        margin-top: 12px;
         font-style: italic;
-        font-size: var(--text-s);
+        font-size: 70%;
     }
 }
 </style>

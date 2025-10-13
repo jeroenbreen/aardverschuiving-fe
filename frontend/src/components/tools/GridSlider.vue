@@ -1,10 +1,7 @@
 <script setup lang="ts">
 import { defineEmits, ref, watch } from "vue";
 import { useMainStore } from "@/stores/main";
-
-const emit = defineEmits<{
-    select: (value: number) => void;
-}>();
+import Tool from "@/components/tools/Tool.vue";
 
 const store = useMainStore();
 const localValue = ref(store.grid);
@@ -18,20 +15,20 @@ watch(
             clearTimeout(timer);
         }
         timer = setTimeout(() => {
-            emit("select", localValue.value);
+            store.grid = localValue.value;
         }, 100);
     }
 );
 </script>
 
 <template>
-    <div class="GridSlider">
-        <label> Grid </label>
-        <v-slider v-model="localValue" :min="5" :max="80" :step="2" />
-    </div>
+    <Tool label="Grid">
+        <v-slider
+            v-model="localValue"
+            :min="5"
+            :max="50"
+            :step="2"
+            show-ticks
+        />
+    </Tool>
 </template>
-
-<style lang="scss" scoped>
-.GridSlider {
-}
-</style>

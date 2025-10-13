@@ -12,15 +12,18 @@ defineProps({
 
 const store = useMainStore();
 
-const municipalities = computed(() => {
+const list = computed(() => {
     if (store.distanceList) {
         const relations = store.distanceList.distances.map(
             (distance: Distance) => {
-                return store.municipalities.find(
-                    (municipality) =>
-                        municipality.cbs_code ===
-                        distance.target_municipality_code
-                );
+                return {
+                    municipality: store.municipalities.find(
+                        (municipality) =>
+                            municipality.cbs_code ===
+                            distance.target_municipality_code
+                    ),
+                    distance: distance.distance,
+                };
             }
         );
         relations.length = 3;
@@ -37,13 +40,15 @@ const select = (municipality: Municipality) => {
 
 <template>
     <div class="MunicipaliltyRelations">
-        <h4>Meest overeenkomstige gemeentes:</h4>
         <button
-            @click="select(municipality)"
-            v-for="(municipality, index) in municipalities"
+            @click="select(item.municipality)"
+            v-for="(item, index) in list"
             :key="index"
         >
-            {{ municipality.title }}
+            {{ item.municipality.title }}
+            <span>
+                {{ item.municipality.province }}
+            </span>
         </button>
     </div>
 </template>
@@ -58,9 +63,16 @@ const select = (municipality: Municipality) => {
 }
 button {
     background: var(--color-grey-1);
-    padding: 2px;
+    padding: 8px 4px 4px 5px;
     margin-bottom: 4px;
     display: block;
+    text-align: left;
+    width: 100%;
+    line-height: 1;
+
+    span {
+        font-size: 65%;
+    }
 
     &:hover {
         background: var(--color-grey-2);

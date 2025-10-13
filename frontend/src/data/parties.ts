@@ -59,7 +59,7 @@ const parties: Party[] = [
     },
     {
         id: 7,
-        name: "Partij voor de Dieren",
+        name: "PvdD",
         full: "Partij voor de Dieren",
         isParty: true,
         color: "#ffff99",
@@ -101,7 +101,7 @@ const parties: Party[] = [
     },
     {
         id: 13,
-        name: "ChristenUnie",
+        name: "CU",
         full: "ChristenUnie",
         isParty: true,
         color: "#3ca0ff",
@@ -192,30 +192,31 @@ const parties: Party[] = [
     },
     {
         id: 26,
-        name: "Samen voor NL",
+        name: "Samen v NL",
         full: "Samen voor NL",
         isParty: true,
         color: "#000000",
     },
-    // {
-    //     id: 27,
-    //     name: "Overige 2021",
-    //     isParty: true,
-    //     color: "#000000",
-    // },
+    {
+        id: 27,
+        name: "Overige 2021",
+        full: "Overige 2021",
+        isParty: true,
+        color: "#000000",
+    },
     {
         id: 28,
         name: "GroenLinks",
         full: "GROENLINKS",
         isParty: true,
-        color: "#000000",
+        color: "#39a935",
     },
     {
         id: 29,
         name: "PvdA",
         full: "Partij van de Arbeid (P.v.d.A.)",
         isParty: true,
-        color: "red",
+        color: "#e40006",
     },
     {
         id: 30,
@@ -247,7 +248,7 @@ const parties: Party[] = [
     },
     {
         id: 34,
-        name: "Lijst Henk Krol",
+        name: "Henk Krol",
         full: "Lijst Henk Krol",
         isParty: true,
         color: "#000",

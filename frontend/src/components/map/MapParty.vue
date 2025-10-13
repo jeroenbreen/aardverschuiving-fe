@@ -28,15 +28,16 @@ defineProps({
     align-items: center;
     border: 1px solid transparent;
     font-size: 12px;
+    line-height: 1;
 
     &__color {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
+        width: 8px;
+        height: 8px;
     }
 
     &__party {
-        padding-left: 12px;
+        padding-left: 4px;
+        padding-top: 2px;
     }
 }
 </style>
