@@ -13,6 +13,7 @@ export class App {
     height: number;
     ctx: CanvasRenderingContext2D;
     voteSets: VoteSetHeavy[];
+    activeVoteSets: VoteSetHeavy[];
     cells: Cell[];
     appParties: AppParty[];
     totalPopulation: number;
@@ -42,6 +43,7 @@ export class App {
         this.turn = 0;
         this.ctx = ctx;
         this.voteSets = this.order(voteSets);
+        this.activeVoteSets = [];
         this.skipped = 0;
         this.totalPopulation = this.getTotalPopulation();
         this.selectedParties = selectedParties;
@@ -68,8 +70,12 @@ export class App {
         this.cells = this.createCells();
         const runs = 10000;
 
+        this.activeVoteSets = this.voteSets.filter((vs) =>
+            this.selectedParties.includes(vs[2]?.id || -1)
+        );
+
         for (let i = 0; i < runs; i++) {
-            if (this.voteSets.length > 0) {
+            if (this.activeVoteSets.length > 0) {
                 this.run();
             }
         }
@@ -208,7 +214,7 @@ export class App {
     }
 
     run() {
-        const biggest = this.voteSets[0];
+        const biggest = this.activeVoteSets[0];
         // console.log(biggest.municipality.title + " " + biggest.party?.name);
         const { cell, distance } =
             this.getNearestCellWithSpaceForVoteSet(biggest);
@@ -240,13 +246,13 @@ export class App {
                 cell.addVoteSet(newItemWithDistance);
                 this.insert(rest);
             }
-            const index = this.voteSets.indexOf(biggest);
-            this.voteSets.splice(index, 1);
+            const index = this.activeVoteSets.indexOf(biggest);
+            this.activeVoteSets.splice(index, 1);
         } else {
             // console.log("skipped");
             this.skipped += biggest[3];
-            const index = this.voteSets.indexOf(biggest);
-            this.voteSets.splice(index, 1);
+            const index = this.activeVoteSets.indexOf(biggest);
+            this.activeVoteSets.splice(index, 1);
         }
     }
 
