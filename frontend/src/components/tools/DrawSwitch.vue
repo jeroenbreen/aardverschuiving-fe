@@ -6,7 +6,7 @@ const store = useMainStore();
 
 <template>
     <Tool label="Teken modus">
-        <v-switch v-model="store.geographicMode" class="DrawSwitch" />
+        <v-switch v-model="store.mapMode" class="DrawSwitch" />
     </Tool>
 </template>
 

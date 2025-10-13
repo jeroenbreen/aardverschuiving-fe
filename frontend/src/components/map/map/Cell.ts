@@ -8,11 +8,23 @@ export class Cell {
     indexY: number;
     x: number;
     y: number;
+    final: {
+        size: number;
+        map: {
+            x: number;
+            y: number;
+        };
+        legend: {
+            x: number;
+            y: number;
+        };
+    };
     size: number;
     voteSets: VoteSetHeavyWithDistance[];
     cellPopulation: number;
     population: number;
     cache: any;
+    color: string;
 
     constructor(
         app: App,
@@ -35,6 +47,18 @@ export class Cell {
         this.cache = {
             neighbour: {},
         };
+        this.final = {
+            size: 0,
+            map: {
+                x: 0,
+                y: 0,
+            },
+            legend: {
+                x: 0,
+                y: 0,
+            },
+        };
+        this.color = "grey";
     }
 
     getNeighbour(shellPosition: number) {
@@ -126,15 +150,36 @@ export class Cell {
     draw(ctx: CanvasRenderingContext2D, selectedParties: number[]) {
         if (this.voteSets.length > 0) {
             if (this.show(selectedParties)) {
-                const size = this.size * (this.filledPercentage() / 100);
-                const x = this.x + this.app.width / 10 + (this.size - size) / 2;
-                const y = this.y + this.app.width / 10 + (this.size - size) / 2;
-                const party = this.getParty();
-                if (party) {
-                    ctx.fillStyle = party.color;
-                    ctx.fillRect(x, y, size, size);
-                }
+                ctx.fillStyle = this.color;
+                ctx.fillRect(
+                    this.final.map.x,
+                    this.final.map.y,
+                    this.final.size,
+                    this.final.size
+                );
             }
+        }
+    }
+
+    draw2(ctx: CanvasRenderingContext2D, x: number, y: number) {
+        ctx.fillStyle = this.color;
+        ctx.fillRect(
+            this.final.legend.x + x,
+            this.final.legend.y + y,
+            this.final.size,
+            this.final.size
+        );
+    }
+
+    finish() {
+        const size = this.size * (this.filledPercentage() / 100);
+        const marginLeft = this.app.width / 10;
+        this.final.map.x = this.x + marginLeft + (this.size - size) / 2;
+        this.final.map.y = this.y + marginLeft + (this.size - size) / 2;
+        this.final.size = size;
+        const party = this.getParty();
+        if (party) {
+            this.color = party.color;
         }
     }
 

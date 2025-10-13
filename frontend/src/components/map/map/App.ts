@@ -4,6 +4,7 @@ import {
     VoteSetHeavyWithDistance,
 } from "../../../types";
 import { Cell } from "./Cell";
+import { AppParty } from "./AppParty";
 import { boundingBox, ratio } from "./settings";
 import { getDistanceBetweenCells } from "./shell";
 
@@ -13,6 +14,7 @@ export class App {
     ctx: CanvasRenderingContext2D;
     voteSets: VoteSetHeavy[];
     cells: Cell[];
+    appParties: AppParty[];
     totalPopulation: number;
     cellPopulation: number;
     cellSize: number;
@@ -22,6 +24,7 @@ export class App {
     turn: number;
     selectedParties: number[];
     cache: any;
+    mapMode: boolean;
 
     constructor(
         ctx: CanvasRenderingContext2D,
@@ -30,7 +33,8 @@ export class App {
         voteSets: VoteSetHeavy[],
         grid: number,
         onClick: Callback,
-        selectedParties: number[]
+        selectedParties: number[],
+        mapMode: boolean
     ) {
         this.width = width;
         this.height = height;
@@ -41,6 +45,7 @@ export class App {
         this.skipped = 0;
         this.totalPopulation = this.getTotalPopulation();
         this.selectedParties = selectedParties;
+        this.appParties = [];
         this.cells = [];
         this.gridHorizontal = 0;
         this.gridVertical = 0;
@@ -49,6 +54,7 @@ export class App {
             municipalities: {},
             coordinates: {},
         };
+        this.mapMode = mapMode;
         //
         this.initClick(onClick);
         this.init(grid);
@@ -67,13 +73,49 @@ export class App {
                 this.run();
             }
         }
-        this.draw();
+
+        for (const cell of this.cells) {
+            cell.finish();
+        }
+        this.gatherForParties();
+        this.mapMode ? this.drawMap() : this.drawLegend();
     }
 
-    updateGrid(grid: number, voteSets: VoteSetHeavy[]) {
-        this.cells = [];
-        this.voteSets = this.order(voteSets);
-        this.init(grid);
+    switchMode(mapMode: boolean) {
+        this.mapMode = mapMode;
+        this.clear();
+        this.mapMode ? this.drawMap() : this.drawLegend();
+    }
+
+    gatherForParties() {
+        for (const cell of this.cells) {
+            const partyOfCell = cell.getParty();
+            if (partyOfCell) {
+                let appParty = this.appParties.find(
+                    (p) => p.party === partyOfCell
+                );
+                if (!appParty) {
+                    appParty = new AppParty(this, partyOfCell);
+                    this.appParties.push(appParty);
+                }
+                appParty.addCell(cell);
+            }
+        }
+        for (const appParty of this.appParties) {
+            appParty.init();
+        }
+        this.appParties.sort((a, b) => b.population - a.population);
+    }
+
+    drawLegend() {
+        const x = this.width / 10;
+        let y = this.height / 4;
+        for (const appParty of this.appParties) {
+            if (this.selectedParties.includes(appParty.party.id)) {
+                appParty.draw(this.ctx, x, y);
+                y += appParty.height + this.width / 30;
+            }
+        }
     }
 
     clear() {
@@ -190,7 +232,7 @@ export class App {
         this.voteSets.splice(index, 0, voteSet);
     }
 
-    draw() {
+    drawMap() {
         for (const cell of this.cells) {
             cell.draw(this.ctx, this.selectedParties);
         }
@@ -199,7 +241,7 @@ export class App {
     updateSelectedParties(selectedParties: number[]) {
         this.clear();
         this.selectedParties = selectedParties;
-        this.draw();
+        this.mapMode ? this.drawMap() : this.drawLegend();
     }
 
     getNearestCellWithSpaceForVoteSet(voteSet: VoteSetHeavy) {

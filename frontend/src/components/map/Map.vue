@@ -61,7 +61,8 @@ const create = () => {
                 voteSets,
                 store.grid,
                 callback,
-                props.parties.map((p) => p.id)
+                props.parties.map((p) => p.id),
+                store.mapMode
             );
             report.value = app.value.getReport();
         }
@@ -84,6 +85,13 @@ watch(
 );
 
 watch(
+    () => store.mapMode,
+    () => {
+        app.value?.switchMode(store.mapMode);
+    }
+);
+
+watch(
     () => store.width,
     () => {
         create();
@@ -94,7 +102,7 @@ watch(
 watch(
     () => props.parties,
     () => {
-        app.value.updateSelectedParties(props.parties.map((p) => p.id));
+        app.value?.updateSelectedParties(props.parties.map((p) => p.id));
     },
     {
         deep: true,
@@ -128,7 +136,7 @@ onMounted(() => {
                 <div>{{ election.year }}</div>
             </div>
 
-            <MapParties :parties="parties" />
+            <MapParties v-if="store.mapMode" :parties="parties" />
         </div>
 
         <div class="Map__report" v-if="report">
