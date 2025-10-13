@@ -23,7 +23,13 @@ watch(
 <template>
     <div class="GridSlider">
         <div class="GridSlider__slider">
-            <v-slider v-model="localValue" :min="5" :max="50" :step="2" />
+            <v-slider
+                v-model="localValue"
+                :min="5"
+                :max="50"
+                :step="2"
+                show-ticks
+            />
         </div>
         <label> Grid </label>
     </div>

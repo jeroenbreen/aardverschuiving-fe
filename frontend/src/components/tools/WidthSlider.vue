@@ -23,7 +23,13 @@ watch(
 <template>
     <div class="GridSlider">
         <div class="GridSlider__slider">
-            <v-slider v-model="localValue" :min="100" :max="600" :step="10" />
+            <v-slider
+                v-model="localValue"
+                :min="100"
+                :max="600"
+                :step="50"
+                show-ticks
+            />
         </div>
         <label> Poster grootte </label>
     </div>

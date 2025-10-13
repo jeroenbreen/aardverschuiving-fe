@@ -12,10 +12,14 @@ import { loadVotes } from "@/tools/loader";
 const store = useMainStore();
 
 const loadElection = async (election: ElectionType) => {
-    loadVotes(election.url).then((voteSets: VoteSet[]) => {
-        election.voteSets = voteSets;
+    if (election.url.length > 0) {
+        loadVotes(election.url).then((voteSets: VoteSet[]) => {
+            election.voteSets = voteSets;
+            election.loaded = true;
+        });
+    } else {
         election.loaded = true;
-    });
+    }
 };
 
 onMounted(() => {

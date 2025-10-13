@@ -11,7 +11,8 @@ const store = useMainStore();
                 v-model="store.threshold"
                 :min="0"
                 :max="1000000"
-                :step="50000"
+                :step="100000"
+                show-ticks
             />
         </div>
         <label>

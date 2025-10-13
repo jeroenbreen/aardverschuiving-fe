@@ -53,7 +53,7 @@ onMounted(() => {
 .Main {
     height: 100%;
     background: #ddd;
-    --h: 100px;
+    --h: 140px;
 
     &__tools {
         height: var(--h);

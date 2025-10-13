@@ -277,6 +277,15 @@ const elections: Election[] = [
             },
         ],
     },
+    {
+        id: 3,
+        year: 2017,
+        type: "tweede-kamer",
+        loaded: false,
+        url: "",
+        voteSets: [],
+        results: [],
+    },
 ];
 
 export default elections;
