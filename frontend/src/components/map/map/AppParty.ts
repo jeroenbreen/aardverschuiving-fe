@@ -45,7 +45,9 @@ export class AppParty {
         let x = baseX;
         let y = baseY + this.legendHeight;
         const margin = 2;
-        let rowSize = this.app.width / this.app.gridHorizontal;
+        const lastCell = this.cells[this.cells.length - 1];
+        const firstCell = this.cells[0];
+        let rowSize = firstCell.final.size;
         for (const cell of this.cells) {
             cell.final.legend.x = x;
             cell.final.legend.y = y;
@@ -57,7 +59,8 @@ export class AppParty {
                 rowSize = cell.final.size;
             }
         }
-        this.height = y - baseY;
+
+        this.height = y + rowSize - baseY;
     }
 
     drawLegend(ctx: CanvasRenderingContext2D) {
