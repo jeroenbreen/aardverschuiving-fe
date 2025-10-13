@@ -83,8 +83,37 @@ export class App {
 
     switchMode(mapMode: boolean) {
         this.mapMode = mapMode;
-        this.clear();
-        this.mapMode ? this.drawMap() : this.drawLegend();
+        const time = 400;
+        const ticks = 20;
+        let currentTick = 0;
+        let interval = 0;
+
+        const tick = (part: number) => {
+            this.clear();
+            for (const cell of this.cells) {
+                const party = cell.getParty();
+                if (party) {
+                    if (this.selectedParties.includes(party.id)) {
+                        cell.switch(mapMode, part, this.ctx);
+                    }
+                }
+            }
+            if (!mapMode && part >= 0.75) {
+                for (const appParty of this.appParties) {
+                    if (this.selectedParties.includes(appParty.party.id)) {
+                        appParty.drawLegend(this.ctx);
+                    }
+                }
+            }
+            if (part >= 1) {
+                clearInterval(interval);
+            }
+        };
+
+        interval = setInterval(() => {
+            tick(currentTick / ticks);
+            currentTick++;
+        }, time / ticks);
     }
 
     gatherForParties() {
@@ -101,19 +130,19 @@ export class App {
                 appParty.addCell(cell);
             }
         }
-        for (const appParty of this.appParties) {
-            appParty.init();
-        }
+        const x = this.width / 10;
+        let y = this.height / 4;
         this.appParties.sort((a, b) => b.population - a.population);
+        for (const appParty of this.appParties) {
+            appParty.init(x, y);
+            y += appParty.height + this.width / 30;
+        }
     }
 
     drawLegend() {
-        const x = this.width / 10;
-        let y = this.height / 4;
         for (const appParty of this.appParties) {
             if (this.selectedParties.includes(appParty.party.id)) {
-                appParty.draw(this.ctx, x, y);
-                y += appParty.height + this.width / 30;
+                appParty.draw(this.ctx);
             }
         }
     }

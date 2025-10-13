@@ -102,7 +102,8 @@ watch(
 watch(
     () => props.parties,
     () => {
-        app.value?.updateSelectedParties(props.parties.map((p) => p.id));
+        create();
+        //app.value?.updateSelectedParties(props.parties.map((p) => p.id));
     },
     {
         deep: true,

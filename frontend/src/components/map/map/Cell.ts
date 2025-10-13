@@ -161,14 +161,33 @@ export class Cell {
         }
     }
 
-    draw2(ctx: CanvasRenderingContext2D, x: number, y: number) {
+    draw2(ctx: CanvasRenderingContext2D) {
         ctx.fillStyle = this.color;
         ctx.fillRect(
-            this.final.legend.x + x,
-            this.final.legend.y + y,
+            this.final.legend.x,
+            this.final.legend.y,
             this.final.size,
             this.final.size
         );
+    }
+
+    switch(mapMode: boolean, part: number, ctx: CanvasRenderingContext2D) {
+        let startX, startY, endX, endY;
+        if (mapMode) {
+            startX = this.final.legend.x;
+            startY = this.final.legend.y;
+            endX = this.final.map.x;
+            endY = this.final.map.y;
+        } else {
+            startX = this.final.map.x;
+            startY = this.final.map.y;
+            endX = this.final.legend.x;
+            endY = this.final.legend.y;
+        }
+        const x = startX + (endX - startX) * part;
+        const y = startY + (endY - startY) * part;
+        ctx.fillStyle = this.color;
+        ctx.fillRect(x, y, this.final.size, this.final.size);
     }
 
     finish() {
