@@ -22,15 +22,12 @@ defineProps<{
 .MapParties {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 8px;
     border-top: 1px solid #888;
-    padding: 8px;
-    width: 230px;
+    gap: 4px 2px;
     pointer-events: none;
     font-family: var(--font-mono);
     color: var(--color-black-1);
-
-    .MapParty {
-        width: 50%;
-    }
+    background: #fff;
 }
 </style>

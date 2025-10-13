@@ -125,11 +125,12 @@ onMounted(() => {
             }"
         >
             <canvas ref="el" />
+
             <div
                 class="Map__title"
                 :style="{
-                    width: store.width / 3 + 'px',
-                    'font-size': store.width / 30 + 'px',
+                    width: store.width / 3.5 + 'px',
+                    'font-size': store.width / 35 + 'px',
                 }"
             >
                 <div>Verkiezingen</div>
@@ -174,7 +175,7 @@ onMounted(() => {
     canvas {
         position: absolute;
         left: 0;
-        top: 10%;
+        top: 6%;
     }
 
     &__title {
@@ -207,6 +208,7 @@ onMounted(() => {
         position: absolute;
         bottom: 20px;
         left: 20px;
+        right: 20px;
         z-index: 1;
         pointer-events: none;
     }

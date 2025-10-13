@@ -19,7 +19,7 @@ export const useMainStore = defineStore("main", {
     state: () => {
         return {
             width: 300,
-            mapMode: true,
+            mapMode: false,
             init: false,
             elections: [],
             municipalities: [],
@@ -28,7 +28,7 @@ export const useMainStore = defineStore("main", {
             partyLib: {},
             distances: [],
             grid: 30,
-            threshold: 500 * 1000,
+            threshold: 0 * 1000,
             // the numbers based on ranking
         } as MainState;
     },

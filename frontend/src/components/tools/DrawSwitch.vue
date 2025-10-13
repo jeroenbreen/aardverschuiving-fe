@@ -5,7 +5,7 @@ const store = useMainStore();
 </script>
 
 <template>
-    <Tool label="Teken modus">
+    <Tool label="Als grafiek / Als kaart">
         <v-switch v-model="store.mapMode" class="DrawSwitch" />
     </Tool>
 </template>

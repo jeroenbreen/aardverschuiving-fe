@@ -130,12 +130,12 @@ export class App {
                 appParty.addCell(cell);
             }
         }
-        const x = this.width / 10;
-        let y = this.height / 4;
+        const x = this.width / 3;
+        let y = this.height / 3.5;
         this.appParties.sort((a, b) => b.population - a.population);
         for (const appParty of this.appParties) {
             appParty.init(x, y);
-            y += appParty.height + this.width / 30;
+            y += appParty.height + this.width / 25;
         }
     }
 

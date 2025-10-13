@@ -8,7 +8,6 @@ export class AppParty {
     cells: Cell[];
     height: number;
     population: number;
-    legendHeight: number;
     x: number;
     y: number;
 
@@ -18,7 +17,6 @@ export class AppParty {
         this.cells = [];
         this.population = 0;
         this.height = 0;
-        this.legendHeight = this.app.width / 20;
         this.x = 0;
         this.y = 0;
     }
@@ -43,33 +41,35 @@ export class AppParty {
 
     initCells(baseX: number, baseY: number) {
         let x = baseX;
-        let y = baseY + this.legendHeight;
+        let y = baseY;
+        const factor = 0.1;
+        const barHeight = (this.app.width / 9) * factor;
         const margin = 2;
-        const lastCell = this.cells[this.cells.length - 1];
-        const firstCell = this.cells[0];
-        let rowSize = firstCell.final.size;
         for (const cell of this.cells) {
             cell.final.legend.x = x;
             cell.final.legend.y = y;
+            cell.final.legend.height = barHeight;
+            cell.final.legend.width =
+                (cell.final.size * cell.final.size * factor) / barHeight;
 
-            x += cell.final.size + margin;
+            x += cell.final.legend.width;
             if (x > this.app.width) {
                 x = this.x;
-                y += rowSize + margin;
-                rowSize = cell.final.size;
+                y += barHeight + margin;
             }
         }
 
-        this.height = y + rowSize - baseY;
+        this.height = y + barHeight - baseY;
     }
 
     drawLegend(ctx: CanvasRenderingContext2D) {
         ctx.fillStyle = "black";
-        ctx.font = this.app.width / 35 + "px Arial";
+        const fontSize = this.app.width / 43;
+        ctx.font = fontSize + "px Arial";
         ctx.fillText(
             this.party.name + " (" + this.population + ")",
-            this.x,
-            this.y + 16
+            this.app.width / 10,
+            this.y + 0.5 * fontSize
         );
     }
 

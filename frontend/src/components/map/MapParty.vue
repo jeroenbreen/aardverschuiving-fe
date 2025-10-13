@@ -31,12 +31,12 @@ defineProps({
     line-height: 1;
 
     &__color {
-        width: 10px;
-        height: 10px;
+        width: 8px;
+        height: 8px;
     }
 
     &__party {
-        padding-left: 12px;
+        padding-left: 4px;
         padding-top: 2px;
     }
 }

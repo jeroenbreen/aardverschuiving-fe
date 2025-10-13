@@ -17,6 +17,8 @@ export class Cell {
         legend: {
             x: number;
             y: number;
+            width: number;
+            height: number;
         };
     };
     size: number;
@@ -56,6 +58,8 @@ export class Cell {
             legend: {
                 x: 0,
                 y: 0,
+                width: 0,
+                height: 0,
             },
         };
         this.color = "grey";
@@ -166,32 +170,51 @@ export class Cell {
         ctx.fillRect(
             this.final.legend.x,
             this.final.legend.y,
-            this.final.size,
-            this.final.size
+            this.final.legend.width,
+            this.final.legend.height
         );
     }
 
     switch(mapMode: boolean, part: number, ctx: CanvasRenderingContext2D) {
-        let startX, startY, endX, endY;
+        let startX,
+            startY,
+            endX,
+            endY,
+            startWidth,
+            endWidth,
+            startHeight,
+            endHeight;
         if (mapMode) {
             startX = this.final.legend.x;
             startY = this.final.legend.y;
             endX = this.final.map.x;
             endY = this.final.map.y;
+            startWidth = this.final.legend.width;
+            endWidth = this.final.size;
+            startHeight = this.final.legend.height;
+            endHeight = this.final.size;
         } else {
             startX = this.final.map.x;
             startY = this.final.map.y;
             endX = this.final.legend.x;
             endY = this.final.legend.y;
+            startWidth = this.final.size;
+            endWidth = this.final.legend.width;
+            startHeight = this.final.size;
+            endHeight = this.final.legend.height;
         }
         const x = startX + (endX - startX) * part;
         const y = startY + (endY - startY) * part;
+        const width = startWidth + (endWidth - startWidth) * part;
+        const height = startHeight + (endHeight - startHeight) * part;
+
         ctx.fillStyle = this.color;
-        ctx.fillRect(x, y, this.final.size, this.final.size);
+        ctx.fillRect(x, y, width, height);
     }
 
     finish() {
-        const size = this.size * (this.filledPercentage() / 100);
+        const share = this.filledPercentage() / 100;
+        const size = this.size * Math.sqrt(share);
         const marginLeft = this.app.width / 10;
         this.final.map.x = this.x + marginLeft + (this.size - size) / 2;
         this.final.map.y = this.y + marginLeft + (this.size - size) / 2;
