@@ -4,6 +4,7 @@ import { Election, Municipality, Party, ElectionDistance } from "./../types";
 interface MainState {
     width: number;
     mapMode: boolean;
+    winnerTakesAll: boolean;
     init: boolean;
     elections: Election[];
     municipalities: Municipality[];
@@ -20,6 +21,7 @@ export const useMainStore = defineStore("main", {
         return {
             width: 300,
             mapMode: true,
+            winnerTakesAll: true,
             init: false,
             elections: [],
             municipalities: [],

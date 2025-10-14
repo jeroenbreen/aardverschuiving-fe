@@ -6,6 +6,7 @@ import { computed, onMounted, ref } from "vue";
 import ThresholdSlider from "@/components/tools/ThresholdSlider.vue";
 import WidthSlider from "@/components/tools/WidthSlider.vue";
 import DrawSwitch from "@/components/tools/DrawSwitch.vue";
+import WinnerTakesAllSwitch from "@/components/tools/WinnerTakesAllSwitch.vue";
 
 const store = useMainStore();
 
@@ -32,10 +33,16 @@ onMounted(() => {
 <template>
     <div class="Main" v-if="store.init">
         <div class="Main__tools">
-            <GridSlider />
-            <ThresholdSlider />
-            <WidthSlider v-if="measured" />
-            <DrawSwitch />
+            <div>
+                <GridSlider />
+                <ThresholdSlider />
+                <WidthSlider v-if="measured" />
+            </div>
+
+            <div>
+                <DrawSwitch />
+                <WinnerTakesAllSwitch />
+            </div>
         </div>
 
         <div
@@ -56,11 +63,14 @@ onMounted(() => {
 .Main {
     height: 100%;
     background: #ddd;
-    --h: 140px;
+    --h: 110px;
 
     &__tools {
         height: var(--h);
         padding: 8px var(--size-4);
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
     }
 
     &__content {

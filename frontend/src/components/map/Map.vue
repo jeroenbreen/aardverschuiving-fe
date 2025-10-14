@@ -62,7 +62,8 @@ const create = () => {
                 store.grid,
                 callback,
                 props.parties.map((p) => p.id),
-                store.mapMode
+                store.mapMode,
+                store.winnerTakesAll
             );
             report.value = app.value.getReport();
         }
@@ -81,6 +82,13 @@ watch(
         // app.value.updateGrid(store.grid, [...store.voteSetsHeavy]);
         create();
         currentCell.value = null;
+    }
+);
+
+watch(
+    () => store.winnerTakesAll,
+    () => {
+        create();
     }
 );
 

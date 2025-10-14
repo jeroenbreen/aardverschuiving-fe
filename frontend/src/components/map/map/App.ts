@@ -26,6 +26,7 @@ export class App {
     selectedParties: number[];
     cache: any;
     mapMode: boolean;
+    winnerTakesAll: boolean;
 
     constructor(
         ctx: CanvasRenderingContext2D,
@@ -35,7 +36,8 @@ export class App {
         grid: number,
         onClick: Callback,
         selectedParties: number[],
-        mapMode: boolean
+        mapMode: boolean,
+        winnerTakesAll: boolean
     ) {
         this.width = width;
         this.height = height;
@@ -57,6 +59,7 @@ export class App {
             coordinates: {},
         };
         this.mapMode = mapMode;
+        this.winnerTakesAll = winnerTakesAll;
         //
         this.initClick(onClick);
         this.init(grid);
@@ -70,9 +73,7 @@ export class App {
         this.cells = this.createCells();
         const runs = 10000;
 
-        this.activeVoteSets = this.voteSets.filter((vs) =>
-            this.selectedParties.includes(vs[2]?.id || -1)
-        );
+        this.activeVoteSets = this.filter(this.voteSets);
 
         for (let i = 0; i < runs; i++) {
             if (this.activeVoteSets.length > 0) {
@@ -85,6 +86,42 @@ export class App {
         }
         this.gatherForParties();
         this.mapMode ? this.drawMap() : this.drawLegend();
+    }
+
+    filter(voteSets: VoteSetHeavy[]) {
+        interface Item {
+            title: string;
+            vs: VoteSetHeavy[];
+        }
+        const lib: Item[] = [];
+        const result: VoteSetHeavy[] = [];
+
+        const prefilter = voteSets.filter((vs) =>
+            this.selectedParties.includes(vs[2]?.id || -1)
+        );
+
+        if (this.winnerTakesAll) {
+            for (const vs of prefilter) {
+                const municipality = vs[1].title;
+                const item = lib.find((i) => i.title === municipality);
+                if (!item) {
+                    lib.push({
+                        title: municipality,
+                        vs: [vs],
+                    });
+                } else {
+                    item.vs.push(vs);
+                }
+            }
+            for (const item of lib) {
+                item.vs.sort((a, b) => b[3] - a[3]);
+                // only filter the winner
+                result.push(item.vs[0]);
+            }
+            return result;
+        } else {
+            return prefilter;
+        }
     }
 
     switchMode(mapMode: boolean) {

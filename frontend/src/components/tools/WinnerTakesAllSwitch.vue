@@ -5,13 +5,13 @@ const store = useMainStore();
 </script>
 
 <template>
-    <Tool label="Als grafiek / Als kaart" for-switch>
-        <v-switch v-model="store.mapMode" class="DrawSwitch" />
+    <Tool label="Winner Takes All" for-switch>
+        <v-switch v-model="store.winnerTakesAll" class="WinnerTakesAll" />
     </Tool>
 </template>
 
 <style lang="scss" scoped>
-.DrawSwitch {
+.WinnerTakesAll {
     --v-input-control-height: 24px;
 }
 

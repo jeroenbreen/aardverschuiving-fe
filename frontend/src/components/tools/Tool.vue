@@ -6,11 +6,15 @@ defineProps({
         type: String,
         required: true,
     },
+    forSwitch: {
+        type: Boolean,
+        default: false,
+    },
 });
 </script>
 
 <template>
-    <div class="Tool">
+    <div class="Tool" :data-for-switch="forSwitch">
         <div class="Tool__content">
             <slot />
         </div>
@@ -30,6 +34,12 @@ defineProps({
 
     label {
         font-size: 15px;
+    }
+
+    &[data-for-switch="true"] {
+        & .Tool__content {
+            width: 55px;
+        }
     }
 }
 </style>
