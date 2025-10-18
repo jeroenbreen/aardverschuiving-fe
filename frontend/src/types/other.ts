@@ -1,4 +1,4 @@
 export interface MenuButton {
-    label: string;
-    route: string;
+    text: string;
+    to: string;
 }

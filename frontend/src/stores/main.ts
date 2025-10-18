@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 import { Election, Municipality, Party, ElectionDistance } from "./../types";
 
 interface MainState {
+    measured: boolean;
     width: number;
     mapMode: boolean;
     winnerTakesAll: boolean;
@@ -19,6 +20,7 @@ interface MainState {
 export const useMainStore = defineStore("main", {
     state: () => {
         return {
+            measured: false,
             width: 300,
             mapMode: true,
             winnerTakesAll: true,

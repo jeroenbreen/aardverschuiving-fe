@@ -1,47 +1,30 @@
 <script setup lang="ts">
-import { Municipality, Election, VoteSet } from "@/types";
+import WidthSlider from "@/components/tools/WidthSlider.vue";
+import ThresholdSlider from "@/components/tools/ThresholdSlider.vue";
+import GridSlider from "@/components/tools/GridSlider.vue";
+import DrawSwitch from "@/components/tools/DrawSwitch.vue";
+import WinnerTakesAllSwitch from "@/components/tools/WinnerTakesAllSwitch.vue";
 import { useMainStore } from "@/stores/main";
-import MunicipalityPicker from "./MunicipalityPicker.vue";
-import ElectionPicker from "./ElectionPicker.vue";
-import GridSlider from "./GridSlider.vue";
-import PartyPicker from "./PartyPicker.vue";
-import { loadVotes } from "@/tools/loader";
 
 const store = useMainStore();
-
-const setCurrent = (municipallity: Municipality) => {
-    store.currentMunicipality = municipallity;
-};
-
-const setCurrentElection = (election: Election) => {
-    if (election.voteSets.length === 0) {
-        store.currentElection = null;
-        store.loaded = false;
-        loadVotes(election.url).then((voteSets: VoteSet[]) => {
-            election.voteSets = voteSets;
-            store.loaded = true;
-            store.currentElection = election;
-        });
-    } else {
-        store.currentElection = election;
-    }
-};
 </script>
 
 <template>
     <div class="Tools">
-        <municipality-picker @select="setCurrent" />
-        <election-picker @select="setCurrentElection" />
-
-        <party-picker :key="store.currentElection" />
+        <GridSlider />
+        <ThresholdSlider />
+        <WidthSlider v-if="store.measured" />
+        <DrawSwitch />
+        <WinnerTakesAllSwitch />
     </div>
 </template>
 
 <style lang="scss" scoped>
 .Tools {
-    padding: var(--size-4);
+    height: var(--h);
+    padding: 8px var(--size-4);
     display: flex;
+    gap: 10px;
     flex-direction: column;
-    gap: var(--size-4);
 }
 </style>

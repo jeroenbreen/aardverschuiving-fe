@@ -1,13 +1,19 @@
 <script setup lang="ts">
 import { useMainStore } from "./stores/main";
 import ppMenu from "@/components/menu/Menu.vue";
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import elections from "@/data/elections";
 import municipalities from "@/data/municipalities";
 import parties from "@/data/parties";
 import distances from "@/data/distances";
-import { Election as ElectionType, VoteSet } from "@/types";
+import {
+    Election as ElectionType,
+    MenuButton as MenuButtonType,
+    VoteSet,
+} from "@/types";
 import { loadVotes } from "@/tools/loader";
+import Tools from "@/components/tools/Tools.vue";
+import Logo from "@/components/Logo.vue";
 
 const store = useMainStore();
 
@@ -32,15 +38,53 @@ onMounted(() => {
         loadElection(election);
     }
 });
+
+const drawer = ref(false);
+const menuItems: MenuButtonType[] = [
+    {
+        text: "Verkiezingskaart",
+        to: "/",
+    },
+    {
+        text: "Missie",
+        to: "/about",
+    },
+    {
+        text: "Uitleg grid",
+        to: "/uitleg-grid",
+    },
+];
 </script>
 
 <template>
-    <div class="App">
-        <pp-menu />
-        <div class="App__content">
+    <v-app>
+        <v-app-bar app color="white" dark>
+            <v-app-bar-nav-icon @click="drawer = !drawer" />
+
+            <v-toolbar-title>
+                <Logo />
+            </v-toolbar-title>
+        </v-app-bar>
+
+        <v-navigation-drawer v-model="drawer">
+            <v-list>
+                <v-list-item
+                    v-for="item in menuItems"
+                    :key="item.text"
+                    :to="item.to"
+                    @click="drawer = false"
+                >
+                    <v-list-item-title>{{ item.text }}</v-list-item-title>
+                </v-list-item>
+            </v-list>
+
+            <Tools />
+        </v-navigation-drawer>
+
+        <v-main>
             <router-view />
-        </div>
-    </div>
+        </v-main>
+    </v-app>
 </template>
 
 <style lang="scss">

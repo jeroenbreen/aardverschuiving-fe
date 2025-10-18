@@ -6,7 +6,9 @@ const store = useMainStore();
 </script>
 
 <template>
-    <Tool :label="'Toon partijen met meer dan ' + store.threshold + ' stemmen'">
+    <Tool
+        :label="'Toon partijen met meer dan <' + store.threshold + '> stemmen'"
+    >
         <v-slider
             v-model="store.threshold"
             :min="0"

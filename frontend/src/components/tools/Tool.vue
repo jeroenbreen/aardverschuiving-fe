@@ -15,21 +15,22 @@ defineProps({
 
 <template>
     <div class="Tool" :data-for-switch="forSwitch">
+        <label> {{ label }} </label>
         <div class="Tool__content">
             <slot />
         </div>
-        <label> {{ label }} </label>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .Tool {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    border-top: 1px solid #aaa;
+    padding-top: 12px;
 
     &__content {
-        width: 150px;
+        width: 100%;
     }
 
     label {
