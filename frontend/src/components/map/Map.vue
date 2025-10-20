@@ -68,7 +68,7 @@ const create = () => {
             report.value = app.value.getReport();
         }
         const end = new Date();
-        console.log("create time", end.getTime() - start.getTime());
+        // console.log("create time", end.getTime() - start.getTime());
     }
 };
 
@@ -146,25 +146,26 @@ onMounted(() => {
                 <div>{{ election.year }}</div>
             </div>
 
-            <MapParties v-if="store.mapMode" :parties="parties" />
-        </div>
+            <div class="Map__footer">
+                <MapParties v-if="store.mapMode" :parties="parties" />
 
-        <div class="Map__report" v-if="report">
-            Op deze kaart is {{ report.coverage }}% van de stemmers
-            vertegenwoordigd.<br />
-            De stemmers zijn gemiddeld {{ report.displacement }}km van hun eigen
-            gemeente afgebeeld [<router-link :to="{ name: 'Grid' }"
-                >UITLEG</router-link
-            >].
-        </div>
+                <div class="Map__report" v-if="report">
+                    Op deze kaart is <strong>{{ report.coverage }}%</strong> van
+                    de stemmers vertegenwoordigd. [<router-link
+                        :to="{ name: 'Grid' }"
+                        >UITLEG</router-link
+                    >].
+                </div>
 
-        <map-cell
-            v-if="currentCell"
-            :cell="currentCell"
-            :style="{
-                width: store.width + 'px',
-            }"
-        />
+                <map-cell
+                    v-if="currentCell"
+                    :cell="currentCell"
+                    :style="{
+                        width: store.width + 'px',
+                    }"
+                />
+            </div>
+        </div>
     </div>
 </template>
 
@@ -212,7 +213,7 @@ onMounted(() => {
         }
     }
 
-    .MapParties {
+    &__footer {
         position: absolute;
         bottom: 20px;
         left: 20px;
@@ -223,7 +224,6 @@ onMounted(() => {
 
     &__report {
         margin-top: 12px;
-        font-style: italic;
         font-size: 70%;
     }
 }

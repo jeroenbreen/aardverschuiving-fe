@@ -26,8 +26,8 @@ defineProps({
 .Tool {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid #aaa;
-    padding-top: 12px;
+    border-bottom: 1px solid #aaa;
+    padding: 6px 0;
 
     &__content {
         width: 100%;

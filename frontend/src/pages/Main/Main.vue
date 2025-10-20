@@ -2,7 +2,7 @@
 import { useMainStore } from "@/stores/main";
 import Election from "@/components/election/Election.vue";
 import { computed, onMounted, ref } from "vue";
-import Tools from "@/components/tools/Tools.vue";
+import { ratio, a4ratio } from "./../../components/map/map/settings";
 
 const store = useMainStore();
 
@@ -14,11 +14,13 @@ const padding = 20;
 
 onMounted(() => {
     if (content.value) {
-        const width = content.value.clientWidth - 2 * padding;
-        if (width > 500) {
-            store.width = 500;
+        const width = content.value.clientWidth;
+        const height = content.value.clientHeight;
+        const realRatio = width / height;
+        if (realRatio > ratio) {
+            store.width = Math.min(height / a4ratio, 500);
         } else {
-            store.width = width;
+            store.width = Math.min(width, 500);
         }
         store.measured = true;
     }
@@ -26,12 +28,8 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="Main" v-if="store.init">
-        <div
-            ref="content"
-            class="Main__content"
-            :style="{ padding: padding + 'px' }"
-        >
+    <div class="Main" v-if="store.init" :style="{ padding: padding + 'px' }">
+        <div class="Main__content" ref="content">
             <Election
                 v-for="election in loadedElections"
                 :key="election.id"
@@ -44,19 +42,21 @@ onMounted(() => {
 <style lang="scss" scoped>
 .Main {
     height: 100%;
-    background: #ddd;
-    --h: 110px;
+    overflow: auto;
 
     &__content {
         display: flex;
         gap: 20px;
         justify-content: flex-start;
-        overflow: auto;
         height: 100%;
 
         & > * {
             flex-shrink: 0;
         }
     }
+}
+
+main {
+    height: 100%;
 }
 </style>

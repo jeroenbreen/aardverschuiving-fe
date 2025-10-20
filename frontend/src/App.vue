@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useMainStore } from "./stores/main";
-import ppMenu from "@/components/menu/Menu.vue";
 import { onMounted, ref } from "vue";
 import elections from "@/data/elections";
 import municipalities from "@/data/municipalities";
@@ -14,8 +13,11 @@ import {
 import { loadVotes } from "@/tools/loader";
 import Tools from "@/components/tools/Tools.vue";
 import Logo from "@/components/Logo.vue";
+import { useRoute } from "vue-router";
 
 const store = useMainStore();
+
+const route = useRoute();
 
 const loadElection = async (election: ElectionType) => {
     if (election.url.length > 0) {
@@ -39,7 +41,7 @@ onMounted(() => {
     }
 });
 
-const drawer = ref(false);
+const drawer = ref(true);
 const menuItems: MenuButtonType[] = [
     {
         text: "Verkiezingskaart",
@@ -61,9 +63,7 @@ const menuItems: MenuButtonType[] = [
         <v-app-bar app color="white" dark>
             <v-app-bar-nav-icon @click="drawer = !drawer" />
 
-            <v-toolbar-title>
-                <Logo />
-            </v-toolbar-title>
+            <v-toolbar-title> <Logo /> </v-toolbar-title>
         </v-app-bar>
 
         <v-navigation-drawer v-model="drawer">
@@ -74,21 +74,29 @@ const menuItems: MenuButtonType[] = [
                     :to="item.to"
                     @click="drawer = false"
                 >
-                    <v-list-item-title>{{ item.text }}</v-list-item-title>
+                    <v-list-item-title
+                        ><b>{{ item.text }}</b></v-list-item-title
+                    >
                 </v-list-item>
             </v-list>
 
-            <Tools />
+            <Tools v-if="route.name === 'Main'" />
         </v-navigation-drawer>
 
-        <v-main>
+        <main>
             <router-view />
-        </v-main>
+        </main>
     </v-app>
 </template>
 
 <style lang="scss">
 @import "@/styles/index";
+
+main {
+    overflow: hidden;
+    height: 100vh;
+    padding-top: 64px;
+}
 </style>
 
 <style lang="scss" scoped>
@@ -98,13 +106,15 @@ const menuItems: MenuButtonType[] = [
     left: 0;
     width: 100%;
     height: 100%;
+}
 
-    .Menu {
-        height: 60px;
-    }
+.v-list {
+    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-bottom: 2px solid #000;
+    margin-bottom: 12px;
+}
 
-    &__content {
-        height: calc(100% - 60px);
-    }
+nav {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 </style>
