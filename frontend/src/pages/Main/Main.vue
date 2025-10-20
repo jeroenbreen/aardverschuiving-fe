@@ -14,8 +14,9 @@ const padding = 20;
 
 onMounted(() => {
     if (content.value) {
-        const width = content.value.clientWidth;
-        const height = content.value.clientHeight;
+        const buffer = 4;
+        const width = content.value.clientWidth - buffer;
+        const height = content.value.clientHeight - buffer;
         const realRatio = width / height;
         if (realRatio > ratio) {
             store.width = Math.min(height / a4ratio, 500);

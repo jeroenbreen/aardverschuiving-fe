@@ -219,7 +219,7 @@ onMounted(() => {
         left: 20px;
         right: 20px;
         z-index: 1;
-        pointer-events: none;
+        //pointer-events: none;
     }
 
     &__report {

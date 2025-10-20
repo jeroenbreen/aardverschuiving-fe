@@ -23,7 +23,7 @@ export const useMainStore = defineStore("main", {
             measured: false,
             width: 300,
             mapMode: true,
-            winnerTakesAll: true,
+            winnerTakesAll: false,
             init: false,
             elections: [],
             municipalities: [],
