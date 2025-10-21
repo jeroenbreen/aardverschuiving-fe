@@ -83,7 +83,7 @@ const menuItems: MenuButtonType[] = [
             <Tools v-if="route.name === 'Main'" />
         </v-navigation-drawer>
 
-        <v-main>
+        <v-main :class="{ 'main-fixed': route.name === 'Main' }">
             <router-view />
         </v-main>
     </v-app>
@@ -92,7 +92,7 @@ const menuItems: MenuButtonType[] = [
 <style lang="scss">
 @import "@/styles/index";
 
-main {
+.main-fixed {
     overflow: hidden;
     height: 100vh;
     padding-top: 64px;
