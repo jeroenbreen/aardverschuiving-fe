@@ -21,7 +21,9 @@ export interface VoteResult {
 
 export type CellDistance = number;
 
-export type VoteSet = [Election_id, Municipality_code, Party_id, Votes];
+export type Municipality_id = number
+
+export type VoteSet = [Municipality_id, Party_id, Votes];
 
 export type VoteSetHeavy = [Election | null, Municipality, Party | null, Votes];
 

@@ -5,6 +5,7 @@ export * from "./votes";
 export * from "./map";
 export * from "./relations";
 export * from "./other";
+export * from "./data";
 
 declare global {
     interface Window {
@@ -16,3 +17,5 @@ declare global {
         };
     }
 }
+
+
