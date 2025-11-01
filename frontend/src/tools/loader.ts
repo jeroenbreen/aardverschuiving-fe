@@ -1,10 +1,10 @@
-import { VoteSet } from "./../types";
+import { Data } from "./../types";
 
-export const loadVotes = async (url: string): Promise<unknown> => {
+export const loadData = async (url: string): Promise<Data> => {
     return new Promise((resolve) => {
         fetch(url)
             .then((response) => response.json())
-            .then((jsonFile: VoteSet[]) => {
+            .then((jsonFile: Data) => {
                 resolve(jsonFile);
             })
             .catch((error) => console.error("Error fetching JSON:", error));

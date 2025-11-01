@@ -1,7 +1,10 @@
 import { Municipality_code } from "./votes";
 
+export type Municipality_id = number
+
+
 export interface Municipality {
-    id: number;
+    id: Municipality_id;
     name: string;
     latitude: number;
     longitude: number;

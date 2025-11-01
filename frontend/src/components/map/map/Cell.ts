@@ -1,5 +1,5 @@
 import { App } from "./App";
-import { Party, VoteSetHeavyWithDistance } from "../../../types";
+import { Party, VoteSetHeavy } from "../../../types";
 import { getShell, getRibSizeForShell, getAreaInsideShell } from "./shell";
 
 export class Cell {
@@ -22,7 +22,7 @@ export class Cell {
         };
     };
     size: number;
-    voteSets: VoteSetHeavyWithDistance[];
+    voteSets: VoteSetHeavy[];
     cellPopulation: number;
     population: number;
     cache: any;
@@ -136,14 +136,14 @@ export class Cell {
 
     getTotalDistance() {
         return this.voteSets.reduce((acc, voteSet) => {
-            return acc + voteSet[4] * voteSet[3];
+            return acc + voteSet.votes * voteSet.distance;
         }, 0);
     }
 
-    addVoteSet(voteSet: VoteSetHeavyWithDistance) {
-        if (this.isEmpty() || this.voteSets[0][2] === voteSet[2]) {
+    addVoteSet(voteSet: VoteSetHeavy) {
+        if (this.isEmpty() || this.voteSets[0].party === voteSet.party) {
             this.voteSets.push(voteSet);
-            this.population += voteSet[3];
+            this.population += voteSet.votes;
         }
     }
 
@@ -227,7 +227,11 @@ export class Cell {
 
     show(selectedParties: number[]) {
         const voteSet = this.voteSets[0];
-        return voteSet && voteSet[2] && selectedParties.includes(voteSet[2].id);
+        return (
+            voteSet &&
+            voteSet.party &&
+            selectedParties.includes(voteSet.party.id)
+        );
     }
 
     isEmpty() {
@@ -242,7 +246,7 @@ export class Cell {
         if (this.isEmpty()) {
             return null;
         } else {
-            return this.voteSets[0][2];
+            return this.voteSets[0].party;
         }
     }
 

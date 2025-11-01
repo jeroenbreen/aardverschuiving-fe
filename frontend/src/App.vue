@@ -1,16 +1,8 @@
 <script setup lang="ts">
 import { useMainStore } from "./stores/main";
 import { onMounted, ref } from "vue";
-import elections from "@/data/elections";
-import municipalities from "@/data/municipalities";
-import parties from "@/data/parties";
-import distances from "@/data/distances";
-import {
-    Election as ElectionType,
-    MenuButton as MenuButtonType,
-    VoteSet,
-} from "@/types";
-import { loadVotes } from "@/tools/loader";
+import { Data, MenuButton as MenuButtonType } from "@/types";
+import { loadData } from "@/tools/loader";
 import Tools from "@/components/tools/Tools.vue";
 import Logo from "@/components/Logo.vue";
 import { useRoute } from "vue-router";
@@ -19,26 +11,15 @@ const store = useMainStore();
 
 const route = useRoute();
 
-const loadElection = async (election: ElectionType) => {
-    if (election.url.length > 0) {
-        loadVotes(election.url).then((voteSets: VoteSet[]) => {
-            election.voteSets = voteSets;
-            election.loaded = true;
-        });
-    } else {
-        election.loaded = true;
-    }
-};
-
 onMounted(() => {
-    store.elections = elections;
-    store.addMunicipalities(municipalities);
-    store.addParties(parties);
-    store.distances = distances;
-    store.init = true;
-    for (const election of store.elections) {
-        loadElection(election);
-    }
+    const url = "/elections.json";
+    loadData(url).then((data: Data) => {
+        store.reset();
+        store.addMunicipalities(data.municipalities);
+        store.addParties(data.parties);
+        store.addElections(data.elections);
+        store.init = true;
+    });
 });
 
 const drawer = ref(true);

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineProps } from "vue";
-import MapParty from "@/components/map/MapParty";
+import MapParty from "./MapParty.vue";
 import { Party } from "@/types";
 
 defineProps<{

@@ -1,21 +1,23 @@
+import {Municipality_id} from "@/types/municipalities";
+
 export interface Relation {
     municipality_code: string;
     relations: { municipality_id: number; strenth: number }[];
 }
 
 export interface DeviationItem {
-    municipality_code: string;
+    municipality_id: Municipality_id;
     deviations: { party_id: number; deviation: number }[];
 }
 
 export interface Distance {
-    source_municipality_code: string;
-    target_municipality_code: string;
+    source_municipality_id: Municipality_id;
+    target_municipality_id: Municipality_id;
     distance: number;
 }
 
 export interface DistanceList {
-    municipality_code: string;
+    municipality_id: Municipality_id;
     distances: Distance[];
 }
 

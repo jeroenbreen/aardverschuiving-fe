@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { useMainStore } from "@/stores/main";
 import Election from "@/components/election/Election.vue";
-import { computed, onMounted, ref } from "vue";
+import { onMounted, ref } from "vue";
 import { ratio, a4ratio } from "./../../components/map/map/settings";
 
 const store = useMainStore();
 
 const content = ref<HTMLElement | null>(null);
-
-const loadedElections = computed(() => store.elections.filter((e) => e.loaded));
 
 const padding = 20;
 
@@ -29,13 +27,15 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="Main" v-if="store.init" :style="{ padding: padding + 'px' }">
+    <div class="Main" :style="{ padding: padding + 'px' }">
         <div class="Main__content" ref="content">
-            <Election
-                v-for="election in loadedElections"
-                :key="election.id"
-                :election="election"
-            />
+            <template v-if="store.init">
+                <Election
+                    v-for="election in store.elections"
+                    :key="election.id"
+                    :election="election"
+                />
+            </template>
         </div>
     </div>
 </template>

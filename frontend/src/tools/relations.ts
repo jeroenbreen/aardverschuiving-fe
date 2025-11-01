@@ -2,19 +2,19 @@ import {
     DeviationItem,
     Distance,
     DistanceList,
-    Municipality,
-    VoteResult,
+    Municipality, Municipality_id,
+    // VoteResult,
     VoteSet,
 } from "../types";
 
-export const resultsToPercentage = (results: VoteResult[], doSort: boolean) => {
+export const resultsToPercentage = (results: VoteSet[], doSort: boolean) => {
     const votesTotal = results.reduce((acc, v) => {
-        return acc + v.votes;
+        return acc + v[2];
     }, 0);
     const normalised = results.map((r) => {
         return {
-            votes: Math.round((100 * r.votes) / votesTotal),
-            party_id: r.party_id,
+            votes: Math.round((100 * r[2]) / votesTotal),
+            party_id: r[1],
         };
     });
     if (doSort) {
@@ -27,49 +27,49 @@ export const resultsToPercentage = (results: VoteResult[], doSort: boolean) => {
 };
 
 export const getResultsForMunicipality = (
-    municipalityCode: string,
+    municipality_id: Municipality_id,
     voteSets: VoteSet[]
 ) => {
     return voteSets
         .filter((v) => {
-            return v[1] === municipalityCode;
+            return v[0] === municipality_id;
         })
         .map((value) => {
             return {
-                party_id: value[2],
-                municipality_code: value[1],
-                votes: value[3],
+                party_id: value[1],
+                municipality_id: value[0],
+                votes: value[2],
             };
         });
 };
 
-export const getDeviationItem = (
-    municipalityCode: string,
-    electionResults: VoteResult[],
-    municipalityResults: VoteResult[]
-): DeviationItem => {
-    const deviations = electionResults.map((e) => {
-        const m = municipalityResults.find((m) => m.party_id === e.party_id);
-        let deviation;
-        if (!m) {
-            // assuming a zero for the municipality
-            deviation = e.votes;
-        } else {
-            deviation = m.votes - e.votes;
-        }
-        return {
-            party_id: e.party_id,
-            deviation,
-        };
-    });
-    deviations.sort((a, b) => {
-        return Math.abs(b.deviation) - Math.abs(a.deviation);
-    });
-    return {
-        municipality_code: municipalityCode,
-        deviations,
-    };
-};
+// export const getDeviationItem = (
+//     municipality_id: Municipality_id,
+//     electionResults: VoteResult[],
+//     municipalityResults: VoteResult[]
+// ): DeviationItem => {
+//     const deviations = electionResults.map((e) => {
+//         const m = municipalityResults.find((m) => m.party_id === e.party_id);
+//         let deviation;
+//         if (!m) {
+//             // assuming a zero for the municipality
+//             deviation = e.votes;
+//         } else {
+//             deviation = m.votes - e.votes;
+//         }
+//         return {
+//             party_id: e.party_id,
+//             deviation,
+//         };
+//     });
+//     deviations.sort((a, b) => {
+//         return Math.abs(b.deviation) - Math.abs(a.deviation);
+//     });
+//     return {
+//         municipality_id: municipality_id,
+//         deviations,
+//     };
+// };
 
 export const getDistance = (
     sourceDeviationItem: DeviationItem,
@@ -90,8 +90,8 @@ export const getDistance = (
     }
 
     return {
-        source_municipality_code: sourceDeviationItem.municipality_code,
-        target_municipality_code: targetDeviationItem.municipality_code,
+        source_municipality_id: sourceDeviationItem.municipality_id,
+        target_municipality_id: targetDeviationItem.municipality_id,
         distance,
     };
 };
@@ -102,7 +102,7 @@ export const getDistanceingList = (
 ): DistanceList => {
     const distances = [];
     const thisDeviationItem = deviations.find((d) => {
-        return d.municipality_code === municipality.cbs_code;
+        return d.municipality_id === municipality.id;
     });
     if (thisDeviationItem) {
         for (const deviation of deviations) {
@@ -118,7 +118,7 @@ export const getDistanceingList = (
     distances.length = 12;
 
     return {
-        municipality_code: municipality.cbs_code,
+        municipality_id: municipality.id,
         distances,
     };
 };

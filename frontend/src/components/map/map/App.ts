@@ -1,8 +1,4 @@
-import {
-    VoteSetHeavy,
-    Callback,
-    VoteSetHeavyWithDistance,
-} from "../../../types";
+import { VoteSetHeavy, Callback, Municipality_id } from "../../../types";
 import { Cell } from "./Cell";
 import { AppParty } from "./AppParty";
 import { boundingBox, ratio } from "./settings";
@@ -90,23 +86,23 @@ export class App {
 
     filter(voteSets: VoteSetHeavy[]) {
         interface Item {
-            title: string;
+            id: Municipality_id;
             vs: VoteSetHeavy[];
         }
         const lib: Item[] = [];
         const result: VoteSetHeavy[] = [];
 
         const prefilter = voteSets.filter((vs) =>
-            this.selectedParties.includes(vs[2]?.id || -1)
+            this.selectedParties.includes(vs.party?.id || -1)
         );
 
         if (this.winnerTakesAll) {
             for (const vs of prefilter) {
-                const municipality = vs[1].title;
-                const item = lib.find((i) => i.title === municipality);
+                const municipality_id = vs.municipality.id;
+                const item = lib.find((i) => i.id === municipality_id);
                 if (!item) {
                     lib.push({
-                        title: municipality,
+                        id: municipality_id,
                         vs: [vs],
                     });
                 } else {
@@ -114,7 +110,7 @@ export class App {
                 }
             }
             for (const item of lib) {
-                item.vs.sort((a, b) => b[3] - a[3]);
+                item.vs.sort((a, b) => b.votes - a.votes);
                 // only filter the winner
                 result.push(item.vs[0]);
             }
@@ -257,29 +253,23 @@ export class App {
             this.getNearestCellWithSpaceForVoteSet(biggest);
         if (cell) {
             const space = cell.getSpace();
-            if (biggest[3] < space) {
-                const itemWithDistance: VoteSetHeavyWithDistance = [
-                    biggest[0],
-                    biggest[1],
-                    biggest[2],
-                    biggest[3],
+            if (biggest.votes < space) {
+                const itemWithDistance: VoteSetHeavy = {
+                    ...biggest,
                     distance,
-                ];
+                };
                 cell.addVoteSet(itemWithDistance);
             } else {
-                const rest: VoteSetHeavy = [
-                    biggest[0],
-                    biggest[1],
-                    biggest[2],
-                    biggest[3] - space,
-                ];
-                const newItemWithDistance: VoteSetHeavyWithDistance = [
-                    biggest[0],
-                    biggest[1],
-                    biggest[2],
-                    space,
+                const rest: VoteSetHeavy = {
+                    ...biggest,
+                    votes: biggest.votes - space,
                     distance,
-                ];
+                };
+                const newItemWithDistance: VoteSetHeavy = {
+                    ...biggest,
+                    votes: space,
+                    distance,
+                };
                 cell.addVoteSet(newItemWithDistance);
                 this.insert(rest);
             }
@@ -287,7 +277,7 @@ export class App {
             this.activeVoteSets.splice(index, 1);
         } else {
             // console.log("skipped");
-            this.skipped += biggest[3];
+            this.skipped += biggest.votes;
             const index = this.activeVoteSets.indexOf(biggest);
             this.activeVoteSets.splice(index, 1);
         }
@@ -297,7 +287,7 @@ export class App {
         const getIndex = (voteSet: VoteSetHeavy) => {
             for (let i = 0; i < this.voteSets.length; i++) {
                 const item = this.voteSets[i];
-                if (voteSet[3] > item[3]) {
+                if (voteSet.votes > item.votes) {
                     return i;
                 }
             }
@@ -326,8 +316,8 @@ export class App {
         } else {
             if (
                 cell.isEmpty() ||
-                (voteSet[2] &&
-                    cell.matchesParty(voteSet[2]) &&
+                (voteSet.party &&
+                    cell.matchesParty(voteSet.party) &&
                     cell.getSpace() > 0)
             ) {
                 // keep score of the first use
@@ -343,8 +333,8 @@ export class App {
                     if (
                         neighbour &&
                         neighbour.getSpace() > 0 &&
-                        voteSet[2] &&
-                        neighbour.matchesParty(voteSet[2])
+                        voteSet.party &&
+                        neighbour.matchesParty(voteSet.party)
                     ) {
                         cellWithSpace = neighbour;
                     }
@@ -361,19 +351,19 @@ export class App {
     }
 
     getExactCellForVoteSet(voteSet: VoteSetHeavy) {
-        const code = voteSet[1].cbs_code;
-        if (this.cache.municipalities[code]) {
-            return this.cache.municipalities[code];
+        const municipality_id = voteSet.municipality.id;
+        if (this.cache.municipalities[municipality_id]) {
+            return this.cache.municipalities[municipality_id];
         } else {
             const longScale = boundingBox.x2 - boundingBox.x1;
-            const deltaLong = voteSet[1].longitude - boundingBox.x1;
+            const deltaLong = voteSet.municipality.longitude - boundingBox.x1;
             const x =
                 Math.round((deltaLong / longScale) * this.gridHorizontal) - 1;
             const latScale = boundingBox.y1 - boundingBox.y2;
-            const deltaLat = boundingBox.y1 - voteSet[1].latitude;
+            const deltaLat = boundingBox.y1 - voteSet.municipality.latitude;
             const y = Math.round((deltaLat / latScale) * this.gridVertical) - 1;
             const cell = this.getCellFromCoordinates(x, y);
-            this.cache.municipalities[code] = cell;
+            this.cache.municipalities[municipality_id] = cell;
             return cell;
         }
     }
@@ -392,13 +382,13 @@ export class App {
 
     order(voteSets: VoteSetHeavy[]) {
         return voteSets.sort((a, b) => {
-            return b[3] - a[3];
+            return b.votes - a.votes;
         });
     }
 
     getTotalPopulation() {
         return this.voteSets.reduce((acc, voteSet) => {
-            return acc + voteSet[3];
+            return acc + voteSet.votes;
         }, 0);
     }
 

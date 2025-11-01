@@ -42,11 +42,36 @@ export const useMainStore = defineStore("main", {
         },
     },
     actions: {
+        addElections(elections: Election[]) {
+            for (const election of elections) {
+                election.totals = [];
+                for (const voteSet of election.results) {
+                    const total = election.totals?.find(
+                        (t) => t.party.id === voteSet[1]
+                    );
+                    if (!total) {
+                        const party = this.partyLib[voteSet[1]];
+                        if (party) {
+                            election.totals.push({
+                                party,
+                                votes: voteSet[2],
+                            });
+                        } else {
+                            console.log("party not found: ");
+                        }
+                    } else {
+                        total.votes += voteSet[2];
+                    }
+                }
+                election.totals.sort((a, b) => b.votes - a.votes);
+            }
+            this.elections = elections;
+        },
         addMunicipalities(municipalities: Municipality[]) {
             this.municipalities = municipalities;
             this.municipalityLib = {};
             municipalities.forEach((m) => {
-                this.municipalityLib[m.cbs_code] = m;
+                this.municipalityLib[m.id] = m;
             });
         },
         addParties(parties: Party[]) {
@@ -55,6 +80,15 @@ export const useMainStore = defineStore("main", {
             parties.forEach((p) => {
                 this.partyLib[p.id] = p;
             });
+        },
+        reset() {
+            this.parties = [];
+            this.partyLib = {};
+            this.municipalities = [];
+            this.municipalityLib = {};
+            this.elections = [];
+            this.distances = [];
+            this.init = false;
         },
     },
 });

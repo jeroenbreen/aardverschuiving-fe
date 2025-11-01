@@ -39,15 +39,14 @@ const report = ref(null);
 const create = () => {
     if (el.value) {
         const start = new Date();
-        const voteSets: VoteSetHeavy[] = props.election.voteSets
+        const voteSets: VoteSetHeavy[] = props.election.results
             .map((v) => {
-                const e = props.election;
-                const m = store.municipalityLib[v[1]];
-                const p = store.partyLib[v[2]];
-                return [e, m, p, v[3]];
+                const municipality = store.municipalityLib[v[0]];
+                const party = store.partyLib[v[1]];
+                const votes = v[2];
+                return { municipality, party, votes, distance: 0 };
             })
-            .filter((v) => v[0] && v[1] && v[2]);
-
+            .filter((v) => v.municipality && v.party);
         const canvas = el.value;
         const ctx = canvas.getContext("2d");
         if (ctx) {
