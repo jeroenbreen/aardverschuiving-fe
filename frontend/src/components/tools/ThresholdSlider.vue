@@ -12,8 +12,8 @@ const store = useMainStore();
         <v-slider
             v-model="store.threshold"
             :min="0"
-            :max="100000"
-            :step="5000"
+            :max="500000"
+            :step="25000"
             show-ticks
         />
     </Tool>
